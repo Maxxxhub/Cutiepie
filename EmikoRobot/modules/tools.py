@@ -1,4 +1,4 @@
-__mod_name__ = "Tools"
+__mod_name__ = "✘ᴛᴏᴏʟꜱ✘"
 
 __help__ = """
 *✘ Sangmata Info bot ✘*
@@ -25,7 +25,7 @@ __help__ = """
  ✘ File To Link ✘:
 ➻ /transfersh: reply to a telegram file to upload it on transfersh and get direct download link
 ➻ /tmpninja: reply to a telegram file to upload it on tmpninja and get direct download link
- File Or Text To Telegraph:
+ ✘ File Or Text To Telegraph ✘:
 ➻ /tgm : Get Telegraph Link Of Replied Media
 ➻ /tgt: Get Telegraph Link of Replied Text
  ✘ Tagger ✘
