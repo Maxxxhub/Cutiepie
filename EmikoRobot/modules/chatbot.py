@@ -306,24 +306,24 @@ async def inuka(client, message):
         "Hi, my friend, what can I do for you today?")
 
     response = await lunaQuery(test, message.from_user.id if message.from_user else 0)
-    response = response.replace("Aco", "Emiko")
-    response = response.replace("aco", "emiko")
-    response = response.replace("Luna", "Emiko")
-    response = response.replace("luna", "emiko")
-    response = response.replace("I'm a Christian", "My god is @excrybaby")
+    response = response.replace("Aco", "Teddy")
+    response = response.replace("aco", "Teddy")
+    response = response.replace("Luna", "Teddy")
+    response = response.replace("luna", "Teddy")
+    response = response.replace("I'm a Christian", "My god is @Sweetu_9014")
     response = response.replace("9", "16")
-    response = response.replace("I'm married to my job.", "I'm married with @excrybaby")
-    response = response.replace("I'm single.", "My husband is @excrybaby")
-    response = response.replace("Emikobot.ai", "@emikosupport")
-    response = response.replace("I live in San Francisco, California.", "I live in @emikosupport")
-    response = response.replace("I made myself", "I was Created by @excrybaby")
+    response = response.replace("I'm married to my job.", "I'm married with @Sweetu_9014")
+    response = response.replace("I'm single.", "My husband is @Sweetu_9014")
+    response = response.replace("TeddyRobot.ai", "@teddyxbot_support")
+    response = response.replace("I live in San Francisco, California.", "I live in @teddyxbot_support")
+    response = response.replace("I made myself", "I was Created by @Sweetu_9014")
     response = response.replace(
             "Hi, my friend! Do you want me to tell you a joke?",
-            "Hello there I am Emiko...nice to meet u")
-    response = response.replace("Have the control right.", "@excrybaby is my owner.")
+            "Hello there I am Teddy...nice to meet u")
+    response = response.replace("Have the control right.", "@Sweetu_9014 is my owner.")
     response = response.replace(
             "Hi, my friend, what can I do for you today?",
-            "Hi, My name is Emiko Nice to meet you")
+            "Hi, My name is Teddy Nice to meet you")
 
     pro = response
     if not "en" in lan and not lan == "":
@@ -384,40 +384,40 @@ async def inuka(client, message):
 
     # test = emoji.demojize(test.strip())
 
-    test = test.replace("Emiko", "Aco")
-    test = test.replace("Emiko", "Aco")
-    test = test.replace("My god is @excrybaby", "I'm a Christian")
+    test = test.replace("Teddy", "Aco")
+    test = test.replace("Teddy", "Aco")
+    test = test.replace("My god is @Sweetu_9014", "I'm a Christian")
     test = test.replace("16", "9") 
-    test = test.replace("@excrybaby is my husband.", "I'm single.")
-    test = test.replace("@emikosupport", "Emikobot.ai")
-    test = test.replace("I live in @emikosupport.", "I live in San Francisco, California.")
-    test = test.replace("I was created by @excrybaby", "I made myself")
+    test = test.replace("@Sweetu_9014 is my husband.", "I'm single.")
+    test = test.replace("@teddyxbot_support", "TeddyRobot.ai")
+    test = test.replace("I live in @teddyxbot_support.", "I live in San Francisco, California.")
+    test = test.replace("I was created by @Sweetu_9014", "I made myself")
     test = test.replace(
-        "Hello there I am Emiko...nice to meet u",
+        "Hello there I am Teddy...nice to meet u",
         "Hi, my friend! Do you want me to tell you a joke?")
-    test = test.replace("@excrybaby is my owner", "Have the control right.")
+    test = test.replace("@Sweetu_9014 is my owner", "Have the control right.")
     test = test.replace(
-        "Hi, My name is Emiko Nice to meet you.",
+        "Hi, My name is Teddy Nice to meet you.",
         "Hi, my friend, what can I do for you today?")
     response = await lunaQuery(test, message.from_user.id if message.from_user else 0)
-    response = response.replace("Aco", "Emiko")
-    response = response.replace("aco", "emiko")
-    response = response.replace("Luna", "Emiko")
-    response = response.replace("luna", "emiko")
-    response = response.replace("I'm a Christian", "My god is @excrybaby")
-    response = response.replace("I'm married to my job.", "I'm married with @excrybaby")
+    response = response.replace("Aco", "Teddy")
+    response = response.replace("aco", "Teddy")
+    response = response.replace("Luna", "Teddy")
+    response = response.replace("luna", "Teddy")
+    response = response.replace("I'm a Christian", "My god is @Sweetu_9014")
+    response = response.replace("I'm married to my job.", "I'm married with @Sweetu_9014")
     response = response.replace("9", "16") 
-    response = response.replace("I'm single.", "My husband is @excrybaby")
-    response = response.replace("Emikobot.ai", "@emikosupport")
-    response = response.replace("I live in San Francisco, California.", "I live in @emikosupport.")
-    response = response.replace("I made myself", "I was Created by @excrybaby")
+    response = response.replace("I'm single.", "My husband is @Sweetu_9014")
+    response = response.replace("TeddyRobot.ai", "@teddyxbot_support")
+    response = response.replace("I live in San Francisco, California.", "I live in @teddyxbot_support.")
+    response = response.replace("I made myself", "I was Created by @Sweetu_9014")
     response = response.replace(
             "Hi, my friend! Do you want me to tell you a joke?",
-            "Hello there I am Emiko...nice to meet u")
-    response = response.replace("Have the control right.", "@excrybaby is my owner.")
+            "Hello there I am Teddy...nice to meet u")
+    response = response.replace("Have the control right.", "@Sweetu_9014 is my owner.")
     response = response.replace(
             "Hi, my friend, what can I do for you today?",
-            "Hi, My name is Emik Nice to meet you")
+            "Hi, My name is Teddy Nice to meet you")
 
     pro = response
     if not "en" in lan and not lan == "":
@@ -434,9 +434,9 @@ async def inuka(client, message):
 
 
 __help__ = """
-❂ Emiko AI is the only ai system which can detect & reply upto 200 language's
-❂ /chatbot [ON/OFF]: Enables and disables AI Chat mode.
-❂ /chatbot EN : Enables English only chatbot.
+➻ Teddy AI is the only ai system which can detect & reply upto 200 language's
+➻ /chatbot [ON/OFF]: Enables and disables AI Chat mode.
+➻ /chatbot EN : Enables English only chatbot.
 """
 
-__mod_name__ = "Chatbot"
+__mod_name__ = "✘ᴄʜᴀᴛʙᴏᴛ✘"
