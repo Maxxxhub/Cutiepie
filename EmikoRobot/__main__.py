@@ -80,20 +80,23 @@ def get_readable_time(seconds: int) -> str:
 
     return ping_time
 
+GROUP_START_IMG = "https://telegra.ph/file/f2f0ff1e1ff5266221bba.jpg"
+
 
 PM_START_TEXT = """
-*Hello {} !*
-✪ I'm an anime-theme management bot [✨](https://telegra.ph/file/e7d4933b1f9f44d425043.mp4)
+*✧ ᴏɪ ᴏɪ ᴏɪ, {} !*
+ ᴍʏsᴇʟғ :- ᴛᴇᴅᴅy, ɴɪᴄᴇ ᴛᴏ ᴍᴇᴇᴛ ʏᴀ 💜
+ ɪ ᴄᴀɴ ʜᴇʟᴘ ʏᴏᴜ ɪɴ ᴍᴀɴᴀɢɪɴɢ ʏᴏᴜʀ ɢʀᴏᴜᴘ ɪғ ʏᴏᴜ ᴡᴀɴᴛ! [🎀](https://telegra.ph/file/e7d4933b1f9f44d425043.mp4)
 ────────────────────────
-× *Uptime:* `{}`
-× `{}` *users, across* `{}` *chats.*
+× *ᴀʟɪᴠᴇ ꜱɪɴᴄᴇ:* `{}`
+× `{}` *ᴍʏ ғʀɪᴇɴᴅs, ᴀᴄʀᴏss* `{}` *ᴄʜᴀᴛs.*
 ────────────────────────
-✪ Hit /help to see my available commands.
+• ᴄʜᴇᴄᴋ ᴏᴜᴛ ᴍʏ ᴄᴏᴍᴍᴀɴᴅs ʙʏ ᴄʟɪᴄᴋɪɴɢ /help.
 """
 
 buttons = [
     [
-        InlineKeyboardButton(text=f"𝐀ʙᴏᴜᴛ Teddy 𝐑ᴏʙᴏᴛ✨", callback_data="emiko_"),
+        InlineKeyboardButton(text=f"✨ 𝐀ʙᴏᴜᴛ Teddy 𝐑ᴏʙᴏᴛ ✨", callback_data="emiko_"),
     ],
     [
         InlineKeyboardButton(text="❓ ʜᴇʟᴩ ❓", callback_data="help_back"),
