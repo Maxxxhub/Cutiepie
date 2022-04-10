@@ -576,20 +576,6 @@ def delsticker(update, context):
 
 
 
-__mod_name__ = "✘ꜱᴛɪᴄᴋᴇʀꜱ✘"
-
-__help__ = """
-*✘ Help menu for stickers tools ✘*
-➻ /stickerid*:* reply to a sticker to me to tell you its file ID.
-➻ /getsticker*:* reply to a sticker to me to upload its raw PNG file.
-➻ /kang*:* reply to a sticker to add it to your pack.
-➻ /delsticker*:* Reply to your anime exist sticker to your pack to delete it.
-➻ /stickers*:* Find stickers for given term on combot sticker catalogue
-➻ /tiny*:* To make small sticker
-➻ /kamuii <1-8> *:* To deepefying stiker
-➻ /mmf <reply with text>*:* To draw a text for sticker or pohots
-"""
-
 STICKERID_HANDLER = DisableAbleCommandHandler("stickerid", stickerid, run_async=True)
 GETSTICKER_HANDLER = DisableAbleCommandHandler("getsticker", getsticker, run_async=True)
 KANG_HANDLER = DisableAbleCommandHandler("kang", kang, pass_args=True, run_async=True)
