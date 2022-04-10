@@ -131,16 +131,7 @@ async def job_close():
     for pro in chats:
         try:
             await tbot.send_message(
-              int(pro.chat_id), "┏━━━━━━━━━━━━━━━┓
-     🌗 ɴɪɢʜᴛ ᴍᴏᴅᴇ ꜱᴛᴀʀᴛᴇᴅ !
-
-   ɢʀᴏᴜᴘ ɪꜱ ᴄʟᴏꜱɪɴɢ ᴛɪʟʟ 06:00.
-  ᴏɴʟʏ ᴀᴅᴍɪɴꜱ ꜱʜᴏᴜʟᴅ ʙᴇ  ᴀʙʟᴇ
-                 ᴛᴏ ᴍᴇꜱꜱᴀɢᴇ
-
-      ✘ ✘   ᴘᴏᴡᴇʀᴇᴅ ʙʏ :   ✘ ✘ 
-     ≛≛  @teddyxbot_support  ≛≛
-┗━━━━━━━━━━━━━━━┛**"
+              int(pro.chat_id), "12:00 ᴀᴍ, ɢʀᴏᴜᴩ ɪꜱ ᴄʟᴏꜱɪɴɢ ᴛɪʟʟ 6 ᴀᴍ. ɴɪɢʜᴛᴍᴏᴅᴇ ꜱᴛᴀʀᴛᴇᴅ  ! \n**ᴩᴏᴡᴇʀᴇᴅ ʙy @TeddyxRobot_bot ⚡️**"
             )
             await tbot(
             functions.messages.EditChatDefaultBannedRightsRequest(
@@ -151,7 +142,7 @@ async def job_close():
             logger.info(f"Unable To Close Group {chat} - {e}")
 
 #Run everyday at 12am
-scheduler = AsyncIOScheduler(timezone="Asia/Jakarta")
+scheduler = AsyncIOScheduler(timezone="Asia/kolkata")
 scheduler.add_job(job_close, trigger="cron", hour=23, minute=59)
 scheduler.start()
 
@@ -162,7 +153,7 @@ async def job_open():
     for pro in chats:
         try:
             await tbot.send_message(
-              int(pro.chat_id), "06:00 Am, Group Is Opening.\n**Powered By @emiexrobot**"
+              int(pro.chat_id), "06:00 Am, Group Is Opening.\n**Powered By @TeddyxRobot_bot**"
             )
             await tbot(
             functions.messages.EditChatDefaultBannedRightsRequest(
@@ -173,6 +164,6 @@ async def job_open():
             logger.info(f"Unable To Open Group {pro.chat_id} - {e}")
 
 # Run everyday at 06
-scheduler = AsyncIOScheduler(timezone="Asia/Jakarta")
+scheduler = AsyncIOScheduler(timezone="Asia/kolkata")
 scheduler.add_job(job_open, trigger="cron", hour=5, minute=58)
 scheduler.start()
