@@ -15,6 +15,7 @@ from telegram.utils.helpers import mention_html
 
 from EmikoRobot import dispatcher
 from EmikoRobot.modules.disable import DisableAbleCommandHandler
+from EmikoRobot.modules.language import gs
 
 combot_stickers_url = "https://combot.org/telegram/stickers?q="
 
@@ -575,6 +576,11 @@ def delsticker(update, context):
         )
 
 
+def helps(chat):
+    return gs(chat, "stickers_help")
+
+
+__mod_name__ = "Stickers"
 
 STICKERID_HANDLER = DisableAbleCommandHandler("stickerid", stickerid, run_async=True)
 GETSTICKER_HANDLER = DisableAbleCommandHandler("getsticker", getsticker, run_async=True)
