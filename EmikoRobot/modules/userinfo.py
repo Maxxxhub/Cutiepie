@@ -316,7 +316,7 @@ def info(update: Update, context: CallbackContext):
         text += "\n\nThe Disaster level of this person is 'Soldier'."
         disaster_level_present = True
     elif user.id == 1829047705:
-         text += "\n\nOwner Of A Bot. Queen Of @excrybaby. Bot Name Inspired From 'JoJo'."
+         text += "\n\nOwner Of A Bot. Queen Of @sweetttu_1. Bot Name Inspired From 'JoJo'."
          disaster_level_present = True
 
     try:
@@ -353,9 +353,9 @@ def info(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                "Health", url="https://t.me/KennedyProject/44"),
+                                "Health", url="https://t.me/teddy_updates/8"),
                             InlineKeyboardButton(
-                                "Disaster", url="https://t.me/KennedyProject/43")
+                                "Disaster", url="https://t.me/teddy_updates")
                         ],
                     ]
                 ),
@@ -371,9 +371,9 @@ def info(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                "Health", url="https://t.me/KennedyProject/44"),
+                                "Health", url="https://t.me/teddy_updates/8"),
                             InlineKeyboardButton(
-                                "Disaster", url="https://t.me/KennedyProject/43")
+                                "Disaster", url="https://t.me/teddy_updates")
                         ],
                     ]
                 ),
@@ -445,9 +445,9 @@ def set_about_me(update: Update, context: CallbackContext):
 
 @sudo_plus
 def stats(update: Update, context: CallbackContext):
-    stats = "<b>╔═━「 Current Emiko Statistics 」</b>\n" + "\n".join([mod.__stats__() for mod in STATS])
+    stats = "<b>╔═━「 Current Teddy Statistics 」</b>\n" + "\n".join([mod.__stats__() for mod in STATS])
     result = re.sub(r"(\d+)", r"<code>\1</code>", stats)
-    result += "\n<b>╘═━「 Powered By kennedy-ex 」</b>"
+    result += "\n<b>╘═━「 Powered By Teddy 」</b>"
     update.effective_message.reply_text(
         result,
         parse_mode=ParseMode.HTML, 
@@ -539,37 +539,37 @@ def __user_info__(user_id):
 
 
 __help__ = """
-*ID:*
-❂ /id*:* get the current group id. If used by replying to a message, gets that user's id.
-❂ /gifid*:* reply to a gif to me to tell you its file ID.
+*✘ ID ✘:*
+➻ /id*:* get the current group id. If used by replying to a message, gets that user's id.
+➻ /gifid*:* reply to a gif to me to tell you its file ID.
  
-*Self addded information:* 
-❂ /setme <text>*:* will set your info
-❂ /me*:* will get your or another user's info.
+*✘ Self addded information ✘:* 
+➻ /setme <text>*:* will set your info
+➻ /me*:* will get your or another user's info.
 Examples:
-❂ /setme I am a wolf.
-❂ /me @username(defaults to yours if no user specified)
+➻ /setme I am a wolf.
+➻ /me @username(defaults to yours if no user specified)
  
-*Information others add on you:* 
-❂ /bio*:* will get your or another user's bio. This cannot be set by yourself.
-❂ /setbio <text>*:* while replying, will save another user's bio 
+*✘ Information others add on you ✘:* 
+➻ /bio*:* will get your or another user's bio. This cannot be set by yourself.
+➻ /setbio <text>*:* while replying, will save another user's bio 
 Examples:
-❂ /bio @username(defaults to yours if not specified).
-❂ /setbio This user is a wolf (reply to the user)
+➻ /bio @username(defaults to yours if not specified).
+➻ /setbio This user is a wolf (reply to the user)
  
-*Overall Information about you:*
-❂ /info*:* get information about a user. 
+*✘ Overall Information about you ✘:*
+➻ /info*:* get information about a user. 
  
-*json Detailed info:*
-❂ /json*:* Get Detailed info about any message.
+*✘ json Detailed info ✘:*
+➻ /json*:* Get Detailed info about any message.
  
-*AFk:*
+*✘ AFk ✘:*
 When marked as AFK, any mentions will be replied to with a message stating that you're not available!
-❂ /afk <reason>*:* Mark yourself as AFK.
+➻ /afk <reason>*:* Mark yourself as AFK.
   - brb <reason>: Same as the afk command, but not a command. 
   
-*What is that health thingy?*
- Come and see [HP System explained](https://t.me/KennedyProject/44)
+*✘ What is that health thingy? ✘*
+ Come and see [HP System explained](https://t.me/teddy_updates/8)
 """
 
 SET_BIO_HANDLER = DisableAbleCommandHandler("setbio", set_about_bio, run_async=True)
@@ -592,7 +592,7 @@ dispatcher.add_handler(GET_BIO_HANDLER)
 dispatcher.add_handler(SET_ABOUT_HANDLER)
 dispatcher.add_handler(GET_ABOUT_HANDLER)
 
-__mod_name__ = "Info & AFK"
+__mod_name__ = "✘ɪɴꜰᴏ & ᴀꜰᴋ✘"
 __command_list__ = ["setbio", "bio", "setme", "me", "info"]
 __handlers__ = [
     ID_HANDLER,
