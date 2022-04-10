@@ -131,7 +131,16 @@ async def job_close():
     for pro in chats:
         try:
             await tbot.send_message(
-              int(pro.chat_id), "12:00 Am, Group Is Closing Till 6 Am. Night Mode Started ! \n**Powered By @emiexrobot**"
+              int(pro.chat_id), "┏━━━━━━━━━━━━━━━┓
+     🌗 ɴɪɢʜᴛ ᴍᴏᴅᴇ ꜱᴛᴀʀᴛᴇᴅ !
+
+   ɢʀᴏᴜᴘ ɪꜱ ᴄʟᴏꜱɪɴɢ ᴛɪʟʟ 06:00.
+  ᴏɴʟʏ ᴀᴅᴍɪɴꜱ ꜱʜᴏᴜʟᴅ ʙᴇ  ᴀʙʟᴇ
+                 ᴛᴏ ᴍᴇꜱꜱᴀɢᴇ
+
+      ✘ ✘   ᴘᴏᴡᴇʀᴇᴅ ʙʏ :   ✘ ✘ 
+     ≛≛  @teddyxbot_support  ≛≛
+┗━━━━━━━━━━━━━━━┛**"
             )
             await tbot(
             functions.messages.EditChatDefaultBannedRightsRequest(
