@@ -574,6 +574,8 @@ def delsticker(update, context):
             "Please reply to sticker message to del sticker"
         )
 
+
+
 __mod_name__ = "✘ꜱᴛɪᴄᴋᴇʀꜱ✘"
 
 __help__ = """
@@ -587,7 +589,6 @@ __help__ = """
 ➻ /kamuii <1-8> *:* To deepefying stiker
 ➻ /mmf <reply with text>*:* To draw a text for sticker or pohots
 """
-
 
 STICKERID_HANDLER = DisableAbleCommandHandler("stickerid", stickerid, run_async=True)
 GETSTICKER_HANDLER = DisableAbleCommandHandler("getsticker", getsticker, run_async=True)
