@@ -448,7 +448,7 @@ def emiko_about_callback(update, context):
         )
     elif query.data == "emiko_support":
         query.message.edit_text(
-            text="*✦ Emiko support chats ✦*"
+            text="*✦ Teddy support chats ✦*"
             f"\n➻ Join My Support Group/Channel for see or report a problem on {dispatcher.bot.first_name}.",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
