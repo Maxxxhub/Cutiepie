@@ -5,11 +5,11 @@ __help__ = """
 ➻ /play (query or reply audio) to playing music from yourube or your audio telegram.
 ➻ /playlist (choose option) for playing your personal playlist or group playlist.
 ✘ Admins only ✘
-➻ /auth - Add to authorized users.
-➻ /unauth - Canceling or deleting from authorized users list.
-➻ /msettings - To open panel settings on musicplayer.
-➻ /setadmin - To set all command only for admins.
-➻ /setmember - Set all command for all members.
+➻ /pause  - Pause the playing music.
+➻ /resume - Resume the paused music.
+➻ /mute - Mute the playing music.
+➻ /unmute - Unmute the muted music.
+➻ /skip - Skip the current playing music.
 ➻ /vol (range 1-200) - To set volume on voice calls.
-NOTE : DON'T SPAM TO REQUEST SONG OR VIDEO...
+NOTE : DON'T SPAM TO REQUEST A SONG OR VIDEO...
 """
