@@ -232,7 +232,9 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_animation(
-            GROUP_START_IMG, caption= f"<b>𝐇ɪ Dᴀʀʟɪɴɢ ❤️ 𝐈'ᴍ ᴀʟɪᴠᴇ </b>\n<b> 𝐒ᴛᴀʀᴛᴇᴅ 𝐒ɪɴᴄᴇ </b> <code>⚡️{uptime}⚡️</code>,
+            GROUP_START_IMG, caption= "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>".format(
+                uptime
+            ),
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
