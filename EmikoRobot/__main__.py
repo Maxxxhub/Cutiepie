@@ -232,7 +232,13 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_animation(
-            GROUP_START_IMG, caption= f"<b>𝐇ɪ Dᴀʀʟɪɴɢ ❤️ 𝐈'ᴍ ᴀʟɪᴠᴇ </b>\n<b> 𝐒ᴛᴀʀᴛᴇᴅ 𝐖ᴏʀᴋɪɴɢ 𝐒ɪɴᴄᴇ </b> <code>⚡️{uptime}⚡️</code>",
+            GROUP_START_IMG, caption= (
+                f"Hello {mention_html(user.id, user.first_name)}, I'm {bot.first_name}\n\n"
+                f"┏━━━━━━━━━━━━━━━━━━━\n"
+                f"┣[• Owner : @{OWNER_USERNAME}  \n"
+                f"┣[• Uptime : ⚡️ {uptime} ⚡️ \n"
+                f"┣[• Python   : Ver {python_version()} \n"
+                f"┗━━━━━━━━━━━━━━━━━━━")"
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
@@ -392,7 +398,7 @@ def emiko_about_callback(update, context):
                  ],
                  [
                     InlineKeyboardButton(text="🚩 ꜱᴜᴩᴩᴏʀᴛ 🚩", callback_data="emiko_support"),
-                    InlineKeyboardButton(text="💠 ᴄʀᴇᴅɪᴛꜱ 💠", callback_data="emiko_credit"),
+                    InlineKeyboardButton(text="💠 ᴏᴡɴᴇʀ 💠", callback_data="emiko_credit"),
                  ],
                  [
                     InlineKeyboardButton(text="⚠️ ꜱᴏᴜʀᴄᴇ ⚠️", url="https://xnxx.com"),
@@ -469,12 +475,12 @@ def emiko_about_callback(update, context):
     elif query.data == "emiko_credit":
         query.message.edit_text(
             text=f"✘ Credis for {dispatcher.bot.first_name} ✘\n"
-            f"\n➻ Here the owner of {dispatcher.bot.first_name}",
+            f"\n➻ Here, the owner of {dispatcher.bot.first_name}",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="❤️‍🔥 Suru ❤️‍🔥", url="https://github.com/SuruXmanager"),
+                    InlineKeyboardButton(text="❤️‍🔥 ꜱᴜʀᴜ ❤️‍🔥", url="https://t.me/sweetttu_1"),
                  ],
                  [
                     InlineKeyboardButton(text="🔙 ʙᴀᴄᴋ 🔙", callback_data="emiko_"),
@@ -744,7 +750,7 @@ def donate(update: Update, context: CallbackContext):
             DONATE_STRING, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True
         )
 
-        if OWNER_ID != 1606221784:
+        if OWNER_ID != 5011207678:
             update.effective_message.reply_text(
                 "I'm free for everyone ❤️ If you wanna make me smile, just join"
                 "[My Channel]({})".format(DONATION_LINK),
@@ -791,7 +797,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "[нℓσ ∂αяℓιиg ❤️, ι'м αℓινє 🔥...!!](https://telegra.ph/file/8243ba9ed346f214e966e.jpg)", parse_mode=ParseMode.MARKDOWN)
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "[нℓσ ∂αяℓιиg ❤️, ι'м αℓινє 🔥...!!!](https://telegra.ph/file/8243ba9ed346f214e966e.jpg)", parse_mode=ParseMode.MARKDOWN)
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!",
