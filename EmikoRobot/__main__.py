@@ -232,13 +232,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_animation(
-            GROUP_START_IMG, caption= (
-                f"Hello {mention_html(user.id, user.first_name)}, I'm {bot.first_name}\n\n"
-                f"┏━━━━━━━━━━━━━━━━━━━\n"
-                f"┣[• Owner : @{OWNER_USERNAME}  \n"
-                f"┣[• Uptime : ⚡️ {uptime} ⚡️ \n"
-                f"┣[• Python   : Ver {python_version()} \n"
-                f"┗━━━━━━━━━━━━━━━━━━━")"
+            GROUP_START_IMG, caption= f"<b>𝐇ɪ Dᴀʀʟɪɴɢ ❤️ 𝐈'ᴍ ᴀʟɪᴠᴇ </b>\n<b> 𝐒ᴛᴀʀᴛᴇᴅ 𝐒ɪɴᴄᴇ </b> <code>⚡️{uptime}⚡️</code>
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
