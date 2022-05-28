@@ -80,7 +80,7 @@ def get_readable_time(seconds: int) -> str:
 
     return ping_time
 
-GROUP_START_IMG = "https://telegra.ph/file/f2f0ff1e1ff5266221bba.jpg"
+GROUP_START_IMG = "https://telegra.ph/file/c124da7128cfa1989ca48.jpg"
 
 
 PM_START_TEXT = """
@@ -232,7 +232,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_animation(
-            GROUP_START_IMG, caption= "𝗜'𝗠 𝗔𝗪𝗔𝗞𝗘 𝗔𝗟𝗥𝗘𝗔𝗗𝗬!\n<b>𝗛𝗔𝗩𝗘𝗡'𝗧 𝗦𝗟𝗘𝗣𝗧 𝗦𝗜𝗡𝗖𝗘:</b> <code>{}</code>".format(
+            GROUP_START_IMG, caption= "𝗜'𝗠 𝗔𝗪𝗔𝗞𝗘 𝗗𝗔𝗥𝗟𝗜𝗡𝗚 🆙 n<b>𝗛𝗔𝗩𝗘𝗡'𝗧 𝗦𝗟𝗘𝗣𝗧 𝗦𝗜𝗡𝗖𝗘 💥:</b> <code>{}</code>".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
@@ -241,7 +241,7 @@ def start(update: Update, context: CallbackContext):
                     [
                         InlineKeyboardButton(
                             text="♠️ ᴀᴅᴅ ᴛᴇᴅᴅy ᴛᴏ yᴏᴜʀ ɢʀᴏᴜᴩ ♠️",
-                            url="t.me/TeddyxRobot_bot?startgroup=new",
+                            url="t.me/TeddyRobot_bot?startgroup=new",
                         ),
                     ]
                 ]
