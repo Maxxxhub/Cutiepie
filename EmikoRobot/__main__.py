@@ -37,7 +37,6 @@ from EmikoRobot.modules import ALL_MODULES
 from EmikoRobot.modules.helper_funcs.chat_status import is_user_admin
 from EmikoRobot.modules.helper_funcs.misc import paginate_modules
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
-from EmikoRobot.script import GROUP_START_IMG
 from telegram.error import (
     BadRequest,
     ChatMigrated,
@@ -80,6 +79,15 @@ def get_readable_time(seconds: int) -> str:
     ping_time += ":".join(time_list)
 
     return ping_time
+
+
+GROUP_START_IMG = (
+    "https://telegra.ph/file/c124da7128cfa1989ca48.jpg",
+    "https://telegra.ph/file/5780b3273162d2b9ba9ec.jpg",
+    "https://telegra.ph/file/e2d56d5dbb108ba7af20c.jpg",
+    "https://telegra.ph/file/258c02c002e89287d5d9b.jpg",
+    "https://telegra.ph/file/9849b3940f063b065f4e3.jpg",
+)
     
 
 PM_START_TEXT = """
