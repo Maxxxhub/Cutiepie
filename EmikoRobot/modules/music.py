@@ -206,7 +206,7 @@ async def ytmusic(client, message: Message):
         await pablo.edit(f"**Failed To Download** \n**Error :** `{str(e)}`")
         return
     c_time = time.time()
-    capy = f" 🎶 **Song Name :** [{thum}]({mo}) \n 🔎 **Requested For :** `{urlissed}` \ 📽️ n**Channel :** `{thums}` "
+    capy = f" 🎶 **Song Name :** [{thum}]({mo}) \n 🔎 **Requested For :** `{urlissed}` \n 📽️ **Channel :** `{thums}` "
     file_stark = f"{ytdl_data['id']}.mp3"
     await client.send_audio(
         message.chat.id,
