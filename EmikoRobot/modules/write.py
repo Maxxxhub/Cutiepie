@@ -6,7 +6,7 @@ from pyrogram import filters
 from EmikoRobot.function.pluginhelpers import get_text
 from EmikoRobot import pbot
 
-API1 = "https://single-developers.up.railway.app?write="
+API1 = "https://apis.xditya.me/write?text="
 API2 = "https://single-developers.up.railway.app/write"
 
 
@@ -76,7 +76,7 @@ async def writer(client, message):
         try:
             await message.reply_photo(
                 url,
-                caption=f"**Successfully Written** As {text}\n\nImage Link => {url}\n\n**By @TeddyxRobot_bot**",
+                caption=f"**Successfully Written** As {text}\n\nImage Link => {url}\n\n**By @smokerr_xd**",
             )
         except:
             return
@@ -111,7 +111,7 @@ async def writer(client, message):
         try:
             await message.reply_photo(
                 url,
-                caption=f"**Successfully Written** As {text}\n\nImage Link => {url}\n\n**By @TeddyxRobot_bot**",
+                caption=f"**Successfully Written** As {text}\n\nImage Link => {url}\n\n**By @smokerr_xd**",
             )
         except:
             return
@@ -167,7 +167,7 @@ async def longwriter(client, message):
         try:
             await message.reply_photo(
                 url,
-                caption=f"**Successfully Written**\n\nImage Link => {url}\n\n**By @TeddyxRobot_bot**",
+                caption=f"**Successfully Written**\n\nImage Link => {url}\n\n**By @smokerr_xd**",
             )
         except:
             return
@@ -208,7 +208,7 @@ async def longwriter(client, message):
         try:
             await message.reply_photo(
                 url,
-                caption=f"**Successfully Written**\n\nImage Link => {url}\n\n**By @TeddyxRobot_bot**",
+                caption=f"**Successfully Written**\n\nImage Link => {url}\n\n**By @smokerr_xd**",
             )
         except:
             return
