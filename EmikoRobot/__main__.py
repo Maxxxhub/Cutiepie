@@ -37,7 +37,7 @@ from EmikoRobot.modules import ALL_MODULES
 from EmikoRobot.modules.helper_funcs.chat_status import is_user_admin
 from EmikoRobot.modules.helper_funcs.misc import paginate_modules
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
-from EmikoRobot.Teddyscript import GROUP_START_IMG
+from EmikoRobot.script import GROUP_START_IMG
 from telegram.error import (
     BadRequest,
     ChatMigrated,
