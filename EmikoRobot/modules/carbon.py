@@ -31,7 +31,7 @@ async def repo(_, message):
     await message.reply_photo(
         photo=MEMEK,
         caption=f"""✨ **Hey I'm Teddy Robot** 
-**Owner repo : [Suru](https://t.me/Sweetu_9014)**
+**Owner repo : [Suru](https://t.me/smokerr_xd)**
 **Python Version :** `{y()}`
 **Library Version :** `{o}`
 **Telethon Version :** `{s}`
