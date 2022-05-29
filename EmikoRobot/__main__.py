@@ -106,7 +106,7 @@ buttons = [
     ],
     [
         InlineKeyboardButton(
-            text="♠️ ᴀᴅᴅ ᴛᴇᴅᴅy ᴛᴏ yᴏᴜʀ ɢʀᴏᴜᴩ ♠️", url=f"t.me/TeddyxRobot_bot?startgroup=new"),
+            text="♠️ ᴀᴅᴅ ᴛᴇᴅᴅy ᴛᴏ yᴏᴜʀ ɢʀᴏᴜᴩ ♠️", url=f"t.me/Teddyrobot_bot?startgroup=new"),
     ],
 ]
 
@@ -397,7 +397,7 @@ def emiko_about_callback(update, context):
                     InlineKeyboardButton(text="💠 ᴏᴡɴᴇʀ 💠", callback_data="emiko_credit"),
                  ],
                  [
-                    InlineKeyboardButton(text="⚠️ ꜱᴏᴜʀᴄᴇ ⚠️", url="https://xnxx.com"),
+                    InlineKeyboardButton(text="⚠️ ꜱᴏᴜʀᴄᴇ ⚠️", url="https://t.me/smokerr_xd"),
                  ],
                  [
                     InlineKeyboardButton(text="🔙 ʙᴀᴄᴋ 🔙", callback_data="emiko_back"),
@@ -746,7 +746,7 @@ def donate(update: Update, context: CallbackContext):
             DONATE_STRING, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True
         )
 
-        if OWNER_ID != 5011207678:
+        if OWNER_ID != 5403086819:
             update.effective_message.reply_text(
                 "I'm free for everyone ❤️ If you wanna make me smile, just join"
                 "[My Channel]({})".format(DONATION_LINK),
