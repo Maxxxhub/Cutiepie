@@ -232,7 +232,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_animation(
-            GROUP_START_IMG, caption= "𝗜'𝗠 𝗔𝗪𝗔𝗞𝗘 𝗗𝗔𝗥𝗟𝗜𝗡𝗚 🆙 n<b>𝗛𝗔𝗩𝗘𝗡'𝗧 𝗦𝗟𝗘𝗣𝗧 𝗦𝗜𝗡𝗖𝗘 💥:</b> <code>{}</code>".format(
+            GROUP_START_IMG, caption= "𝗜'𝗠 𝗔𝗪𝗔𝗞𝗘 𝗗𝗔𝗥𝗟𝗜𝗡𝗚n<b>𝗛𝗔𝗩𝗘𝗡'𝗧 𝗦𝗟𝗘𝗣𝗧 𝗦𝗜𝗡𝗖𝗘 💥:</b> <code>{}</code>".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
@@ -456,8 +456,8 @@ def emiko_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="🚩 ꜱᴜᴩᴩᴏʀᴛ 🚩", url="t.me/teddyxbot_support"),
-                    InlineKeyboardButton(text="♾️ ᴜᴩᴅᴀᴛᴇꜱ ♾️", url="https://t.me/teddy_updates"),
+                    InlineKeyboardButton(text="🚩 ꜱᴜᴩᴩᴏʀᴛ 🚩", url="t.me/teddysupport"),
+                    InlineKeyboardButton(text="♾️ ᴜᴩᴅᴀᴛᴇꜱ ♾️", url="https://t.me/teddysupport"),
                  ],
                  [
                     InlineKeyboardButton(text="🔙 ʙᴀᴄᴋ 🔙", callback_data="emiko_"),
@@ -476,7 +476,7 @@ def emiko_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="❤️‍🔥 ꜱᴜʀᴜ ❤️‍🔥", url="https://t.me/sweetttu_1"),
+                    InlineKeyboardButton(text="❤️‍ ꜱᴜʀᴜ 💜", url="https://t.me/smokerr_xd"),
                  ],
                  [
                     InlineKeyboardButton(text="🔙 ʙᴀᴄᴋ 🔙", callback_data="emiko_"),
