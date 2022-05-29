@@ -11,14 +11,6 @@
     
    "logo":    "https://telegra.ph/file/35e56ba7eace7332356ad.jpg",  
    "repository": "https://github.com/SuruXmanager/Teddybot-2",
-   "addons": [
-          {
-         "options": {
-            "version": "12"
-         },
-         "plan": "heroku-postgresql"
-      }
-   ],
    "buildpacks": [
     {
       "url": "https://github.com/heroku/heroku-buildpack-python"
