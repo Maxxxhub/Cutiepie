@@ -38,7 +38,7 @@ from EmikoRobot.modules import ALL_MODULES
 from EmikoRobot.modules.helper_funcs.chat_status import is_user_admin
 from EmikoRobot.modules.helper_funcs.misc import paginate_modules
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
-from EmikoRobot.script import TEDDY_GROUP_START_IMG, TEDDY_HELP_IMG
+from EmikoRobot.script import TEDDY_GROUP_START_IMG
 from telegram.error import (
     BadRequest,
     ChatMigrated,
@@ -532,8 +532,8 @@ def get_help(update: Update, context: CallbackContext):
     if chat.type != chat.PRIVATE:
         if len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
             module = args[1].lower()
-            update.effective_message.reply_photo(
-            random.choice(TEDDY_HELP_IMG), caption= f"Oh Darling, Click the Button Below to get help of {module.capitalize()}",
+            update.effective_message.reply_text(
+             f"Oh Darling, Click the Button Below to get help of {module.capitalize()}",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
