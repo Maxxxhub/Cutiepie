@@ -549,13 +549,19 @@ def get_help(update: Update, context: CallbackContext):
             )
             return
         update.effective_message.reply_text(
-            "Contact me in PM to get the list of possible commands.",
+            "» ᴄʜᴏᴏsᴇ ᴀɴ ᴏᴩᴛɪᴏɴ ғᴏʀ ɢᴇᴛᴛɪɴɢ ʜᴇʟᴩ.",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="Help",
-                            url="t.me/{}?start=help".format(context.bot.username),
+                            text="ᴏᴩᴇɴ ɪɴ ᴩʀɪᴠᴀᴛᴇ",
+                            url="https://t.me/{}?start=help".format(context.bot.username),
+                        )
+                    ],
+                    [
+                        InlineKeyboardButton(
+                            text="ᴏᴩᴇɴ ʜᴇʀᴇ",
+                            callback_data="help_back",
                         )
                     ]
                 ]
