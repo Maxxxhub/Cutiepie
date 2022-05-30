@@ -811,7 +811,7 @@ def main():
                              url="https://t.me/teddyrobot_bot?startgroup=true")
                      ] 
                 ]
-            ),
+            )
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!",
