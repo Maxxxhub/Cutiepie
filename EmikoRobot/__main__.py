@@ -38,7 +38,7 @@ from EmikoRobot.modules import ALL_MODULES
 from EmikoRobot.modules.helper_funcs.chat_status import is_user_admin
 from EmikoRobot.modules.helper_funcs.misc import paginate_modules
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
-from EmikoRobot.script import TEDDY_START_IMG
+from EmikoRobot.script import TEDDY_GROUP_START_IMG
 from telegram.error import (
     BadRequest,
     ChatMigrated,
@@ -82,8 +82,6 @@ def get_readable_time(seconds: int) -> str:
 
     return ping_time
 
-
-GROUP_START_IMG = ("https://telegra.ph/file/e2d56d5dbb108ba7af20c.jpg")
 
 
 PM_START_TEXT = """
@@ -235,7 +233,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_photo(
-            random.choice(TEDDY_START_IMG), caption= "𝗜'𝗠 𝗔𝗪𝗔𝗞𝗘 𝗗𝗔𝗥𝗟𝗜𝗡𝗚 \n<b>𝗛𝗔𝗩𝗘𝗡'𝗧 𝗦𝗟𝗘𝗣𝗧 𝗦𝗜𝗡𝗖𝗘 💥:</b> <code>{}</code>".format(
+            random.choice(TEDDY_GROUP_START_IMG), caption= "𝗜'𝗠 𝗔𝗪𝗔𝗞𝗘 𝗗𝗔𝗥𝗟𝗜𝗡𝗚 \n<b>𝗛𝗔𝗩𝗘𝗡'𝗧 𝗦𝗟𝗘𝗣𝗧 𝗦𝗜𝗡𝗖𝗘 💥:</b> <code>{}</code>".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
