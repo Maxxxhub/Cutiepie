@@ -13,5 +13,5 @@ TEDDY_HELP_IMG = (
   "https://telegra.ph/file/21e696bbefcfe39c6e74e.jpg",
   "https://telegra.ph/file/5b1d8766504ff75c1bd1f.jpg",
   "https://telegra.ph/file/731879a344b3b49fe51bd.jpg",
-  "https://telegra.ph/file/6221afc84b357ed0d1fc5.jpg"
+  "https://telegra.ph/file/6221afc84b357ed0d1fc5.jpg",
 )
