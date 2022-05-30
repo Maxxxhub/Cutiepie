@@ -202,7 +202,7 @@ def start(update: Update, context: CallbackContext):
                     update.effective_chat.id,
                     HELPABLE[mod].__help__,
                     InlineKeyboardMarkup(
-                        [[InlineKeyboardButton(text="🔙 ʙᴀᴄᴋ 🔙", callback_data="help_back")]]
+                        [[InlineKeyboardButton(text="◁", callback_data="help_back")]]
                     ),
                 )
 
@@ -232,7 +232,7 @@ def start(update: Update, context: CallbackContext):
                 disable_web_page_preview=False,
             )
     else:
-        update.effective_message.reply_animation(
+        update.effective_message.reply_photo(
             GROUP_START_IMG, caption= "𝗜'𝗠 𝗔𝗪𝗔𝗞𝗘 𝗗𝗔𝗥𝗟𝗜𝗡𝗚 \n<b>𝗛𝗔𝗩𝗘𝗡'𝗧 𝗦𝗟𝗘𝗣𝗧 𝗦𝗜𝗡𝗖𝗘 💥:</b> <code>{}</code>".format(
                 uptime
             ),
@@ -331,7 +331,7 @@ def help_button(update, context):
                 parse_mode=ParseMode.MARKDOWN,
                 disable_web_page_preview=True,
                 reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton(text="🔙 ʙᴀᴄᴋ 🔙", callback_data="help_back")]]
+                    [[InlineKeyboardButton(text="◁", callback_data="help_back")]]
                 ),
             )
 
@@ -401,7 +401,7 @@ def emiko_about_callback(update, context):
                     InlineKeyboardButton(text="⚠️ ꜱᴏᴜʀᴄᴇ ⚠️", url="https://t.me/smokerr_xd"),
                  ],
                  [
-                    InlineKeyboardButton(text="🔙 ʙᴀᴄᴋ 🔙", callback_data="emiko_back"),
+                    InlineKeyboardButton(text="◁", callback_data="emiko_back"),
                  ]
                 ]
             ),
@@ -434,7 +434,7 @@ def emiko_about_callback(update, context):
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="🔙 ʙᴀᴄᴋ 🔙", callback_data="emiko_")]]
+                [[InlineKeyboardButton(text="◁", callback_data="emiko_")]]
             ),
         )
 
@@ -446,7 +446,7 @@ def emiko_about_callback(update, context):
             f"\n\n➻ You can also set buttons for notes and filters (refer help menu)",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="🔙 ʙᴀᴄᴋ 🔙", callback_data="emiko_")]]
+                [[InlineKeyboardButton(text="◁", callback_data="emiko_")]]
             ),
         )
     elif query.data == "emiko_support":
@@ -461,7 +461,7 @@ def emiko_about_callback(update, context):
                     InlineKeyboardButton(text="♾️ ᴜᴩᴅᴀᴛᴇꜱ ♾️", url="https://t.me/teddysupport"),
                  ],
                  [
-                    InlineKeyboardButton(text="🔙 ʙᴀᴄᴋ 🔙", callback_data="emiko_"),
+                    InlineKeyboardButton(text="◁", callback_data="emiko_"),
                  
                  ]
                 ]
@@ -480,7 +480,7 @@ def emiko_about_callback(update, context):
                     InlineKeyboardButton(text="❤️‍ ꜱᴜʀᴜ 💜", url="https://t.me/smokerr_xd"),
                  ],
                  [
-                    InlineKeyboardButton(text="🔙 ʙᴀᴄᴋ 🔙", callback_data="emiko_"),
+                    InlineKeyboardButton(text="◁", callback_data="emiko_"),
                  ]
                 ]
             ),
@@ -505,7 +505,7 @@ def Source_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="🔙 ʙᴀᴄᴋ 🔙", callback_data="emiko_")
+                    InlineKeyboardButton(text="◁", callback_data="emiko_")
                  ]
                 ]
             ),
@@ -575,7 +575,7 @@ def get_help(update: Update, context: CallbackContext):
             chat.id,
             text,
             InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="🔙 ʙᴀᴄᴋ 🔙", callback_data="help_back")]]
+                [[InlineKeyboardButton(text="◁", callback_data="help_back")]]
             ),
         )
 
@@ -647,7 +647,7 @@ def settings_button(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                text="🔙 ʙᴀᴄᴋ 🔙",
+                                text="◁",
                                 callback_data="stngs_back({})".format(chat_id),
                             )
                         ]
