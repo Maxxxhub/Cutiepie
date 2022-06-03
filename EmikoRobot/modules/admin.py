@@ -991,6 +991,11 @@ __help__ = """
 ➻ /rules*:* get the rules for this chat.
 ➻ /setrules <your rules here>*:* set the rules for this chat.
 ➻ /clearrules*:* clear the rules for this chat.
+*The Following Commands are stuff:*
+➻ /myinfo*:* try it urself bruh.
+➻ /ginfo <group username>*:* for group info which are in teddy's db.
+➻ /cinfo <channel username>*:* for channel info which are in teddy's db.
+➻ /uinfo*:* try it urself bruh.
 """
 
 SET_DESC_HANDLER = CommandHandler("setdesc", set_desc, filters=Filters.chat_type.groups, run_async=True)
