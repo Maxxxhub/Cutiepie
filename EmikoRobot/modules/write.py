@@ -1,6 +1,6 @@
 from pyrogram import filters
 
-from FallenRobot import pbot
+from EmikoRobot import pbot
 
 
 @pbot.on_message(filters.command("write"))
