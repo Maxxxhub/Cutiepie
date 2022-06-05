@@ -353,9 +353,9 @@ def info(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                <b>"ʜᴇᴀʟᴛʜ"</b>, url="https://t.me/teddysupport"),
+                                "ʜᴇᴀʟᴛʜ", url="https://t.me/teddysupport"),
                             InlineKeyboardButton(
-                                <b>"ᴅɪsᴀsᴛᴇʀ ʟᴇᴠᴇʟs"</b>, url="https://t.me/Teddysupport")
+                                "ᴅɪsᴀsᴛᴇʀ ʟᴇᴠᴇʟs", url="https://t.me/Teddysupport")
                         ],
                     ]
                 ),
@@ -371,9 +371,9 @@ def info(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                <b>"ʜᴇᴀʟᴛʜ"</b>, url="https://t.me/teddysupport"),
+                                "ʜᴇᴀʟᴛʜ", url="https://t.me/teddysupport"),
                             InlineKeyboardButton(
-                                <b>"ᴅɪsᴀsᴛᴇʀ ʟᴇᴠᴇʟs"</b>, url="https://t.me/Teddysupport")
+                                "ᴅɪsᴀsᴛᴇʀ ʟᴇᴠᴇʟs", url="https://t.me/Teddysupport")
                         ],
                     ]
                 ),
