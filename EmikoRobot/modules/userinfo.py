@@ -165,12 +165,12 @@ def get_id(update: Update, context: CallbackContext):
 
     elif chat.type == "private":
         msg.reply_text(
-            f"ʏᴏᴜʀ ᴜsᴇʀ ɪᴅ ɪs <code>{chat.id}</code>.", parse_mode=ParseMode.HTML,
+            f"<b>ʏᴏᴜʀ ᴜsᴇʀ ɪᴅ ɪs</b> <code>{chat.id}</code>.", parse_mode=ParseMode.HTML,
         )
 
     else:
         msg.reply_text(
-            f"This group's id is <code>{chat.id}</code>.", parse_mode=ParseMode.HTML,
+            f"<b>ᴛʜɪꜱ ɢʀᴏᴜᴩ'ꜱ ɪᴅ ɪꜱ</b> <code>{chat.id}</code>.", parse_mode=ParseMode.HTML,
         )
 
 
@@ -255,8 +255,8 @@ def info(update: Update, context: CallbackContext):
 
     text = (
         f"╔═━「<b> ᴜsᴇʀ ɪɴғᴏ :</b> 」\n"
-        f"➻ ᴜsᴇʀ ɪᴅ: <code>{user.id}</code>\n"
-        f"➻ ғɪʀsᴛ ɴᴀᴍᴇ: {html.escape(user.first_name)}"
+        f"➻ <b>ᴜsᴇʀ ɪᴅ:</b> <code>{user.id}</code>\n"
+        f"➻ <b>ғɪʀsᴛ ɴᴀᴍᴇ:</b> {html.escape(user.first_name)}"
     )
 
     if user.last_name:
