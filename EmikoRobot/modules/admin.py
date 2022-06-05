@@ -486,7 +486,7 @@ def refresh_admin(update, _):
     except KeyError:
         pass
 
-    update.effective_message.reply_text<b>("✅ Admins cache refreshed!")</b>
+    update.effective_message.reply_text("✅ ᴀᴅᴍɪɴ-ᴄᴀᴄʜᴇ ʀᴇꜰʀᴇꜱʜᴇᴅ!")
 
 
 @connection_status
