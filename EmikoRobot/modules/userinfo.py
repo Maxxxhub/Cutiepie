@@ -260,15 +260,15 @@ def info(update: Update, context: CallbackContext):
     )
 
     if user.last_name:
-        text += f"\n➻ ʟᴀsᴛ ɴᴀᴍᴇ: {html.escape(user.last_name)}"
+        text += f"\n➻ <b>ʟᴀsᴛ ɴᴀᴍᴇ:</b> {html.escape(user.last_name)}"
 
     if user.username:
-        text += f"\n➻ ᴜsᴇʀɴᴀᴍᴇ: @{html.escape(user.username)}"
+        text += f"\n➻ <b>ᴜsᴇʀɴᴀᴍᴇ:</b> @{html.escape(user.username)}"
 
-    text += f"\n➻ ʟɪɴᴋ: {mention_html(user.id, 'link')}"
+    text += f"\n➻ <b>ʟɪɴᴋ:</b> {mention_html(user.id, 'link')}"
 
     if chat.type != "private" and user_id != bot.id:
-        _stext = "\n➻ ᴩʀᴇsᴇɴᴄᴇ: <code>{}</code>"
+        _stext = "\n➻ <b>ᴩʀᴇsᴇɴᴄᴇ:</b> <code>{}</code>"
 
         afk_st = is_afk(user.id)
         if afk_st:
@@ -298,25 +298,25 @@ def info(update: Update, context: CallbackContext):
     disaster_level_present = False
 
     if user.id == OWNER_ID:
-        text += "\n\nᴛʜᴇ ᴅɪsᴀsᴛᴇʀ ʟᴇᴠᴇʟ ᴏғ ᴛʜɪs ᴜsᴇʀ ɪs 'ɢᴏᴅ'."
+        text += "\n\nᴛʜᴇ ᴅɪsᴀsᴛᴇʀ ʟᴇᴠᴇʟ ᴏғ ᴛʜɪs ᴜsᴇʀ ɪs <b>'ɢᴏᴅ'</b>."
         disaster_level_present = True
     elif user.id in DEV_USERS:
-        text += "\n\nᴛʜɪs ᴜsᴇʀ ɪs ᴀ ᴍᴇᴍʙᴇʀ ᴏғ 'ᴀɴᴏɴ ᴀssᴏᴄɪᴀᴛɪᴏɴ'."
+        text += "\n\nᴛʜɪs ᴜsᴇʀ ɪs ᴀ ᴍᴇᴍʙᴇʀ ᴏғ <b>'ᴀɴᴏɴ ᴀssᴏᴄɪᴀᴛɪᴏɴ'</b>."
         disaster_level_present = True
     elif user.id in DRAGONS:
-        text += "\n\nᴛʜᴇ ᴅɪsᴀsᴛᴇʀ ʟᴇᴠᴇʟ ᴏғ ᴛʜɪs ᴜsᴇʀ ɪs 'ᴅʀᴀɢᴏɴ'."
+        text += "\n\nᴛʜᴇ ᴅɪsᴀsᴛᴇʀ ʟᴇᴠᴇʟ ᴏғ ᴛʜɪs ᴜsᴇʀ ɪs <b>'ᴅʀᴀɢᴏɴ'</b>."
         disaster_level_present = True
     elif user.id in DEMONS:
-        text += "\n\nᴛʜᴇ ᴅɪsᴀsᴛᴇʀ ʟᴇᴠᴇʟ ᴏғ ᴛʜɪs ᴜsᴇʀ ɪs 'ᴅᴇᴍᴏɴ'."
+        text += "\n\nᴛʜᴇ ᴅɪsᴀsᴛᴇʀ ʟᴇᴠᴇʟ ᴏғ ᴛʜɪs ᴜsᴇʀ ɪs <b>'ᴅᴇᴍᴏɴ'</b>."
         disaster_level_present = True
     elif user.id in TIGERS:
-        text += "\n\nᴛʜᴇ ᴅɪsᴀsᴛᴇʀ ʟᴇᴠᴇʟ ᴏғ ᴛʜɪs ᴜsᴇʀ ɪs 'ᴛɪɢᴇʀ'."
+        text += "\n\nᴛʜᴇ ᴅɪsᴀsᴛᴇʀ ʟᴇᴠᴇʟ ᴏғ ᴛʜɪs ᴜsᴇʀ ɪs <b>'ᴛɪɢᴇʀ'</b>."
         disaster_level_present = True
     elif user.id in WOLVES:
-        text += "\n\nᴛʜᴇ ᴅɪsᴀsᴛᴇʀ ʟᴇᴠᴇʟ ᴏғ ᴛʜɪs ᴜsᴇʀ ɪs 'ᴡᴏʟғ'."
+        text += "\n\nᴛʜᴇ ᴅɪsᴀsᴛᴇʀ ʟᴇᴠᴇʟ ᴏғ ᴛʜɪs ᴜsᴇʀ ɪs <b>'ᴡᴏʟғ'</b>."
         disaster_level_present = True
     elif user.id == 5403086819:
-         text += "\n\nOwner Of A Bot. Queen Of @smokerr_xd. Bot Name Inspired From 'Suru'."
+         text += "\n\nOwner Of A Bot. Queen Of @smokerr_xd. Bot Name Inspired From <b>'Suru'</b>."
          disaster_level_present = True
 
     try:
@@ -353,9 +353,9 @@ def info(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                "ʜᴇᴀʟᴛʜ", url="https://t.me/teddysupport"),
+                                <b>"ʜᴇᴀʟᴛʜ"</b>, url="https://t.me/teddysupport"),
                             InlineKeyboardButton(
-                                "ᴅɪsᴀsᴛᴇʀ ʟᴇᴠᴇʟs", url="https://t.me/Teddysupport")
+                                <b>"ᴅɪsᴀsᴛᴇʀ ʟᴇᴠᴇʟs"</b>, url="https://t.me/Teddysupport")
                         ],
                     ]
                 ),
@@ -371,9 +371,9 @@ def info(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                "ʜᴇᴀʟᴛʜ", url="https://t.me/teddysupport"),
+                                <b>"ʜᴇᴀʟᴛʜ"</b>, url="https://t.me/teddysupport"),
                             InlineKeyboardButton(
-                                "ᴅɪsᴀsᴛᴇʀ ʟᴇᴠᴇʟs", url="https://t.me/Teddysupport")
+                                <b>"ᴅɪsᴀsᴛᴇʀ ʟᴇᴠᴇʟs"</b>, url="https://t.me/Teddysupport")
                         ],
                     ]
                 ),
