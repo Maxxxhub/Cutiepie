@@ -177,14 +177,14 @@ def promote(update: Update, context: CallbackContext) -> str:
         not (promoter.can_promote_members or promoter.status == "creator")
         and user.id not in DRAGONS
     ):
-        message.reply_text("You don't have the necessary rights to do that!")
+        message.reply_text("Yᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴛʜᴇ ɴᴇᴄᴇꜱꜱᴀʀy ʀɪɢʜᴛꜱ ᴛᴏ ᴅᴏ ᴛʜᴀᴛ!")
         return
 
     user_id = extract_user(message, args)
 
     if not user_id:
         message.reply_text(
-            "You don't seem to be referring to a user or the ID specified is incorrect..",
+            "Yᴏᴜ ᴅᴏɴ'ᴛ ꜱᴇᴇᴍ ᴛᴏ ʙᴇ ʀᴇꜰᴇʀʀɪɴɢ ᴛᴏ ᴀ ᴜꜱᴇʀ ᴏʀ ᴛʜᴇ ID ꜱᴩᴇᴄɪꜰɪᴇᴅ ɪꜱ ɪɴᴄᴏʀʀᴇᴄᴛ..",
         )
         return
 
@@ -194,11 +194,11 @@ def promote(update: Update, context: CallbackContext) -> str:
         return
 
     if user_member.status in ('administrator', 'creator'):
-        message.reply_text("How am I meant to promote someone that's already an admin?")
+        message.reply_text("Hᴏᴡ ᴀᴍ ɪ meanᴛ ᴛo ᴩʀᴏᴍᴏᴛᴇ ꜱᴏᴍᴇᴏɴᴇ ᴛʜᴀᴛ'ꜱ ᴀʟʀᴇᴀᴅy ᴀɴ ᴀᴅᴍɪɴ?")
         return
 
     if user_id == bot.id:
-        message.reply_text("I can't promote myself! Get an admin to do it for me.")
+        message.reply_text("I ᴄᴀɴ'ᴛ ᴩʀᴏᴍᴏᴛᴇ ᴍyꜱᴇʟꜰ! ɢᴇᴛ ᴀɴ ᴀᴅᴍɪɴ ᴛᴏ ᴅᴏ ɪᴛ ꜰᴏʀ ᴍᴇ.")
         return
 
     # set same perms as bot - bot can't assign higher perms than itself!
@@ -219,22 +219,22 @@ def promote(update: Update, context: CallbackContext) -> str:
         )
     except BadRequest as err:
         if err.message == "User_not_mutual_contact":
-            message.reply_text("I can't promote someone who isn't in the group.")
+            message.reply_text("I caɴ'ᴛ ᴩʀᴏᴍᴏᴛᴇ ꜱᴏᴍᴇᴏɴᴇ ᴡʜᴏ ɪꜱɴ'ᴛ ɪɴ ᴛʜᴇ ɢʀᴏᴜᴩ.")
         else:
-            message.reply_text("An error occured while promoting.")
+            message.reply_text("Aɴ ᴇʀʀᴏʀ ᴏᴄᴄᴜʀᴇᴅ ᴡʜɪʟᴇ ᴩʀᴏᴍᴏᴛɪɴɢ.")
         return
 
     bot.sendMessage(
         chat.id,
-        f"Promoting a user in <b>{chat.title}</b>\n\nUser: {mention_html(user_member.user.id, user_member.user.first_name)}\nAdmin: {mention_html(user.id, user.first_name)}",
+        f"Pʀᴏᴍᴏᴛɪɴɢ ᴀ ᴜꜱᴇʀ ɪɴ <b>{chat.title}</b>\n\nUꜱᴇʀ: {mention_html(user_member.user.id, user_member.user.first_name)}\nAᴅᴍɪɴ: {mention_html(user.id, user.first_name)}",
         parse_mode=ParseMode.HTML,
     )
 
     log_message = (
         f"<b>{html.escape(chat.title)}:</b>\n"
         f"#PROMOTED\n"
-        f"<b>Admin:</b> {mention_html(user.id, user.first_name)}\n"
-        f"<b>User:</b> {mention_html(user_member.user.id, user_member.user.first_name)}"
+        f"<b>Aᴅᴍɪɴ:</b> {mention_html(user.id, user.first_name)}\n"
+        f"<b>Uꜱᴇʀ:</b> {mention_html(user_member.user.id, user_member.user.first_name)}"
     )
 
     return log_message
@@ -259,14 +259,14 @@ def lowpromote(update: Update, context: CallbackContext) -> str:
         not (promoter.can_promote_members or promoter.status == "creator")
         and user.id not in DRAGONS
     ):
-        message.reply_text("You don't have the necessary rights to do that!")
+        message.reply_text("Yᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴛʜᴇ ɴᴇᴄᴇꜱꜱᴀʀy ʀɪɢʜᴛꜱ ᴛᴏ ᴅᴏ ᴛʜᴀᴛ!")
         return
 
     user_id = extract_user(message, args)
 
     if not user_id:
         message.reply_text(
-            "You don't seem to be referring to a user or the ID specified is incorrect..",
+            "Yᴏᴜ ᴅᴏɴ'ᴛ ꜱᴇᴇᴍ ᴛᴏ ʙᴇ ʀᴇꜰᴇʀʀɪɴɢ ᴛᴏ ᴀ ᴜꜱᴇʀ ᴏʀ ᴛʜᴇ ID ꜱᴩᴇᴄɪꜰɪᴇᴅ ɪꜱ ɪɴᴄᴏʀʀᴇᴄᴛ..",
         )
         return
 
@@ -276,11 +276,11 @@ def lowpromote(update: Update, context: CallbackContext) -> str:
         return
 
     if user_member.status in ('administrator', 'creator'):
-        message.reply_text("How am I meant to promote someone that's already an admin?")
+        message.reply_text("Hᴏᴡ ᴀᴍ ɪ ᴍᴇᴀɴᴛ ᴛᴏ ᴩʀᴏᴍᴏᴛᴇ ꜱᴏᴍᴇᴏɴᴇ ᴛʜᴀᴛ'ꜱ ᴀʟʀᴇᴀᴅy ᴀɴ ᴀᴅᴍɪɴ?")
         return
 
     if user_id == bot.id:
-        message.reply_text("I can't promote myself! Get an admin to do it for me.")
+        message.reply_text("I ᴄᴀɴ'ᴛ ᴩʀᴏᴍᴏᴛᴇ ᴍyꜱᴇʟꜰ! ɢᴇᴛ ᴀɴ ᴀᴅᴍɪɴ ᴛᴏ ᴅᴏ ɪᴛ ꜰᴏʀ ᴍᴇ.")
         return
 
     # set same perms as bot - bot can't assign higher perms than itself!
@@ -296,22 +296,22 @@ def lowpromote(update: Update, context: CallbackContext) -> str:
         )
     except BadRequest as err:
         if err.message == "User_not_mutual_contact":
-            message.reply_text("I can't promote someone who isn't in the group.")
+            message.reply_text("I caɴ'ᴛ ᴩʀᴏᴍᴏᴛᴇ ꜱᴏᴍᴇᴏɴᴇ ᴡʜᴏ ɪꜱɴ'ᴛ ɪɴ ᴛʜᴇ ɢʀᴏᴜᴩ.")
         else:
-            message.reply_text("An error occured while promoting.")
+            message.reply_text("Aɴ ᴇʀʀᴏʀ ᴏᴄᴄᴜʀᴇᴅ ᴡʜɪʟᴇ ᴩʀᴏᴍᴏᴛɪɴɢ.")
         return
 
     bot.sendMessage(
         chat.id,
-        f"Lowpromoting a user in <b>{chat.title}<b>\n\nUser: {mention_html(user_member.user.id, user_member.user.first_name)}\nAdmin: {mention_html(user.id, user.first_name)}",
+        f"Lᴏᴡᴩʀᴏᴍᴏᴛɪɴɢ ᴀ ᴜꜱᴇʀ ɪɴ <b>{chat.title}<b>\n\nUꜱᴇʀ: {mention_html(user_member.user.id, user_member.user.first_name)}\nAᴅᴍɪɴ: {mention_html(user.id, user.first_name)}",
         parse_mode=ParseMode.HTML,
     )
 
     log_message = (
         f"<b>{html.escape(chat.title)}:</b>\n"
         f"#LOWPROMOTED\n"
-        f"<b>Admin:</b> {mention_html(user.id, user.first_name)}\n"
-        f"<b>User:</b> {mention_html(user_member.user.id, user_member.user.first_name)}"
+        f"<b>Aᴅᴍɪɴ:</b> {mention_html(user.id, user.first_name)}\n"
+        f"<b>Uꜱᴇʀ:</b> {mention_html(user_member.user.id, user_member.user.first_name)}"
     )
 
     return log_message
@@ -336,14 +336,14 @@ def fullpromote(update: Update, context: CallbackContext) -> str:
         not (promoter.can_promote_members or promoter.status == "creator")
         and user.id not in DRAGONS
     ):
-        message.reply_text("You don't have the necessary rights to do that!")
+        message.reply_text("Yᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴛʜᴇ ɴᴇᴄᴇꜱꜱᴀʀy ʀɪɢʜᴛꜱ ᴛᴏ ᴅᴏ ᴛʜᴀᴛ!")
         return
 
     user_id = extract_user(message, args)
 
     if not user_id:
         message.reply_text(
-            "You don't seem to be referring to a user or the ID specified is incorrect..",
+            "Yᴏᴜ ᴅᴏɴ'ᴛ ꜱᴇᴇᴍ ᴛᴏ ʙᴇ ʀᴇꜰᴇʀʀɪɴɢ ᴛᴏ ᴀ ᴜꜱᴇʀ ᴏʀ ᴛʜᴇ ID ꜱᴩᴇᴄɪꜰɪᴇᴅ ɪꜱ ɪɴᴄᴏʀʀᴇᴄᴛ..",
         )
         return
 
@@ -353,11 +353,11 @@ def fullpromote(update: Update, context: CallbackContext) -> str:
         return
 
     if user_member.status in ('administrator', 'creator'):
-        message.reply_text("How am I meant to promote someone that's already an admin?")
+        message.reply_text("Hᴏᴡ ᴀᴍ ɪ ᴍᴇᴀɴᴛ ᴛᴏ ᴩʀᴏᴍᴏᴛᴇ ꜱᴏᴍᴇᴏɴᴇ ᴛʜᴀᴛ'ꜱ ᴀʟʀᴇᴀᴅy ᴀɴ ᴀᴅᴍɪɴ?")
         return
 
     if user_id == bot.id:
-        message.reply_text("I can't promote myself! Get an admin to do it for me.")
+        message.reply_text("I ᴄᴀɴ'ᴛ ᴩʀᴏᴍᴏᴛᴇ ᴍyꜱᴇʟꜰ! ɢᴇᴛ ᴀɴ ᴀᴅᴍɪɴ ᴛᴏ ᴅᴏ ɪᴛ ꜰᴏʀ ᴍᴇ.")
         return
 
     # set same perms as bot - bot can't assign higher perms than itself!
@@ -379,9 +379,9 @@ def fullpromote(update: Update, context: CallbackContext) -> str:
         )
     except BadRequest as err:
         if err.message == "User_not_mutual_contact":
-            message.reply_text("I can't promote someone who isn't in the group.")
+            message.reply_text("I caɴ'ᴛ ᴩʀᴏᴍᴏᴛᴇ ꜱᴏᴍᴇᴏɴᴇ ᴡʜᴏ ɪꜱɴ'ᴛ ɪɴ ᴛʜᴇ ɢʀᴏᴜᴩ.")
         else:
-            message.reply_text("An error occured while promoting.")
+            message.reply_text("Aɴ ᴇʀʀᴏʀ ᴏᴄᴄᴜʀᴇᴅ ᴡʜɪʟᴇ ᴩʀᴏᴍᴏᴛɪɴɢ.")
         return
 
     keyboard = InlineKeyboardMarkup([[
@@ -391,15 +391,15 @@ def fullpromote(update: Update, context: CallbackContext) -> str:
 
     bot.sendMessage(
         chat.id,
-        f"Fullpromoting a user in <b>{chat.title}</b>\n\n<b>User: {mention_html(user_member.user.id, user_member.user.first_name)}</b>\n<b>Promoter: {mention_html(user.id, user.first_name)}</b>",
+        f"Fᴜʟʟᴩʀᴏᴍᴏᴛɪɴɢ ᴀ ᴜꜱᴇʀ in <b>{chat.title}</b>\n\n<b>Uꜱᴇʀ: {mention_html(user_member.user.id, user_member.user.first_name)}</b>\n<b>Pʀᴏᴍᴏᴛᴇʀ: {mention_html(user.id, user.first_name)}</b>",
         parse_mode=ParseMode.HTML,
     )
 
     log_message = (
         f"<b>{html.escape(chat.title)}:</b>\n"
         f"#FULLPROMOTED\n"
-        f"<b>Admin:</b> {mention_html(user.id, user.first_name)}\n"
-        f"<b>User:</b> {mention_html(user_member.user.id, user_member.user.first_name)}"
+        f"<b>Aᴅᴍɪɴ:</b> {mention_html(user.id, user.first_name)}\n"
+        f"<b>Uꜱᴇʀ:</b> {mention_html(user_member.user.id, user_member.user.first_name)}"
     )
 
     return log_message
@@ -421,7 +421,7 @@ def demote(update: Update, context: CallbackContext) -> str:
     user_id = extract_user(message, args)
     if not user_id:
         message.reply_text(
-            "You don't seem to be referring to a user or the ID specified is incorrect..",
+            "Yᴏᴜ ᴅᴏɴ'ᴛ ꜱᴇᴇᴍ ᴛᴏ ʙᴇ ʀᴇꜰᴇʀʀɪɴɢ ᴛᴏ ᴀ ᴜꜱᴇʀ ᴏʀ ᴛʜᴇ ID ꜱᴩᴇᴄɪꜰɪᴇᴅ ɪꜱ ɪɴᴄᴏʀʀᴇᴄᴛ..",
         )
         return
 
@@ -431,7 +431,7 @@ def demote(update: Update, context: CallbackContext) -> str:
         return
 
     if user_member.status == "creator":
-        message.reply_text("This person CREATED the chat, how would I demote them?")
+        message.reply_text("Tʜɪꜱ ᴩᴇʀꜱᴏɴ CREATED ᴛʜᴇ ᴄʜᴀᴛ, ʜᴏᴡ ᴡᴏᴜʟᴅ ɪ ᴅᴇᴍᴏᴛᴇ ᴛʜᴇᴍ?")
         return
 
     if not user_member.status == "administrator":
@@ -601,7 +601,7 @@ def pin(update: Update, context: CallbackContext) -> str:
                     [
                         [
                             InlineKeyboardButton(
-                                "👉 Go to message", url=f"{message_link}")
+                                "👉 Gᴏ ᴛᴏ ᴍᴇꜱꜱᴀɢᴇ", url=f"{message_link}")
                         ]
                     ]
                 ), 
@@ -714,7 +714,7 @@ def pinned(update: Update, context: CallbackContext) -> str:
             parse_mode=ParseMode.HTML,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="👉 Go to message", url=f"https://t.me/{link_chat_id}/{pinned_id}")]]
+                [[InlineKeyboardButton(text="👉 Gᴏ ᴛᴏ ᴍᴇꜱꜱᴀɢᴇ", url=f"https://t.me/{link_chat_id}/{pinned_id}")]]
             ),
         )
 
@@ -951,7 +951,7 @@ def bug_reporting(update: Update, _: CallbackContext):
                     f"@{SUPPORT_CHAT}",
                     f"📣 <b>New bug reported.</b>\n\n<b>Chat:</b> <a href='{invitelink}'>{chat.title}</a>\n<b>Name:</b> <a href='tg://user?id={msg.from_user.id}'>{mention_html(msg.from_user.id, msg.from_user.first_name)}</a>\n<b>User ID:</b> <code>{msg.from_user.id}</code>\n<b>Chat id:</b> <code>{chat.id}</code>\n\nContent of the report:\n{bugnya}",
                     reply_markup=InlineKeyboardMarkup(
-                        [[InlineKeyboardButton("Go To Mesaage", url=f"{msg.link}")]]
+                        [[InlineKeyboardButton("Gᴏ ᴛᴏ ᴍᴇꜱꜱᴀɢᴇ", url=f"{msg.link}")]]
                     ),
                     parse_mode=ParseMode.HTML,
                     disable_web_page_preview=True,
