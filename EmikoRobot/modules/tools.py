@@ -1,4 +1,4 @@
-__mod_name__ = "✘ᴛᴏᴏʟꜱ✘"
+__mod_name__ = "Tᴏᴏʟꜱ"
 
 __help__ = """
 *✘ Sangmata Info bot ✘*
