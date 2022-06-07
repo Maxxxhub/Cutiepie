@@ -967,10 +967,10 @@ def bug_reporting(update: Update, _: CallbackContext):
 
 
 __help__ = """
-<u>User Commands:</u>
+**User Commands:**
 ➻ /admins*:* list of admins in the chat
 ➻ /pinned*:* to get the current pinned message.
-<u>The Following Commands are Admins only:</u>
+*The Following Commands are Admins only:*
 ➻ /pin*:* silently pins the message replied to - add `'loud'` or `'notify'` to give notifs to users
 ➻ /unpin*:* unpins the currently pinned message
 ➻ /invitelink*:* gets invitelink
@@ -987,7 +987,7 @@ __help__ = """
 ➻ /setdesc*:* Set group description
 ➻ /setsticker*:* Set group sticker
 ➻ /bug*:* to report a bug on bot • example: /bug Music not working.
-<b>Rules:</b>
+*Rules:*
 ➻ /rules*:* get the rules for this chat.
 ➻ /setrules <your rules here>*:* set the rules for this chat.
 ➻ /clearrules*:* clear the rules for this chat.
