@@ -109,7 +109,7 @@ async def cancel_spam(event):
         return await event.respond("__Stopped Mention.__")
 
 
-__mod_name__ = "✘ᴛᴀɢ ᴀʟʟ✘"
+__mod_name__ = "Tᴀɢ Aʟʟ"
 __help__ = """
 ──「 Mention all func 」──
 ✘ Teddy Can Be a Mention Bot for your group ✘.
