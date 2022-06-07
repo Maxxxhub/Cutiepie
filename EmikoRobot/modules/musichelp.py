@@ -1,4 +1,4 @@
-__mod_name__ = "✘ᴍᴜꜱɪᴄ ᴩʟᴀyᴇʀ✘"
+__mod_name__ = "Mᴜꜱɪᴄ ᴩʟᴀyᴇʀ"
 
 __help__ = """
 ──「 Music stream 」──              
