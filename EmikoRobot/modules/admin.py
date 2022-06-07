@@ -987,7 +987,7 @@ __help__ = """
 ➻ /setdesc*:* Set group description
 ➻ /setsticker*:* Set group sticker
 ➻ /bug*:* to report a bug on bot • example: /bug Music not working.
-<u>Rules:</u>
+<b>Rules:</b>
 ➻ /rules*:* get the rules for this chat.
 ➻ /setrules <your rules here>*:* set the rules for this chat.
 ➻ /clearrules*:* clear the rules for this chat.
