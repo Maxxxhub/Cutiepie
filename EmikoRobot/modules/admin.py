@@ -967,10 +967,10 @@ def bug_reporting(update: Update, _: CallbackContext):
 
 
 __help__ = """
-*User Commands*:
+<u>*User Commands*:</u>
 ➻ /admins*:* list of admins in the chat
 ➻ /pinned*:* to get the current pinned message.
-*The Following Commands are Admins only:* 
+<u>*The Following Commands are Admins only*:</u>
 ➻ /pin*:* silently pins the message replied to - add `'loud'` or `'notify'` to give notifs to users
 ➻ /unpin*:* unpins the currently pinned message
 ➻ /invitelink*:* gets invitelink
@@ -987,7 +987,7 @@ __help__ = """
 ➻ /setdesc*:* Set group description
 ➻ /setsticker*:* Set group sticker
 ➻ /bug*:* to report a bug on bot • example: /bug Music not working.
-*Rules*:
+<u>*Rules*:</u>
 ➻ /rules*:* get the rules for this chat.
 ➻ /setrules <your rules here>*:* set the rules for this chat.
 ➻ /clearrules*:* clear the rules for this chat.
@@ -1039,7 +1039,7 @@ dispatcher.add_handler(DEMOTE_HANDLER)
 dispatcher.add_handler(SET_TITLE_HANDLER)
 dispatcher.add_handler(ADMIN_REFRESH_HANDLER)
 
-__mod_name__ = "✘ ᴀᴅᴍɪɴꜱ ✘"
+__mod_name__ = "Aᴅᴍɪɴꜱ"
 __command_list__ = [
     "setdesc"
     "setsticker"
