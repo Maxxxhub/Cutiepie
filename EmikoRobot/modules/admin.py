@@ -967,7 +967,7 @@ def bug_reporting(update: Update, _: CallbackContext):
 
 
 __help__ = """
-**User Commands:**
+*User Commands:*
 ➻ /admins*:* list of admins in the chat
 ➻ /pinned*:* to get the current pinned message.
 *The Following Commands are Admins only:*
@@ -986,7 +986,7 @@ __help__ = """
 ➻ /setgpic*:* reply to an image to set as group photo
 ➻ /setdesc*:* Set group description
 ➻ /setsticker*:* Set group sticker
-➻ /bug*:* to report a bug on bot • example: /bug Music not working.
+➻ /bug*:* to report a bug on bot \n• example: /bug Music not working.
 *Rules:*
 ➻ /rules*:* get the rules for this chat.
 ➻ /setrules <your rules here>*:* set the rules for this chat.
