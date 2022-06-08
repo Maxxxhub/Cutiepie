@@ -36,5 +36,4 @@ else:
                     ]
                 ]
             ),
-        )
   await tbot.send_file(event.chat_id, PHOTO, caption=TEXT,  buttons=BUTTON)
