@@ -7,6 +7,7 @@ from telethon import __version__ as tlhver
 from pyrogram import __version__ as pyrover
 from EmikoRobot.events import register
 from EmikoRobot import telethn as tbot
+from EmikoRobot.script import TEDDY_ALIVE_IMG
 
 
 @register(pattern=("/alive"))
@@ -21,7 +22,7 @@ async def awake(event):
   
 else:
         update.effective_message.reply_photo(
-            random.choice(TEDDY_GROUP_START_IMG)
+            random.choice(TEDDY_ALIVE_IMG)
             ),
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
