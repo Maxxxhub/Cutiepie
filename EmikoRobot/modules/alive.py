@@ -16,7 +16,7 @@ async def awake(event):
   TEXT = f"**ʜɪɪ [{event.sender.first_name}](tg://user?id={event.sender.id}), ɪ'ᴍ ᴛᴇᴅᴅy ʀᴏʙᴏᴛ.** \n\n"
   TEXT += "⚪ **ɪ'ᴍ ᴡᴏʀᴋɪɴɢ ᴩʀᴏᴩᴇʀʟy** \n\n"
   TEXT += f"⚪ **ᴍy ᴍᴀꜱᴛᴇʀ : [ꜱᴜʀᴜ](https://t.me/smokerr_xd)** \n\n"
-  TEXT += f"⚪ <b>ʟɪʙʀᴀʀy ᴠᴇʀꜱɪᴏɴ :</b> `{telever}` \n\n"
+  TEXT += f"⚪ **ʟɪʙʀᴀʀy ᴠᴇʀꜱɪᴏɴ :** `{telever}` \n\n"
   TEXT += f"⚪ **ᴛᴇʟᴇᴛʜᴏɴ ᴠᴇʀꜱɪᴏɴ :** `{tlhver}` \n\n"
   TEXT += f"⚪ **ᴩyʀᴏɢʀᴀᴍ ᴠᴇʀꜱɪᴏɴ :** `{pyrover}` \n\n"
   TEXT += "**ᴛʜᴀɴᴋꜱ ꜰᴏʀ ᴀᴅᴅɪɴɢ ᴍᴇ ʜᴇʀᴇ, ᴅᴀʀʟɪɴɢ❤️**"
