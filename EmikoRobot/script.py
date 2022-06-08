@@ -14,4 +14,8 @@ TEDDY_GROUP_START_IMG = (
   "https://telegra.ph//file/3a88a958a88e83d85d284.jpg",
   "https://telegra.ph/file/14be160df3b84c59e268e.jpg",
 )
+TEDDY_ALIVE_IMG = (
+  "https://te.legra.ph/file/249fb93bb4219d5a0368f.jpg"
+  "https://te.legra.ph/file/d9da10bb8f4482e207732.jpg"
+)
   
