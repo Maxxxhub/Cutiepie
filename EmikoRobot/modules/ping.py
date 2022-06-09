@@ -6,7 +6,7 @@ import random
 import os
 import asyncio
 from typing import List
-from EmikoRobot import bot_sys_stats
+from EmikoRobot import STATS
 
 import requests
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
