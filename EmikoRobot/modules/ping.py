@@ -19,7 +19,8 @@ from telegram.ext import (
     MessageHandler,
 )
 
-from EmikoRobot import StartTime, dispatcher, pgram
+from EmikoRobot import StartTime, dispatcher
+from EmikoRobot.__main__ import pgram
 from pyrogram import filters
 from EmikoRobot.modules.disable import DisableAbleCommandHandler
 from EmikoRobot.script import TEDDY_PING_IMG
