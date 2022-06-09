@@ -2,6 +2,7 @@ import time
 import importlib
 from sys import argv
 import re
+import random
 import os
 import asyncio
 from typing import List
@@ -21,6 +22,7 @@ from telegram.ext import (
 from EmikoRobot import StartTime, dispatcher, pgram
 from pyrogram import filters
 from EmikoRobot.modules.disable import DisableAbleCommandHandler
+from EmikoRobot.script import TEDDY_PING_IMG
 
 sites_list = {
     "Telegram": "https://api.telegram.org",
@@ -97,12 +99,12 @@ def ping(update: Update, context: CallbackContext):
 
 
     update.effective_message.reply_photo(
-        PING_IMG, caption=text,
+        random.choice(TEDDY_PING_IMG), caption=text,
         parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
                   [
-                  InlineKeyboardButton(text="System Stats 💻", callback_data="stats_callback")
+                  InlineKeyboardButton(text="📍 System Stats 📍", callback_data="stats_callback")
                   ]
                 ]
             ),
@@ -127,12 +129,12 @@ def pingall(update: Update, context: CallbackContext):
     reply_msg += '\n<b>Service uptime:</b> <code>{}</code>'.format(uptime)
 
     update.effective_message.reply_photo(
-        PING_IMG, caption=reply_msg,
+        random.choice(TEDDY_PING_IMG), caption=text,
         parse_mode=ParseMode.HTML,
         reply_markup=InlineKeyboardMarkup(
                 [
                   [
-                  InlineKeyboardButton(text="System Stats 💻", callback_data="stats_callback")
+                  InlineKeyboardButton(text="📍 System Stats 📍", callback_data="stats_callback")
                   ]
                 ]
             ),
