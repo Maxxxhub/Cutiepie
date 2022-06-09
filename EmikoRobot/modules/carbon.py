@@ -24,18 +24,18 @@ async def carbon_func(_, message):
     carbon.close()
 
 
-MEMEK = "https://te.legra.ph/file/f4c942f18d17650efa0c2.jpg"
+MEMEK = "https://telegra.ph/file/c18f3d06a999cd1839312.jpg"
 
 @pbot.on_message(filters.command("repo"))
 async def repo(_, message):
     await message.reply_photo(
         photo=MEMEK,
-        caption=f"""✨ **Hᴇy, ɪ'ᴍ ᴛᴇᴅᴅy ʀᴏʙᴏᴛ** 
-**Oᴡɴᴇʀ ʀᴇᴩᴏ : [Suru](https://t.me/smokerr_xd)**
-**Pyᴛʜᴏɴ ᴠᴇʀꜱɪᴏɴ :** `{y()}`
-**Lɪʙʀᴀʀy ᴠᴇʀꜱɪᴏɴ :** `{o}`
-**Tᴇʟᴇᴛʜᴏɴ ᴠᴇʀꜱɪᴏɴ :** `{s}`
-**Pyʀᴏɢʀᴀᴍ ᴠᴇʀꜱɪᴏɴ :** `{z}`
+        caption=f"""✨ **Hᴇy, ɪ'ᴍ ᴛᴇᴅᴅy ʀᴏʙᴏᴛ** \n\n"
+**Oᴡɴᴇʀ ʀᴇᴩᴏ : [Suru](https://t.me/smokerr_xd)** \n\n"
+**Pyᴛʜᴏɴ ᴠᴇʀꜱɪᴏɴ :** `{y()}` \n\n"
+**Lɪʙʀᴀʀy ᴠᴇʀꜱɪᴏɴ :** `{o}` \n\n"
+**Tᴇʟᴇᴛʜᴏɴ ᴠᴇʀꜱɪᴏɴ :** `{s}` \n\n"
+**Pyʀᴏɢʀᴀᴍ ᴠᴇʀꜱɪᴏɴ :** `{z}` \n\n"
 **🙂.**
 """,
         reply_markup=InlineKeyboardMarkup(
