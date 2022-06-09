@@ -21,3 +21,7 @@ TEDDY_GROUP_START_IMG = (
 "https://telegra.ph/file/64f01f5b87e7963d1a79e.jpg",
 "https://telegra.ph/file/acdef9f9c0e24ad4f019e.jpg",
 )
+TEDDY_PING_IMG = (
+  "https://te.legra.ph/file/f4c942f18d17650efa0c2.jpg"
+  "https://te.legra.ph/file/e4921c9b600f45bde42cc.jpg"
+)
