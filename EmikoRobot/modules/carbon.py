@@ -24,27 +24,27 @@ async def carbon_func(_, message):
     carbon.close()
 
 
-MEMEK = "https://telegra.ph/file/509f39a0c35ee17623478.jpg"
+MEMEK = "https://te.legra.ph/file/f4c942f18d17650efa0c2.jpg"
 
 @pbot.on_message(filters.command("repo"))
 async def repo(_, message):
     await message.reply_photo(
         photo=MEMEK,
-        caption=f"""✨ **Hey I'm Teddy Robot** 
-**Owner repo : [Suru](https://t.me/smokerr_xd)**
-**Python Version :** `{y()}`
-**Library Version :** `{o}`
-**Telethon Version :** `{s}`
-**Pyrogram Version :** `{z}`
-**hehehe.**
+        caption=f"""✨ **Hᴇy, ɪ'ᴍ ᴛᴇᴅᴅy ʀᴏʙᴏᴛ** 
+**Oᴡɴᴇʀ ʀᴇᴩᴏ : [Suru](https://t.me/smokerr_xd)**
+**Pyᴛʜᴏɴ ᴠᴇʀꜱɪᴏɴ :** `{y()}`
+**Lɪʙʀᴀʀy ᴠᴇʀꜱɪᴏɴ :** `{o}`
+**Tᴇʟᴇᴛʜᴏɴ ᴠᴇʀꜱɪᴏɴ :** `{s}`
+**Pyʀᴏɢʀᴀᴍ ᴠᴇʀꜱɪᴏɴ :** `{z}`
+**🙂.**
 """,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "Repo", url="https://t.me/smokerr_xd"), 
+                        "📍 Rᴇᴩᴏ 📍", url="https://t.me/smokerr_xd"), 
                     InlineKeyboardButton(
-                        "Support", url="https://t.me/teddysupport")
+                        "📍 Sᴜᴩᴩᴏʀᴛ 📍", url="https://t.me/teddysupport")
                 ]
             ]
         )
