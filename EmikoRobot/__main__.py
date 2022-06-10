@@ -232,6 +232,7 @@ def start(update: Update, context: CallbackContext):
                 disable_web_page_preview=False,
             )
     else:
+        await message.reply_sticker("CAACAgUAAxkBAAEENxZiNtPdibVkMsjLZrUG9NK4hotHQgAC2wEAAoM12VSdN9ujxVtnUyME")
         update.effective_message.reply_photo(
             random.choice(TEDDY_GROUP_START_IMG), caption= "𝗜'𝗠 𝗔𝗪𝗔𝗞𝗘 𝗗𝗔𝗥𝗟𝗜𝗡𝗚 \n<b>𝗛𝗔𝗩𝗘𝗡'𝗧 𝗦𝗟𝗘𝗣𝗧 𝗦𝗜𝗡𝗖𝗘 💥:</b> <code>{}</code>".format(
                 uptime
