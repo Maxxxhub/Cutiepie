@@ -240,11 +240,11 @@ def start(update: Update, context: CallbackContext):
                 [
                     [
                         InlineKeyboardButton(
-                            text="♠️ ᴀᴅᴅ ᴛᴇᴅᴅy ♠️",
+                            text="♠️ᴀᴅᴅ ᴛᴇᴅᴅy♠️",
                             url="t.me/TeddyRobot_bot?startgroup=new",
                         ),
                         InlineKeyboardButton(
-                            text="♨️UPDATES♨️",
+                            text="♨️ᴜᴩᴅᴀᴛᴇꜱ♨️",
                             url="t.me/teddy_bot_updates",
                         ),
                     ]
