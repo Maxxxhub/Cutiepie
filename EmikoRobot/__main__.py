@@ -234,14 +234,18 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_photo(
-            random.choice(TEDDY_GROUP_START_IMG), caption= f"<b>𝐇ɪ Dᴀʀʟɪɴɢ ❤️ 𝐈'ᴍ Tᴇᴅᴅy 𝐑ᴏʙᴏᴛ</b>\n<b> 𝐒ᴛᴀʀᴛᴇᴅ 𝐖ᴏʀᴋɪɴɢ 𝐒ɪɴᴄᴇ </b> <code>⚡️{uptime}⚡️</code>",
+            random.choice(TEDDY_GROUP_START_IMG), caption= f"<b>𝐇ɪ Dᴀʀʟɪɴɢ ❤️ 𝐈'ᴍ Tᴇᴅᴅy 𝐑ᴏʙᴏᴛ</b>\n<b> 𝐒ᴛᴀʀᴛᴇᴅ 𝐖ᴏʀᴋɪɴɢ 𝐒ɪɴᴄᴇ </b> <code>📍{uptime}📍</code>",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="♠️ ᴀᴅᴅ ᴛᴇᴅᴅy ᴛᴏ yᴏᴜʀ ɢʀᴏᴜᴩ ♠️",
+                            text="♠️ ᴀᴅᴅ ᴛᴇᴅᴅy ♠️",
                             url="t.me/TeddyRobot_bot?startgroup=new",
+                        ),
+                        inlinekeyboardButton(
+                            text="♨️UPDATES♨️",
+                            uel="t.me/teddy_bot_updates",
                         ),
                     ]
                 ]
@@ -457,7 +461,7 @@ def emiko_about_callback(update, context):
                 [
                  [
                     InlineKeyboardButton(text="🚩 ꜱᴜᴩᴩᴏʀᴛ 🚩", url="t.me/teddysupport"),
-                    InlineKeyboardButton(text="♾️ ᴜᴩᴅᴀᴛᴇꜱ ♾️", url="https://t.me/teddysupport"),
+                    InlineKeyboardButton(text="♾️ ᴜᴩᴅᴀᴛᴇꜱ ♾️", url="https://t.me/teddy_bot_updates"),
                  ],
                  [
                     InlineKeyboardButton(text="◁", callback_data="emiko_"),
@@ -476,7 +480,7 @@ def emiko_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="❤️‍ ꜱᴜʀᴜ 💜", url="https://t.me/smokerr_xd"),
+                    InlineKeyboardButton(text="🖤 ꜱᴜʀᴜ 🖤", url="https://t.me/smokerr_xd"),
                  ],
                  [
                     InlineKeyboardButton(text="◁", callback_data="emiko_"),
@@ -548,7 +552,7 @@ def get_help(update: Update, context: CallbackContext):
             )
             return
         update.effective_message.reply_text(
-            "» ᴄʜᴏᴏsᴇ ᴀɴ ᴏᴩᴛɪᴏɴ ғᴏʀ ɢᴇᴛᴛɪɴɢ ʜᴇʟᴩ.",
+            "♨️ ᴄʜᴏᴏsᴇ ᴀɴ ᴏᴩᴛɪᴏɴ ғᴏʀ ɢᴇᴛᴛɪɴɢ ʜᴇʟᴩ.",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
@@ -799,16 +803,24 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", f"[нℓσ ∂αяℓιиg ❤️, ι'м αℓινє 🔥...!!!)](https://telegra.ph/file/08781a98407cc57459a38.jpg)", parse_mode=ParseMode.MARKDOWN)
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", f"[нℓσ ∂αяℓιиg ❤️, ι'м αℓινє 🔥...!!!)](https://telegra.ph/file/08781a98407cc57459a38.jpg)",
+                                       parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
-                  [                  
-                       InlineKeyboardButton(
-                             text="[♠️ ᴀᴅᴅ ᴛᴇᴅᴅy ᴛᴏ yᴏᴜʀ ɢʀᴏᴜᴩ ♠️]",
-                             url="https://t.me/teddyrobot_bot?startgroup=true")
-                     ] 
+                    [
+                        InlineKeyboardButton(
+                            text="♠️ ᴀᴅᴅ ᴛᴇᴅᴅy ♠️",
+                            url="t.me/TeddyRobot_bot?startgroup=new",
+                        ),
+                        inlinekeyboardButton(
+                            text="♨️UPDATES♨️",
+                            uel="t.me/teddy_bot_updates",
+                        ),
+                    ]
                 ]
-            )
+            ),
+        )
+
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!",
