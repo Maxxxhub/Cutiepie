@@ -814,7 +814,7 @@ def main():
                         ),
                         inlinekeyboardButton(
                             text="♨️UPDATES♨️",
-                            uel="t.me/teddy_bot_updates",
+                            url="t.me/teddy_bot_updates",
                         ),
                     ]
                 ]
