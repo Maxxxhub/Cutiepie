@@ -11,7 +11,7 @@ from EmikoRobot import telethn as tbot
 PHOTO = "https://telegra.ph/file/00d5abf609557589c8d72.jpg"
 @register(pattern=("/alive"))
 async def awake(event):
-  TEXT = f"**ʜɪɪ [{event.sender.first_name}](tg://user?id={event.sender.id}), ɪ'ᴍ ᴛᴇᴅᴅy ʀᴏʙᴏᴛ.** \n\n"
+  TEXT = f"**ʜɪɪ [{event.sender.first_name}](tg://user?id={event.sender.id}),『 ɪ'ᴍ ᴛᴇᴅᴅy ʀᴏʙᴏᴛ 』** \n\n"
   TEXT += "⚪ **ɪ'ᴍ ᴡᴏʀᴋɪɴɢ ᴩʀᴏᴩᴇʀʟy** \n\n"
   TEXT += f"⚪ **ᴍy ᴍᴀꜱᴛᴇʀ : [ꜱᴜʀᴜ](https://t.me/smokerr_xd)** \n\n"
   TEXT += f"⚪ **ʟɪʙʀᴀʀy ᴠᴇʀꜱɪᴏɴ :** `{telever}` \n\n"
