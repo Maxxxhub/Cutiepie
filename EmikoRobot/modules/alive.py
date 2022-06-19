@@ -9,7 +9,7 @@ from EmikoRobot.events import register
 from EmikoRobot import telethn as tbot
 
 PHOTO = "https://telegra.ph/file/00d5abf609557589c8d72.jpg"
-@register(pattern=("/alive"))
+@register(pattern=("/alive", "/teddy"))
 async def awake(event):
   TEXT = f"**ʜɪɪ [{event.sender.first_name}](tg://user?id={event.sender.id}),『 ɪ'ᴍ ᴛᴇᴅᴅy ʀᴏʙᴏᴛ 』** \n\n"
   TEXT += "⚪ **ɪ'ᴍ ᴡᴏʀᴋɪɴɢ ᴩʀᴏᴩᴇʀʟy** \n\n"
