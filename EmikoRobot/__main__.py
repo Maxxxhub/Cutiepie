@@ -87,13 +87,13 @@ def get_readable_time(seconds: int) -> str:
 
 PM_START_TEXT = """
 *✧ ᴏɪ ᴏɪ ᴏɪ, {} !*
- ᴍʏsᴇʟғ :- ᴛᴇᴅᴅy, ɴɪᴄᴇ ᴛᴏ ᴍᴇᴇᴛ ʏᴀ 💜
- ɪ ᴄᴀɴ ʜᴇʟᴘ ʏᴏᴜ ɪɴ ᴍᴀɴᴀɢɪɴɢ ʏᴏᴜʀ ɢʀᴏᴜᴘ ɪғ ʏᴏᴜ ᴡᴀɴᴛ! [🎀](https://telegra.ph/file/f996f7be2a32f66f71694.mp4)
-────────────────────────
-× *ᴀʟɪᴠᴇ ꜱɪɴᴄᴇ:* `{}`
-× `{}` *ᴍʏ ғʀɪᴇɴᴅs, ᴀᴄʀᴏss* `{}` *ᴄʜᴀᴛs.*
-────────────────────────
-• ᴄʜᴇᴄᴋ ᴏᴜᴛ ᴍʏ ᴄᴏᴍᴍᴀɴᴅs ʙʏ ᴄʟɪᴄᴋɪɴɢ /help.
+ 『 ᴍʏsᴇʟғ :- ᴛᴇᴅᴅy, ɴɪᴄᴇ ᴛᴏ ᴍᴇᴇᴛ ʏᴀ 💜
+    ɪ ᴄᴀɴ ʜᴇʟᴘ ʏᴏᴜ ɪɴ ᴍᴀɴᴀɢɪɴɢ ʏᴏᴜʀ ɢʀᴏᴜᴘ ɪғ ʏᴏᴜ ᴡᴀɴᴛ! [🎀](https://telegra.ph/file/f996f7be2a32f66f71694.mp4)
+    ╔═══════════════════════╗
+    ┣➪ *ᴀʟɪᴠᴇ ꜱɪɴᴄᴇ:* `{}`
+    ┣➪ `{}` *ᴍʏ ғʀɪᴇɴᴅs, ᴀᴄʀᴏss* `{}` *ᴄʜᴀᴛs.*
+    ╚═══════════════════════╝
+         ᴄʜᴇᴄᴋ ᴏᴜᴛ ᴍʏ ᴄᴏᴍᴍᴀɴᴅs ʙʏ ᴄʟɪᴄᴋɪɴɢ /help. 』
 """
 
 buttons = [
@@ -184,7 +184,7 @@ def send_help(chat_id, text, keyboard=None):
 def test(update: Update, context: CallbackContext):
     # pprint(eval(str(update)))
     # update.effective_message.reply_text("Hola tester! _I_ *have* `markdown`", parse_mode=ParseMode.MARKDOWN)
-    update.effective_message.reply_text("This person edited a message")
+    update.effective_message.reply_text("Hᴀᴀɴ ❤️ᴅᴇ, ᴢɪɴᴅᴀ ʜᴜ")
     print(update.effective_message)
 
 
@@ -324,7 +324,7 @@ def help_button(update, context):
         if mod_match:
             module = mod_match.group(1)
             text = (
-                "Here is the help for the *{}* module:\n".format(
+                "Hᴇʀᴇ ɪꜱ ᴛʜᴇ ʜᴇʟᴩ ꜰᴏʀ ᴛʜᴇ *{}* ᴍᴏᴅᴜʟᴇ:\n".format(
                     HELPABLE[module].__mod_name__
                 )
                 + HELPABLE[module].__help__
@@ -575,7 +575,7 @@ def get_help(update: Update, context: CallbackContext):
     elif len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
         module = args[1].lower()
         text = (
-            "Here is the available help for the *{}* module:\n".format(
+            "Hᴇʀᴇ ɪꜱ ᴛʜᴇ ʜᴇʟᴩ ꜰᴏʀ ᴛʜᴇ *{}* ᴍᴏᴅᴜʟᴇ:\n".format(
                 HELPABLE[module].__mod_name__
             )
             + HELPABLE[module].__help__
