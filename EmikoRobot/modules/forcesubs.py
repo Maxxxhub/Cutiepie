@@ -40,13 +40,13 @@ def _onUnMuteRequest(client, cb):
                 except UserNotParticipant:
                     client.answer_callback_query(
                         cb.id,
-                        text=f"❗ Join our @{channel} channel and press 'Unmute Me' button.",
+                        text=f"❗ Jᴏɪɴ ᴏᴜʀ @{channel} ᴄʜᴀɴɴᴇʟ ᴀɴᴅ ᴘʀᴇss  '✌️Uɴᴍᴜᴛᴇ ᴍᴇ✌️' ʙᴜᴛᴛᴏɴ.",
                         show_alert=True,
                     )
             else:
                 client.answer_callback_query(
                     cb.id,
-                    text="❗ You have been muted by admins due to some other reason.",
+                    text="❗ Yᴏᴜ ʜᴀᴠᴇ ʙᴇᴇɴ ᴍᴜᴛᴇᴅ ʙʏ ᴀᴅᴍɪɴs ᴅᴜᴇ ᴛᴏ sᴏᴍᴇ ᴏᴛʜᴇʀ ʀᴇᴀsᴏɴ.",
                     show_alert=True,
                 )
         else:
@@ -54,13 +54,13 @@ def _onUnMuteRequest(client, cb):
             ):
                 client.send_message(
                     chat_id,
-                    f"❗ **{cb.from_user.mention} is trying to UnMute himself but i can't unmute him because i am not an admin in this chat add me as admin again.**\n__#Leaving this chat...__",
+                    f"❗ **{cb.from_user.mention} ɪs ᴛʀʏɪɴɢ ᴛᴏ ᴜɴᴍᴜᴛᴇ ʜɪᴍsᴇʟғ ʙᴜᴛ ɪ ᴄᴀɴ'ᴛ ᴜɴᴍᴜᴛᴇ ʜɪᴍ ʙᴄᴏᴢ ɪ ᴀᴍ ɴᴏᴛ ᴀᴅᴍɪɴ ɪɴ ᴛʜɪs ᴄʜᴀᴛ..Aᴅᴅ ᴍᴇ ᴀs ᴀᴅᴍɪɴ ғɪʀsᴛ.**\n__#Lᴇᴀᴠɪɴɢ ᴛʜɪs ᴄʜᴀᴛ...__",
                 )
 
             else:
                 client.answer_callback_query(
                     cb.id,
-                    text="❗ Warning! Don't press the button when you cn talk.",
+                    text="❗ Wᴀʀɴɪɴɢ! Mᴀᴢᴇ ɴᴀʜ ʟᴇ ʙᴇᴛᴇ 🤨.",
                     show_alert=True,
                 )
 
@@ -80,7 +80,7 @@ def _check_member(client, message):
             except UserNotParticipant:
                 try:
                     sent_message = message.reply_text(
-                        "Welcome {} 🙏 \n **You haven't joined our @{} Channel yet**👷 \n \nPlease Join [Our Channel](https://t.me/{}) and hit the **UNMUTE ME** Button. \n \n ".format(
+                        "Wᴇʟᴄᴏᴍᴇ ʙʀᴏᴛʜᴇʀ/sɪs {} 🙏 \n **Yᴏᴜ ʜᴀᴠᴇɴ'ᴛ ᴊᴏɪɴᴇᴅ ᴏᴜʀ @{} ᴄʜᴀɴɴᴇʟ ʏᴇᴛ**😕 \n \nJᴏɪɴ [Oᴜʀ ᴄʜᴀɴɴᴇʟ](https://t.me/{}) ᴀɴᴅ ʜɪᴛ ᴛʜᴀᴛ **✌️Uɴᴍᴜᴛᴇ ᴍᴇ✌️** Bᴜᴛᴛᴏɴ. \n \n ".format(
                             message.from_user.mention, channel, channel
                         ),
                         disable_web_page_preview=True,
@@ -88,13 +88,13 @@ def _check_member(client, message):
                             [
                                 [
                                     InlineKeyboardButton(
-                                        "Join Channel",
+                                        "👉Jᴏɪɴ ᴄʜᴀɴɴᴇʟ👈",
                                         url="https://t.me/{}".format(channel),
                                     )
                                 ],
                                 [
                                     InlineKeyboardButton(
-                                        "Unmute Me", callback_data="onUnMuteRequest"
+                                        "✌️Uɴᴍᴜᴛᴇ ᴍᴇ✌️", callback_data="onUnMuteRequest"
                                     )
                                 ],
                             ]
@@ -105,13 +105,13 @@ def _check_member(client, message):
                     )
                 except ChatAdminRequired:
                     sent_message.edit(
-                        "😕 **Teddy is not admin here..**\n__Give me ban permissions and retry.. \n#Ending FSub...__"
+                        "😕 **Tᴇᴅᴅʏ ɪs ɴᴏᴛ ᴀᴅᴍɪɴ ʜᴇʀᴇ..**\n__Mᴀᴋᴇ ᴛᴇᴅᴅʏ ᴀᴅᴍɪɴ ᴡɪᴛʜ ʙᴀɴ ʀɪɢʜᴛs ᴀɴᴅ ʀᴇᴛʀʏ.. \n#Eɴᴅɪɴɢ FSUB...__"
                     )
 
             except ChatAdminRequired:
                 client.send_message(
                     chat_id,
-                    text=f"😕 **I not an admin of @{channel} channel.**\n__Give me admin of that channel and retry.\n#Ending FSub...__",
+                    text=f"😕 **I ᴀᴍ ɴᴏᴛ ᴀɴ ᴀᴅᴍɪɴ ᴏғ @{channel} ᴄʜᴀɴɴᴇʟ.**\n__Mᴀᴋᴇ ᴍᴇ ᴀᴅᴍɪɴ ɪɴ @{channel} ᴀɴᴅ ʀᴇᴛʀʏ.\n#Eɴᴅɪɴɢ FSUB...__",
                 )
 
 
@@ -125,10 +125,10 @@ def config(client, message):
             input_str = input_str.replace("@", "")
             if input_str.lower() in ("off", "no", "disable"):
                 sql.disapprove(chat_id)
-                message.reply_text("❌ **Force Subscribe is Disabled Successfully.**")
+                message.reply_text("❌ **Fᴏʀᴄᴇ sᴜʙsᴄʀɪʙᴇ ɪs ᴅɪsᴀʙʟᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ.**")
             elif input_str.lower() in ("clear"):
                 sent_message = message.reply_text(
-                    "**Unmuting all members who are muted by me...**"
+                    "**Uɴᴍᴜᴛɪᴍɢ ᴀʟʟ ᴍᴇᴍʙᴇʀs ᴡʜᴏ ᴀʀᴇ ᴍᴜᴛᴇᴅ ʙʏ ᴍᴇ...**"
                 )
                 try:
                     for chat_member in client.get_chat_members(
@@ -137,67 +137,67 @@ def config(client, message):
                         if chat_member.restricted_by.id == (client.get_me()).id:
                             client.unban_chat_member(chat_id, chat_member.user.id)
                             time.sleep(1)
-                    sent_message.edit("✅ **Unmuted all members who are muted by me.**")
+                    sent_message.edit("✅ **Uɴᴍᴜᴛᴇᴅ ᴀʟʟ ᴍᴇᴍʙᴇʀs ᴡʜᴏ ᴀʀᴇ ᴍᴜᴛᴇᴅ ʙʏ ᴍᴇ.**")
                 except ChatAdminRequired:
                     sent_message.edit(
-                        "😕 **I am not an admin in this chat.**\n__I can't unmute members because i am not an admin in this chat make me admin with ban user permission.__"
+                        "😕 **I ᴀᴍ ɴᴏᴛ ᴀɴ ᴀᴅᴍɪɴ ɪɴ ᴛʜɪs ᴄʜᴀᴛ.**\n__I ᴄᴀɴ'ᴛ ᴜɴᴍᴜᴛᴇ ᴍᴍʙᴇʀs ʙᴄᴏᴢ ɪ ᴀᴍ ɴᴏᴛ ᴀɴ ᴀᴅᴍɪɴ ɪɴ ᴛʜɪs ᴄʜᴀᴛ, ᴍᴀᴋᴇ ᴍᴇ ᴀᴅᴍɪɴ ᴡᴏᴛʜ ʙᴀɴ ᴜsᴇʀ ᴘᴇʀᴍɪssɪᴏɴ.__"
                     )
             else:
                 try:
                     client.get_chat_member(input_str, "me")
                     sql.add_channel(chat_id, input_str)
                     message.reply_text(
-                        f"✅ **Force Subscribe is Enabled**\n__Force Subscribe is enabled, all the group members have to subscribe this [channel](https://t.me/{input_str}) in order to send messages in this group.__",
+                        f"✅ **Fᴏʀᴄᴇ Sᴜʙsᴄʀɪʙᴇ ɪs ᴇɴᴀʙʟᴇᴅ**\n__Fᴏʀᴄᴇ Sᴜʙsᴄʀɪʙᴇ ɪs ᴇɴᴀʙʟᴇᴅ, ᴀʟʟ ᴛʜᴇ ɢʀᴏᴜᴘ ᴍᴇᴍʙᴇʀsʜᴀᴠᴇ ᴛᴏ sᴜʙsᴄʀɪʙᴇ ᴛ [ᴄʜᴀɴɴᴇʟ](https://t.me/{input_str}) ɪɴ ᴏʀᴅᴇʀ ᴛᴏ sᴇᴍᴅ ᴍsɢ's ɪɴ ᴛʜɪs ɢʀᴏᴜᴘ.__",
                         disable_web_page_preview=True,
                     )
                 except UserNotParticipant:
                     message.reply_text(
-                        f"😕 **Not an Admin in the Channel**\n__I am not an admin in the [channel](https://t.me/{input_str}). Add me as a admin in order to enable ForceSubscribe.__",
+                        f"😕 **Nᴏᴛ ᴀɴ ᴀᴅᴍɪɴ ɪɴ ᴛʜᴇ ᴄʜᴀɴɴᴇʟ**\n__I ᴀᴍ ɴᴏᴛ ᴀɴ ᴀᴅᴍɪɴ ɪɴ ᴛʜᴇ [ᴄʜᴀɴɴᴇʟ](https://t.me/{input_str}). Aᴅᴅ ᴍᴇ ᴀs ᴀ ᴀᴅᴍɪɴ ɪɴ ᴏʀᴅᴇʀ ᴛᴏ ᴇɴᴀʙʟᴇ ғsᴜʙ.__",
                         disable_web_page_preview=True,
                     )
                 except (UsernameNotOccupied, PeerIdInvalid):
-                    message.reply_text(f"❗ **Invalid Channel Username.**")
+                    message.reply_text(f"❗ **Iɴᴠᴀʟɪᴅ ᴄʜᴀɴɴᴇʟ ᴜsᴇʀɴᴀᴍᴇ.**")
                 except Exception as err:
                     message.reply_text(f"❗ **ERROR:** ```{err}```")
         else:
             if sql.fs_settings(chat_id):
                 message.reply_text(
-                    f"✅ **Force Subscribe is enabled in this chat.**\n__For this [Channel](https://t.me/{sql.fs_settings(chat_id).channel})__",
+                    f"✅ **Fᴏʀᴄᴇ sᴜʙsᴄʀɪʙᴇ ɪs ᴇɴᴀʙʟᴇᴅ ɪɴ ᴛʜɪs ᴄʜᴀᴛ.**\n__Fᴏʀ ᴛʜɪs [ᴄʜᴀɴɴᴇʟ](https://t.me/{sql.fs_settings(chat_id).channel})__",
                     disable_web_page_preview=True,
                 )
             else:
-                message.reply_text("❌ **Force Subscribe is disabled in this chat.**")
+                message.reply_text("❌ **Fᴏʀᴄᴇ sᴜʙsᴄʀɪʙᴇ ɪs ᴅɪsᴀʙʟᴇᴅ ɪɴ ᴛʜɪs ᴄʜᴀᴛ.**")
     else:
         message.reply_text(
-            "❗ **Group Creator Required**\n__You have to be the group creator to do that.__"
+            "❗ **Gʀᴏᴜᴘ ᴄʀᴇᴀᴛᴘʀ ʀᴇǫᴜɪʀᴇᴅ**\n__Yᴏᴜ ʜᴀᴠᴇ ᴛᴏ ʙᴇ ᴛʜᴇ ɢʀᴏᴜᴘ ᴄʀᴇᴀᴛᴏʀ ᴛᴏ ᴅᴏ ᴛʜᴀᴛ!__"
         )
 
 
 __help__ = """
 *Force Subscribe:*
 ➻ Teddy can mute members who are not subscribed your channel until they subscribe
-➻ When enabled I will mute unsubscribed members and show them a unmute button. When they pressed the button I will unmute them
-*✘ Setup ✘*
-*Only creator*
-➻ Add me in your group as admin
-➻ Add me in your channel as admin 
+➻ Wʜᴇɴ ᴇɴᴀʙʟᴇᴅ ғsᴜʙ, ɪ ᴡɪʟʟ ᴍᴜᴛᴇ ᴜɴsᴜʙsᴄʀɪʙᴇᴅ ᴍᴇᴍʙᴇʀs ᴀɴᴅ sʜᴏᴡ ᴛʜᴇᴍ ᴀ ᴜɴᴍᴜᴛᴇ ʙᴜᴛᴛᴏɴ, Wʜᴇɴ ᴛʜᴇʏ ᴘʀᴇssᴇᴅ ᴛʜᴇ ʙᴜᴛᴛᴏɴ ɪ ᴡɪʟʟ ᴜɴᴍᴜᴛᴇ ᴛʜᴇᴍ.
+*✘ ՏᗴTᑌᑭ ✘*
+* ONLY CREATOR *
+➻ Aᴅᴅ ᴍᴇ ɪɴ ᴜʀ ɢʀᴏᴜᴘ ᴀs ᴀᴅᴍɪɴ.
+➻ Aᴅᴅ ᴍᴇ ɪɴ ᴜʀ ᴄʜᴀɴɴᴇʟ ᴀs ᴀᴅᴍɪɴ.
  
-*✘ Commmands ✘*
-➻ /fsub {channel username} - To turn on and setup the channel.
-  💡Do this first...
-➻ /fsub - To get the current settings.
-➻ /fsub disable - To turn of ForceSubscribe..
-  💡If you disable fsub, you need to set again for working.. /fsub {channel username} 
-➻ /fsub clear - To unmute all members who muted by me.
-*✘ Federation ✘*
-Everything is fun, until a spammer starts entering your group, and you have to block it. Then you need to start banning more, and more, and it hurts.
-But then you have many groups, and you don't want this spammer to be in one of your groups - how can you deal? Do you have to manually block it, in all your groups?\n
-*No longer!* With Federation, you can make a ban in one chat overlap with all other chats.\n
-You can even designate federation admins, so your trusted admin can ban all the spammers from chats you want to protect.\n
-*✘ Commands ✘:*\n
-Feds are now divided into 3 sections for your ease.
-➻ `/fedownerhelp`*:* Provides help for fed creation and owner only commands
-➻ `/fedadminhelp`*:* Provides help for fed administration commands
-➻ `/feduserhelp`*:* Provides help for commands anyone can use
+*✘ ᑕOᗰᗰᗩᑎᗪՏ ✘*
+➻ /fsub {ᴄʜᴀɴɴᴇʟ ᴜsᴇʀɴᴀᴍᴇ} - Tᴏ ᴛᴜʀɴ ᴏɴ ғsᴜʙ ᴀɴᴅ sᴇᴛᴜᴘ ᴛʜᴇ ᴄʜᴀɴɴᴇʟ.
+  💡Dᴏ ᴛʜɪs ғɪʀsᴛ...
+➻ /fsub - Tᴏ ɢᴇᴛ ᴛʜᴇ ᴄᴜʀʀᴇᴍᴛ ғsᴜʙ sᴇᴛᴛɪɴɢs.
+➻ /fsub disable - Tᴏ ᴛᴜʀɴ ᴏғғ ғᴏʀᴄᴇ sᴜʙsᴄʀɪʙᴇ..
+  💡Iғ ʏᴏᴜ ᴅɪsᴀʙʟᴇ ғsᴜʙ, ʏᴏᴜ ɴᴇᴇᴅ ᴛᴏ sᴇᴛ ᴀɢᴀɪɴ ғᴏʀ ᴡᴏʀᴋɪɴɢ.. /fsub {ᴄʜᴀɴɴᴇʟ ᴜsᴇʀɴᴀᴍᴇ} 
+➻ /fsub clear - Tᴏ ᴜɴᴍᴜᴛᴇ ᴀʟʟ ᴍᴇᴍʙᴇʀs ᴡʜᴏ ᴍᴜᴛᴇᴅ ʙʏ ᴍᴇ.
+*✘ ᖴᗴᗪᗴᖇᗩTIOᑎ ✘*
+Eᴠᴇʀʏᴛʜɪɴɢ ɪs ғᴜɴ, ᴜɴᴛɪʟ ᴀ sᴘᴀɴᴍᴇʀ sᴛᴀʀᴛs ᴇᴍᴛᴇʀɪɴɢ ʏᴏᴜʀ ɢʀᴏᴜᴘ, ᴀɴᴅ ʏᴘᴜ ʜᴀᴠᴇ ᴛᴏ ʙʟᴏᴄᴋ ɪᴛ. Tʜᴇɴ ʏᴏᴜ ɴᴇᴇᴅ ᴛᴏ sᴛᴀʀᴛ ʙᴀɴɴɪɴɢ ᴍᴏʀᴇ, ᴀɴᴅ ᴍᴏʀᴇ, ᴀɴᴅ ɪᴛ ʜᴜʀᴛs.
+Bᴜᴛ ᴛʜᴇɴ ʏᴏᴜ ʜᴀᴠᴇ ᴍᴀɴʏ ɢʀᴏᴜᴘs, ᴀɴᴅ ʏᴏᴜ ᴅᴏɴ'ᴛ ᴡᴀɴᴛ ᴛʜɪs sᴘᴀᴍᴍᴇʀ ᴛᴏ ʙᴇ ɪɴ ᴏɴᴇ ᴏғ ʏᴏᴜʀ ɢʀᴏᴜᴘs - ʜᴏᴡ ᴄᴀɴ ʏᴏᴜ ᴅᴇᴀʟ? Dᴏ ʏᴏᴜ ʜᴀᴠᴇ ᴛᴏ ᴍᴀɴᴜᴀʟʟʏ ʙʟᴏᴄᴋ ɪᴛ, ɪɴ ᴀʟʟ ʏᴏᴜʀ ɢʀᴏᴜᴘs?\n
+*Nᴏ ʟᴏɴɢᴇʀ!* Wɪᴛʜ Fᴇᴅᴇʀᴀᴛɪᴏɴ, ʏᴏᴜ ᴄᴀɴ ᴍᴀᴋᴇ ᴀ ʙᴀɴ ɪɴ ᴏɴᴇ ᴄʜᴀᴛ ᴏᴠᴇʀʟᴀᴘ ᴡɪᴛʜ ᴀʟʟ ᴏᴛʜᴇʀ ᴄʜᴀᴛs.\n
+Yᴏᴜ ᴄᴀɴ ᴇᴠᴇɴ ᴅᴇsɪɢɴᴀᴛᴇ ғᴇᴅᴇʀᴀᴛɪᴏɴ ᴀᴅᴍɪɴs, sᴏ ʏᴏᴜʀ ᴛʀɪsᴛᴇᴅ ᴀᴅᴍɪɴ ᴄᴀɴ ʙᴀɴ ᴀʟʟ ᴛʜᴇ sᴘᴀᴍᴍᴇʀs ғʀᴏᴍ ᴄʜᴀᴛs ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴘʀᴏᴛᴇᴄᴛ.\n
+*✘ ᑕOᗰᗰᗩᑎᗪՏ ✘:*\n
+Fᴇᴅs ᴀʀᴇ ɴᴏᴡ ᴅɪᴠɪᴅᴇᴅ ɪɴᴛᴘ 3 sᴇᴄᴛɪᴏɴs ғᴏʀ ʏᴏᴜʀ ᴇᴀsᴇ.
+➻ `/fedownerhelp`*:* Pʀᴏᴠɪᴅᴇs ʜᴇʟᴘ ғᴏʀ ғᴇᴅ ᴄʀᴇᴀᴛɪᴏɴ and ᴏᴡɴᴇʀ ᴏɴʟʏ ᴄᴏᴍᴍᴀɴᴅs.
+➻ `/fedadminhelp`*:* Pʀᴘᴠɪᴅᴇs ʜᴇʟᴘ ғᴏʀ ғᴇᴅ ᴀᴅᴍɪɴɪsᴛʀᴀᴛɪᴏɴ ᴄᴏᴍᴍᴀɴᴅs.
+➻ `/feduserhelp`*:* Pʀᴏᴠɪᴅᴇ ʜᴇʟᴘ ғᴏʀ ᴄᴏᴍᴍᴀɴᴅs ᴀɴʏᴏᴍᴇ ᴄᴀɴ ᴜsᴇ.
 """
 __mod_name__ = "F-ꜱᴜʙꜱ/Fᴇᴅꜱ"
