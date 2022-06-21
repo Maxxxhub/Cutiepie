@@ -13,12 +13,12 @@ from EmikoRobot.utils.functions import make_carbon
 @capture_err
 async def carbon_func(_, message):
     if not message.reply_to_message:
-        return await message.reply_text("`Reply to a text message to make carbon.`")
+        return await message.reply_text("`Rᴇᴘʟʏ ᴛᴏ ᴀ ᴛᴇxᴛ ᴍsɢ ᴛᴏ ᴍᴀᴋᴇ ᴄᴀʀʙᴏɴ.`")
     if not message.reply_to_message.text:
-        return await message.reply_text("`Reply to a text message to make carbon.`")
-    m = await message.reply_text("`Preparing Carbon`")
+        return await message.reply_text("`Rᴇᴘʟʏ ᴛᴏ ᴀ ᴛᴇxᴛ ᴍsɢ ᴛᴏ ᴍᴀᴋᴇ ᴄᴀʀʙᴏɴ.`")
+    m = await message.reply_text("`Pʀᴇᴘᴀʀɪɴɢ ᴄᴀʀʙᴏɴ`")
     carbon = await make_carbon(message.reply_to_message.text)
-    await m.edit("`Uploading`")
+    await m.edit("`Uᴘʟᴏᴀᴅɪɴɢ`")
     await pbot.send_photo(message.chat.id, carbon)
     await m.delete()
     carbon.close()
@@ -30,8 +30,8 @@ MEMEK = "https://telegra.ph/file/c18f3d06a999cd1839312.jpg"
 async def repo(_, message):
     await message.reply_photo(
         photo=MEMEK,
-        caption=f"""✨ **Hᴇy, ɪ'ᴍ ᴛᴇᴅᴅy ʀᴏʙᴏᴛ** \n\n"
-**Oᴡɴᴇʀ ʀᴇᴩᴏ : [Suru](https://t.me/smokerr_xd)** \n\n"
+        caption=f"""✨ **Hᴇy, I'ᴍ Tᴇᴅᴅy Tᴏʙᴏᴛ** \n\n"
+**Oᴡɴᴇʀ ʀᴇᴩᴏ : [Sᴜʀᴜ](https://t.me/smokerr_xd)** \n\n"
 **Pyᴛʜᴏɴ ᴠᴇʀꜱɪᴏɴ :** `{y()}` \n\n"
 **Lɪʙʀᴀʀy ᴠᴇʀꜱɪᴏɴ :** `{o}` \n\n"
 **Tᴇʟᴇᴛʜᴏɴ ᴠᴇʀꜱɪᴏɴ :** `{s}` \n\n"
