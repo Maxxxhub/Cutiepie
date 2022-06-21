@@ -1,4 +1,4 @@
-# AI Chat (C) 2020-2021 by @InukaAsith
+# AI Chat (C) 2022-2023 by @sᴜʀᴜxʜᴜʙ
 
 import emoji
 import re
@@ -36,7 +36,7 @@ async def fetch(url):
                         data = await resp.text()
             return data
     except:
-        print("AI response Timeout")
+        print("AI ʀᴇsᴘᴏɴsᴇ ᴛɪᴍᴇᴏᴜᴛ")
         return
 
 
@@ -49,35 +49,35 @@ en_chats = []
 async def hmm(_, message):
     global ewe_chats
     if len(message.command) != 2:
-        await message.reply_text("I only recognize /chatbot on and /chatbot off only")
+        await message.reply_text("I ᴄᴀɴ ᴏɴʟʏ ʀᴇᴄᴏɢɴɪᴢᴇ /chatbot on ᴀɴᴅ /chatbot off ᴏɴʟʏ")
         message.continue_propagation()
     status = message.text.split(None, 1)[1]
     chat_id = message.chat.id
     if status == "ON" or status == "on" or status == "On":
-        lel = await edit_or_reply(message, "`Processing...`")
+        lel = await edit_or_reply(message, "`Pʀᴏᴄᴇssɪɴɢ...`")
         lol = add_chat(int(message.chat.id))
         if not lol:
-            await lel.edit("Teddy AI Already Activated In This Chat")
+            await lel.edit("Tᴇᴅᴅʏ AI ᴡᴀs ᴀʟʀᴇᴀᴅʏ ᴀᴄᴛɪᴠᴀᴛᴇᴅ ʜᴇʀᴇ")
             return
-        await lel.edit(f"Teddy AI Actived by {message.from_user.mention()} for users in {message.chat.title}")
+        await lel.edit(f"Tᴇᴅᴅʏ AI ᴀᴄᴛɪᴠᴀᴛᴇᴅ ʙʏ {message.from_user.mention()} ғᴏʀ ᴜsᴇʀs ɪɴ {message.chat.title}")
 
     elif status == "OFF" or status == "off" or status == "Off":
-        lel = await edit_or_reply(message, "`Processing...`")
+        lel = await edit_or_reply(message, "`Pʀᴏᴄᴇssɪɴɢ..`")
         Escobar = remove_chat(int(message.chat.id))
         if not Escobar:
-            await lel.edit("Teddy AI Was Not Activated In This Chat")
+            await lel.edit("Tᴇᴅᴅʏ AI ᴡᴀs ɴᴏᴛ ᴀᴄᴛɪᴠᴀᴛᴇᴅ ɪɴ ᴛʜɪs ᴄʜᴀᴛ")
             return
-        await lel.edit(f"Teddy AI Deactivated by {message.from_user.mention()} for users in {message.chat.title}")
+        await lel.edit(f"Tᴇᴅᴅʏ AI ᴅᴇᴀᴄᴛɪᴠᴀᴛᴇᴅ ʙʏ {message.from_user.mention()} ғᴏʀ ᴜsᴇʀs ɪɴ {message.chat.title}")
 
     elif status == "EN" or status == "en" or status == "english":
         if not chat_id in en_chats:
             en_chats.append(chat_id)
-            await message.reply_text(f"English AI chat Enabled by {message.from_user.mention()}")
+            await message.reply_text(f"Eɴɢʟɪsʜ AI ᴄʜᴀᴛ ᴇɴᴀʙʟᴇᴅ ʙʏ {message.from_user.mention()}")
             return
-        await message.reply_text(f"English AI Chat Disabled by {message.from_user.mention()}")
-        message.continue_propagation()
+        await message.reply_text(f"Eɴɢʟɪsʜ AI ᴄʜᴀᴛ ᴅɪsᴀʙʟᴇᴅ ʙʏ {message.from_user.mention()}")
+       message.continue_propagation()
     else:
-        await message.reply_text("I only recognize `/chatbot on` and `chatbot off` only")
+        await message.reply_text("I ᴄᴀɴ ᴏɴʟʏ ʀᴇᴄᴏɢɴɪᴢᴇ `/chatbot on` ᴀɴᴅ `chatbot off` ᴏɴʟʏ")
 
 
 @pbot.on_message(
@@ -108,17 +108,17 @@ async def hmm(client, message):
         test = msg
         test = test.replace("Teddy", "Aco")
         test = test.replace("Teddy", "Aco")
-        test = test.replace("My god is @Chain_smoker_4r ", "I'm a Christian")
+        test = test.replace("My god is @smokerr_xd ", "I'm a Christian")
         test = test.replace("16", "9")
-        test = test.replace("@Chain_smoker_4r is my husband.", "I'm single.")
-        test = test.replace("My husband is @Chain_smoker_4r", "I'm single.")
+        test = test.replace("@smokerr_xd is my husband.", "I'm single.")
+        test = test.replace("My husband is @smokerr_xd", "I'm single.")
         test = test.replace("@teddysupport", "TeddyRobot.ai")
         test = test.replace("I live in @teddysupport.", "I live in San Francisco, California.")
-        test = test.replace("I was created by @Chain_smoker_4r.")
+        test = test.replace("I was created by @smokerr_xd.")
         test = test.replace(
             "Hello there I am Teddy...nice to meet u",
             "Hi, my friend! Do you want me to tell you a joke?")
-        test = test.replace("@Chain_smoker_4r is my owner", "Have the control right.")
+        test = test.replace("@smokerr_xd is my owner", "Have the control right.")
         test = test.replace(
             "Hi, My name is Teddy Nice to meet you.",
             "Hi, my friend, what can I do for you today?")
@@ -129,17 +129,17 @@ async def hmm(client, message):
         response = response.replace("aco", "Teddy")
         response = response.replace("Luna", "Teddy")
         response = response.replace("luna", "Teddy")
-        response = response.replace("I'm a Christian", "My god is @Chain_smoker_4r")
+        response = response.replace("I'm a Christian", "My god is @smokerr_xd")
         response = response.replace("9", "16")
-        response = response.replace("I'm married to my job.", "I'm married with @Chain_smoker_4r")
-        response = response.replace("I'm single.", "My husband is @Chain_smoker_4r")
+        response = response.replace("I'm married to my job.", "I'm married with @smokerr_xd")
+        response = response.replace("I'm single.", "My husband is @smokerr_xd")
         response = response.replace("TeddyRobot.ai", "@teddysupport")
         response = response.replace("I live in San Francisco, California.", "I live in @teddysupport.")
-        response = response.replace("I made myself", "I was Created by @Chain_smoker_4r")
+        response = response.replace("I made myself", "I was Created by @smokerr_xd")
         response = response.replace(
                 "Hi, my friend! Do you want me to tell you a joke?",
                 "Hello there I am Teddy...nice to meet u")
-        response = response.replace("Have the control right.", "@Chain_smoker_4r is my owner.")
+        response = response.replace("Have the control right.", "@smokerr_xd is my owner.")
         response = response.replace(
                 "Hi, my friend, what can I do for you today?",
                 "Hi, My name is Teddy Nice to meet you")
@@ -196,16 +196,16 @@ async def hmm(client, message):
 
         test = test.replace("Teddy", "Aco")
         test = test.replace("Teddy", "Aco")
-        test = test.replace("My god is @Chain_smoker_4r", "I'm a Christian")
+        test = test.replace("My god is @smokerr_xd", "I'm a Christian")
         test = test.replace("16", "9")
-        test = test.replace("@Chain_smoker_4r is my husband.", "I'm single.")
+        test = test.replace("@smokerr_xd is my husband.", "I'm single.")
         test = test.replace("@teddysupport", "TeddyRobot.ai")
         test = test.replace("I live in @teddysupport.", "I live in San Francisco, California")
-        test = test.replace("I was created by @Chain_smoker_4r", "I made myself")
+        test = test.replace("I was created by @smokerr_xd", "I made myself")
         test = test.replace(
             "Hello there I am Teddy...nice to meet u",
             "Hi, my friend! Do you want me to tell you a joke?")
-        test = test.replace("@Chain_smoker_4r is my owner", "Have the control right.")
+        test = test.replace("@smokerr_xd is my owner", "Have the control right.")
         test = test.replace(
             "Hi, My name is Teddy Nice to meet you.",
             "Hi, my friend, what can I do for you today?")
@@ -216,17 +216,17 @@ async def hmm(client, message):
         response = response.replace("aco", "Teddy")
         response = response.replace("Luna", "Teddy")
         response = response.replace("luna", "Teddy")
-        response = response.replace("I'm a Christian", "My god is @Chain_smoker_4r")
+        response = response.replace("I'm a Christian", "My god is @smokerr_xd")
         response = response.replace("9", "16")
-        response = response.replace("I'm married to my job.", "I'm married with @Chain_smoker_4r")
-        response = response.replace("I'm single.", "My husband is @Chain_smoker_4r")
+        response = response.replace("I'm married to my job.", "I'm married with @smokerr_xd")
+        response = response.replace("I'm single.", "My husband is @smokerr_xd")
         response = response.replace("TeddyRobot.ai", "@teddysupport")
         response = response.replace("I live in San Francisco, California.", "I live in @teddysupport.")
-        response = response.replace("I made myself", "I was Created by @Chain_smoker_4r")
+        response = response.replace("I made myself", "I was Created by @smokerr_xd")
         response = response.replace(
                 "Hi, my friend! Do you want me to tell you a joke?",
                 "Hello there I am Teddy...nice to meet u")
-        response = response.replace("Have the control right.", "@Chain_smoker_4r is my owner.")
+        response = response.replace("Have the control right.", "@smokerr_xd is my owner.")
         response = response.replace(
                 "Hi, my friend, what can I do for you today?",
                 "Hi, My name is Teddy Nice to meet you")
@@ -238,7 +238,7 @@ async def hmm(client, message):
             except:
                 return
         try:
-            await pbot.send_chat_action(message.chat.id, "typing")
+            await pbot.send_chat_action(message.chat.id, "Tʏᴘɪɴɢ...")
             await message.reply_text(pro)
         except CFError:
             return
@@ -291,16 +291,16 @@ async def inuka(client, message):
             return
     test = test.replace("Teddy", "Aco")
     test = test.replace("Teddy", "Aco")
-    test = test.replace("My god is @Chain_smoker_4r", "I'm a Christian")
+    test = test.replace("My god is @smokerr_xd", "I'm a Christian")
     test = test.replace("16", "9")
-    test = test.replace("@Chain_smoker_4r is my husband.", "I'm single.")
+    test = test.replace("@smokerr_xd is my husband.", "I'm single.")
     test = test.replace("@teddysupport", "TeddyRobot.ai")
     test = test.replace("I live in @teddysupport.", "I live in San Francisco, California.")
-    test = test.replace("I was created by @Chain_smoker_4r", "I made myself")
+    test = test.replace("I was created by @smokerr_xd", "I made myself")
     test = test.replace(
         "Hello there I am Teddy...nice to meet u",
         "Hi, my friend! Do you want me to tell you a joke?")
-    test = test.replace("@Chain_smoker_4r is my owner", "Have the control right.")
+    test = test.replace("@smokerr_xd is my owner", "Have the control right.")
     test = test.replace(
         "Hi, My name is Teddy Nice to meet you.",
         "Hi, my friend, what can I do for you today?")
@@ -310,17 +310,17 @@ async def inuka(client, message):
     response = response.replace("aco", "Teddy")
     response = response.replace("Luna", "Teddy")
     response = response.replace("luna", "Teddy")
-    response = response.replace("I'm a Christian", "My god is @Chain_smoker_4r")
+    response = response.replace("I'm a Christian", "My god is @smokerr_xd")
     response = response.replace("9", "16")
-    response = response.replace("I'm married to my job.", "I'm married with @Chain_smoker_4r")
-    response = response.replace("I'm single.", "My husband is @sweetttu_1")
+    response = response.replace("I'm married to my job.", "I'm married with @smokerr_xd")
+    response = response.replace("I'm single.", "My husband is @smokerr_xd")
     response = response.replace("TeddyRobot.ai", "@teddysupport")
     response = response.replace("I live in San Francisco, California.", "I live in @teddysupport")
-    response = response.replace("I made myself", "I was Created by @Chain_smoker_4r")
+    response = response.replace("I made myself", "I was Created by @smokerr_xd")
     response = response.replace(
             "Hi, my friend! Do you want me to tell you a joke?",
             "Hello there I am Teddy...nice to meet u")
-    response = response.replace("Have the control right.", "@Chain_smoker_4r is my owner.")
+    response = response.replace("Have the control right.", "@smokerr_xd is my owner.")
     response = response.replace(
             "Hi, my friend, what can I do for you today?",
             "Hi, My name is Teddy Nice to meet you")
@@ -330,7 +330,7 @@ async def inuka(client, message):
         pro = translator.translate(pro, dest=lan)
         pro = pro.text
     try:
-        await pbot.send_chat_action(message.chat.id, "typing")
+        await pbot.send_chat_action(message.chat.id, "Tʏᴘɪɴɢ...")
         await message.reply_text(pro)
     except CFError:
         return
@@ -386,16 +386,16 @@ async def inuka(client, message):
 
     test = test.replace("Teddy", "Aco")
     test = test.replace("Teddy", "Aco")
-    test = test.replace("My god is @Chain_smoker_4r", "I'm a Christian")
+    test = test.replace("My god is @smokerr_xd", "I'm a Christian")
     test = test.replace("16", "9") 
-    test = test.replace("@Chain_smoker_4r is my husband.", "I'm single.")
+    test = test.replace("@smokerr_xd is my husband.", "I'm single.")
     test = test.replace("@teddysupport", "TeddyRobot.ai")
     test = test.replace("I live in @teddysupport.", "I live in San Francisco, California.")
-    test = test.replace("I was created by @Chain_smoker_4r", "I made myself")
+    test = test.replace("I was created by @smokerr_xd", "I made myself")
     test = test.replace(
         "Hello there I am Teddy...nice to meet u",
         "Hi, my friend! Do you want me to tell you a joke?")
-    test = test.replace("@Chain_smoker_4r is my owner", "Have the control right.")
+    test = test.replace("@smokerr_xd is my owner", "Have the control right.")
     test = test.replace(
         "Hi, My name is Teddy Nice to meet you.",
         "Hi, my friend, what can I do for you today?")
@@ -404,20 +404,20 @@ async def inuka(client, message):
     response = response.replace("aco", "Teddy")
     response = response.replace("Luna", "Teddy")
     response = response.replace("luna", "Teddy")
-    response = response.replace("I'm a Christian", "My god is @Chain_smoker_4r")
-    response = response.replace("I'm married to my job.", "I'm married with @Chain_smoker_4r")
+    response = response.replace("I'm a Christian", "My god is @smokerr_xd")
+    response = response.replace("I'm married to my job.", "I'm married with @smokerr_xd")
     response = response.replace("9", "16") 
-    response = response.replace("I'm single.", "My husband is @Chain_smoker_4r")
+    response = response.replace("I'm single.", "My husband is @smokerr_xd")
     response = response.replace("TeddyRobot.ai", "@teddysupport")
     response = response.replace("I live in San Francisco, California.", "I live in @teddysupport.")
-    response = response.replace("I made myself", "I was Created by @Chain_smoker_4r")
+    response = response.replace("I made myself", "I was Created by @smokerr_xd")
     response = response.replace(
             "Hi, my friend! Do you want me to tell you a joke?",
             "Hello there I am Teddy...nice to meet u")
-    response = response.replace("Have the control right.", "@Chain_smoker_4r is my owner.")
+    response = response.replace("Have the control right.", "@smokerr_xd ɪs ᴍʏ ᴏᴡɴᴇʀ.")
     response = response.replace(
-            "Hi, my friend, what can I do for you today?",
-            "Hi, My name is Teddy Nice to meet you")
+            "Hɪ, ᴍʏ ғʀɪᴇɴᴅ, ᴡʜᴀᴛ ᴄᴀɴ ɪ ᴅᴏ ғᴏʀ ʏᴏᴜ?",
+            "Hɪ, ᴍʏ ɴᴀᴍᴇ ɪs ᴛᴇᴅᴅʏ ɴɪᴄᴇ ᴛᴏ ᴍᴇᴇᴛ ʏᴏᴜ!")
 
     pro = response
     if not "en" in lan and not lan == "":
@@ -427,16 +427,16 @@ async def inuka(client, message):
         except Exception:
             return
     try:
-        await pbot.send_chat_action(message.chat.id, "typing")
+        await pbot.send_chat_action(message.chat.id, "Tʏᴘɪɴɢ...")
         await message.reply_text(pro)
     except CFError:
         return
 
 
 __help__ = """
-➻ Teddy AI is the only ai system which can detect & reply upto 200 language's
-➻ /chatbot [ON/OFF]: Enables and disables AI Chat mode.
-➻ /chatbot EN : Enables English only chatbot.
+➻ Tᴇᴅᴅʏ AI ɪs ᴛʜᴇ ᴏɴʟʏ ᴀɪ sᴛsᴛᴇᴍ ᴡʜɪᴄʜ ᴄᴀɴ ᴅᴇᴛᴇᴄᴛ ᴀɴᴅ ʀᴇᴘʟʏ ᴜᴘᴛᴏ 200 ʟᴀɴɢᴜᴀɢᴇ's.
+➻ /chatbot [ON/OFF]: Eɴᴀʙʟᴇs ᴀɴᴅ ᴅɪsᴀʙʟᴇs AI ᴄʜᴀᴛ ᴍᴏᴅᴇ.
+➻ /chatbot EN : Eɴᴀʙʟᴇs ᴇɴɢʟɪsʜ ᴏɴʟʏ ᴄʜᴀᴛʙᴏᴛ.
 """
 
 __mod_name__ = "Cʜᴀᴛʙᴏᴛ"
