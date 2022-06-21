@@ -19,7 +19,7 @@ async def msg(event):
     try:
         a = country.info()
     except:
-        await event.reply("Country Not Avaiable Currently")
+        await event.reply("Cᴏᴜɴᴛʀʏ ɴᴏᴛ ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴜʀᴇᴇɴᴛʟʏ")
     name = a.get("name")
     bb = a.get("altSpellings")
     hu = ""
@@ -79,28 +79,28 @@ async def msg(event):
 
     wiki = a.get("wiki")
 
-    caption = f"""<b><u>Information Gathered Successfully</b></u>
+    caption = f"""<b><u>Iɴғᴏʀᴍᴀᴛɪᴏɴ ɢᴀᴛʜᴇʀᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ</b></u>
 <b>
-Country Name:- {name}
-Alternative Spellings:- {hu}
-Country Area:- {area} square kilometers
-Borders:- {borders}
-Calling Codes:- {call}
-Country's Capital:- {capital}
-Country's currency:- {currencies}
-Country's Flag:- {okie}
-Demonym:- {HmM}
-Country Type:- {EsCoBaR}
-ISO Names:- {iso}
-Languages:- {lMAO}
-Native Name:- {nonive}
-population:- {waste}
-Region:- {reg}
-Sub Region:- {sub}
-Time Zones:- {tom}
-Top Level Domain:- {lanester}
-wikipedia:- {wiki}</b>
-Gathered By Teddy Robot ✨.</b>
+Cᴏᴜɴᴛʀʏ ɴᴀᴍᴇ:- {name}
+Aʟᴛᴇʀɴᴀᴛɪᴠᴇ sᴘᴇʟʟɪɴɢs:- {hu}
+Cᴏᴜɴᴛʀʏ ᴀʀᴇᴀ:- {area} sǫᴜᴀʀᴇ ᴋɪʟᴏᴍᴇᴛᴇʀs
+Bᴏʀᴅᴇʀs:- {borders}
+Cᴀʟʟɪɴɢ ᴄᴏᴅᴇs:- {call}
+Cᴏᴜɴᴛʀʏ's ᴄᴀᴘɪᴛᴀʟ:- {capital}
+Cᴏᴜɴᴛʀʏ's ᴄᴜʀʀᴇɴᴄʏ:- {currencies}
+Cᴏᴜɴᴛʀʏ's ғʟᴀɢ:- {okie}
+Dᴇᴍᴏɴʏᴍ:- {HmM}
+Cᴏᴜɴᴛʀʏ ᴛʏᴘᴇ:- {EsCoBaR}
+ISO Nᴀᴍᴇs:- {iso}
+Lᴀɴɢᴜᴀɢᴇs:- {lMAO}
+Nᴀᴛɪᴠᴇ ɴᴀᴍᴇ:- {nonive}
+Pᴏᴜʟᴀᴛɪᴏɴ:- {waste}
+Rᴇɢɪᴏɴ:- {reg}
+Sᴜʙ ʀᴇɢɪᴏɴ:- {sub}
+Tɪᴍᴇ ᴢᴏɴᴇs:- {tom}
+Tᴏᴘ ʟᴇᴠᴇʟ ᴅᴏᴍᴀɪɴ:- {lanester}
+Wɪᴋɪᴘᴇᴅɪᴀ:- {wiki}</b>
+Gᴀᴛʜᴇʀᴇᴅ ʙʏ Tᴇᴅᴅʏ ✨.</b>
 """
 
     await borg.send_message(
