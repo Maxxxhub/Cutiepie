@@ -46,14 +46,14 @@ def generate_time(to_find: str, findtype: List[str]) -> str:
 
     try:
         result = (
-            f"<b>Country:</b> <code>{country_name}</code>\n"
-            f"<b>Zone Name:</b> <code>{country_zone}</code>\n"
-            f"<b>Country Code:</b> <code>{country_code}</code>\n"
-            f"<b>Daylight saving:</b> <code>{daylight_saving}</code>\n"
-            f"<b>Day:</b> <code>{current_day}</code>\n"
-            f"<b>Current Time:</b> <code>{current_time}</code>\n"
-            f"<b>Current Date:</b> <code>{current_date}</code>\n"
-            '<b>Timezones:</b> <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">List here</a>'
+            f"<b>Cᴏᴜɴᴛʀʏ ɴᴀᴍᴇ:</b> <code>{country_name}</code>\n"
+            f"<b>Zᴏɴᴇ ɴᴀᴍᴇ:</b> <code>{country_zone}</code>\n"
+            f"<b>Cᴏᴜɴᴛʀʏ ᴄᴏᴅᴇ:</b> <code>{country_code}</code>\n"
+            f"<b>Dᴀʏʟɪɢʜᴛ sᴀᴠɪɴɢ:</b> <code>{daylight_saving}</code>\n"
+            f"<b>Dᴀʏ:</b> <code>{current_day}</code>\n"
+            f"<b>Cᴜʀʀᴇɴᴛ ᴛɪᴍᴇ:</b> <code>{current_time}</code>\n"
+            f"<b>Cᴜʀʀᴇɴᴛ ᴅᴀᴛᴇ:</b> <code>{current_date}</code>\n"
+            '<b>Tɪᴍᴇᴢᴏɴᴇs:</b> <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">List here</a>'
         )
     except:
         result = None
@@ -67,10 +67,10 @@ def gettime(update: Update, context: CallbackContext):
     try:
         query = message.text.strip().split(" ", 1)[1]
     except:
-        message.reply_text("Provide a country name/abbreviation/timezone to find.")
+        message.reply_text("Pʀᴏᴠɪᴅᴇ ᴀ ᴄᴏᴜɴᴛʀʏ ɴᴀᴍᴇ/ᴀʙʙʀᴇᴠᴀᴛɪᴏɴ/ᴛɪᴍᴇᴢᴏɴᴇ ᴛᴏ ғɪɴᴅ.")
         return
     send_message = message.reply_text(
-        f"Finding timezone info for <b>{query}</b>",
+        f"Fɪɴᴅɪɴɢ ᴛɪᴍᴇᴢᴏɴᴇ ɪɴғᴏ ғᴏʀ <b>{query}</b>",
         parse_mode=ParseMode.HTML,
     )
 
@@ -82,7 +82,7 @@ def gettime(update: Update, context: CallbackContext):
 
     if not result:
         send_message.edit_text(
-            f"Timezone info not available for <b>{query}</b>\n"
+            f"Tɪᴍᴇ ᴢᴏɴᴇ ɪɴғᴏ ɴᴏᴛ ᴀᴠᴀɪʟᴀʙʟᴇ ғᴏʀ <b>{query}</b>\n"
             '<b>All Timezones:</b> <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">List here</a>',
             parse_mode=ParseMode.HTML,
             disable_web_page_preview=True,
