@@ -378,7 +378,7 @@ def connect_button(update, context):
         else:
             context.bot.answer_callback_query(
                 query.id,
-                "Cᴏɴɴᴇᴄᴛɪᴏɴ ᴛᴏ ᴛʜɪsɴᴄʜᴀᴛ ɪs ɴᴏᴛ ᴀʟʟᴏᴡᴇᴅ!",
+                "Cᴏɴɴᴇᴄᴛɪᴏɴ ᴛᴏ ᴛʜɪs ᴄʜᴀᴛ ɪs ɴᴏᴛ ᴀʟʟᴏᴡᴇᴅ!",
                 show_alert=True,
             )
     elif disconnect_match:
