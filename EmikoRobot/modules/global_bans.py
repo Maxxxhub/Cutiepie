@@ -537,11 +537,9 @@ def __chat_settings__(chat_id, user_id):
     return f"This chat is enforcing *gbans*: `{sql.does_chat_gban(chat_id)}`."
 
 __help__ = f"""
-*Admins only:*
-➾ /antispam <on/off/yes/no>: Will toggle our antispam tech or return your current settings.
-Anti-Spam, used by bot devs to ban spammers across all groups. This helps protect \
-you and your groups by removing spam flooders as quickly as possible.
-Note: Users can appeal gbans or report spammers at @{SUPPORT_CHAT}
+*Antiflood allows you to take action on users that send more than X messages in a row. Exceeding the set flood will result in restricting that user.
+This will mute users if they send more than X messages in a row, bots are ignored.*
+
 ➾ /flood: Get the current antiflood settings
 ➾ /setflood <number/off/no>: Set the number of messages after which to take action on a user. Set to '0', 'off', or 'no' to disable.
 ➾ /setfloodmode <action type>: Choose which action to take on a user who has been flooding. Options: ban/kick/mute/tban/tmute.
@@ -562,7 +560,7 @@ dispatcher.add_handler(UNGBAN_HANDLER)
 dispatcher.add_handler(GBAN_LIST)
 dispatcher.add_handler(GBAN_STATUS)
 
-__mod_name__ = "Aɴᴛɪ-Sᴩᴀᴍ"
+__mod_name__ = "A-ғʟᴏᴏᴅ"
 __handlers__ = [GBAN_HANDLER, UNGBAN_HANDLER, GBAN_LIST, GBAN_STATUS]
 
 if STRICT_GBAN:  # enforce GBANS if this is set
