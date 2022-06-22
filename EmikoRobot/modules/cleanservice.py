@@ -1,5 +1,5 @@
 from EmikoRobot import (
-    dispatchar
+    dispatcher
 )
 __help__ = """
 ➻ /antiservice <on / off>
