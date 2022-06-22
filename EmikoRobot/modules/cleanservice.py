@@ -1,3 +1,6 @@
+from EmikoRobot import (
+    dispatchar
+)
 __help__ = """
 ➻ /antiservice <on / off>
 Note: If on, The bot will auto delete service messages for ex: user joined , user left etc...
