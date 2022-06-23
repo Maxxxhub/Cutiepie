@@ -76,7 +76,7 @@ async def can_change_info(message):
         isinstance(p, types.ChannelParticipantAdmin) and p.admin_rights.change_info
     )
 
-@register(pattern="^/(nightmode|Nightmode|NightMode|kontolmode|KONTOLMODE) ?(.*)")
+@register(pattern="^/(nightmode|Nightmode) ?(.*)")
 async def profanity(event):
     if event.fwd_from:
         return
@@ -85,42 +85,42 @@ async def profanity(event):
     input = event.pattern_match.group(2)
     if not event.sender_id == OWNER_ID:
         if not await is_register_admin(event.input_chat, event.sender_id):
-           await event.reply("Only admins can execute this command!")
+           await event.reply("Oɴʟʏ ᴀᴅᴍɪɴs ᴄᴀɴ ᴇxᴇᴄᴜᴛᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ!")
            return
         else:
           if not await can_change_info(message=event):
-            await event.reply("You are missing the following rights to use this command:CanChangeinfo")
+            await event.reply("Yᴏᴜ ᴀʀᴇ ᴍɪssɪɴɢ ᴛʜᴇ ғᴏʟʟᴏᴡɪɴɢ ʀɪɢʜᴛs ᴛᴏ ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ:CanChangeinfo")
             return
     if not input:
         if is_nightmode_indb(str(event.chat_id)):
                 await event.reply(
-                    "Currently NightMode is Enabled for this Chat"
+                    "Cᴜʀʀᴇɴᴛʟʏ ɴɪɢʜᴛ ᴍᴏᴅᴇ ɪs ᴇɴᴀʙʟᴇᴅ ғᴏʀ ᴛʜɪs ᴄʜᴀᴛ"
                 )
                 return
         await event.reply(
-            "Currently NightMode is Disabled for this Chat"
+            "Cᴜʀʀᴇɴᴛʟʏ ɴɪɢʜᴛ ᴍᴏᴅᴇ ɪs ᴅɪsᴀʙʟᴇᴅ ғᴏʀ ᴛʜɪs ᴄʜᴀᴛ"
         )
         return
     if "on" in input:
         if event.is_group:
             if is_nightmode_indb(str(event.chat_id)):
                     await event.reply(
-                        "Night Mode is Already Turned ON for this Chat"
+                        "Nɪɢʜᴛ ᴍᴏᴅᴇ ɪs ᴀʟʀᴇᴀᴅʏ ᴛᴜʀɴᴇᴅ ᴏɴ ғᴏʀ ᴛʜɪs ᴄʜᴀᴛ"
                     )
                     return
             add_nightmode(str(event.chat_id))
-            await event.reply("NightMode turned on for this chat.")
+            await event.reply("Nɪɢʜᴛᴍᴏᴅᴇ ᴛᴜʀɴᴇᴅ ᴏɴ ғᴏʀ ᴛʜɪs ᴄʜᴀᴛ.")
     if "off" in input:
         if event.is_group:
             if not is_nightmode_indb(str(event.chat_id)):
                     await event.reply(
-                        "Night Mode is Already Off for this Chat"
+                        "Nɪɢʜᴛ ᴍᴏᴅᴇ ɪs ᴀʟʀᴇᴀᴅʏ ᴏғғ ғᴏʀ ᴛʜɪs ᴄʜᴀᴛ"
                     )
                     return
         rmnightmode(str(event.chat_id))
-        await event.reply("NightMode Disabled!")
+        await event.reply("Nɪɢʜᴛᴍᴏᴅᴇ ᴅɪsᴀʙʟᴇᴅ!")
     if not "off" in input and not "on" in input:
-        await event.reply("Please Specify On or Off!")
+        await event.reply("Pʟᴇᴀsᴇ sᴘᴇᴄɪғʏ On ᴏʀ Off!")
         return
 
 
@@ -131,7 +131,7 @@ async def job_close():
     for pro in chats:
         try:
             await tbot.send_message(
-              int(pro.chat_id), "12:00 ᴀᴍ, ɢʀᴏᴜᴩ ɪꜱ ᴄʟᴏꜱɪɴɢ ᴛɪʟʟ 6 ᴀᴍ. ɴɪɢʜᴛᴍᴏᴅᴇ ꜱᴛᴀʀᴛᴇᴅ  ! \n**ᴩᴏᴡᴇʀᴇᴅ ʙy @Teddyrobot_bot ⚡️**"
+              int(pro.chat_id), "12:00 ᴀᴍ, ɢʀᴏᴜᴩ ɪꜱ ᴄʟᴏꜱɪɴɢ ᴛɪʟʟ 6 ᴀᴍ. ɴɪɢʜᴛᴍᴏᴅᴇ ꜱᴛᴀʀᴛᴇᴅ ! \n**ᴩᴏᴡᴇʀᴇᴅ ʙy @Teddyrobot_bot ✰⚡️**"
             )
             await tbot(
             functions.messages.EditChatDefaultBannedRightsRequest(
@@ -139,7 +139,7 @@ async def job_close():
             )
             )
         except Exception as e:
-            logger.info(f"Unable To Close Group {chat} - {e}")
+            logger.info(f"Uɴᴀʙʟᴇ ᴛᴏ ᴄʟᴏsᴇ ɢʀᴏᴜᴘ {chat} - {e}")
 
 #Run everyday at 12am
 scheduler = AsyncIOScheduler(timezone="Asia/kolkata")
@@ -153,7 +153,7 @@ async def job_open():
     for pro in chats:
         try:
             await tbot.send_message(
-              int(pro.chat_id), "06:00 ᴀᴍ, ɢʀᴏᴜᴩ ɪꜱ ᴏᴩᴇɴɪɴɢ. ɴɪɢʜᴛᴍᴏᴅᴇ ᴇɴᴅᴇᴅ ! \n**ᴩᴏᴡᴇʀᴇᴅ ʙy @Teddyrobot_bot ⚡️**"
+              int(pro.chat_id), "06:00 ᴀᴍ, ɢʀᴏᴜᴩ ɪꜱ ᴏᴩᴇɴɪɴɢ. ɴɪɢʜᴛᴍᴏᴅᴇ ᴇɴᴅᴇᴅ! \n**ᴩᴏᴡᴇʀᴇᴅ ʙy @Teddyrobot_bot ✰**"
             )
             await tbot(
             functions.messages.EditChatDefaultBannedRightsRequest(
@@ -161,7 +161,7 @@ async def job_open():
             )
         )
         except Exception as e:
-            logger.info(f"Unable To Open Group {pro.chat_id} - {e}")
+            logger.info(f"Uɴᴀʙʟᴇ ᴛᴏ ᴏᴘᴇɴ ɢʀᴏᴜᴘ {pro.chat_id} - {e}")
 
 # Run everyday at 06
 scheduler = AsyncIOScheduler(timezone="Asia/kolkata")
