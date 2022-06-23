@@ -27,11 +27,11 @@ async def variable(var):
     if HEROKU_APP_NAME is not None:
         app = Heroku.app(HEROKU_APP_NAME)
     else:
-        return await var.reply("`[HEROKU]:" "\nPlease setup your` **HEROKU_APP_NAME**")
+        return await var.reply("`[HEROKU]:" "\nPʟᴇᴀsᴇ sᴇᴛᴜᴘ ʏᴏᴜʀ` **HEROKU_APP_NAME**")
     exe = var.pattern_match.group(1)
     heroku_var = app.config()
     if exe == "see":
-        k = await var.reply("`Getting information...`")
+        k = await var.reply("`Gᴇᴛᴛɪɴɢ ɪɴғᴏʀᴍᴀᴛɪᴏɴ...`")
         await asyncio.sleep(1.5)
         try:
             variable = var.pattern_match.group(2).split()[0]
@@ -41,7 +41,7 @@ async def variable(var):
                 )
             else:
                 return await k.edit(
-                    "**ConfigVars**:" f"\n\n`Error:\n-> {variable} don't exists`"
+                    "**Configvars**:" f"\n\n`Eʀʀᴏʀ:\n-> {variable} ᴅᴏɴ'ᴛ ᴇxɪsᴛ`"
                 )
         except IndexError:
             configs = prettyjson(heroku_var.to_dict(), indent=2)
@@ -54,7 +54,7 @@ async def variable(var):
                         var.chat_id,
                         "configs.json",
                         reply_to=var.id,
-                        caption="`Output too large, sending it as a file`",
+                        caption="`Oᴜᴛᴘᴜᴛ ᴛᴏᴏ ʟᴀʀɢᴇ, sᴇɴᴅɪɴɢ ɪᴛ ᴀs ᴀ ғɪʟᴇ`",
                     )
                 else:
                     await k.edit(
@@ -66,7 +66,7 @@ async def variable(var):
             os.remove("configs.json")
             return
     elif exe == "set":
-        s = await var.reply("`Setting information...weit ser`")
+        s = await var.reply("`Sᴇᴛᴛɪᴍɢ ɪɴғᴏʀᴍᴀᴛɪᴏɴ...ᴡᴀɪᴛ sᴜʀ`")
         variable = var.pattern_match.group(2)
         if not variable:
             return await s.edit(">`.set var <ConfigVars-name> <value>`")
@@ -79,24 +79,24 @@ async def variable(var):
                 return await s.edit(">`/set var <ConfigVars-name> <value>`")
         await asyncio.sleep(1.5)
         if variable in heroku_var:
-            await s.edit(f"**{variable}**  `successfully changed to`  ->  **{value}**")
+            await s.edit(f"**{variable}**  `sᴜᴄᴄᴇssғᴜʟʟʏ ᴄʜᴀɴɢᴇᴅ ᴛᴏ`  ->  **{value}**")
         else:
             await s.edit(
-                f"**{variable}**  `successfully added with value`  ->  **{value}**"
+                f"**{variable}**  `sᴜᴄᴄᴇssғᴜʟʟʏ ᴀᴅᴅᴇᴅ ᴡɪᴛʜ ᴠᴀʟᴜᴇ`  ->  **{value}**"
             )
         heroku_var[variable] = value
     elif exe == "del":
-        m = await var.reply("`Getting information to deleting variable...`")
+        m = await var.reply("`Gᴇᴛᴛɪɴɢ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴛᴏ ᴅᴇʟᴇᴛɪɴɢ ᴠᴀʀɪᴀʙʟᴇ...`")
         try:
             variable = var.pattern_match.group(2).split()[0]
         except IndexError:
-            return await m.edit("`Please specify ConfigVars you want to delete`")
+            return await m.edit("`Pʟᴇᴀsᴇ sᴘᴇᴄɪғʏ ᴄᴏɴғɪɢᴠᴀʀs ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴅᴇʟᴇᴛᴇ`")
         await asyncio.sleep(1.5)
         if variable in heroku_var:
-            await m.edit(f"**{variable}**  `successfully deleted`")
+            await m.edit(f"**{variable}**  `sᴜᴄᴄᴇssғᴜʟʟʏ ᴅᴇʟᴇᴛᴇᴅ`")
             del heroku_var[variable]
         else:
-            return await m.edit(f"**{variable}**  `is not exists`")
+            return await m.edit(f"**{variable}**  `ɪs ɴᴏᴛ ᴇxɪsᴛs`")
 
 
 @register(pattern="^/usage(?: |$)")
@@ -110,7 +110,7 @@ async def dyno_usage(dyno):
     """
     Get your account Dyno Usage
     """
-    die = await dyno.reply("`Processing...`")
+    die = await dyno.reply("`Pʀᴏᴄᴇssɪɴɢ sᴜʀ...`")
     useragent = (
         "Mozilla/5.0 (Linux; Android 10; SM-G975F) "
         "AppleWebKit/537.36 (KHTML, like Gecko) "
@@ -125,7 +125,7 @@ async def dyno_usage(dyno):
     path = "/accounts/" + user_id + "/actions/get-quota"
     r = requests.get(heroku_api + path, headers=headers)
     if r.status_code != 200:
-        return await die.edit("`Error: something bad happened`\n\n" f">.`{r.reason}`\n")
+        return await die.edit("`Error: Sᴏᴍᴇᴛʜɪɴɢ ʙᴀᴅ ʜᴀᴘᴘᴇɴᴇᴅ`\n\n" f">.`{r.reason}`\n")
     result = r.json()
     quota = result["account_quota"]
     quota_used = result["quota_used"]
@@ -153,15 +153,15 @@ async def dyno_usage(dyno):
     await asyncio.sleep(1.5)
 
     return await die.edit(
-        "❂ **Dyno Usage **:\n\n"
-        f" » Dyno usage for **{HEROKU_APP_NAME}**:\n"
-        f"      •  `{AppHours}`**h**  `{AppMinutes}`**m**  "
+        "✰ ** Dʏɴᴏ ᴜsᴀɢᴇ **:\n\n"
+        f" ➾ Dʏɴᴏ ᴜsᴀɢᴇ ғᴏʀ **{HEROKU_APP_NAME}**:\n"
+        f"      »  `{AppHours}`**ʜ**  `{AppMinutes}`**ᴍ**  "
         f"**|**  [`{AppPercentage}`**%**]"
         "\n\n"
-        "  » Dyno hours quota remaining this month:\n"
-        f"      •  `{hours}`**h**  `{minutes}`**m**  "
+        "  ➾ Dʏɴᴏ ʜᴏᴜʀs ǫᴜᴏᴛᴀ ʀᴇᴍᴀɪɴɪɴɢ ᴛʜɪs ᴍᴏɴᴛʜ :\n"
+        f"      »  `{hours}`**ʜ**  `{minutes}`**ᴍ**  "
         f"**|**  [`{percentage}`**%**]"
-        f"\n\n  » Dynos heroku {day} days left"
+        f"\n\n  ➾ Dʏɴᴏs ʜᴇʀᴏᴋᴜ {day} ᴅᴀʏs ʟᴇғᴛ"
     )
 
 
@@ -178,17 +178,17 @@ async def _(dyno):
         app = Heroku.app(HEROKU_APP_NAME)
     except:
         return await dyno.reply(
-            " Please make sure your Heroku API Key, Your App name are configured correctly in the heroku"
+            " Pʟᴇᴀsᴇ ᴍᴀᴋᴇ sᴜʀᴇ ᴛʜᴛ ʏᴏᴜʀ ʜᴇʀᴏᴋᴜ API ᴋᴇʏ, Yᴏᴜʀ ᴀᴘᴘ ɴᴀᴍᴇ ᴀʀᴇ ᴄᴏɴғɪɢᴜʀᴇᴅ ᴄᴏʀʀᴇᴄᴛʟʏ ɪɴ ᴛʜᴇ ʜᴇʀᴏᴋᴜ"
         )
-    v = await dyno.reply("Getting Logs....")
+    v = await dyno.reply("Gᴇᴛᴛɪɴɢ ʟᴏɢs sᴜʀ....")
     with open("logs.txt", "w") as log:
         log.write(app.get_log())
-    await v.edit("Got the logs wait a sec")
+    await v.edit("Gᴏᴛ ᴛʜᴇ ʟᴏɢs, ᴡᴀɪᴛ ᴀ sᴇᴄ")
     await dyno.client.send_file(
         dyno.chat_id,
         "logs.txt",
         reply_to=dyno.id,
-        caption="Teddy logs.",
+        caption="Tᴇᴅᴅʏ ʟᴏɢs.",
     )
 
     await asyncio.sleep(5)
