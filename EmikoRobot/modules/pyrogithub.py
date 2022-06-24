@@ -11,7 +11,7 @@ __mod_name__ = "Github"
 @capture_err
 async def github(_, message):
     if len(message.command) != 2:
-        await message.reply_text("/git Username")
+        await message.reply_text("/git Usᴇʀɴᴀᴍᴇ")
         return
     username = message.text.split(None, 1)[1]
     URL = f"https://api.github.com/users/{username}"
@@ -34,16 +34,16 @@ async def github(_, message):
                 followers = result["followers"]
                 following = result["following"]
                 caption = f"""**Info Of {name}**
-**Username:** `{username}`
-**Bio:** `{bio}`
-**Profile Link:** [Here]({url})
-**Company:** `{company}`
-**Created On:** `{created_at}`
-**Repositories:** `{repositories}`
-**Blog:** `{blog}`
-**Location:** `{location}`
-**Followers:** `{followers}`
-**Following:** `{following}`"""
+**𝗨𝘀𝗲𝗿𝗻𝗮𝗺𝗲:** `{username}`
+**Bɪᴏ:** `{bio}`
+**Pʀᴏғɪʟᴇ ʟɪɴᴋ:** [Here]({url})
+**Cᴏᴍᴘᴀɴʏ:** `{company}`
+**Cʀᴇᴀᴛᴇᴅ ᴏɴ:** `{created_at}`
+**Rᴇᴘᴏsɪᴛᴏʀɪᴇs:** `{repositories}`
+**Bʟᴏɢ:** `{blog}`
+**Lᴏᴄᴀᴛɪᴏɴ:** `{location}`
+**Fᴏʟʟᴏᴡᴇʀs:** `{followers}`
+**Fᴏʟʟᴏᴡɪɴɢ:** `{following}`"""
             except Exception as e:
                 print(str(e))
                 pass
