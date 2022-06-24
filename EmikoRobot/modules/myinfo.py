@@ -30,7 +30,7 @@ async def proboyx(event):
     chat = await event.get_chat()
     current_time = datetime.utcnow()
     firstname = event.sender.first_name
-    button = [[custom.Button.inline("information",data="informations")]]
+    button = [[custom.Button.inline("𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻",data="informations")]]
     on = await bot.send_file(event.chat_id, file=file2,caption= f"ʜᴇy {firstname}, \n ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ \n ᴛᴏ ɢᴇᴛ ɪɴꜰᴏ ᴀʙᴏᴜᴛ yᴏᴜ", buttons=button)
 
     await asyncio.sleep(edit_time)
@@ -65,7 +65,7 @@ async def callback_query_handler(event):
   try:
     boy = event.sender_id
     PRO = await bot.get_entity(boy)
-    LILIE = "POWERED BY TEDDY \n\n"
+    LILIE = "𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗯𝘆 𝗧𝗲𝗱𝗱𝘆 \n\n"
     LILIE += f"Fɪʀsᴛ ɴᴀᴍᴇ : {PRO.first_name} \n"
     LILIE += f"Lᴀsᴛ ɴᴀᴍᴇ : {PRO.last_name}\n"
     LILIE += f"Yᴏᴜ ʙᴏᴛ : {PRO.bot} \n"
