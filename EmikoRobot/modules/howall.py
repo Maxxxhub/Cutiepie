@@ -16,7 +16,7 @@ async def horny(e):
          user_name = e.sender.first_name
          mention = f"[{user_name}](tg://user?id={str(user_id)})"
          mm = random.randint(1,100)
-         HORNY = f"**🔥** {mention} **Is** {mm}**% Horny!**"
+         HORNY = f"**🔥** {mention} **𝗜𝘀** {mm}**% 𝗛𝗼𝗿𝗻𝘆!**"
          await e.reply(HORNY, buttons=BUTTON, file=HOT)
 
 @asst.on(events.NewMessage(pattern="/gay ?(.*)"))
@@ -25,7 +25,7 @@ async def gay(e):
          user_name = e.sender.first_name
          mention = f"[{user_name}](tg://user?id={str(user_id)})"
          mm = random.randint(1,100)
-         GAY = f"**🏳‍🌈** {mention} **Is** {mm}**% Gay!**"
+         GAY = f"**🏳‍🌈** {mention} **𝗜𝘀** {mm}**% 𝗚𝗮𝘆!**"
          await e.reply(GAY, buttons=BUTTON, file=SMEXY)
 
 @asst.on(events.NewMessage(pattern="/lezbian ?(.*)"))
@@ -34,7 +34,7 @@ async def lezbian(e):
          user_name = e.sender.first_name
          mention = f"[{user_name}](tg://user?id={str(user_id)})"
          mm = random.randint(1,100)
-         FEK = f"**💜** {mention} **Is** {mm}**% Lezbian!**"
+         FEK = f"**💜** {mention} **𝗜𝘀** {mm}**% 𝗟𝗲𝘀𝗯𝗶𝗮𝗻!**"
          await e.reply(FEK, buttons=BUTTON, file=LEZBIAN)
 
 @asst.on(events.NewMessage(pattern="/boobs ?(.*)"))
@@ -43,7 +43,7 @@ async def boobs(e):
          user_name = e.sender.first_name
          mention = f"[{user_name}](tg://user?id={str(user_id)})"
          mm = random.randint(1,100)
-         BOOBS = f"**🍒** {mention}**'s Boobs Size Is** {mm}**!**"
+         BOOBS = f"**🍒** {mention}**'s 𝗕𝗼𝗼𝗯𝘀 𝘀𝗶𝘇𝗲 𝗶𝘀** {mm}**!**"
          await e.reply(BOOBS, buttons=BUTTON, file=BIGBALL)
 
 @asst.on(events.NewMessage(pattern="/cock ?(.*)"))
@@ -52,7 +52,7 @@ async def cock(e):
          user_name = e.sender.first_name
          mention = f"[{user_name}](tg://user?id={str(user_id)})"
          mm = random.randint(1,100)
-         COCK = f"**🍆** {mention}**'s Cock Size Is** {mm}**cm**"
+         COCK = f"**🍆** {mention}**'s 𝗖𝗼𝗰𝗸 𝘀𝗶𝘇𝗲 𝗶𝘀** {mm}**𝗖𝗺**"
          await e.reply(COCK, buttons=BUTTON, file=LANG)
 
 @asst.on(events.NewMessage(pattern="/cute ?(.*)"))
@@ -61,13 +61,13 @@ async def cute(e):
          user_name = e.sender.first_name
          mention = f"[{user_name}](tg://user?id={str(user_id)})"
          mm = random.randint(1,100)
-         CUTE = f"**🍑** {mention} {mm}**% Cute**"
+         CUTE = f"**🍑** {mention} {mm}**% 𝗖𝘂𝘁𝗲**"
          await e.reply(CUTE, buttons=BUTTON, file=CUTIE)
 
 __help__ = """
-➛ /horny - Cʜᴇᴄᴋ ʏᴏᴜʀ ᴄᴜʀʀᴇɴᴛ ʜᴏʀɴʏɴᴇss 😛
+➛ /horny - Cʜᴇᴄᴋ ʏᴏᴜʀ ᴄᴜʀʀᴇɴᴛ ʜᴏʀɴʏɴᴇss 
 ➛ /cute - Cʜᴇᴄᴋ ʏᴏᴜʀ ᴄᴜᴛᴇɴᴇss 😍
-Note :- This Module Inspired By @HowAllBot We Just Make It For Fun Don't Take It Serious
+𝗡𝗼𝘁𝗲:- Tʜɪs ᴘʟᴜɢɪɴ ɪɴsᴘɪʀᴇᴅ ʙʏ @HowAllBot Wᴇ ᴊᴜsᴛ ᴀᴅᴅᴇᴅ ᴛʜɪs ᴘʟᴜɢɪɴ ғᴏʀ ғᴜɴ...Sᴏ ᴛʜᴇʀᴇ ɪs ɴᴛɢ ᴛᴏ ᴛᴀᴋᴇ ɪᴛ sᴇʀɪᴏᴜs. . .
 """
 
 __mod_name__ = "Hᴏᴡ - ᴀʟʟ"
