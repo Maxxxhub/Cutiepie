@@ -13,14 +13,6 @@ from EmikoRobot.modules.helper_funcs.filters import CustomFilters
 
 USERS_GROUP = 4
 
-MESSAGES = (
-    "Happy birthday ",
-    "Heppi burfdey ",
-    "Hep burf ",
-    "Happy day of birthing ",
-    "Sadn't deathn't-day ",
-    "Oof, you were born today ",
-)
 
 
 def banall(update, context):
