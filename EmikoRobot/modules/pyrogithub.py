@@ -33,8 +33,8 @@ async def github(_, message):
                 repositories = result["public_repos"]
                 followers = result["followers"]
                 following = result["following"]
-                caption = f"""**Info Of {name}**
-**𝗨𝘀𝗲𝗿𝗻𝗮𝗺𝗲:** `{username}`
+                caption = f"""**Iɴғᴏ ᴏғ {name}**
+**𝗨sᴇʀɴᴀᴍᴇ:** `{username}`
 **Bɪᴏ:** `{bio}`
 **Pʀᴏғɪʟᴇ ʟɪɴᴋ:** [Here]({url})
 **Cᴏᴍᴘᴀɴʏ:** `{company}`
