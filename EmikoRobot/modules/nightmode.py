@@ -131,7 +131,7 @@ async def job_close():
     for pro in chats:
         try:
             await tbot.send_message(
-              int(pro.chat_id), "12:00 ᴀᴍ, ɢʀᴏᴜᴩ ɪꜱ ᴄʟᴏꜱɪɴɢ ᴛɪʟʟ 6 ᴀᴍ. ɴɪɢʜᴛᴍᴏᴅᴇ ꜱᴛᴀʀᴛᴇᴅ ! \n**ᴩᴏᴡᴇʀᴇᴅ ʙy @Teddyrobot_bot ✰⚡️**"
+              int(pro.chat_id), "12:00 ᴀᴍ, ɢʀᴏᴜᴩ ɪꜱ ᴄʟᴏꜱɪɴɢ ᴛɪʟʟ 6 ᴀᴍ. ɴɪɢʜᴛᴍᴏᴅᴇ ꜱᴛᴀʀᴛᴇᴅ ! \n**ᴩᴏᴡᴇʀᴇᴅ ʙy @Teddyrobot_bot ✰**"
             )
             await tbot(
             functions.messages.EditChatDefaultBannedRightsRequest(
