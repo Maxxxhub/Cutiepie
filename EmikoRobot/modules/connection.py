@@ -310,15 +310,15 @@ def connected(bot: Bot, update: Update, chat, user_id, need_admin=True):
         else:
             send_message(
                 update.effective_message,
-                "Tʜᴇ ɢʀᴏᴜᴘ ᴄʜᴀᴍɢᴇᴅ ᴛʜᴇ ᴄᴏɴɴᴇᴄᴛɪᴏɴ ʀɪɢʜᴛs ᴏʀ ʏᴏᴜ ᴀʀᴇ ɴᴏ ʟᴏɴɢᴇʀ ᴀɴ ᴀᴅᴍɪɴ.\nI ʜᴠ ᴛᴏ ᴅɪsᴄᴏɴɴᴇᴄᴛ ʏᴏᴜ.",
+                "Tʜᴇ ɢʀᴏᴜᴘ ᴄʜᴀɴɢᴇᴅ ᴛʜᴇ ᴄᴏɴɴᴇᴄᴛɪᴏɴ ʀɪɢʜᴛs ᴏʀ ʏᴏᴜ ᴀʀᴇ ɴᴏ ʟᴏɴɢᴇʀ ᴀɴ ᴀᴅᴍɪɴ.\nI ʜᴠ ᴛᴏ ᴅɪsᴄᴏɴɴᴇᴄᴛ ʏᴏᴜ.",
             )
             disconnect_chat(update, bot)
     else:
         return False
 
 
-CONN_HELP = """
- ᗩᑕTIOᑎՏ ᗩᖇ ᗩᐯᗩIᒪᗩᗷᒪᗴ ᗯITᕼ ᑕOᑎᑎᗴᑕTᗴᗪ ᘜᖇOᑌᑭՏ:
+CONN_HELP = """ 
+ Aᴄᴛɪᴏɴs ᴛʜᴀᴛ ᴀʀᴇ ᴀᴠᴀɪʟᴀʙʟᴇ ᴡɪᴛʜ ᴄᴏɴɴᴇᴄᴛᴇᴅ ᴄʜᴀᴛs/ɢʀᴏᴜᴘs:
  • Vɪᴇᴡ ᴀɴᴅ ᴇᴅɪᴛ ɴᴏᴛᴇs.
  • Vɪᴇᴡ ᴀɴᴅ ᴇᴅɪᴛ ғɪʟᴛᴇʀs..
  • Gᴇᴛ ɪɴᴠɪᴛᴇ ʟɪɴᴋ ᴏғ ᴛʜᴇ ᴄʜᴀᴛ.
@@ -327,7 +327,7 @@ CONN_HELP = """
  • Sᴇᴛ ʟᴏᴄᴋs ᴀɴᴅ ᴜɴʟᴏᴄᴋs ɪɴ ᴄʜᴀᴛ.
  • Eɴᴀʙʟᴇ ᴀɴᴅ ᴅɪsᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs ɪɴ ᴄʜᴀᴛ.
  • Exᴘᴏʀᴛ ᴀɴᴅ ɪᴍᴘᴏʀᴛs ᴏғ ᴄʜᴀᴛ ʙᴀᴄᴋᴜᴘ.
- • Mᴏʀᴇ ɪɴ ғᴜᴛᴜʀᴇ! sᴛᴀʏ ᴛᴜɴᴇᴅ ᴡɪᴛʜ @Teddyrobot_bot """
+ • Mᴏʀᴇ ɪɴ ғᴜᴛᴜʀᴇ! sᴛᴀʏ ᴛᴜɴᴇᴅ ᴡɪᴛʜ         @Teddyrobot_bot"""
 
 
 def help_connect_chat(update, context):
@@ -335,7 +335,7 @@ def help_connect_chat(update, context):
     args = context.args
 
     if update.effective_message.chat.type != "private":
-        send_message(update.effective_message, "PM ᴍᴇ ᴡɪᴛʜ ᴛʜᴀᴛ ᴄᴏᴍᴍᴀɴᴅ ᴛᴏ ɢᴇᴛ ʜᴇʟᴘ ғᴏʀ ᴛʜᴛ.")
+        send_message(update.effective_message, "PM ᴍᴇ ᴡɪᴛʜ ᴛʜᴀᴛ ᴄᴏᴍᴍᴀɴᴅ ᴛᴏ ɢᴇᴛ ʜᴇʟᴘ ғᴏʀ ᴛʜᴀᴛ.")
         return
     send_message(update.effective_message, CONN_HELP, parse_mode="markdown")
 
@@ -409,7 +409,7 @@ Tʜɪs ᴀʟʟᴏᴡs ʏᴏᴜ ᴛᴏ ᴄᴏɴɴᴇᴄᴛ ᴛᴏ ᴀ ᴄʜᴀ's 
 ➻ /connection: Lɪsᴛ ᴄᴏɴɴᴇᴄᴛᴇᴅ ᴄʜᴀᴛs.
 ➻ /disconnect: Dɪsᴄᴏɴɴᴇᴄᴛ ғʀᴏᴍ ᴀ ᴄʜᴀᴛ.
 ➻ /helpconnect: Lɪsᴛ ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs ᴛʜᴀᴛ ᴄᴀɴ ʙᴇ ᴜsᴇᴅ. 
-*✘ ᗩᗪᗰIᑎ OᑎᒪY ✘:*
+*✘ **Aᴅᴍɪɴ ᴏɴʟʏ** ✘:*
 ➻ /allowconnect <yes/no>: Aʟʟᴏᴡ ᴀ ᴜsᴇʀ ᴛᴏ ᴄᴏɴɴᴇᴄᴛ ᴛᴏ ᴀ ᴄʜᴀᴛ.
 """
 
