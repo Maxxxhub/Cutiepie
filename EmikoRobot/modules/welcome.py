@@ -198,12 +198,16 @@ def new_member(update: Update, context: CallbackContext):  # sourcery no-metrics
             # Give the owner a special welcome
             if new_mem.id == OWNER_ID:
                 update.effective_message.reply_text(
-                    f"Welcome to {html.escape(chat.title)} my king.", reply_to_message_id=reply
+  f"""╔════════════════╗
+         ✰ Wᴇʟᴄᴏᴍᴇ Tᴏ ✰                      
+  {html. escape(chat.title)}
+        『Mʏ Kɪɴɢ ❤️🥀』
+      ╚════════════════╝""", reply_to_message_id=reply
                 )
                 welcome_log = (
                     f"{html.escape(chat.title)}\n"
                     f"#USER_JOINED\n"
-                    f"My King just joined the chat"
+                    f"Mʏ ᴋɪɴɢ ᴊᴜsᴛ ᴊᴏɪɴᴇᴅ ᴛʜᴇ ᴄʜᴀᴛ 💥"
                 )
                 continue
 
@@ -973,10 +977,10 @@ def clean_welcome(update: Update, context: CallbackContext) -> str:
         return (
             f"<b>{html.escape(chat.title)}:</b>\n"
             f"#CLEAN_WELCOME\n"
-            f"<b>Admin:</b> {mention_html(user.id, user.first_name)}\n"
-            f"Has toggled clean welcomes to <code>OFF</code>."
+            f"<b>Aᴅᴍɪɴ:</b> {mention_html(user.id, user.first_name)}\n"
+            f"Hᴀs ᴛᴏɢɢʟᴇᴅ ᴄʟᴇᴀɴ ᴡᴇʟᴄᴏᴍᴇs ᴛᴏ <code>OFF</code>."
         )
-    update.effective_message.reply_text("I understand 'on/yes' or 'off/no' only!")
+    update.effective_message.reply_text("I ᴜɴᴅᴇʀsᴛᴀɴᴅ 'on/yes' ᴏʀ 'off/no' ᴏɴʟʏ!")
     return ""
 
 
@@ -988,28 +992,28 @@ def cleanservice(update: Update, context: CallbackContext) -> str:
         curr = sql.clean_service(chat.id)
         if curr:
             update.effective_message.reply_text(
-                "Welcome clean service is : on", parse_mode=ParseMode.MARKDOWN
+                "Wᴇʟᴄᴏᴍᴇ ᴄʟᴇᴀɴ sᴇʀᴠɪᴄᴇ ɪs : on", parse_mode=ParseMode.MARKDOWN
             )
         else:
             update.effective_message.reply_text(
-                "Welcome clean service is : off", parse_mode=ParseMode.MARKDOWN
+                "Wᴇʟᴄᴏᴍᴇ ᴄʟᴇᴀɴ sᴇʀᴠɪᴄᴇ ɪs : off", parse_mode=ParseMode.MARKDOWN
             )
 
     elif len(args) >= 1:
         var = args[0]
         if var in ("no", "off"):
             sql.set_clean_service(chat.id, False)
-            update.effective_message.reply_text("Welcome clean service is : off")
+            update.effective_message.reply_text("Wᴇʟᴄᴏᴍᴇ ᴄʟᴇᴀɴ sᴇʀᴠɪᴄᴇ ɪs : off")
         elif var in ("yes", "on"):
             sql.set_clean_service(chat.id, True)
-            update.effective_message.reply_text("Welcome clean service is : on")
+            update.effective_message.reply_text("Wᴇʟᴄᴏᴍᴇ ᴄʟᴇᴀɴ sᴇʀᴠɪᴄᴇ ɪs : on")
         else:
             update.effective_message.reply_text(
-                "Invalid option", parse_mode=ParseMode.MARKDOWN
+                "Iɴᴠᴀʟɪᴅ ᴏᴘᴛɪᴏɴ", parse_mode=ParseMode.MARKDOWN
             )
     else:
         update.effective_message.reply_text(
-            "Usage is on/yes or off/no", parse_mode=ParseMode.MARKDOWN
+            "Usᴀɢᴇ ɪs on/yes ᴏʀ off/no", parse_mode=ParseMode.MARKDOWN
         )
 
 
@@ -1026,7 +1030,7 @@ def user_button(update: Update, context: CallbackContext):
         sql.set_human_checks(user.id, chat.id)
         member_dict = VERIFIED_USER_WAITLIST[(chat.id, user.id)]
         member_dict["status"] = True
-        query.answer(text="Yeet! You're a human, unmuted!")
+        query.answer(text="Yᴜᴘᴘᴘ! Yᴏᴜ'ʀᴇ ᴀ ʜᴜᴍᴀɴ, ᴜɴᴍᴜᴛᴇᴅ!")
         bot.restrict_chat_member(
             chat.id,
             user.id,
@@ -1073,7 +1077,7 @@ def user_button(update: Update, context: CallbackContext):
                     sql.set_clean_welcome(chat.id, sent.message_id)
 
     else:
-        query.answer(text="You're not allowed to do this!")
+        query.answer(text="Yᴏᴜ'ʀᴇ ɴᴏᴛ ᴀʟʟᴏᴡᴇᴅ ᴛᴏ ᴅᴏ ᴛʜɪs!")
 
 
 def user_captcha_button(update: Update, context: CallbackContext):
@@ -1096,7 +1100,7 @@ def user_captcha_button(update: Update, context: CallbackContext):
             sql.set_human_checks(user.id, chat.id)
             member_dict = VERIFIED_USER_WAITLIST[(chat.id, user.id)]
             member_dict["status"] = True
-            query.answer(text="Yeet! You're a human, unmuted!")
+            query.answer(text="Yᴜᴘᴘ! Yᴏᴜ'ʀᴇ ᴀ ʜᴜᴍᴀɴ, ᴜɴᴍᴜᴛᴇᴅ!")
             bot.restrict_chat_member(
                 chat.id,
                 user.id,
@@ -1147,9 +1151,9 @@ def user_captcha_button(update: Update, context: CallbackContext):
             except:
                 pass
             kicked_msg = f"""
-            ❌ [{escape_markdown(join_usr_data.first_name)}](tg://user?id={join_user}) failed the captcha and was kicked.
+            ❌ [{escape_markdown(join_usr_data.first_name)}](tg://user?id={join_user}) ғᴀɪʟᴇᴅ ᴛʜᴇ ᴄᴀᴘᴛᴄʜᴀ ᴀɴᴅ ᴡᴀs ᴋɪᴄᴋᴇᴅ.
             """
-            query.answer(text="Wrong answer")
+            query.answer(text="Wʀᴏɴɢ ᴀɴsᴡᴇʀ")
             res = chat.unban_member(join_user)
             if res:
                 bot.sendMessage(
@@ -1157,7 +1161,7 @@ def user_captcha_button(update: Update, context: CallbackContext):
                 )
 
     else:
-        query.answer(text="You're not allowed to do this!")
+        query.answer(text="Yᴏᴜ'ʀᴇ ɴᴏᴛ ᴀʟʟᴏᴡᴇᴅ ᴛᴏ ᴅᴏ ᴛʜɪs!")
 
 
 WELC_HELP_TXT = (
@@ -1229,28 +1233,28 @@ def __chat_settings__(chat_id, _):
     welcome_pref = sql.get_welc_pref(chat_id)[0]
     goodbye_pref = sql.get_gdbye_pref(chat_id)[0]
     return (
-        "This chat has it's welcome preference set to `{}`.\n"
-        "It's goodbye preference is `{}`.".format(welcome_pref, goodbye_pref)
+        "Tʜɪs ᴄʜᴀᴛ ʜᴀs ɪᴛ's ᴡᴇʟᴄᴏᴍᴇ ᴘʀᴇғᴇʀᴇᴍᴄᴇ sᴇᴛ ᴛᴏ `{}`.\n"
+        "Iᴛ'ᴢ ɢᴏᴏᴅʙʏᴇ ᴘʀᴇғᴇʀᴇɴᴄᴇ ɪs `{}`.".format(welcome_pref, goodbye_pref)
     )
 
 
 __help__ = """
-*✘ Admins only ✘:*
-➻ /welcome <on/off>*:* enable/disable welcome messages.
-➻ /welcome*:* shows current welcome settings.
-➻ /welcome noformat*:* shows current welcome settings, without the formatting - useful to recycle your welcome messages!
-➻ /goodbye*:* same usage and args as `/welcome`.
-➻ /setwelcome <sometext>*:* set a custom welcome message. If used replying to media, uses that media.
-➻ /setgoodbye <sometext>*:* set a custom goodbye message. If used replying to media, uses that media.
-➻ /resetwelcome*:* reset to the default welcome message.
-➻ /resetgoodbye*:* reset to the default goodbye message.
-➻ /cleanwelcome <on/off>*:* On new member, try to delete the previous welcome message to avoid spamming the chat.
-➻ /welcomemutehelp*:* gives information about welcome mutes.
-➻ /cleanservice <on/off*:* deletes telegrams welcome/left service messages.
- *Example:*
-user joined chat, user left chat.
-*✘ Welcome markdown ✘:*
-➻ /welcomehelp*:* view more formatting information for custom welcome/goodbye messages.
+*✘ Aᴅᴍɪɴ ᴏɴʟʏ ✘:*
+➻ /welcome <on/off>*:* Eɴᴀʙʟᴇ/ᴅɪsᴀʙʟᴇ ᴡᴇʟᴄᴏᴍᴇ ᴍᴇssᴀɢᴇs.
+➻ /welcome*:* Sʜᴏᴡs ᴄᴜʀʀᴇɴᴛ ᴡᴇʟᴄᴏᴍᴇ ᴍᴇssᴀɢᴇ sᴇᴛᴛɪɴɢs.
+➻ /welcome noformat*:* Sʜᴏᴡs ᴄᴜʀʀᴇɴᴛ ᴡᴇʟᴄᴏᴍᴇ sᴇᴛᴛɪɴɢ, ᴡɪᴛʜᴏᴜᴛ ᴛʜᴇ ғᴏʀᴍᴀᴛᴛɪɴɢ - ᴜsᴇғᴜʟ ᴛᴏ ʀᴇᴄʏᴄʟᴇ ʏᴏᴜʀ ᴡᴇʟᴄᴏᴍᴇ ᴍᴇssᴀɢᴇs!
+➻ /goodbye*:* Sᴀᴍᴇ ᴜsᴀɢᴇ ɴᴅ ᴀʀɢs ᴀs `/welcome`.
+➻ /setwelcome <sometext>*:* Sᴇᴛ ᴀ ᴄᴜsᴛᴏᴍ ᴡᴇʟᴄᴏᴍᴇ ᴍᴇssᴀɢᴇ. Iғ ᴜsᴇᴅ ᴛᴏ ᴍᴇᴅɪᴀ, ᴜsᴇs ᴛʜᴀᴛ ᴍᴇᴅɪᴀ.
+➻ /setgoodbye <sometext>*:* Sᴇᴛ ᴀ ᴄᴜsᴛᴏᴍ ɢᴏᴏᴅʙʏʀ ᴍᴇssᴀɢᴇ. Iғ ᴜsᴇᴅ ʀᴇᴘʟɪᴇᴅ ᴛᴏ ᴍᴇᴅɪᴀ, ᴜsᴇs ᴛʜᴀᴛ ᴍᴇᴅɪᴀ.
+➻ /resetwelcome*:* Rᴇsᴇᴛ ᴛᴏ ᴛʜᴇ ᴅᴇғᴀᴜʟᴛ ᴡᴇʟᴄᴏᴍᴇ ᴍᴇssᴀғᴇ.
+➻ /resetgoodbye*:* Rᴇsᴇᴛ ᴛᴏ ᴛʜᴇ ᴅᴇғᴀᴜʟᴛ ɢᴏᴏᴅʙʏᴇ ᴍᴇssᴀɢᴇ.
+➻ /cleanwelcome <on/off>*:* Oɴ ɴᴇᴡ ᴍᴇᴍʙᴇʀ, ᴛʀʏ ᴛᴏ ᴅᴇʟᴇᴛᴇ ᴛʜᴇ ᴘʀᴇᴠɪᴏᴜs ᴡᴇʟᴄᴏᴍᴇ ᴍᴇssᴀɢᴇ ᴛᴏ ᴀᴠᴏɪᴅ sᴘᴀᴍᴍɪɴɢ ɪɴ ᴛʜᴇ ᴄʜᴀᴛ.
+➻ /welcomemutehelp*:* Gɪᴠᴇs ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴡᴇʟᴄᴏᴍᴇ ᴍᴜᴛᴇs.
+➻ /cleanservice <on/off>*:* Dᴇʟᴇᴛᴇs ɢʀᴏᴜᴘ/ᴄʜᴀᴛ's ᴜsᴇʀ ᴊᴏɪɴᴇᴅ ɴᴅ ᴜsᴇʀ ʟᴇғᴛ sᴇʀᴠɪᴄᴇ ᴍᴇssᴀɢᴇs.
+ *Exᴀᴍᴘʟᴇ:*
+ᴜsᴇʀ ᴊᴏɪɴᴇᴅ ᴄʜᴀᴛ, ᴜsᴇʀ ʟᴇғᴛ ᴄʜᴀᴛ.
+*✘ Wᴇʟᴄᴏᴍᴇ ᴍᴀʀᴋᴅᴏᴡɴ ✘:*
+➻ /welcomehelp*:* Vɪᴇᴡ ᴍᴏʀᴇ ғᴏʀᴍᴀᴛᴛɪɴɢ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ғᴏʀ ᴄᴜsᴛᴏᴍɪsɪɴɢ ᴡᴇᴘᴄᴏᴍᴇ/ɢᴏᴏᴅʙʏᴇ ᴍᴇssᴀɢᴇs.
 """
 
 NEW_MEM_HANDLER = MessageHandler(
