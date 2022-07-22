@@ -378,9 +378,9 @@ async def chat_watcher_func(_, message):
 
 
 __help__ = """
-*Away from group*
- ❍ /afk <reason>*:* mark yourself as AFK(away from keyboard).
-When marked as AFK, any mentions will be replied to with a message to say you're not available!
+*Aᴡᴀʏ ғʀᴏᴍ ɢʀᴏᴜᴘ*
+ ❍ /afk <reason>*:* Mᴀʀᴋ ʏᴏᴜʀsᴇʟғ ᴀs AFK (ᴀᴡᴀʏ ғʀᴏᴍ ᴋᴇʏʙᴏᴀʀᴅ).
+Wʜᴇɴ ᴍᴀʀᴋᴇᴅ ᴀs AFK, ᴀɴʏ ᴍᴇɴᴛɪᴏɴs ᴡɪʟʟ ʙᴇ ʀᴇᴘʟɪᴇᴅ ᴛᴏ ᴡɪᴛʜ ᴀ ᴍsɢ ᴛᴏ sᴀʏ ʏᴏᴜ'ʀᴇ ɴᴏᴛ ᴀᴠᴀɪʟᴀʙʟᴇ!
 """
 
 __mod_name__ = "Aғᴋ"
