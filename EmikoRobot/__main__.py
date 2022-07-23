@@ -234,18 +234,24 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_photo(
-            random.choice(TEDDY_GROUP_START_IMG), caption= f"<b>𝐇ɪ Dᴀʀʟɪɴɢ ❤️ 𝐈'ᴍ Tᴇᴅᴅy 𝐑ᴏʙᴏᴛ</b>\n<b> 𝐒ᴛᴀʀᴛᴇᴅ 𝐖ᴏʀᴋɪɴɢ 𝐒ɪɴᴄᴇ </b> <code>📍{uptime}📍</code>",
+            random.choice(TEDDY_GROUP_START_IMG), caption= f"""
+╔═════════════════════╗
+┣➪ Tᴇᴅᴅʏ Rᴏʙᴏᴛ Sᴛᴀʀᴛᴇᴅ ✅
+╚═════════════════════╝
+Aᴅᴠᴀɴᴄᴇᴅ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ + ᴍᴜsɪᴄ
+   ʙᴏᴛ ꜰᴏʀ ʏᴏᴜʀ ɢʀᴏᴜᴘ ~
+      Tᴇᴅᴅʏ ʀᴏʙᴏᴛ
+╔═════════════════════╗
+┣➪ Sᴜᴘᴘᴏʀᴛ:- @Teddysupport 
+╚═════════════════════╝
+""",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="♠️ᴀᴅᴅ ᴛᴇᴅᴅy♠️",
+                            text="📍ᴀᴅᴅ ᴛᴇᴅᴅy ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ♠📍",
                             url="t.me/TeddyRobot_bot?startgroup=new",
-                        ),
-                        InlineKeyboardButton(
-                            text="♨️ᴜᴩᴅᴀᴛᴇꜱ♨️",
-                            url="t.me/teddy_bot_updates",
                         ),
                     ]
                 ]
