@@ -810,16 +810,7 @@ def main():
 
 if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", f"[нℓσ ∂αяℓιиg ❤️)](https://telegra.ph/file/08781a98407cc57459a38.jpg)", caption= f"""
-╔════════════════════════╗ 
-┣➪  Tᴇᴅᴅʏ Rᴏʙᴏᴛ Sᴛᴀʀᴛᴇᴅ ✅   
-       
- ➻╭──────────────
-➻ ┣─ » **Pyᴛʜᴏɴ ᴠᴇʀꜱɪᴏɴ :** `{y()}`
- ➻╰──────────────
-
-┣➪
-╚════════════════════════╝""" parse_mode=ParseMode.MARKDOWN)
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", f"[нℓσ ∂αяℓιиg ❤️, ι'м αℓινє 🔥...!!!)](https://telegra.ph/file/08781a98407cc57459a38.jpg)", parse_mode=ParseMode.MARKDOWN)
 
         except Unauthorized:
             LOGGER.warning(
