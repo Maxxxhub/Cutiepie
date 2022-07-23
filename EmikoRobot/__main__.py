@@ -40,6 +40,7 @@ from EmikoRobot.modules.helper_funcs.chat_status import is_user_admin
 from EmikoRobot.modules.helper_funcs.misc import paginate_modules
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
 from EmikoRobot.script import TEDDY_GROUP_START_IMG
+from platform import python_version as y
 from telegram.error import (
     BadRequest,
     ChatMigrated,
@@ -90,8 +91,8 @@ PM_START_TEXT = """
 『 ᴍʏsᴇʟғ :- ᴛᴇᴅᴅy, ɴɪᴄᴇ ᴛᴏ ᴍᴇᴇᴛ ʏᴀ 💜
 ɪ ᴄᴀɴ ʜᴇʟᴘ ʏᴏᴜ ɪɴ ᴍᴀɴᴀɢɪɴɢ ʏᴏᴜʀ ɢʀᴏᴜᴘ ɪғ ʏᴏᴜ ᴡᴀɴᴛ! [🎀](https://telegra.ph/file/f996f7be2a32f66f71694.mp4)
 ╔═══════════════════════╗
-┣➪ *ᴀʟɪᴠᴇ ꜱɪɴᴄᴇ:* `{}`
-┣➪ `{}` *ᴍʏ ғʀɪᴇɴᴅs, ᴀᴄʀᴏss* `{}` *ᴄʜᴀᴛs.*
+ ➻ *ᴀʟɪᴠᴇ ꜱɪɴᴄᴇ:* `{}`
+ ➻ `{}` *ᴍʏ ғʀɪᴇɴᴅs, ᴀᴄʀᴏss* `{}` *ᴄʜᴀᴛs.*
 ╚═══════════════════════╝
 ᴄʜᴇᴄᴋ ᴏᴜᴛ ᴍʏ ᴄᴏᴍᴍᴀɴᴅs ʙʏ ᴄʟɪᴄᴋɪɴɢ /help. 』
 """
@@ -239,8 +240,8 @@ def start(update: Update, context: CallbackContext):
 ┣➪ Tᴇᴅᴅʏ Rᴏʙᴏᴛ Sᴛᴀʀᴛᴇᴅ ✅
 ╚═════════════════════╝
 Aᴅᴠᴀɴᴄᴇᴅ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ + ᴍᴜsɪᴄ
-   ʙᴏᴛ ꜰᴏʀ ʏᴏᴜʀ ɢʀᴏᴜᴘ ~
-      Tᴇᴅᴅʏ ʀᴏʙᴏᴛ
+     ʙᴏᴛ ꜰᴏʀ ʏᴏᴜʀ ɢʀᴏᴜᴘ ~
+          Tᴇᴅᴅʏ ʀᴏʙᴏᴛ
 ╔═════════════════════╗
 ┣➪ Sᴜᴘᴘᴏʀᴛ:- @Teddysupport 
 ╚═════════════════════╝
@@ -807,9 +808,18 @@ def migrate_chats(update: Update, context: CallbackContext):
 
 def main():
 
-    if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
+if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", f"[нℓσ ∂αяℓιиg ❤️, ι'м αℓινє 🔥...!!!)](https://telegra.ph/file/08781a98407cc57459a38.jpg)", parse_mode=ParseMode.MARKDOWN)
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", f"[нℓσ ∂αяℓιиg ❤️)](https://telegra.ph/file/08781a98407cc57459a38.jpg)", caption= f"""
+╔════════════════════════╗ 
+┣➪  Tᴇᴅᴅʏ Rᴏʙᴏᴛ Sᴛᴀʀᴛᴇᴅ ✅   
+       
+ ➻╭──────────────
+➻ ┣─ » **Pyᴛʜᴏɴ ᴠᴇʀꜱɪᴏɴ :** `{y()}`
+ ➻╰──────────────
+
+┣➪
+╚════════════════════════╝""" parse_mode=ParseMode.MARKDOWN)
 
         except Unauthorized:
             LOGGER.warning(
