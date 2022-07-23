@@ -353,9 +353,9 @@ def info(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                "ʜᴇᴀʟᴛʜ", url="https://t.me/teddysupport"),
+                                "Hᴇᴀʟᴛʜ", url="https://t.me/Teddysupport/8379"),
                             InlineKeyboardButton(
-                                "ᴅɪsᴀsᴛᴇʀ ʟᴇᴠᴇʟs", url="https://t.me/Teddysupport")
+                                "Sᴜᴘᴘᴏʀᴛ", url="https://t.me/Teddysupport")
                         ],
                     ]
                 ),
@@ -371,9 +371,9 @@ def info(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                "ʜᴇᴀʟᴛʜ", url="https://t.me/teddysupport"),
+                                "Hᴇᴀʟᴛʜ", url="https://t.me/Teddysupport/8379"),
                             InlineKeyboardButton(
-                                "ᴅɪsᴀsᴛᴇʀ ʟᴇᴠᴇʟs", url="https://t.me/Teddysupport")
+                                "Sᴜᴘᴘᴏʀᴛ", url="https://t.me/Teddysupport")
                         ],
                     ]
                 ),
@@ -564,10 +564,6 @@ Examples:
 *✘ json Detailed info ✘:*
 ➻ /json*:* Get Detailed info about any message.
  
-*✘ AFk ✘:*
-When marked as AFK, any mentions will be replied to with a message stating that you're not available!
-➻ /afk <reason>*:* Mark yourself as AFK.
-  - brb <reason>: Same as the afk command, but not a command. 
   
 *✘ What is that health thingy? ✘*
  Come and see [HP System explained](https://t.me/teddy_updates/8)
@@ -593,7 +589,7 @@ dispatcher.add_handler(GET_BIO_HANDLER)
 dispatcher.add_handler(SET_ABOUT_HANDLER)
 dispatcher.add_handler(GET_ABOUT_HANDLER)
 
-__mod_name__ = "Iɴꜰᴏ & Aꜰᴋ"
+__mod_name__ = "Iɴꜰᴏ"
 __command_list__ = ["setbio", "bio", "setme", "me", "info"]
 __handlers__ = [
     ID_HANDLER,
