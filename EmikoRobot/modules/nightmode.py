@@ -131,7 +131,21 @@ async def job_close():
     for pro in chats:
         try:
             await tbot.send_message(
-              int(pro.chat_id), "12:00 ᴀᴍ, ɢʀᴏᴜᴩ ɪꜱ ᴄʟᴏꜱɪɴɢ ᴛɪʟʟ 6 ᴀᴍ. ɴɪɢʜᴛᴍᴏᴅᴇ ꜱᴛᴀʀᴛᴇᴅ ! \n**ᴩᴏᴡᴇʀᴇᴅ ʙy @Teddyrobot_bot ✰**"
+              int(pro.chat_id), """
+┏━━━━━━━━━━━━━━━━━━━━┓
+      ➾『 Tᴇᴅᴅʏ Rᴏʙᴏᴛ 』
+
+    🌗 ɴɪɢʜᴛ ᴍᴏᴅᴇ ꜱᴛᴀʀᴛᴇᴅ !
+
+ Gʀᴏᴜᴘ ɪꜱ ᴄʟᴏꜱɪɴɢ ᴛɪʟʟ 06:00ᴀᴍ.
+  Oɴʟʏ ᴀᴅᴍɪɴs sʜᴏᴜʟᴅ ʙᴇ ᴀʙʟᴇ 
+           ᴛᴏ ᴍᴇssᴀɢᴇ.
+
+
+   ✰  ᴘᴏᴡᴇʀᴇᴅ ʙʏ :  ~ ~ ~ ~
+   ~ ~ ~ ~  @Teddyrobot_bot  ✰
+┗━━━━━━━━━━━━━━━━━━━━┛
+"""
             )
             await tbot(
             functions.messages.EditChatDefaultBannedRightsRequest(
@@ -153,7 +167,21 @@ async def job_open():
     for pro in chats:
         try:
             await tbot.send_message(
-              int(pro.chat_id), "06:00 ᴀᴍ, ɢʀᴏᴜᴩ ɪꜱ ᴏᴩᴇɴɪɴɢ. ɴɪɢʜᴛᴍᴏᴅᴇ ᴇɴᴅᴇᴅ! \n**ᴩᴏᴡᴇʀᴇᴅ ʙy @Teddyrobot_bot ✰**"
+              int(pro.chat_id), """
+┏━━━━━━━━━━━━━━━━━━━━┓
+       ➾『 Tᴇᴅᴅʏ Rᴏʙᴏᴛ 』
+
+      🏜️ ɴɪɢʜᴛ ᴍᴏᴅᴇ ᴇɴᴅᴇᴅ !
+
+     6:00ᴀᴍ, Gʀᴏᴜᴘ ɪs ᴏᴘᴇɴɪɴɢ.
+   Eᴠᴇʀʏᴏɴᴇ sʜᴏᴜʟᴅ ʙᴇ ᴀʙʟᴇ ᴛᴏ
+              ᴍᴇssᴀɢᴇ .
+
+
+   ✰  ᴘᴏᴡᴇʀᴇᴅ ʙʏ :  ~ ~ ~ ~
+   ~ ~ ~ ~  @Teddyrobot_bot  ✰
+┗━━━━━━━━━━━━━━━━━━━━┛
+"""
             )
             await tbot(
             functions.messages.EditChatDefaultBannedRightsRequest(
@@ -167,7 +195,4 @@ async def job_open():
 scheduler = AsyncIOScheduler(timezone="Asia/kolkata")
 scheduler.add_job(job_open, trigger="cron", hour=5, minute=58)
 scheduler.start()
-
-
-
 
