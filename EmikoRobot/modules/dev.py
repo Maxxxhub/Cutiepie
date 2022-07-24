@@ -89,5 +89,13 @@ dispatcher.add_handler(LEAVE_HANDLER)
 dispatcher.add_handler(GITPULL_HANDLER)
 dispatcher.add_handler(RESTART_HANDLER)
 
-__mod_name__ = "Dev"
+__help__ = """
+*Note:* ONLY DEVELOPER COMMAND !
+⚚ /leave <chat id> - Leave that chat!
+⚚ /gitpull - update your heroku app.
+⚚ /reboot - Reboot the application ( works for heroku only )
+⚚ /lockdown on/off - if on leave all groups where bot is newly added.
+"""
+
+__mod_name__ = "DEV"
 __handlers__ = [LEAVE_HANDLER, GITPULL_HANDLER, RESTART_HANDLER, ALLOWGROUPS_HANDLER]
