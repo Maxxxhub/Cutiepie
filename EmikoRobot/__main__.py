@@ -89,7 +89,8 @@ def get_readable_time(seconds: int) -> str:
 PM_START_TEXT = """
 *✧ ᴏɪ ᴏɪ ᴏɪ, {} !* 🥀
 『 ᴍʏsᴇʟғ :- ᴛᴇᴅᴅy, ɴɪᴄᴇ ᴛᴏ ᴍᴇᴇᴛ ʏᴀ 💜
-ɪ ᴄᴀɴ ʜᴇʟᴘ ʏᴏᴜ ɪɴ ᴍᴀɴᴀɢɪɴɢ ʏᴏᴜʀ ɢʀᴏᴜᴘ ɪғ ʏᴏᴜ ᴡᴀɴᴛ! [🎀](https://telegra.ph/file/f996f7be2a32f66f71694.mp4)
+ɪ ᴄᴀɴ ʜᴇʟᴘ ʏᴏᴜ ɪɴ ᴍᴀɴᴀɢɪɴɢ ʏᴏᴜʀ ɢʀᴏᴜᴘ ɪғ
+ ʏᴏᴜ ᴡᴀɴᴛ! [🎀](https://telegra.ph/file/f996f7be2a32f66f71694.mp4)
 ╔═══════════════════════╗
  ➻ *ᴀʟɪᴠᴇ ꜱɪɴᴄᴇ:* `{}`
  ➻ `{}` *ᴍʏ ғʀɪᴇɴᴅs, ᴀᴄʀᴏss* `{}` *ᴄʜᴀᴛs.*
@@ -236,31 +237,32 @@ def start(update: Update, context: CallbackContext):
     else:
         update.effective_message.reply_text(
         """
-╔═════════════════════╗
-┣➪ Tᴇᴅᴅʏ Rᴏʙᴏᴛ Iᴢ Aʟɪᴠᴇ ✅
-╚═════════════════════╝
+╔══════════════════╗
+┣➪   ~  Tᴇᴅᴅʏ Rᴏʙᴏᴛ ~
+╚══════════════════╝
+            Aʟɪᴠᴇ ✅
 Aᴅᴠᴀɴᴄᴇᴅ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ + ᴍᴜsɪᴄ
      ʙᴏᴛ ꜰᴏʀ ʏᴏᴜʀ ɢʀᴏᴜᴘ ~
           Tᴇᴅᴅʏ ʀᴏʙᴏᴛ
-╔═════════════════════╗
+╔══════════════════╗
 ┣➪ Sᴜᴘᴘᴏʀᴛ:- @Teddysupport 
-╚═════════════════════╝
+╚══════════════════╝
 """,
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text=" ❓ ",
-                            callback_data="help_back"
+                            text=" ➕ ",
+                            url=f"t.me/Teddyrobot_bot?startgroup=new"
                         ),
                         InlineKeyboardButton(
-                        text=" 🥀 ",
-                        url="https://t.me/Teddysupport"
+                        text= " 👨‍💻 ",
+                        url=f"t.me/smokerr_xd"
                         ),
                         InlineKeyboardButton(
-                        text=" ⚜️ ",
-                        callback_data="emiko_admin"
+                        text " 🆒 ",
+                        callback_data="Teddy_"
                         ),
                     ]
                 ]
@@ -388,7 +390,18 @@ def help_button(update, context):
 
     except BadRequest:
         pass
-
+        
+def emiko_about_callback(update, context):
+    query = update.callback_query
+    if query.data == "Teddy_":
+        query.message.edit_text(
+            text=f"""✧ I'm *{dispatcher.bot.first_name}*, a powerful group management bot built to help you manage your group easily."
+            "\n➻ I can restrict users."
+            "\n➻ I can greet users with customizable welcome messages and even set a group's rules."
+            "\n➻ I have an advanced anti-flood system."
+            "\n➻ I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc."
+            "\n➻ I have a note keeping system, blacklists, and even predetermined replies on certain keywords."""
+        
 
 def emiko_about_callback(update, context):
     query = update.callback_query
@@ -399,10 +412,7 @@ def emiko_about_callback(update, context):
             "\n➻ I can greet users with customizable welcome messages and even set a group's rules."
             "\n➻ I have an advanced anti-flood system."
             "\n➻ I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc."
-            "\n➻ I have a note keeping system, blacklists, and even predetermined replies on certain keywords."
-            "\n➻ I check for admins' permissions before executing any command and more stuffs"
-            f"\n\n_{dispatcher.bot.first_name}'s licensed under the GNU General Public License v3.0_"
-            f"\n\n Click on button bellow to get basic help for {dispatcher.bot.first_name}.",
+            "\n➻ I have a note keeping system, blacklists, and even predetermined replies on certain keywords.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -567,18 +577,18 @@ def get_help(update: Update, context: CallbackContext):
             )
             return
         update.effective_message.reply_text(
-            "♨️ ᴄʜᴏᴏsᴇ ᴀɴ ᴏᴩᴛɪᴏɴ ғᴏʀ ɢᴇᴛᴛɪɴɢ ʜᴇʟᴩ.",
+            "😾 Cʜᴏᴏsᴇ ᴀɴ ᴏᴩᴛɪᴏɴ ғᴏʀ ɢᴇᴛᴛɪɴɢ ʜᴇʟᴩ.",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="ᴏᴩᴇɴ ɪɴ ᴩʀɪᴠᴀᴛᴇ",
+                            text="Oᴘᴇɴ ɪɴ ᴩʀɪᴠᴀᴛᴇ",
                             url="https://t.me/{}?start=help".format(context.bot.username),
                         )
                     ],
                     [
                         InlineKeyboardButton(
-                            text="ᴏᴩᴇɴ ʜᴇʀᴇ",
+                            text="Oᴩᴇɴ ʜᴇʀᴇ",
                             callback_data="help_back",
                         )
                     ]
@@ -661,7 +671,7 @@ def settings_button(update: Update, context: CallbackContext):
             chat_id = mod_match.group(1)
             module = mod_match.group(2)
             chat = bot.get_chat(chat_id)
-            text = "*{}* has the following settings for the *{}* module:\n\n".format(
+            text = "*{}* ʜᴀs ᴛʜᴇ ғᴏʟʟᴏᴡɪɴɢ sᴇᴛᴛɪɴɢs ғᴏʀ ᴛʜᴇ *{}* ᴍᴏᴅᴜʟᴇ:\n\n".format(
                 escape_markdown(chat.title), CHAT_SETTINGS[module].__mod_name__
             ) + CHAT_SETTINGS[module].__chat_settings__(chat_id, user.id)
             query.message.reply_text(
@@ -756,7 +766,7 @@ def get_settings(update: Update, context: CallbackContext):
                 ),
             )
         else:
-            text = "Click here to check your settings."
+            text = "Cʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ᴄʜᴇᴄᴋ ʏᴏᴜʀ sᴇᴛʀɪɴɢs."
 
     else:
         send_settings(chat.id, user.id, True)
@@ -818,10 +828,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(
-                f"@{SUPPORT_CHAT}", 
-                "👋 Hɪ, Iᴍ ᴀʟɪᴠᴇ.",
-                parse_mode=ParseMode.MARKDOWN
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", f"[нℓσ ∂αяℓιиg ❤️, ι'м αℓινє 🔥...!!!)](https://telegra.ph/file/808823ae72572884684ad.mp4)", parse_mode=ParseMode.MARKDOWN
             )
 
         except Unauthorized:
