@@ -111,9 +111,9 @@ async def cancel_spam(event):
 
 __mod_name__ = "Tᴀɢ Aʟʟ"
 __help__ = """
-──「 Mention all func 」──
-✘ Teddy Can Be a Mention Bot for your group ✘.
-Only admins can tag all.  here is a list of commands
-➻ /tagall or @all (reply to message or add another message) To mention all members in your group, without exception.
-➻ /cancel for canceling the mention-all.
+──「 Mᴇɴᴛɪᴏɴ ᴀʟʟ ғᴜɴᴄ 」──
+✘ Tᴇᴅᴅʏ ᴄᴀɴ ᴀʟsᴏ ʙᴇ ᴀɴ ᴍᴇɴᴛɪᴏɴ ʙᴏᴛ ғᴏʀ ʏᴏᴜʀ ɢʀᴏᴜᴘ ✘.
+Oɴʟʏ ᴀᴅᴍɪɴs ᴄᴀɴ ᴛᴀɢ ᴀʟʟ. Lɪsᴛ ᴏғ ᴄᴏᴍᴍᴀɴᴅs ᴀʀᴇ:-
+➻ /tagall ᴏʀ @all (Rᴇᴘʟʏ ᴛᴏ ᴍᴇssᴀɢᴇ) Tᴏ ᴍᴇɴᴛɪᴏɴ ᴀʟʟ ᴍᴇᴍʙᴇʀs ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ. 
+➻ /cancel Tᴏ ᴄᴀɴᴄᴇʟ ᴍᴇɴᴛɪᴏɴɪɴɢ ᴀʟʟ
 """
