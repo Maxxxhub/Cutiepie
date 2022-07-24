@@ -237,7 +237,7 @@ def start(update: Update, context: CallbackContext):
         update.effective_message.reply_text(
         """
 ╔═════════════════════╗
-┣➪ Tᴇᴅᴅʏ Rᴏʙᴏᴛ Sᴛᴀʀᴛᴇᴅ ✅
+┣➪ Tᴇᴅᴅʏ Rᴏʙᴏᴛ Iᴢ Aʟɪᴠᴇ ✅
 ╚═════════════════════╝
 Aᴅᴠᴀɴᴄᴇᴅ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ + ᴍᴜsɪᴄ
      ʙᴏᴛ ꜰᴏʀ ʏᴏᴜʀ ɢʀᴏᴜᴘ ~
@@ -253,6 +253,14 @@ Aᴅᴠᴀɴᴄᴇᴅ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ + ᴍᴜsɪᴄ
                         InlineKeyboardButton(
                             text=" ❓ ",
                             callback_data="help_back"
+                        ),
+                        InlineKeyboardButton(
+                        text=" 🥀 ",
+                        url="https://t.me/Teddysupport"
+                        ),
+                        InlineKeyboardButton(
+                        text=" ⚜️ ",
+                        callback_data="emiko_admin"
                         ),
                     ]
                 ]
