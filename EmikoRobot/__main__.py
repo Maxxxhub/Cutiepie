@@ -261,7 +261,7 @@ Aᴅᴠᴀɴᴄᴇᴅ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ + ᴍᴜsɪᴄ
                         url=f"t.me/smokerr_xd"
                         ),
                         InlineKeyboardButton(
-                        text " 🆒 ",
+                        text= " 🆒 ",
                         callback_data="Teddy_"
                         ),
                     ]
