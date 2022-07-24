@@ -574,6 +574,6 @@ async def lego(event):
 
 __mod_name__ = "Lᴏɢᴏ"
 
-__help__ = """ ✘ This is help menu for logomaker ✘
-➻ /logo Teddy - Create a logo with random view.
+__help__ = """ ✘ Hᴇʟᴘ ᴍᴇɴᴜ ғᴏʀ ʟᴏɢᴏᴍᴀᴋᴇʀ ✘
+➻ /logo Tᴇᴅᴅʏ - Cʀᴇᴀᴛᴇ ᴀ ʟᴏɢᴏ ᴡɪᴛʜ ʀᴀɴᴅᴏɴ ᴠɪᴇᴡ
 """
