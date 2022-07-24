@@ -94,10 +94,10 @@ async def ytmusic(client, message: Message):
     urlissed = get_text(message)
 
     pablo = await client.send_message(
-        message.chat.id, f"`Getting {urlissed} From Youtube Servers. Please Wait.`"
+        message.chat.id, f"`Gᴇᴛᴛɪɴɢ {urlissed} ғʀᴏᴍ ʏᴏᴜᴛᴜʙᴇ sᴇʀᴠᴇʀs. Hᴏʟᴅ ᴛɪɢʜᴛ!`"
     )
     if not urlissed:
-        await pablo.edit("Invalid Command Syntax, Please Check Help Menu To Know More!")
+        await pablo.edit("Iɴᴠᴀʟɪᴅ ᴄᴏᴍᴍᴀɴᴅ sʏɴᴛᴀx!")
         return
 
     search = SearchVideos(f"{urlissed}", offset=1, mode="dict", max_results=1)
@@ -130,11 +130,11 @@ async def ytmusic(client, message: Message):
             ytdl_data = ytdl.extract_info(url, download=True)
 
     except Exception as e:
-        await pablo.edit(f"**Failed To Download** \n**Error :** `{str(e)}`")
+        await pablo.edit(f"**Fᴀɪʟᴇᴅ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ** \n**Eʀʀᴏʀ :** `{str(e)}`")
         return
     c_time = time.time()
     file_stark = f"{ytdl_data['id']}.mp4"
-    capy = f"🎬 **Video Name ➠** [{thum}]({mo}) \n 🔎 **Requested For :** `{urlissed}` \n 📽️ **Channel :** `{thums}` "
+    capy = f"🎬 **Vɪᴅᴇᴏ ɴᴀᴍᴇ ➠** [{thum}]({mo}) \n 🔎 **Rᴇǫᴜᴇsᴛᴇᴅ ғᴏʀ :** `{urlissed}` \n 📽️ **Cʜᴀɴɴᴇʟ :** `{thums}` "
     await client.send_video(
         message.chat.id,
         video=open(file_stark, "rb"),
@@ -147,7 +147,7 @@ async def ytmusic(client, message: Message):
         progress_args=(
             pablo,
             c_time,
-            f"`Uploading {urlissed} Song From YouTube Music!`",
+            f"`Uᴘʟᴏᴀᴅɪɴɢ {urlissed} sᴏɴɢ ғʀᴏᴍ ʏᴏᴜᴛᴜʙᴇ ᴍᴜsɪᴄ!`",
             file_stark,
         ),
     )
@@ -163,11 +163,11 @@ async def ytmusic(client, message: Message):
     if not urlissed:
         await client.send_message(
             message.chat.id,
-            "Invalid Command Syntax, Please Check Help Menu To Know More!",
+            "Iɴᴠᴀʟɪᴅ ᴄᴏᴍᴍᴀɴᴅ sʏɴᴛᴀx!",
         )
         return
     pablo = await client.send_message(
-        message.chat.id, f"`Getting {urlissed} From Youtube Servers. Please Wait.`"
+        message.chat.id, f"`Gᴇᴛᴛɪɴɢ {urlissed} ғʀᴏᴍ ʏᴏᴜᴛᴜʙᴇ sᴇʀᴠᴇʀs... Hᴏʟᴅ ᴛɪɢʜᴛ!.`"
     )
     search = SearchVideos(f"{urlissed}", offset=1, mode="dict", max_results=1)
     mi = search.result()
@@ -203,10 +203,10 @@ async def ytmusic(client, message: Message):
         with YoutubeDL(opts) as ytdl:
             ytdl_data = ytdl.extract_info(mo, download=True)
     except Exception as e:
-        await pablo.edit(f"**Failed To Download** \n**Error :** `{str(e)}`")
+        await pablo.edit(f"**Fᴀɪʟᴇᴅ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ** \n**Eʀʀᴏʀ :** `{str(e)}`")
         return
     c_time = time.time()
-    capy = f" 🎶 **Song Name :** [{thum}]({mo}) \n 🔎 **Requested For :** `{urlissed}` \n 📽️ **Channel :** `{thums}` "
+    capy = f" 🎼 **Sᴏɴɢ ɴᴀᴍᴇ :** [{thum}]({mo}) \n 🔎 **Rᴇǫᴜᴇsᴛᴇᴅ ғᴏʀ :** `{urlissed}` \n 🎥 **Cʜᴀɴɴᴇʟ :** `{thums}` "
     file_stark = f"{ytdl_data['id']}.mp3"
     await client.send_audio(
         message.chat.id,
@@ -220,7 +220,7 @@ async def ytmusic(client, message: Message):
         progress_args=(
             pablo,
             c_time,
-            f"`Uploading {urlissed} Song From YouTube Music!`",
+            f"`Uᴘʟᴏᴀᴅɪɴɢ {urlissed} Sᴏɴɢ ғʀᴏᴍ ʏᴏᴜᴛᴜʙᴇ ᴍᴜsɪᴄ!`",
             file_stark,
         ),
     )
@@ -233,8 +233,8 @@ async def ytmusic(client, message: Message):
 @pbot.on_message(filters.command(["lyric", "lyrics"]))
 async def lyrics_func(_, message):
     if len(message.command) < 2:
-        return await message.reply_text("**Usage:**\n/lyrics [QUERY]")
-    m = await message.reply_text("**__Searching your lyrics__**")
+        return await message.reply_text("**Usᴀɢᴇ:**\n/lyrics [QUERY]")
+    m = await message.reply_text("**__Sᴇᴀʀᴄʜɪɴɢ ʏᴏᴜʀ ʟʏʀɪᴄs__**")
     query = message.text.strip().split(None, 1)[1]
     song = await arq.lyrics(query)
     lyrics = song.result
