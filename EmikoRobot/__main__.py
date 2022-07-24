@@ -235,7 +235,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_photo(
-            random.choice(TEDDY_GROUP_START_IMG), caption= f"""
+        """
 ╔═════════════════════╗
 ┣➪ Tᴇᴅᴅʏ Rᴏʙᴏᴛ Sᴛᴀʀᴛᴇᴅ ✅
 ╚═════════════════════╝
@@ -251,8 +251,15 @@ Aᴅᴠᴀɴᴄᴇᴅ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ + ᴍᴜsɪᴄ
                 [
                     [
                         InlineKeyboardButton(
-                            text="📍ᴀᴅᴅ ᴛᴇᴅᴅy ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ♠📍",
-                            url="t.me/TeddyRobot_bot?startgroup=new",
+                            text=" ❓ ",
+                            callback_data="help_back"),
+                                    InlineKeyboardButton(
+            text=" 🔗 ", switch_inline_query_current_chat=""
+        ),
+                InlineKeyboardButton(
+            text=" 🥀 ", 
+            url="https://t.me/Teddysupport"
+        ),
                         ),
                     ]
                 ]
