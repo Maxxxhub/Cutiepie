@@ -1,21 +1,19 @@
 __mod_name__ = "Tᴏᴏʟꜱ"
 
 __help__ = """
-*✘ Sangmata Info bot ✘*
-➻ /sg <reply>*:* To check history name
-*Date-time-Weather*
-➻ /time <country code>*:* Gives information about a timezone.
-➻ /weather <city>*:* Get weather info in a particular place.
-➻ /wttr <city>*:* Advanced weather module, usage same as /weather
-➻ /wttr moon*:* Get the current status of moon
-*✘ Converts ✘*
-➻ /encrypt*:* Encrypts The Given Text
-➻ /decrypt*:* Decrypts Previously Ecrypted Text
-➻ /zip*:* reply to a telegram file to compress it in .zip format
-➻ /unzip*:* reply to a telegram file to decompress it from the .zip format
- ✘ Telegraph ✘:
-➻ /tgm : Get Telegraph Link Of Replied Media
-➻ /tgt: Get Telegraph Link of Replied Text
- ✘ Tagger ✘
-➻ /tagall : for tag everyone at least 100 member first.
+*✘ Sᴀɴɢᴍᴀᴛᴀ ɪɴғᴏ ✘*
+➻ /sg <ʀᴇᴘʟʏ ᴛᴏ ᴜsᴇʀ>*:* Tᴏ ᴄʜᴇᴄᴋ ᴀɴʏᴏɴᴇ's ʜɪsᴛᴏʀʏ.
+*Dᴀᴛᴇ-ᴛɪᴍᴇ-ᴡᴇᴀᴛʜᴇʀ*
+➻ /time <country code>*:* Gɪᴠᴇs ɪɴғᴏ ᴀʙᴏᴜᴛ ᴛʜᴇ ᴛɪᴍᴇᴢᴏɴᴇ.
+➻ /weather <city>*:* Gᴇᴛ ᴡᴇᴀᴛʜᴇʀ ɪɴғᴏ ᴏғ ᴛʜᴇ ɢɪᴠᴇɴ ᴄɪᴛʏ.
+➻ /wttr <city>*:* Aᴅᴠᴀɴᴄᴇᴅ ᴡᴇᴀᴛʜᴇʀ ᴍᴏᴅᴜʟᴇ, ᴜsᴀɢᴇ sᴀᴍᴇ ᴀs /weather.
+➻ /wttr moon*:* Gᴇᴛ ᴛʜᴇ ᴄᴜʀʀᴇᴍᴛ sᴛᴀᴛᴜs ᴏғ ᴛʜᴇ ᴍᴏᴏɴ.
+*✘ ᴇɴᴄʀʏᴘᴛ ɴᴅ ᴅᴇᴄʀʏᴘᴛ ✘*
+➻ /encrypt*:* Eɴᴄʀʏᴘᴛ ᴛʜᴇ ᴛᴇxᴛ.
+➻ /decrypt*:* Dᴇᴄʀʏᴘᴛs ᴘʀᴇᴠɪᴏᴜsʟʏ ᴇɴᴄʀʏᴘᴛᴇᴅ ᴛᴇxᴛ.
+➻ /zip*:* Rᴇᴘʟʏ ᴛᴏ ᴀ ᴛᴇʟᴇɢʀᴀᴍ ғɪʟᴇ ᴛᴏ ᴄᴏᴍᴘʀᴇss ɪᴛ ɪɴ .zip ғᴏʀᴍᴀᴛ.
+➻ /unzip*:* Rᴇᴘʟʏ ᴛᴏ ᴀ ᴛᴇʟᴇɢʀᴀᴍ ғɪʟᴇ ᴛᴏ ᴅᴇᴄᴏᴍᴘʀᴇss ɪᴛ ғʀᴏᴍ ᴛʜᴇ .zip ғᴏʀᴍᴀᴛ.
+ ✘ Tᴇʟᴇɢʀᴀᴘʜ✘:
+➻ /tgm : Gᴇᴛ ᴀ ᴘᴇʀᴍᴀɴᴇɴᴛ ᴛᴇʟᴇɢʀᴀᴘʜ ʟɪɴᴋ ᴏғ ʀᴇᴘʟɪᴇᴅ ᴍᴇᴅɪᴀ.
+➻ /tgt: Gᴇᴛ ᴀ ᴘᴇʀᴍᴀɴᴇɴᴛ ᴛᴇʟᴇɢʀᴀᴘʜ ʟɪɴᴋ ᴏғ ʀᴇᴘʟɪᴇᴅ ᴛᴇxᴛ.
 """
