@@ -317,17 +317,17 @@ def connected(bot: Bot, update: Update, chat, user_id, need_admin=True):
         return False
 
 
-CONN_HELP = """ 
- Aᴄᴛɪᴏɴs ᴛʜᴀᴛ ᴀʀᴇ ᴀᴠᴀɪʟᴀʙʟᴇ ᴡɪᴛʜ ᴄᴏɴɴᴇᴄᴛᴇᴅ ᴄʜᴀᴛs/ɢʀᴏᴜᴘs:
- • Vɪᴇᴡ ᴀɴᴅ ᴇᴅɪᴛ ɴᴏᴛᴇs.
- • Vɪᴇᴡ ᴀɴᴅ ᴇᴅɪᴛ ғɪʟᴛᴇʀs..
- • Gᴇᴛ ɪɴᴠɪᴛᴇ ʟɪɴᴋ ᴏғ ᴛʜᴇ ᴄʜᴀᴛ.
- • Sᴇᴛ ᴀɴᴅ ᴄᴏɴᴛʀᴏʟ ᴀɴᴛɪғʟᴏᴏᴅ sᴇᴛᴛɪɴɢs.
- • Sᴇᴛ ᴀɴᴅ ᴄᴏɴᴛʀᴏʟ ʙʟᴀᴄᴋʟɪsᴛ sᴇᴛᴛɪɴɢs.
- • Sᴇᴛ ʟᴏᴄᴋs ᴀɴᴅ ᴜɴʟᴏᴄᴋs ɪɴ ᴄʜᴀᴛ.
- • Eɴᴀʙʟᴇ ᴀɴᴅ ᴅɪsᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅs ɪɴ ᴄʜᴀᴛ.
- • Exᴘᴏʀᴛ ᴀɴᴅ ɪᴍᴘᴏʀᴛs ᴏғ ᴄʜᴀᴛ ʙᴀᴄᴋᴜᴘ.
- • Mᴏʀᴇ ɪɴ ғᴜᴛᴜʀᴇ! sᴛᴀʏ ᴛᴜɴᴇᴅ ᴡɪᴛʜ         @Teddyrobot_bot"""
+CONN_HELP = """
+ Actions are available with connected groups:
+ • View and edit Notes.
+ • View and edit Filters.
+ • Get invite link of chat.
+ • Set and control AntiFlood settings.
+ • Set and control Blacklist settings.
+ • Set Locks and Unlocks in chat.
+ • Enable and Disable commands in chat.
+ • Export and Imports of chat backup.
+ • More in future!"""
 
 
 def help_connect_chat(update, context):
