@@ -402,7 +402,8 @@ def emiko_about_callback(update, context):
             "\n➻ I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc."
             "\n➻ I have a note keeping system, blacklists, and even predetermined replies on certain keywords.",
 parse_mode=ParseMode.MARKDOWN,
-)
+            disable_web_page_preview=True,
+        )
         
 
 def emiko_about_callback(update, context):
