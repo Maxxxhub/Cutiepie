@@ -234,7 +234,7 @@ def start(update: Update, context: CallbackContext):
                 disable_web_page_preview=False,
             )
     else:
-        update.effective_message.reply_photo(
+        update.effective_message.reply_text(
         """
 ╔═════════════════════╗
 ┣➪ Tᴇᴅᴅʏ Rᴏʙᴏᴛ Sᴛᴀʀᴛᴇᴅ ✅
@@ -252,13 +252,7 @@ Aᴅᴠᴀɴᴄᴇᴅ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ + ᴍᴜsɪᴄ
                     [
                         InlineKeyboardButton(
                             text=" ❓ ",
-                            callback_data="help_back"),
-                                    InlineKeyboardButton(
-            text=" 🔗 ", switch_inline_query_current_chat=""
-        ),
-                InlineKeyboardButton(
-            text=" 🥀 ", 
-            url="https://t.me/Teddysupport"
+                            callback_data="help_back"
                         ),
                     ]
                 ]
