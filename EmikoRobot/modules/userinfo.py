@@ -539,34 +539,34 @@ def __user_info__(user_id):
 
 
 __help__ = """
-*✘ ID ✘:*
-➻ /id*:* get the current group id. If used by replying to a message, gets that user's id.
-➻ /gifid*:* reply to a gif to me to tell you its file ID.
+*✘ Iᴅ ✘:*
+➻ /id*:* Gᴇᴛ ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ ɢʀᴏᴜᴘ ɪᴅ. current group id. Iғ ᴜsᴇᴅ ʙʏ ʀᴇᴘʟʏɪɴɢ ᴛᴏ ᴀ ᴜsᴇʀ, ɢᴇᴛs ᴛʜᴀᴛ ᴜsᴇʀ ɪᴅ.
+➻ /gifid*:* Rᴇᴘʟʏ ᴛᴏ ᴀ ɢɪғ ᴛᴏ ᴍᴇ ᴛᴏ ᴛᴇʟʟ ʏᴏᴜ ɪᴛs ғɪʟᴇ ɪᴅ.
  
-*✘ Self addded information ✘:* 
-➻ /setme <text>*:* will set your info
-➻ /me*:* will get your or another user's info.
-Examples:
-➻ /setme I am a wolf.
-➻ /me @username(defaults to yours if no user specified)
+*✘ Sᴇʟғ ᴀᴅᴅᴇᴅ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ✘:* 
+➻ /setme <text>*:* Wɪʟʟ sᴇᴛ ʏᴏᴜʀ ɪɴғᴏ.
+➻ /me*:* Wɪʟʟ ɢᴇᴛ ʏᴏᴜʀ ᴏʀ ᴀɴᴏᴛʜᴇʀ ᴜsᴇʀ's ɪɴғᴏ.
+Exᴀᴍᴘʟᴇs:
+➻ /setme I ᴀᴍ ᴀ ᴡᴏʟғ.
+➻ /me @username(ᴅᴇғᴀᴜʟᴛs ᴛᴏ ʏᴏᴜʀs ɪғ ɴᴏ ᴜsᴇʀ sᴘᴇᴄɪғɪᴇᴅ)
  
-*✘ Information others add on you ✘:* 
-➻ /bio*:* will get your or another user's bio. This cannot be set by yourself.
-➻ /setbio <text>*:* while replying, will save another user's bio 
-Examples:
-➻ /bio @username(defaults to yours if not specified).
-➻ /setbio This user is a wolf (reply to the user)
+*✘ Iɴғᴏʀᴍᴀᴛɪᴏɴ ᴏᴛʜᴇʀs ᴀᴅᴅ ᴏɴ ʏᴏᴜ ✘:* 
+➻ /bio*:* Wɪʟʟ ɢᴇᴛ ʏᴏᴜʀ ᴏʀ ᴀɴᴏᴛʜᴇʀ ᴜsᴇʀ's ʙɪᴏ. Tʜɪs ᴄᴀɴɴᴏᴛ ʙᴇ sᴇᴛ ʙʏ ʏᴏᴜʀsᴇʟғ.
+➻ /setbio <text>*:* Wʜɪʟᴇ ʀᴇᴘʟʏɪɴɢ, ᴡɪʟʟ sᴀᴠᴇ ᴀɴᴏᴛʜᴇʀ ᴜsᴇʀ's ʙɪᴏ.
+Exᴀᴍᴘʟᴇs:
+➻ /bio @username(ᴅᴇғᴀᴜʟᴛs ᴛᴏ ʏᴏᴜʀs ɪғ ɴᴏᴛ sᴘᴇᴄɪғɪᴇᴅ).
+➻ /setbio Tʜɪs ᴜsᴇʀ ɪs ᴀ ᴡᴏʟғ (ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴜsᴇʀ)
  
-*✘ Overall Information about you ✘:*
-➻ /info*:* get information about a user.
-➻ /uinfo*:* try it yourself.
+*✘ Iɴғᴏʀᴍᴀᴛɪᴏɴ ✘:*
+➻ /info*:* Gᴇᴛ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴛᴏ ᴛʜᴇ ʀᴇᴘʟɪᴇᴅ ᴛᴇxᴛ ᴏʀ /ɪɴғᴏ {ᴜsᴇʀɴᴀᴍᴇ}.
+➻ /uinfo*:* Tʀʏ ɪᴛ ᴜʀsᴇʟғ ✌️
  
-*✘ json Detailed info ✘:*
-➻ /json*:* Get Detailed info about any message.
+*✘ ᴊsᴏɴ ɪɴғᴏ ✘:*
+➻ /json*:* Gᴇᴛ ᴅᴇᴛᴀɪʟᴇᴅ ɪɴғᴏ ᴛᴏ ᴛʜᴇ ʀᴇᴘʟɪᴇᴅ ᴛᴇxᴛ.
  
   
-*✘ What is that health thingy? ✘*
- Come and see [HP System explained](https://t.me/teddy_updates/8)
+*✘ Wʜᴀᴛ ᴡᴀs ᴛʜᴀᴛ ʜᴇᴀʟᴛʜ ᴛʜɪɴɢ? ✘*
+ Cᴏᴍᴇ ɴᴅ sᴇᴇ [HP System explained](https://t.me/Teddysupport/8379)
 """
 
 SET_BIO_HANDLER = DisableAbleCommandHandler("setbio", set_about_bio, run_async=True)
