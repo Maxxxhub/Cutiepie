@@ -259,7 +259,6 @@ Aᴅᴠᴀɴᴄᴇᴅ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ + ᴍᴜsɪᴄ
                 InlineKeyboardButton(
             text=" 🥀 ", 
             url="https://t.me/Teddysupport"
-        ),
                         ),
                     ]
                 ]
