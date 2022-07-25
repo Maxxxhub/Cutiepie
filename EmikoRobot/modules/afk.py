@@ -13,7 +13,7 @@ import time
 from pyrogram import filters
 from pyrogram.types import Message
 
-from EmikoRobot import app, BOT_USERNAME
+from EmikoRobot import BOT_USERNAME
 from EmikoRobot.helper_extra.afk_mongo import add_afk, is_afk, remove_afk
 from EmikoRobot.__main__ import get_readable_time
 
