@@ -116,6 +116,10 @@ buttons = [
                             text=" ❓ ",
                             callback_data="help_back"
                         ),
+                    ],
+]
+[
+]
                         InlineKeyboardButton(
                             text="♠️ ᴀᴅᴅ ᴛᴇᴅᴅy ᴛᴏ yᴏᴜʀ ɢʀᴏᴜᴩ ♠️",
                             url=f"t.me/Teddyrobot_bot?startgroup=new"
@@ -124,7 +128,7 @@ buttons = [
                             text=" ❓ ʜᴇʟᴩ ❓ ",
                             callback_data="help_back"
                         ),
-                    ]
+                    ],
                 ]
 
 
