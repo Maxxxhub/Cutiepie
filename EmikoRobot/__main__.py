@@ -111,6 +111,7 @@ buttons = [
                         InlineKeyboardButton(
                         text= " 🌹 ",
                             url="t.me/Teddysupport"
+                        ),
                             InlineKeyboardButton(
                                 text= " ❓ ",
                                 callback_data= "help_back"
