@@ -2,8 +2,6 @@ import asyncio
 
 from typing import Union
 from datetime import datetime, timedelta
-from Yukki import cleanmode, app, botname
-from Yukki.database import is_cleanmode_on
 from pyrogram.errors import FloodWait
 
 
