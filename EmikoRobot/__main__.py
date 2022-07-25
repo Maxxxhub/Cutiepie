@@ -262,7 +262,7 @@ Aᴅᴠᴀɴᴄᴇᴅ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ + ᴍᴜsɪᴄ
                         ),
                         InlineKeyboardButton(
                         text= " 🆒 ",
-                        callback_data="Teddy_"
+                        callback_data="emiko__"
                         ),
                     ]
                 ]
@@ -393,7 +393,7 @@ def help_button(update, context):
         
 def emiko_about_callback(update, context):
     query = update.callback_query
-    if query.data == "Teddy_":
+    if query.data == "emiko__":
         query.message.edit_text(
             text=f"✧ I'm *{dispatcher.bot.first_name}*, a powerful group management bot built to help you manage your group easily."
             "\n➻ I can restrict users."
