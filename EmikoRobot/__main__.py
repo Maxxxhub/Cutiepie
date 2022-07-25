@@ -264,10 +264,6 @@ Aᴅᴠᴀɴᴄᴇᴅ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ + ᴍᴜsɪᴄ
                         text= " 🌹 ",
                             url="t.me/Teddysupport"
                         ),
-                        InlineKeyboardButton(
-                            text= " 🪄 ",
-                            callback_data= "emiko__"
-                        ),
                     ]
                 ]
             ),
