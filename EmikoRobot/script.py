@@ -9,7 +9,7 @@ TEDDY_GROUP_START_IMG = (
   "https://telegra.ph/file/43ef3ecc89648372c1e8a.jpg",
   "https://telegra.ph/file/f921453e646ac8d08a7a5.jpg",
 )
-TEDDY_PM_START_IMG = [
+TEDDY_PM_START_IMG2 = [
     "https://telegra.ph//file/0879fbdb307005c1fa8ab.jpg",
     "https://telegra.ph//file/19e3a9d5c0985702497fb.jpg",
     "https://telegra.ph//file/b5fa277081dddbddd0b12.jpg",
