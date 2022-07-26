@@ -223,10 +223,8 @@ def start(update: Update, context: CallbackContext):
 
         else:
             first_name = update.effective_user.first_name
-            update.effective_message.reply_photo(
-            random.choice(TEDDY_PM_START_IMG),
             update.effective_message.reply_text(
-                PM_START_TEXT.format(
+                random.choice(PM_START_TEXT).format(
                     escape_markdown(first_name),
                     escape_markdown(uptime),
                     sql.num_users(),
@@ -235,8 +233,7 @@ def start(update: Update, context: CallbackContext):
                 parse_mode=ParseMode.MARKDOWN,
                 timeout=60,
                 disable_web_page_preview=False,
-            ),
-            )
+                )
     else:
         update.effective_message.reply_photo(
 random.choice(TEDDY_PM_START_IMG2), caption= f"""
