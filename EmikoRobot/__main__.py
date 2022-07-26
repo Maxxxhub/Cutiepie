@@ -39,7 +39,7 @@ from EmikoRobot.modules import ALL_MODULES
 from EmikoRobot.modules.helper_funcs.chat_status import is_user_admin
 from EmikoRobot.modules.helper_funcs.misc import paginate_modules
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
-from EmikoRobot.script import TEDDY_GROUP_START_IMG
+from EmikoRobot.script import TEDDY_GROUP_START_IMG, TEDDY_PM_START_IMG
 from platform import python_version as y
 from telegram.error import (
     BadRequest,
@@ -223,6 +223,8 @@ def start(update: Update, context: CallbackContext):
 
         else:
             first_name = update.effective_user.first_name
+            update.effective_message.reply_photo(
+            random.choice(TEDDY_PM_START_IMG)
             update.effective_message.reply_text(
                 PM_START_TEXT.format(
                     escape_markdown(first_name),
@@ -233,6 +235,7 @@ def start(update: Update, context: CallbackContext):
                 parse_mode=ParseMode.MARKDOWN,
                 timeout=60,
                 disable_web_page_preview=False,
+            ),
             )
     else:
         update.effective_message.reply_text(
