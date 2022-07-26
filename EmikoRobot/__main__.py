@@ -831,7 +831,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", f"[нℓσ ∂αяℓιиg ❤️, ι'м αℓινє 🔥...!!!)](https://telegra.ph/file/808823ae72572884684ad.mp4)", parse_mode=ParseMode.MARKDOWN
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", f"[нℓσ ∂αяℓιиg ❤️, ι'м αℓινє 🔥...!!!)](https://telegra.ph/file/a0ec7152116cac5e50d78.jpg)", parse_mode=ParseMode.MARKDOWN
             )
 
         except Unauthorized:
