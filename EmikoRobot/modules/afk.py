@@ -1,3 +1,4 @@
+
 import time
 import random
 
@@ -10,12 +11,31 @@ from telegram.ext import Filters, MessageHandler, run_async
 
 from EmikoRobot import dispatcher
 from EmikoRobot.modules.disable import DisableAbleCommandHandler, DisableAbleMessageHandler
-from EmikoRobot.modules.redis.afk_redis import start_afk, end_afk, is_user_afk, afk_reason
-from EmikoRobot import REDIS
 from EmikoRobot.modules.users import get_user_id
 
 from EmikoRobot.modules.helper_funcs.alternate import send_message
 from EmikoRobot.modules.helper_funcs.readable_time import get_readable_time
+from EmikoRobot import REDIS
+
+# AFK
+def is_user_afk(userid):
+    rget = REDIS.get(f'is_afk_{userid}')
+    return bool(rget)
+
+
+def start_afk(userid, reason):
+    REDIS.set(f'is_afk_{userid}', reason)
+    
+def afk_reason(userid):
+    return strb(REDIS.get(f'is_afk_{userid}'))
+
+def end_afk(userid):
+    REDIS.delete(f'is_afk_{userid}')
+    return True
+
+# Helpers
+def strb(redis_string):
+    return str(redis_string)
 
 AFK_GROUP = 7
 AFK_REPLY_GROUP = 8
@@ -57,21 +77,14 @@ def no_longer_afk(update, context):
         firstname = update.effective_user.first_name
         try:
             options = [
-                "{} Is wasting his time in the chat!",
-                "The Dead {} Came Back From His Grave!",
-                "Welcome back {}! I hope you bought pizza",
-                "Good to hear from you again {}",
-                "{} Good job waking up now get ready for your classes!",
-                "Hey {}! Why weren't you online for such a long time?",
-                "{} why did you came back?",
-                "{} Is now back online!",
-                "OwO, Welcome back {}",
-                "Welcome to hell again {}",
-                "Whats poppin {}?",
+                "The Dead {} Came Back From His Grave! Time Taken: {}",
+                "Hey {}! Why weren't you online for {}?",
+                "{} Is now back online! Time Taken: {}",
+                "OwO, Welcome back {} You've Missing Till {} ",
             ]
             chosen_option = random.choice(options)
             update.effective_message.reply_text(
-                chosen_option.format(firstname),
+                chosen_option.format(firstname, end_afk_time),
             )
         except BaseException:
             pass
