@@ -77,10 +77,10 @@ def no_longer_afk(update, context):
         firstname = update.effective_user.first_name
         try:
             options = [
-                "The Dead {} Came Back From His Grave! Time Taken: {}",
+                "The Dead {} Came Back From His Grave!\n Time Taken: {}",
                 "Hey {}! Why weren't you online for {}?",
                 "{} Is now back online! Time Taken: {}",
-                "OwO, Welcome back {} You've Missing Till {} ",
+                "OwO, Welcome back {} You've Missing from {} ",
             ]
             chosen_option = random.choice(options)
             update.effective_message.reply_text(
