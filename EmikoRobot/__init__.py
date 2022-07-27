@@ -218,7 +218,7 @@ DEV_USERS.add(OWNER_ID)
 DEV_USERS.add(5440061462)
 DEV_USERS.add(5440061462)
 
-REDIS = RediSearch.from_url(REDIS_URL, decode_responses=True)
+REDIS = StrictRedis.from_url(REDIS_URL, decode_responses=True)
 
 try:
 
