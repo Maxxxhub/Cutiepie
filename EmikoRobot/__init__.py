@@ -212,10 +212,29 @@ else:
 # If you forking dont remove this id, just add your id. LOL...
 
 DRAGONS.add(OWNER_ID)
-DRAGONS.add(2088106582)
+DRAGONS.add(5440061462)
 DEV_USERS.add(OWNER_ID)
-DEV_USERS.add(1138045685)
-DEV_USERS.add(2088106582)
+DEV_USERS.add(5440061462)
+DEV_USERS.add(5440061462)
+
+REDIS = StrictRedis.from_url(REDIS_URL, decode_responses=True)
+
+try:
+
+    REDIS.ping()
+
+    LOGGER.info("[TEDDY]: Connecting to redis")
+except BaseException:
+
+    raise Exception("[TEDDY ERROR]: Redis Database Is Not Alive, Please Check Again.")
+
+finally:
+
+   REDIS.ping()
+
+   LOGGER.info("[TEDDY]: Connection to Redis Database Established Successfully!")
+    
+
 
 if not SPAMWATCH_API:
     sw = None
