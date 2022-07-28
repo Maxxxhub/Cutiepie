@@ -150,7 +150,7 @@ def check_afk(update, context, user_id, fst_name, userc_id):
         if reason == "none":
             res = "{} ɪs ᴅᴇᴅ!\nLᴀsᴛ ʟɪᴠᴇʟɪɴᴇss: {} Aɢᴏ.".format(fst_name, since_afk)
         else:
-            res = "{} is afk!\nReason: {}\nLᴀsᴛ sᴇᴇɴ: {} Aɢᴏ.".format(fst_name, reason, since_afk)
+            res = "{} ɪᴢᴢ ᴀғᴋ 🙁!\nRᴇᴀsᴏɴ 🧐: {}\nLᴀsᴛ sᴇᴇɴ:  {} Aɢᴏ.".format(fst_name, reason, since_afk)
 
         update.effective_message.reply_text(res)
 
