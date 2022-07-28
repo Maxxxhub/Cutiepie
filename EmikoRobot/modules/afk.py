@@ -56,7 +56,7 @@ def afk(update, context):
     fname = update.effective_user.first_name
     try:
         update.effective_message.reply_text(
-            "{} is now Away!".format(fname))
+            "{} ɪᴢᴢᴢᴢ ɴᴏᴡ ᴀᴡᴀʏ!".format(fname))
     except BadRequest:
         pass
 
@@ -77,10 +77,10 @@ def no_longer_afk(update, context):
         firstname = update.effective_user.first_name
         try:
             options = [
-                "The Dead {} Came Back From His Grave!\n Time Taken: {}",
-                "Hey {}! Why weren't you online for {}?",
-                "{} Is now back online! Time Taken: {}",
-                "OwO, Welcome back {} You've Missing from {} ",
+                "Tʜᴇ ᴅᴇᴅ 💀 {} ᴄᴀᴍᴇ ʙᴀᴄᴋ ғʀᴏᴍ ᴛʜᴇɪʀ ɢʀᴀᴠᴇ 🍭!\n Tɪᴍᴇ ᴛᴀᴋᴇɴ ⏳: {}",
+                "Hᴇʏ ʙᴀʙᴇ {} 🍫! Wʜʏ ᴡᴇʀᴇɴ'ᴛ ʏᴏᴜ ᴏɴʟɪɴᴇ ғᴏʀ {} 🤨?",
+                "{} Iᴢ ɴᴏᴡ ᴀʟɪᴠᴇ!\n Tɪᴍᴇ ᴛᴀᴋᴇɴ ⏳: {}",
+                "Yᴇʜ, Wᴇʟᴄᴏᴍᴇ ʙᴀᴄᴋ {} 🍭, ɪ ᴡᴀs ᴍɪssɪɴɢ ʏᴏᴜ ғʀᴏᴍ {} 🥀",
             ]
             chosen_option = random.choice(options)
             update.effective_message.reply_text(
@@ -148,9 +148,9 @@ def check_afk(update, context, user_id, fst_name, userc_id):
         if int(userc_id) == int(user_id):
             return
         if reason == "none":
-            res = "{} is Dead!\nLast Liveliness: {} Ago.".format(fst_name, since_afk)
+            res = "{} ɪs ᴅᴇᴅ!\nLᴀsᴛ ʟɪᴠᴇʟɪɴᴇss: {} Aɢᴏ.".format(fst_name, since_afk)
         else:
-            res = "{} is afk!\nReason: {}\nLast seen: {} Ago.".format(fst_name, reason, since_afk)
+            res = "{} is afk!\nReason: {}\nLᴀsᴛ sᴇᴇɴ: {} Aɢᴏ.".format(fst_name, reason, since_afk)
 
         update.effective_message.reply_text(res)
 
@@ -160,15 +160,15 @@ def __user_info__(user_id):
     text = ""
     if is_afk:
         since_afk = get_readable_time((time.time() - float(REDIS.get(f'afk_time_{user_id}'))))
-        text = "This user is currently afk (away from keyboard)."
-        text += f"\nLast Seen: {since_afk} Ago."
+        text = "Tʜɪs ᴜsᴇʀ ɪs ᴄᴜʀʀᴇɴᴛʟʏ ᴀғᴋ (ᴀᴡᴀʏ ғʀᴏᴍ ᴋᴇʏʙᴏᴀʀᴅ)."
+        text += f"\nLᴀsᴛ sᴇᴇɴ: {since_afk} Aɢᴏ."
        
     else:
-        text = "This user currently isn't afk (not away from keyboard)."
+        text = "Tʜɪs ᴜsᴇʀ ᴄᴜʀʀᴇɴᴛʟʏ ɪsɴ'ᴛ ᴀғᴋ  (ɴᴏᴛ ᴀᴡᴀʏ ғʀᴏᴍ ᴋᴇʏʙᴏᴀʀᴅ)."
     return text
 
 def __stats__():
-    return f"• {len(REDIS.keys())} Total Keys in Redis Database."
+    return f"• {len(REDIS.keys())} Tᴏᴛᴀʟ ᴋᴇʏs ɪɴ ʀᴇᴅɪs ᴅᴀᴛᴀʙᴀsᴇ."
 
 def __gdpr__(user_id):
     end_afk(user_id)
