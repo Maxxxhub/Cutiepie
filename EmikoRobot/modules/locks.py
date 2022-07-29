@@ -29,7 +29,6 @@ LOCK_TYPES = {
     "audio": Filters.audio,
     "voice": Filters.voice,
     "document": Filters.document,
-    "messages": Filters.messages,
     "video": Filters.video,
     "contact": Filters.contact,
     "photo": Filters.photo,
