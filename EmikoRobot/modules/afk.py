@@ -16,6 +16,7 @@ from EmikoRobot.modules.users import get_user_id
 from EmikoRobot.modules.helper_funcs.alternate import send_message
 from EmikoRobot.modules.helper_funcs.readable_time import get_readable_time
 from EmikoRobot import REDIS
+from EmikoRobot.script import TEDDY_AFK_YES_IMG
 
 # AFK
 def is_user_afk(userid):
@@ -55,8 +56,9 @@ def afk(update, context):
     REDIS.set(f'afk_time_{update.effective_user.id}', start_afk_time)
     fname = update.effective_user.first_name
     try:
-        update.effective_message.reply_text(
-            "{} ɪᴢᴢᴢᴢ ɴᴏᴡ ᴀᴡᴀʏ!".format(fname))
+        update.effective_message.reply_photo(
+        random.choice(TEDDY_AFK_YES_IMG), caption= f"""
+        {} ɪᴢᴢᴢᴢ ɴᴏᴡ ᴀᴡᴀʏ!""".format(fname))
     except BadRequest:
         pass
 
