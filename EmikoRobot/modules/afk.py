@@ -57,7 +57,7 @@ def afk(update, context):
     fname = update.effective_user.first_name
     try:
         update.effective_message.reply_photo(
-        random.choice(TEDDY_AFK_YES_IMG), caption="{} ɪᴢᴢᴢᴢ ɴᴏᴡ ᴀᴡᴀʏ!".format(fname))
+        random.choice(TEDDY_AFK_YES_IMG), caption= ""{} ɪᴢᴢᴢᴢ ɴᴏᴡ ᴀᴡᴀʏ!"".format(fname))
     except BadRequest:
         pass
 
