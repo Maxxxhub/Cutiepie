@@ -56,8 +56,7 @@ def afk(update, context):
     REDIS.set(f'afk_time_{update.effective_user.id}', start_afk_time)
     fname = update.effective_user.first_name
     try:
-        update.effective_message.reply_photo(
-        random.choice(TEDDY_AFK_YES_IMG), caption= ""{} ɪᴢᴢᴢᴢ ɴᴏᴡ ᴀᴡᴀʏ!"".format(fname))
+        update.effective_message.reply_text("{} ɪᴢᴢᴢᴢ ɴᴏᴡ ᴀᴡᴀʏ!".format(fname))
     except BadRequest:
         pass
 
