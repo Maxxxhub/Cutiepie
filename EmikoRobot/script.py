@@ -47,3 +47,23 @@ TEDDY_PING_IMG = (
   "https://te.legra.ph/file/f4c942f18d17650efa0c2.jpg"
   "https://te.legra.ph/file/e4921c9b600f45bde42cc.jpg"
 )
+
+
+TEDDY_AFK_YES_IMG = (
+"https://telegra.ph/file/3bbb37579fccf06ffc625.jpg"
+"https://telegra.ph/file/cd4b1450c682e8f0d75dd.jpg"
+"https://telegra.ph/file/ecf1adaa0e63663b253cd.jpg"
+"https://telegra.ph/file/36f69d4e445f3c0b15446.jpg"
+"https://telegra.ph/file/764304ae41aba91a44a9b.jpg"
+"https://telegra.ph/file/ced7e67449f59b0a069b1.jpg"
+"https://telegra.ph/file/b5d44f449be9628451c04.jpg"
+"https://telegra.ph/file/b6f8c2685fc338c02cfd3.jpg"
+"https://telegra.ph/file/40abf21a416ab991aa4f9.jpg"
+"https://telegra.ph/file/4e3602a3f5f0dd7f70a06.jpg"
+"https://telegra.ph/file/803d27cd0b3232b90c296.jpg"
+"https://telegra.ph/file/9d7fefb5005d18ad938b5.jpg"
+"https://telegra.ph/file/2cefae27aad0151bb436a.jpg"
+"https://telegra.ph/file/7af6683c32989f6ca2962.jpg"
+"https://telegra.ph/file/a354c1dd55eed6f306bf9.jpg"
+"https://telegra.ph/file/6aed5f88bdb2ac4604b56.jpg"
+)
