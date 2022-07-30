@@ -100,17 +100,17 @@ PM_START_TEXT = """
 
 buttons = [
     [
-        InlineKeyboardButton(text=f"✨ 𝐀ʙᴏᴜᴛ Teddy 𝐑ᴏʙᴏᴛ ✨", callback_data="emiko_"),
+        InlineKeyboardButton(text=f"🖤Aᴅᴅ ᴛᴇᴅᴅʏ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ🖤", url=f"t.me/Teddyrobot_bot?startgroup=new"),
     ],
     [
-        InlineKeyboardButton(text="❓ ʜᴇʟᴩ ❓", callback_data="help_back"),
+        InlineKeyboardButton(text="Sᴜᴘᴘᴏʀᴛ", url="t.me/Teddysupport"),
         InlineKeyboardButton(
-            text="🔗 ɪɴʟɪɴᴇ 🔗", switch_inline_query_current_chat=""
+            text="Uᴘᴅᴀᴛᴇs", url="t.me/Teddy_bot_updates"
         ),
     ],
     [
         InlineKeyboardButton(
-            text="♠️ ᴀᴅᴅ ᴛᴇᴅᴅy ᴛᴏ yᴏᴜʀ ɢʀᴏᴜᴩ ♠️", url=f"t.me/Teddyrobot_bot?startgroup=new"),
+            text="♠️ Tᴇᴅᴅʏ ᴀʟʟ ᴄᴏᴍᴍᴀɴᴅs ♠️", callback_data="help_back"),
     ],
 ]
 
