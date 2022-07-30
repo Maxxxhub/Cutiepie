@@ -8,8 +8,8 @@ from EmikoRobot.modules.sql.night_mode_sql import (
 from telethon.tl.types import ChatBannedRights
 from apscheduler.schedulers.asyncio import AsyncIOScheduler 
 from telethon import functions
-from EmikoRobot.events import register, OWNER_ID
-from EmikoRobot import telethn as tbot
+from EmikoRobot.events import register
+from EmikoRobot import telethn as tbot, OWNER_ID
 from telethon import Button, custom, events
 
 hehes = ChatBannedRights(
