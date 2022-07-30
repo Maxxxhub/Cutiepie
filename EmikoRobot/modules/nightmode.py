@@ -9,7 +9,7 @@ from telethon.tl.types import ChatBannedRights
 from apscheduler.schedulers.asyncio import AsyncIOScheduler 
 from telethon import functions
 from EmikoRobot.events import register
-from EmikoRobot import telethn as tbot, OWNER_ID
+from EmikoRobot import telethn as tbot
 from telethon import Button, custom, events
 
 hehes = ChatBannedRights(
@@ -83,7 +83,6 @@ async def profanity(event):
     if event.is_private:
         return
     input = event.pattern_match.group(2)
-    if not event.sender_id == OWNER_ID:
         if not await is_register_admin(event.input_chat, event.sender_id):
            await event.reply("Oɴʟʏ ᴀᴅᴍɪɴs ᴄᴀɴ ᴇxᴇᴄᴜᴛᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ!")
            return
