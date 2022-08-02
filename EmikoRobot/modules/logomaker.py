@@ -26,7 +26,7 @@ LOGO_LINKS            = [
 "https://telegra.ph/file/d89d7d045639f57c41c78.jpg",
 "https://telegra.ph/file/47e70d33f86f2a8b83553.jpg",
 "https://telegra.ph/file/615de6d5c1f3325b6cc31.jpg",
-"https://telegra.ph/file/68e468c340e46d28d9359.jpg"
+"https://telegra.ph/file/68e468c340e46d28d9359.jpg",
 "https://telegra.ph/file/496fdb4bc28eb90ebe201.jpg",
 "https://telegra.ph/file/e441362839a24d3e419e3.jpg",
 "https://telegra.ph/file/0745f3315755a5399a95e.jpg",
@@ -52,8 +52,8 @@ LOGO_LINKS            = [
 "https://telegra.ph/file/f3b2dca8ad0dee08e1bbe.jpg",
 "https://telegra.ph/file/266868a200eb4638cbb7d.jpg",
 "https://telegra.ph/file/abf24182aed7a1de31998.jpg",
-"https://telegra.ph/file/7cd9e7467a6fcafeb195c.jpg"
-"https://telegra.ph/file/a63c48047c512586ab476.jpg"
+"https://telegra.ph/file/7cd9e7467a6fcafeb195c.jpg",
+"https://telegra.ph/file/a63c48047c512586ab476.jpg",
 "https://telegra.ph/file/0a2dab693726f8af27b5f.jpg",
 "https://telegra.ph/file/0b47f503353a1b78792f2.jpg",
 "https://telegra.ph/file/b839316c2d27ce204595b.jpg",
