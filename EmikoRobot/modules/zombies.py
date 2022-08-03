@@ -98,7 +98,7 @@ async def rm_deletedacc(show):
 
 __mod_name__ = "Zombies"
 
-__help__ """
+__help__ = """
 ✰ Remove's Deleted Accounts from group/chat.
 
  ×  /zombies : Starts searching for deleted accounts in the group.
