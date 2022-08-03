@@ -8,7 +8,7 @@ from PIL import Image
 from datetime import datetime
 from telegraph import Telegraph, upload_file, exceptions
 
-wibu = "EmikoRobot"
+wibu = "TeddyRobot"
 telegraph = Telegraph()
 r = telegraph.create_account(short_name=wibu)
 auth_url = r["auth_url"]
@@ -85,3 +85,11 @@ file_help = file_help.replace(".py", "")
 file_helpo = file_help.replace("_", " ")
 
 __mod_name__ = "Telegraph"
+
+__help__ = """
+  I can upload files to Telegraph
+
+ ×  /tgm :Get Telegraph Link Of Replied Media.
+ ×  /tgt :Get Telegraph Link of Replied Text. 
+ 
+ """
