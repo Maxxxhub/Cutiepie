@@ -16,4 +16,13 @@ async def handwriting(_, message):
     hand = "https://apis.xditya.me/write?text=" + name
     await m.edit("» ᴜᴩʟᴏᴀᴅɪɴɢ...")
     await pbot.send_chat_action(message.chat.id, "upload_photo")
-    await message.reply_photo(hand, caption="ᴡʀɪᴛᴛᴇɴ ᴡɪᴛʜ 🖊 ʙʏ [Teddy](t.me/Teddyrobot_bot)")
+    await message.reply_photo(hand, caption="ᴡʀɪᴛᴛᴇɴ ᴡɪᴛʜ 🖊 ʙʏ [Teddy](t.me/Teddysupport)")
+    
+__help__ = """
+✰ Writes the given text on white page with a pen 🖊
+
+×  /write <text> : Writes the given text.
+"""
+
+__mod_name__ = "Write"
+
