@@ -4,6 +4,11 @@ from EmikoRobot import pbot, BOT_USERNAME
 from EmikoRobot.utils.errors import capture_err
 
 
+__help__ = """
+I will give information about github profile 
+
+ × /github <username>: Get information about a GitHub user. """
+
 __mod_name__ = "Github"
 
 
