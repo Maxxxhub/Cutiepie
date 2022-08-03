@@ -980,9 +980,6 @@ __help__ =  """
 ➻ /demote*:* Dᴇᴍᴏᴛᴇs ᴛʜᴇ ᴜsᴇʀ ʀᴇᴘʟɪᴇᴅ ᴛᴏ.
 ➻ /title <title here>*:* Sᴇᴛs ᴀ ᴄᴜsᴛᴏᴍ ᴛɪᴛʟᴇ ғᴏʀ ᴀɴ ᴀᴅᴍɪɴ ᴡʜᴏ ɢᴏᴛ ᴘʀᴏᴍᴏᴛᴇᴅ ʙʏ ᴛᴇᴅᴅʏ ʙᴏᴛ.
 ➻ /admincache*:* Rᴇғʀᴇsʜ ᴛʜᴇ ᴀᴅᴍɪɴ ʟɪsᴛ
-➻ /del*:* Dᴇʟᴇᴛᴇs ᴛʜᴇ ᴍᴇssᴀɢᴇ ʏᴏᴜ ʀᴇᴘʟɪᴇᴅ ᴛᴏ.
-➻ /purge*:* Dᴇʟᴇᴛᴇs ᴀʟʟ ᴍᴇssᴀɢᴇs ʙᴇᴛᴡᴇᴇɴ ᴛʜɪs ᴀɴᴅ ᴛʜᴇ ʀᴇᴘʟɪᴇᴅ ᴛᴏ ᴍᴇssᴀɢᴇ.
-➻ /purge <integer X>*:* Dᴇʟᴇᴛᴇs ᴛʜᴇ ʀᴇᴘʟɪᴇᴅ ᴍᴇssᴀɢᴇ, ᴀɴᴅ X ᴍᴇssᴀɢᴇs ғᴏʟʟᴏᴡɪɴɢ ɪᴛ.
 """
 
 SET_DESC_HANDLER = CommandHandler("setdesc", set_desc, filters=Filters.chat_type.groups, run_async=True)
