@@ -15,6 +15,7 @@ from EmikoRobot import OWNER_ID, BOT_USERNAME, SUPPORT_CHAT
 from EmikoRobot.events import register
 from EmikoRobot import telethn
 from PIL import Image, ImageDraw, ImageFont
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode
 
 
 LOGO_LINKS            = [
@@ -38,7 +39,7 @@ LOGO_LINKS            = [
 "https://telegra.ph/file/187b36280a49d651bf3e5.jpg",
 "https://telegra.ph/file/a78e627734c4967b46a9f.jpg",
 "https://telegra.ph/file/73282faf7f099469388ec.jpg",
-"https://telegra.ph/file/60a8817e57de603dfae72.jpg"
+"https://telegra.ph/file/60a8817e57de603dfae72.jpg",
 "https://telegra.ph/file/282c6ab22e80ce45b4785.jpg",
 "https://telegra.ph/file/d25bf93c8cf18ac41037f.jpg",
 "https://telegra.ph/file/a14a0023842083a59b6ad.jpg",
@@ -189,9 +190,9 @@ async def lego(event):
  else:
 
   if not quew:
-     await event.reply('ᴩʟᴇᴀꜱᴇ ɢɪᴍᴍᴇ ᴀ ᴛᴇxᴛ ᴛᴏ ᴍᴀᴋᴇ yᴏᴜʀ ʟᴏɢᴏ ^_^.')
+     await event.reply('Pʟᴇᴀꜱᴇ ɢɪᴍᴍᴇ ᴀ ᴛᴇxᴛ ᴛᴏ ᴍᴀᴋᴇ yᴏᴜʀ ʟᴏɢᴏ ^_^.')
      return
- pesan = await event.reply('yᴏᴜʀ ʟᴏɢᴏ ɪꜱ ɪɴ ᴩʀᴏᴄᴇꜱꜱ...📩ᴩʟᴇᴀꜱᴇ ᴡᴀɪᴛ...!')
+ pesan = await event.reply('Yᴏᴜʀ ʟᴏɢᴏ ɪꜱ ɪɴ ᴩʀᴏᴄᴇꜱꜱ...📩ᴩʟᴇᴀꜱᴇ ᴡᴀɪᴛ...!')
  try:
     text = event.pattern_match.group(1)
     randc = random.choice(LOGO_LINKS)
@@ -213,12 +214,37 @@ async def lego(event):
     draw.text((x, y), text, font=font, fill="white", stroke_width=1, stroke_fill="black")
     fname = "Teddy.png"
     img.save(fname, "png")
-    await telethn.send_file(event.chat_id, file=fname, caption = f"Made by @{SUPPORT_CHAT}")         
+    await telethn.send_file(event.chat_id, file=fname, caption = f"""
+━━━━━━━━━━━♡Tᴇᴅᴅʏ♡━━━━━━━━━━━━━
+
+🤡Lᴏɢᴏ ᴄʀᴇᴀᴛᴇᴅ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ🤡
+    ◈──────────────────◈
+🍫『  ᴄʀᴇᴀᴛᴇᴅ ʙʏ : Tᴇᴅᴅʏ 』🍫
+    ◈──────────────────◈
+   ➾ Aʟʟ ʀɪɢʜᴛs ʀᴇsᴇʀᴠᴇᴅ 
+
+━━━━━━━━━━━♡Tᴇᴅᴅʏ♡━━━━━━━━━━━━━ """),
+    parse_mode=ParseMode.HTML,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton(
+                            text=" ➕ ",
+                            url=f"t.me/Teddyrobot_bot?startgroup=new"
+                        ),
+                        InlineKeyboardButton(
+                        text= " 🌹 ",
+                            url="t.me/Teddysupport"
+                        ),
+                    ]
+                ]
+            ),
+        )
     await pesan.delete()
     if os.path.exists(fname):
             os.remove(fname)
  except Exception as e:
-    await event.reply(f'Error, Report @{SUPPORT_CHAT}, {e}')
+    await event.reply(f'Eʀʀᴏʀ, ʀᴇᴘᴏʀᴛ ᴅɪs ᴀᴛ @{SUPPORT_CHAT}, {e}')
 
 
 
