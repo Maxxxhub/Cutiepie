@@ -111,7 +111,7 @@ Gᴀᴛʜᴇʀᴇᴅ ʙʏ Tᴇᴅᴅʏ ✨.</b>
 
     await event.delete()
     
-    __help__ """
+    __help__ = """
     I will give information about a country
 
  × /country <country name>: Gathering info about given country"""
