@@ -224,7 +224,9 @@ async def lego(event):
    ➾ Aʟʟ ʀɪɢʜᴛs ʀᴇsᴇʀᴠᴇᴅ 
 
 ━━━━━━━━━♡Tᴇᴅᴅʏ♡━━━━━━━━━━━ """),
-    parse_mode=ParseMode.HTML,
+    
+    
+            parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
