@@ -175,4 +175,4 @@ class EmikoHandler:
 emikocmd = EmikoHandler(d).command
 emikomsg = EmikoHandler(d).message
 emikocallback = EmikoHandler(d).callbackquery
-emikoinline = EmikoHandler(d).
+emikoinline = EmikoHandler(d).inlinequery
