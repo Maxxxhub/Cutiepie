@@ -242,3 +242,12 @@ async def lyrics_func(_, message):
         return await m.edit(f"**__{lyrics}__**")
     lyrics = await paste(lyrics)
     await m.edit(f"**LYRICS_TOO_LONG:** [URL]({lyrics})")
+
+
+__help__ = """
+× /song <song name>: Uploads the song in it's best quality available on YouTube.
+× /video <song/video name>! Uploads video in it's best quality available on YouTube.
+ 💡Ex: `/song often remix`
+ 💡Ex: `/video in the end remix` """
+
+__mod_name__ = "Music"
