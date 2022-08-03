@@ -24,18 +24,18 @@ async def carbon_func(_, message):
     carbon.close()
 
 
-MEMEK = "https://telegra.ph/file/c18f3d06a999cd1839312.jpg"
+MEMEK = "https://telegra.ph/file/76a907d00640f38f6d5fb.mp4"
 
 @pbot.on_message(filters.command("repo"))
 async def repo(_, message):
-    await message.reply_photo(
-        photo=MEMEK,
-        caption=f"""✨ **Hᴇy, I'ᴍ Tᴇᴅᴅy Rᴏʙᴏᴛ** \n\n"
-**Oᴡɴᴇʀ ʀᴇᴩᴏ : [Sᴜʀᴜ](https://t.me/smokerr_xd)** \n\n"
-**Pyᴛʜᴏɴ ᴠᴇʀꜱɪᴏɴ :** `{y()}` \n\n"
-**Lɪʙʀᴀʀy ᴠᴇʀꜱɪᴏɴ :** `{o}` \n\n"
-**Tᴇʟᴇᴛʜᴏɴ ᴠᴇʀꜱɪᴏɴ :** `{s}` \n\n"
-**Pyʀᴏɢʀᴀᴍ ᴠᴇʀꜱɪᴏɴ :** `{z}` \n\n"
+    await message.reply_video(
+        video=MEMEK,
+        caption=f"""✨ **Hᴇy, I'ᴍ Tᴇᴅᴅy Rᴏʙᴏᴛ** \n"
+**Oᴡɴᴇʀ ʀᴇᴩᴏ : [Sᴜʀᴜ](https://t.me/smokerr_xd)** \n"
+**Pyᴛʜᴏɴ ᴠᴇʀꜱɪᴏɴ :** `{y()}` \n"
+**Lɪʙʀᴀʀy ᴠᴇʀꜱɪᴏɴ :** `{o}` \n"
+**Tᴇʟᴇᴛʜᴏɴ ᴠᴇʀꜱɪᴏɴ :** `{s}` \n"
+**Pyʀᴏɢʀᴀᴍ ᴠᴇʀꜱɪᴏɴ :** `{z}` \n"
 **🙂.**
 """,
         reply_markup=InlineKeyboardMarkup(
@@ -49,3 +49,10 @@ async def repo(_, message):
             ]
         )
     )
+    
+    __help__ = """
+✘ ᴍᴀᴋᴇs ᴀ ᴄᴀʀʙᴏɴ ᴏғ ᴛʜᴇ ɢɪᴠᴇɴ ᴛᴇxᴛ ᴀɴᴅ sᴇɴᴅ ɪᴛ ᴛᴏ ʏᴏᴜ.
+
+× /carbon : ᴍᴀᴋᴇs ᴄᴀʀʙᴏɴ ɪғ ʀᴇᴩʟɪᴇᴅ ᴛᴏ ᴀ ᴛᴇxᴛ
+
+__mod_name_ = "Cᴀʀʙᴏɴ"
