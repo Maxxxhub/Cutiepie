@@ -276,13 +276,12 @@ async def apk(e):
         await e.reply("Exception Occured:- " + str(err))
 
 
-__mod_name__ = "Sᴇᴀʀᴄʜ"
-
 __help__ = """
-➻ /wiki <query>*:* Pᴇʀғᴏʀᴍ ᴀ ᴡɪᴋɪᴘᴇᴅɪᴀ sᴇᴀʀᴄʜ ᴀɴᴅ ʀᴇᴛᴜʀɴs.
-➻ /image <query>*:* Sᴇᴀʀᴄʜ ɢᴏᴏɢʟᴇ ғᴏʀ ɪᴍᴀɢᴇs ᴀɴᴅ ʀᴇᴛᴜʀɴs ᴛʜᴇᴍ\nFᴏʀ ɢʀᴇᴀᴛᴇʀ ɴᴏ. ᴏғ ʀᴇsɪʟᴛs sᴘᴇᴄɪғʏ ʟɪᴍ, Fᴏʀ ᴇɢ: `/img ʜᴇʟʟᴏ ʟɪᴍ=10`
-➻ /app <appname>*:* Sᴇᴀʀᴄʜᴇs ғᴏʀ ᴀɴ ᴀᴘᴘ ɪɴ ᴘʟᴀʏsᴛᴏʀᴇ ᴀɴᴅ ʀᴇᴛᴜʀɴs ɪᴛs ᴅᴇᴛᴀɪʟs.
-➻ /reverse: Dᴏᴇs ᴀ ʀᴇᴠᴇʀsᴇ ɪᴍᴀɢᴇ sᴇᴀʀᴄʜ ᴏғ ᴛʜᴇ ᴍᴇᴅɪᴀ ᴡʜɪᴄʜ ɪᴛ ᴡᴀs ʀᴇᴘʟɪᴇᴅ ᴛᴏ.
-➻ /git <username>*:* Gᴇᴛ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴏғ ᴀɴʏ ɢɪᴛʜᴜʙ ᴜsᴇʀ.
-➻ /country <country name>*:* Gᴀᴛʜᴇʀɪɴɢ ɪɴғᴏ ᴀʙᴏᴜᴛ ɢɪᴠᴇɴ ᴄᴏᴜɴᴛʀʏ.
-"""
+ × /google <text>: Perform a google search nd returns.
+ × /img <text>: Search Google for images and returns them
+For greater no. of results specify lim, For eg: /img hello lim=10
+ × /app <appname>: Searches for an app in Play Store and returns its details.
+ × /reverse: Does a reverse image search of the media which it was replied to.
+ """
+
+__mod_name__ = "Google"
