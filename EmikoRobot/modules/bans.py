@@ -572,24 +572,18 @@ def snipe(update: Update, context: CallbackContext):
 
 
 __help__ = """
-*ᑌՏᗴᖇ ᑕOᗰᗰᗩᑎᗪՏ:*
-➻ /kickme*:* Kɪᴄᴋs ᴛʜᴇ ᴜsᴇʀ ᴡʜᴏ ᴜssᴜᴇᴅ ᴛʜᴇ ᴄᴏᴍᴍᴀɴᴅ.
-*ᗩᗪᗰIᑎՏ OᑎᒪY:*
+*USER COMMANDS:*
+➻ /kickme*:* Kɪᴄᴋs ᴛʜᴇ ᴜsᴇʀ FROM THE GROUP ᴡʜᴏ ᴜssᴜᴇᴅ ᴛʜᴇ ᴄᴏᴍᴍᴀɴᴅ.
+*ADMINS /-:*
 ➻ /ban <userhandle>*:* Bᴀɴs ᴀ ᴜsᴇʀ.
 ➻ /sban <userhandle>*:* Sɪʟᴇɴᴛʟʏ ʙᴀɴs ᴀ ᴜsᴇʀ.
 ➻ /tban <userhandle> X(m/h/d)*:* Bᴀɴs ᴀ ᴜsᴇʀ ғᴏᴛ X ᴛɪᴍᴇ. m = minutes, h = hours, d = days.
 ➻ /unban <userhandle>*:* Uɴʙᴀɴs ᴀ ᴜsᴇʀ.
 ➻ /kick <userhandle>*:* Kɪᴄᴋs ᴀ ᴜsᴇʀ ᴏᴜᴛ ᴏғ ᴛʜᴇ ɢʀᴏᴜᴘ.
-➻ /mute <userhandle>*:* Sɪʟᴇɴᴄᴇs ᴀ ᴜsᴇʀ.
-➻ /tmute <userhandle> X(m/h/d)*:* Mᴜᴛᴇs ᴀ ᴜsᴇʀ ғᴏʀ X ᴛɪᴍᴇ. m = minutes, h = hours, d = days.
-➻ /unmute <userhandle>*:* Uɴᴍᴜᴛᴇs ᴀ ᴜsᴇʀ.
-➻ /zombies*:* Sᴇᴀʀᴄʜᴇs ᴅᴇʟᴇᴛᴇᴅ ᴀᴄᴄᴏᴜɴᴛs.
-➻ /zombies clean*:* Rᴇᴍᴏᴠᴇs ᴅᴇʟᴇᴛᴇᴅ ᴀᴄᴄᴏᴜɴᴛᴀ ғʀᴏᴍ ᴛʜᴇ ɢʀᴏᴜᴘ/ᴄʜᴀɴɴᴇʟ.
-➻ /snipe <chatid> <string>*:* Mᴀᴋᴇ ᴍ sᴇɴᴅ ᴀ ᴍsɢ ᴛᴏ ᴀ sᴘᴇᴄɪғɪᴄ ᴄʜᴀᴛ.
 """
 
 
-__mod_name__ = "Bᴀɴꜱ/Mᴜᴛᴇ"
+__mod_name__ = "Bᴀɴꜱ"
 
 BAN_HANDLER = CommandHandler(["ban", "sban"], ban, run_async=True)
 TEMPBAN_HANDLER = CommandHandler(["tban"], temp_ban, run_async=True)
