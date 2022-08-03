@@ -983,14 +983,6 @@ __help__ =  """
 ➻ /del*:* Dᴇʟᴇᴛᴇs ᴛʜᴇ ᴍᴇssᴀɢᴇ ʏᴏᴜ ʀᴇᴘʟɪᴇᴅ ᴛᴏ.
 ➻ /purge*:* Dᴇʟᴇᴛᴇs ᴀʟʟ ᴍᴇssᴀɢᴇs ʙᴇᴛᴡᴇᴇɴ ᴛʜɪs ᴀɴᴅ ᴛʜᴇ ʀᴇᴘʟɪᴇᴅ ᴛᴏ ᴍᴇssᴀɢᴇ.
 ➻ /purge <integer X>*:* Dᴇʟᴇᴛᴇs ᴛʜᴇ ʀᴇᴘʟɪᴇᴅ ᴍᴇssᴀɢᴇ, ᴀɴᴅ X ᴍᴇssᴀɢᴇs ғᴏʟʟᴏᴡɪɴɢ ɪᴛ.
-➻ /setgtitle <text>*:* Sᴇᴛ ɢʀᴏᴜᴘ ᴛɪᴛʟᴇ.
-➻ /setgpic*:* Rᴇᴘʟʏ ᴛᴏ ᴀɴ ɪᴍᴀɢᴇ ᴛᴏ sᴇᴛ ɪᴛ ᴀs ᴀ ɢʀᴏᴜᴘ ᴘғᴘ.
-➻ /setdesc*:* Sᴇᴛ ɢʀᴏᴜᴘ ᴅᴇsᴄʀɪᴘᴛɪᴏɴ.
-➻ /setsticker*:* Sᴇᴛ ɢʀᴏᴜᴘ sᴛɪᴄʟᴇʀ.
-*Rᴜʟᴇs:*
-➻ /rules*:* Tᴏ ɢᴇᴛ ᴛʜᴇ ʀᴜʟᴇs.
-➻ /setrules <your rules here>*:* Tᴏ sᴇᴛ ᴛʜᴇ ʀᴜʟᴇs ғᴏʀ ʏᴏᴜʀ ᴄʜᴀᴛ.
-➻ /clearrules*:* Tᴏ ᴄʟᴇᴀʀ ᴛʜᴇ ʀᴜʟᴇs.
 """
 
 SET_DESC_HANDLER = CommandHandler("setdesc", set_desc, filters=Filters.chat_type.groups, run_async=True)
