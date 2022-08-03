@@ -564,9 +564,7 @@ Exᴀᴍᴘʟᴇs:
 *✘ ᴊsᴏɴ ɪɴғᴏ ✘:*
 ➻ /json*:* Gᴇᴛ ᴅᴇᴛᴀɪʟᴇᴅ ɪɴғᴏ ᴛᴏ ᴛʜᴇ ʀᴇᴘʟɪᴇᴅ ᴛᴇxᴛ.
  
-  
-*✘ Wʜᴀᴛ ᴡᴀs ᴛʜᴀᴛ ʜᴇᴀʟᴛʜ ᴛʜɪɴɢ? ✘*
- Cᴏᴍᴇ ɴᴅ sᴇᴇ [HP System explained](https://t.me/Teddysupport/8379)
+ 
 """
 
 SET_BIO_HANDLER = DisableAbleCommandHandler("setbio", set_about_bio, run_async=True)
