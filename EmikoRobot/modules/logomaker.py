@@ -223,25 +223,7 @@ async def lego(event):
     ◈──────────────────◈
    ➾ Aʟʟ ʀɪɢʜᴛs ʀᴇsᴇʀᴠᴇᴅ 
 
-━━━━━━━━━♡Tᴇᴅᴅʏ♡━━━━━━━━━━━ """),
-    
-    
-            parse_mode=ParseMode.HTML,
-            reply_markup=InlineKeyboardMarkup(
-                [
-                    [
-                        InlineKeyboardButton(
-                            text=" ➕ ",
-                            url=f"t.me/Teddyrobot_bot?startgroup=new"
-                        ),
-                        InlineKeyboardButton(
-                        text= " 🌹 ",
-                            url="t.me/Teddysupport"
-                        ),
-                    ]
-                ]
-            ),
-        )
+━━━━━━━━━♡Tᴇᴅᴅʏ♡━━━━━━━━━━━ """)
     await pesan.delete()
     if os.path.exists(fname):
             os.remove(fname)
