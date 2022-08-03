@@ -87,9 +87,6 @@ file_helpo = file_help.replace("_", " ")
 __mod_name__ = "Telegraph"
 
 __help__ = """
-  I can upload files to Telegraph
-
- ×  /tgm :Get Telegraph Link Of Replied Media.
- ×  /tgt :Get Telegraph Link of Replied Text. 
- 
+➻ /tgm : Gᴇᴛ ᴀ ᴘᴇʀᴍᴀɴᴇɴᴛ ᴛᴇʟᴇɢʀᴀᴘʜ ʟɪɴᴋ ᴏғ ʀᴇᴘʟɪᴇᴅ ᴍᴇᴅɪᴀ.
+➻ /tgt: Gᴇᴛ ᴀ ᴘᴇʀᴍᴀɴᴇɴᴛ ᴛᴇʟᴇɢʀᴀᴘʜ ʟɪɴᴋ ᴏғ ʀᴇᴘʟɪᴇᴅ ᴛᴇxᴛ.
  """
