@@ -1,97 +1,47 @@
-from io import BytesIO
-from traceback import format_exc
+import asyncio
+import random
+from asyncio import sleep
 
-from pyrogram import filters
+from pyrogram import filters, Client
 from pyrogram.types import Message
-
-from EmikoRobot import arq
-from EmikoRobot.utils.errors import capture_err
-from EmikoRobot import pbot as app
+from config import PREFIX
 
 
-async def quotify(messages: list):
-    response = await arq.quotly(messages)
-    if not response.ok:
-        return [False, response.result]
-    sticker = response.result
-    sticker = BytesIO(sticker)
-    sticker.name = "sticker.webp"
-    return [True, sticker]
-
-
-def getArg(message: Message) -> str:
-    arg = message.text.strip().split(None, 1)[1].strip()
-    return arg
-
-
-def isArgInt(message: Message) -> bool:
-    count = getArg(message)
-    try:
-        count = int(count)
-        return [True, count]
-    except ValueError:
-        return [False, 0]
-
-
-@app.on_message(filters.command("q"))
-@capture_err
-async def quotly_func(client, message: Message):
+@Client.on_message(filters.me & filters.command(["q"], PREFIX))
+async def quotly(bot: Client, message: Message):
     if not message.reply_to_message:
-        return await message.reply_text("Reply to a message to quote it.")
-    if not message.reply_to_message.text:
-        return await message.reply_text("Replied message has no text, can't quote it.")
-    m = await message.reply_text("Quoting Messages Please wait....")
-    if len(message.command) < 2:
-        messages = [message.reply_to_message]
-
-    elif len(message.command) == 2:
-        arg = isArgInt(message)
-        if arg[0]:
-            if arg[1] < 2 or arg[1] > 10:
-                return await m.edit("Argument must be between 2-10.")
-            count = arg[1]
-            messages = await client.get_messages(
-                message.chat.id,
-                [
-                    i
-                    for i in range(
-                        message.reply_to_message.message_id,
-                        message.reply_to_message.message_id + count,
-                    )
-                ],
-                replies=0,
-            )
-        else:
-            if getArg(message) != "r":
-                return await m.edit(
-                    "Incorrect Argument, Pass **'r'** or **'INT'**, **EX:** __/q 2__"
-                )
-            reply_message = await client.get_messages(
-                message.chat.id,
-                message.reply_to_message.message_id,
-                replies=1,
-            )
-            messages = [reply_message]
-    else:
-        await m.edit("Incorrect argument, check quotly module in help section.")
+        await message.edit("Reply to any users text message")
         return
-    try:
-        sticker = await quotify(messages)
-        if not sticker[0]:
-            await message.reply_text(sticker[1])
-            return await m.delete()
-        sticker = sticker[1]
-        await message.reply_sticker(sticker)
-        await m.delete()
-        sticker.close()
-    except Exception as e:
-        await m.edit(
-            "Something wrong happened while quoting messages,"
-            + " This error usually happens when there's a "
-            + " message containing something other than text."
+
+    await message.edit("```Making a Quote```")
+
+    await message.reply_to_message.forward("@QuotLyBot")
+
+    is_sticker = False
+    progress = 0
+
+    while not is_sticker:
+        try:
+            await sleep(4)
+            msg = await bot.get_history("@QuotLyBot", 1)
+            print(msg)
+            is_sticker = True
+        except:
+            await sleep(1)
+
+            progress += random.randint(0, 5)
+
+            if progress > 100:
+                await message.edit('There was a long running error')
+                return
+
+            try:
+                await message.edit("```Making a Quote\nProcessing {}%```".format(progress))
+            except:
+                await message.edit("ERROR")
+
+    if msg_id := msg[0]['message_id']:
+        await asyncio.gather(
+            message.delete(),
+            bot.forward_messages(message.chat.id, "@QuotLyBot", msg_id)
         )
-        e = format_exc()
-        print(e)
-
-
-__mod_name__ = "Quotly"
