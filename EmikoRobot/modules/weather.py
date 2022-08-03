@@ -91,9 +91,9 @@ async def _(event):
 __help__ = """
 ✰ I can find weather of all cities
 
- ×  /weather <city>: Get weather info in a particular place.
- ×  /wttr <city>: Advanced weather module, usage same as /weather
- ×  /wttr moon: Get the current status of moon.
+➻ /weather <city>*:* Gᴇᴛ ᴡᴇᴀᴛʜᴇʀ ɪɴғᴏ ᴏғ ᴛʜᴇ ɢɪᴠᴇɴ ᴄɪᴛʏ.
+➻ /wttr <city>*:* Aᴅᴠᴀɴᴄᴇᴅ ᴡᴇᴀᴛʜᴇʀ ᴍᴏᴅᴜʟᴇ, ᴜsᴀɢᴇ sᴀᴍᴇ ᴀs /weather.
+➻ /wttr moon*:* Gᴇᴛ ᴛʜᴇ ᴄᴜʀʀᴇᴍᴛ sᴛᴀᴛᴜs ᴏғ ᴛʜᴇ ᴍᴏᴏɴ.
  """
 
 __mod_name__ = "Weather"
