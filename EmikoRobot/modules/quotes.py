@@ -7,7 +7,7 @@ from pyrogram import filters, Client
 from pyrogram.types import Message
 
 
-PREFIX = os.getenv("PREFIX", "/")
+PREFIX = os.getenv("PREFIX", ".")
 
 
 @Client.on_message(filters.me & filters.command(["q"], PREFIX))
