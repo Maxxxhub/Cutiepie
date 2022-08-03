@@ -4,7 +4,9 @@ from asyncio import sleep
 
 from pyrogram import filters, Client
 from pyrogram.types import Message
-from EmikoRobot.config import PREFIX
+
+
+PREFIX = os.getenv("PREFIX", "/")
 
 
 @Client.on_message(filters.me & filters.command(["q"], PREFIX))
