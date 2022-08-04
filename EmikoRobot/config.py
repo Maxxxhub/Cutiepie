@@ -1,6 +1,8 @@
 # Create a new config.py or rename this to config.py file in same dir and import, then extend this class.
 import json
 import os
+from dotenv import load_dotenv
+from os import environ
 
 
 def get_user_list(config, key):
@@ -37,6 +39,7 @@ class Config(object):
     SPAMWATCH_API = ""  # go to support.spamwat.ch to get key
     SPAMWATCH_SUPPORT_CHAT = "@SpamWatchSupport"
     PREFIX = os.getenv("PREFIX", "/")
+    COMMAND_PREFIXES = environ.get("COMMAND_PREFIXES")
 
     # OPTIONAL
     ##List of id's -  (not usernames) for users which have sudo access to the bot.
