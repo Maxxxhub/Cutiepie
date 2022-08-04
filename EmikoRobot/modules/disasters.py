@@ -525,7 +525,7 @@ def devlist(update: Update, context: CallbackContext):
         parse_mode=ParseMode.HTML,
     )
     true_dev = list(set(DEV_USERS) - {OWNER_ID})
-    reply = "<b>Mᴇᴍʙᴇʀ ɪғ ғᴀᴍɪʟʏ ᴛʜɪs ᴋɪɴɢᴅᴏᴍ 🤴:</b>\n"
+    reply = "<b>Mᴇᴍʙᴇʀ ᴏғ ғᴀᴍɪʟʏ ᴛʜɪs ᴋɪɴɢᴅᴏᴍ 🤴:</b>\n"
     for each_user in true_dev:
         user_id = int(each_user)
         try:
