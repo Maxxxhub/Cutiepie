@@ -452,22 +452,13 @@ __mod_name__ = "Bʟᴀᴄᴋʟɪꜱᴛs"
 
 __help__ = """
 Bʟᴀᴄᴋʟɪsᴛs ᴀʀᴇ ᴜsᴇᴅ ᴛᴏ sᴛᴏᴘ ᴄᴇʀᴛᴀɪɴ ᴛʀɪɢɢᴇʀs ғʀᴏᴍ ʙᴇɪɴɢ sᴀɪᴅ ɪɴ ᴀ ɢʀᴏᴜᴘ. Aɴʏ ᴛɪᴍᴇ ᴛʜᴇ ᴛʀɪɢɢᴇʀ ɪs ᴍᴇɴᴛɪᴏɴᴇᴅ, ᴛʜᴇ ᴍsɢ ᴡɪʟʟ ʙᴇ ɪᴍᴍᴇᴅɪᴇᴛʟʏ ᴅᴇʟᴇᴛᴇᴅ.
-*ᑎOTᗴ*: Bʟᴀᴄᴋʟɪsᴛs ᴅᴏ ɴᴏᴛ ᴀғғᴇᴄᴛ ᴀᴅᴍɪɴs.
+*Nᴏᴛᴇ*: Bʟᴀᴄᴋʟɪsᴛs ᴅᴏ ɴᴏᴛ ᴀғғᴇᴄᴛ ᴀᴅᴍɪɴs.
 ➻ /blacklist*:* Vɪᴇᴡ ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ ʙʟᴀᴄᴋʟɪsᴛᴇᴅ ᴡᴏʀᴅs.
-Admin only:
+Aᴅᴍɪɴs /-:
 ➻ /addblacklist <triggers>*:* Aᴅᴅ ᴀ ᴛʀɪɢɢᴇʀ ᴛᴏ ᴛʜᴇ ʙʟᴀᴄᴋʟɪsᴛ.
 ➻ /unblacklist <triggers>*:* Rᴇᴍᴏᴠᴇ ᴛʀɪɢɢᴇʀs ғʀᴏᴍ ᴛʜᴇ ʙʟᴀᴄᴋʟɪsᴛ. Yᴏᴜ ᴄᴀɴ ʀᴇᴍᴏᴠᴇ ᴍᴜʟᴛɪᴘʟᴇ ᴛʀɪɢɢᴇʀs ᴀᴛ ᴏɴᴄᴇ.
 ➻ /blacklistmode <off/del/warn/ban/kick/mute/tban/tmute>*:* Aᴄᴛɪᴏɴ ᴛᴏ ᴘᴇʀғᴏʀᴍ ᴡʜᴇɴ sᴏᴍᴇᴏɴᴇ sᴇɴᴅs ʙʟᴀᴄᴋʟɪsᴛᴇᴅ ᴡᴏʀᴅs.
 Bʟᴀxᴋʟɪsᴛ sᴛɪᴄᴋᴇʀ ɪs ᴜsᴡᴇᴅ ᴛᴏ sᴛᴏᴘ ᴄᴇʀᴛᴀɪɴ sᴛɪᴄᴋᴇʀs. Wʜᴇɴᴇᴠᴇʀ ᴀ sᴛɪᴄᴋᴇʀ ɪs sᴇɴᴛ, ᴛʜᴇ ᴍsɢ ᴡɪʟʟ ʙᴇ ᴅᴇʟᴇᴛᴇᴅ ɪᴍᴍᴇᴅɪᴇᴛʟʏ.
-*NOTE:* Bʟᴀᴄᴋʟɪsᴛ sᴛɪᴄᴋᴇʀs ᴅᴏ ɴᴏᴛ ᴀғғᴇᴄᴛ ᴛʜᴇ ɢʀᴏᴜᴘ ᴀᴅᴍɪɴ.
-➻ /blsticker*:* Sᴇᴇ ᴄᴜʀʀᴇɴᴛ ʙʟᴀᴄᴋʟɪsᴛᴇᴅ sᴛɪᴄᴋᴇʀ.
-*Only admin:*
-➻ /addblsticker <sticker link>*:* Aᴅᴅ ᴛʜᴇ sᴛɪᴄᴋᴇʀ ᴛʀɪɢɢᴇʀ ᴛᴏ ᴛʜᴇ ʙʟᴀᴄᴋʟɪsᴛ. Cᴀɴ ʙᴇ ᴀᴅᴅᴇᴅ ᴠɪᴀ ʀᴇᴘʟʏ sᴛᴄᴋᴇʀ.
-➻ /unblsticker <sticker link>*:* Rᴇᴍᴏᴠᴇ ᴛʀɪɢɢᴇʀs ғʀᴏᴍ ʙʟᴀxᴋʟɪsᴛs. Tʜᴇ sᴀᴍᴇ ɴᴇᴡʟɪɴᴇ ʟᴏɢɪᴄ ᴀᴘᴘʟɪᴇs ʜᴇʀᴇ, sᴏ ʏᴏᴜ ᴄᴀɴ ᴅᴇʟᴇᴛᴇ ᴍᴜʟᴛɪᴘʟᴇ ᴛʀɪɢɢᴇʀs ᴀᴛ ᴏɴᴄᴇ.
-➻ /rmblsticker <sticker link>*:* Sᴀᴍᴇ ᴀs ᴀʙᴏᴠᴇ.
-➻ /blstickermode <delete/ban/tban/mute/tmute>*:* Sᴇᴛs ᴜᴘ ᴀ ᴅᴇғᴀᴜʟᴛ ᴀᴄᴛɪᴏɴ ᴏɴ ᴜsᴇʀ ᴡʜᴀᴛ ᴛᴏ ᴅᴏ ɪғ ᴜsᴇʀs ᴜsᴇ ʙʟᴀᴄᴋʟɪsᴛᴇᴅ sᴛɪᴄᴋᴇʀs.
-Note:
-➻ <sticker link> ᴄᴀɴ ʙᴇ `https://t.me/addstickers/<sticker>` ᴏʀ ᴊᴜsᴛ `<sticker>` ᴏʀ ʀᴇᴘʟʏ ᴛᴏ ᴛʜᴇ sᴛɪᴄᴋᴇʀ ᴍsɢ.
 """
 BLACKLIST_HANDLER = DisableAbleCommandHandler(
     "blacklist",
