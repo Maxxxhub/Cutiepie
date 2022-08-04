@@ -83,7 +83,7 @@ def gettime(update: Update, context: CallbackContext):
     if not result:
         send_message.edit_text(
             f"Tɪᴍᴇ ᴢᴏɴᴇ ɪɴғᴏ ɴᴏᴛ ᴀᴠᴀɪʟᴀʙʟᴇ ғᴏʀ <b>{query}</b>\n"
-            '<b>All Timezones:</b> <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">List here</a>',
+            '<b>Aʟʟ ᴛɪᴍᴇᴢᴏɴᴇs:</b> <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">Lɪsᴛ ʜᴇʀᴇ...</a>',
             parse_mode=ParseMode.HTML,
             disable_web_page_preview=True,
         )
