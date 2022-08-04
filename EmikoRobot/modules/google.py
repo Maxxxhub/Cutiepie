@@ -275,8 +275,7 @@ async def apk(e):
     except Exception as err:
         await e.reply("Exception Occured:- " + str(err))
 
-
- __help__ = """
+__help__ = """
  × /google <text>: Pᴇʀғᴏʀᴍ ᴀ ɢᴏᴏɢʟᴇ sᴇᴀʀᴄʜ ɴᴅ ʀᴇᴛᴜʀɴs.
  × /img <text>: Sᴇᴀʀᴄʜ ɢᴏᴏɢʟᴇ ғᴏʀ ɪᴍᴀɢᴇs ᴀɴᴅ ʀᴇᴛᴜʀɴs ᴛʜᴇᴍ.
 Fᴏʀ ɢʀᴇᴀᴛᴇʀ ɴᴏ. ᴏғ ʀᴇsᴜʟᴛs ʟɪᴍ, Fᴏʀ ᴇɢ: /img hello lim=10
