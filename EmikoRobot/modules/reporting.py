@@ -2,7 +2,7 @@ from pyrogram import filters
 from pyrogram.types import  Message
 from EmikoRobot.modules.helper_funcs.decorators import emikocmd
 from EmikoRobot import pbot
-from EmikoRobot.mongo.reportdb import Reporting
+from mongo.reportdb import Reporting
 from EmikoRobot.utils.commands import command
 from EmikoRobot.utils.adminperms import member_permissions
 
