@@ -81,16 +81,16 @@ async def detect_nsfw(_, message):
         return
     await message.reply_text(
         f"""
-**NSFW Iᴍᴀɢᴇ ᴅᴇᴛᴇᴄᴛᴇᴅ ᴀɴᴅ ᴅᴇʟᴇᴛᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ!
+**NSFW Iᴍᴀɢᴇ ᴅᴇᴛᴇᴄᴛᴇᴅ ᴀɴᴅ ᴅᴇʟᴇᴛᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ ✅
 ————————————————————**
-**Usᴇʀ:** {message.from_user.mention} [`{message.from_user.id}`]
-**Sᴀғᴇ:** `{results.neutral} %`
-**Pᴏʀɴ:** `{results.porn} %`
-**Aᴅᴜʟᴛ:** `{results.sexy} %`
-**Hᴇɴᴛᴀɪ:** `{results.hentai} %`
-**Dʀᴀᴡɪɴɢs:** `{results.drawings} %`
+**Usᴇʀ😺:** {message.from_user.mention} [`{message.from_user.id}`]
+**Sᴀғᴇ🔰:** `{results.neutral} %`
+**Pᴏʀɴ🔞:** `{results.porn} %`
+**Aᴅᴜʟᴛ🤷‍♂️:** `{results.sexy} %`
+**Hᴇɴᴛᴀɪ🥵:** `{results.hentai} %`
+**Dʀᴀᴡɪɴɢs🖌️:** `{results.drawings} %`
 **————————————————————**
-__Usᴇ `/antinsfw off` ᴛᴏ ᴅɪsᴀʙʟᴇ ᴛʜɪs.__
+__Usᴇ `/antinsfw off` ᴛᴏ ᴅɪsᴀʙʟᴇ ᴛʜɪs❗.__
 """
     )
 
@@ -130,12 +130,12 @@ async def nsfw_scan_command(_, message):
     results = results.result
     await m.edit(
         f"""
-**Neutral:** `{results.neutral} %`
-**Porn:** `{results.porn} %`
-**Hentai:** `{results.hentai} %`
-**Sexy:** `{results.sexy} %`
-**Drawings:** `{results.drawings} %`
-**NSFW:** `{results.is_nsfw}`
+**Nᴇᴜᴛʀᴀʟ🔰:** `{results.neutral} %`
+**Pᴏʀᴍ🔞:** `{results.porn} %`
+**Hᴇɴᴛᴀɪ🥵:** `{results.hentai} %`
+**Sᴇxʏ🤷‍♂️:** `{results.sexy} %`
+**Dʀᴀᴡɪɴɢs🖌️:** `{results.drawings} %`
+**NSFW🔘:** `{results.is_nsfw}`
 """
     )
 
