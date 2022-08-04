@@ -276,12 +276,12 @@ async def apk(e):
         await e.reply("Exception Occured:- " + str(err))
 
 
-__help__ = """
- × /google <text>: Perform a google search nd returns.
- × /img <text>: Search Google for images and returns them
-For greater no. of results specify lim, For eg: /img hello lim=10
- × /app <appname>: Searches for an app in Play Store and returns its details.
- × /reverse: Does a reverse image search of the media which it was replied to.
+ __help__ = """
+ × /google <text>: Pᴇʀғᴏʀᴍ ᴀ ɢᴏᴏɢʟᴇ sᴇᴀʀᴄʜ ɴᴅ ʀᴇᴛᴜʀɴs.
+ × /img <text>: Sᴇᴀʀᴄʜ ɢᴏᴏɢʟᴇ ғᴏʀ ɪᴍᴀɢᴇs ᴀɴᴅ ʀᴇᴛᴜʀɴs ᴛʜᴇᴍ.
+Fᴏʀ ɢʀᴇᴀᴛᴇʀ ɴᴏ. ᴏғ ʀᴇsᴜʟᴛs ʟɪᴍ, Fᴏʀ ᴇɢ: /img hello lim=10
+ × /app <appname>: Sᴇᴀʀᴄʜ ғᴏʀ ᴀɴ ᴀᴘᴘ ɪɴ ᴘʟᴀʏsᴛᴏʀᴇ ᴀɴᴅ ʀᴇᴛᴜʀᴍs ɪᴛs ᴅᴇᴛᴀɪʟs.
+ × /reverse: Dᴏᴇs ᴀ ʀᴇᴠᴇʀsᴇ ɪᴍᴀɢᴇ sᴇᴀʀᴄʜ ᴏғ ᴛʜᴇ ᴍᴇᴅɪᴀ ʀᴇᴘʟɪᴇᴅ ᴛᴏ.
  """
 
-__mod_name__ = "Google"
+__mod_name__ = "Gᴏᴏɢʟᴇ"
