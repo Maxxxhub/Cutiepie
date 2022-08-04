@@ -19,8 +19,8 @@ from EmikoRobot.ex_plugins.dbfunctions import (
 from EmikoRobot.utils.filter_groups import karma_negative_group, karma_positive_group
 from EmikoRobot import arq
 
-regex_upvote = r"^((?i)\+|\+\+|\+1|thx|thanx|thanks|pro|cool|good|👍)$"
-regex_downvote = r"^(\-|\-\-|\-1|👎|noob|weak)$"
+regex_upvote = r"^((?i)\+|\+\+|\+1|thx|nice|thanx|thanks|pro|cool|good|👍|piro|impressive|op)$"
+regex_downvote = r"^(\-|\-\-|\-1|👎|noob|weak|chutiya|noobs|chutiye|bad)$"
 
 
 
