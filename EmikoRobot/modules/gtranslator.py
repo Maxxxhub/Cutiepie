@@ -16,7 +16,7 @@ from EmikoRobot.modules.disable import DisableAbleCommandHandler
 
 __help__ = """ 
 Tʜɪs ᴍᴏᴅᴜʟᴇ ᴡɪʟʟ ʜᴇʟᴘ.ʏᴏᴜ ɪɴ ᴛʀᴀɴsʟᴀᴛɪᴏɴ!
-*✘ 𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀 ✘:*
+*✘ Cᴏᴍᴍᴀɴᴅs ✘:*
 ➻ /tl (or /tr): As ᴀ ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ, ᴛʀᴀɴsʟᴀᴛᴇs ɪᴛ ᴛᴏ ᴇɴɢʟɪsʜ.
 ➻ /tl <lang>: Tʀᴀɴsʟᴀᴛᴇs ᴛᴏ <ʟᴀɴɢ ᴄᴏᴅᴇ>
 eg: /tl en: Tʀᴀɴsʟᴀᴛᴇs ᴛᴏ ᴇɴɢʟɪsʜ.
