@@ -319,7 +319,7 @@ if is_module_loaded(FILENAME):
 
     __help__ = """
 ➻ /cmds*:* Cʜᴇᴅᴋ ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ sᴛᴀᴛᴜs ᴏғ ᴅɪsᴀʙʟᴇᴅ ᴄᴏᴍᴍᴀɴᴅs.
-*✘ ᗩᗪᗰIᑎՏ OᑎᒪY ✘:*
+*✘ Aᴅᴍɪɴs /- ✘:*
 ➻ /enable <cmd name>*:* Eɴᴀʙʟᴇ ᴛʜᴀᴛ ᴄᴏᴍᴍᴀɴᴅ.
 ➻ /disable <cmd name>*:* Dɪsᴀʙʟᴇ.ᴛʜᴀᴛ ᴄᴏᴍᴍᴀɴᴅ.
 ➻ /enablemodule <module name>*:* Eɴᴀʙʟᴇ ᴀʟʟ ᴄᴏᴍᴍᴀɴᴅ ɪɴ ᴛʜᴀᴛ ᴍᴏᴅᴜʟᴇ.
