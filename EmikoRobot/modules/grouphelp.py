@@ -4,4 +4,4 @@ __help__ = """
 ➻ /setdesc*:* Sᴇᴛ ɢʀᴏᴜᴘ ᴅᴇsᴄʀɪᴘᴛɪᴏɴ.
 ➻ /setsticker*:* Sᴇᴛ ɢʀᴏᴜᴘ sᴛɪᴄʟᴇʀ. """
 
-__mod_name__ = " Group"
+__mod_name__ = "Gʀᴏᴜᴘ"
