@@ -64,12 +64,12 @@ def error_callback(update: Update, context: CallbackContext):
         pretty_message = (
             "{}\n"
             "-------------------------------------------------------------------------------\n"
-            "An exception was raised while handling an update\n"
-            "User: {}\n"
-            "Chat: {} {}\n"
-            "Callback data: {}\n"
-            "Message: {}\n\n"
-            "Full Traceback: {}"
+            "Aɴ ᴇxᴄᴇᴘᴛɪᴏɴ ᴡᴀs ʀᴀɪsᴇᴅ ᴡʜɪʟᴇ ʜᴀɴᴅʟɪɴɢ ᴀɴ ᴜᴘᴅᴀᴛᴇ \n"
+            "👤Usᴇʀ: {}\n"
+            "📑Cʜᴀᴛ: {} {}\n"
+            "📎Cᴀʟʟʙᴀᴄᴋ ᴅᴀᴛᴀ: {}\n"
+            "📄Mᴇssᴀɢᴇ: {}\n\n"
+            "🖇️Fᴜʟʟ ᴛʀᴀᴄᴇʙᴀᴄᴋ: {}"
         ).format(
             pretty_error,
             update.effective_user.id,
@@ -90,7 +90,7 @@ def error_callback(update: Update, context: CallbackContext):
             context.bot.send_document(
                 ERROR_LOG,
                 open("error.txt", "rb"),
-                caption=f"#{context.error.identifier}\n<b>Your feature's make an error for you, check this:"
+                caption=f"#{context.error.identifier}\n<b>Yᴏᴜʀ ғᴇᴀᴛᴜʀᴇ's ᴍᴀᴋᴇ ᴀɴ ᴇʀʀᴏʀ, Cʜᴇᴄᴋ ᴛʜɪs:"
                 f"</b>\n<code>{e}</code>",
                 parse_mode="html",
             )
@@ -99,7 +99,7 @@ def error_callback(update: Update, context: CallbackContext):
         url = f"https://www.toptal.com/developers/hastebin/{key}"
         context.bot.send_message(
             ERROR_LOG,
-            text=f"#{context.error.identifier}\n<b>Your feature's make an error for you, check this:"
+            text=f"#{context.error.identifier}\n<b>Yᴏᴜʀ ғᴇᴀᴛᴜʀᴇ's ᴍᴀᴋᴇ ᴀɴ ᴇʀʀᴏʀ, ᴄʜᴇᴄᴋ ᴛʜɪs:"
             f"</b>\n<code>{e}</code>",
             reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton("Cursed Errors", url=url)]],
@@ -112,17 +112,17 @@ def list_errors(update: Update, context: CallbackContext):
     if update.effective_user.id not in DEV_USERS:
         return
     e = dict(sorted(errors.items(), key=lambda item: item[1], reverse=True))
-    msg = "<b>Errors List:</b>\n"
+    msg = "<b>Eʀʀᴏʀs ʟɪsᴛ:</b>\n"
     for x, value in e.items():
         msg += f"• <code>{x}:</code> <b>{value}</b> #{x.identifier}\n"
-    msg += f"{len(errors)} have occurred since startup."
+    msg += f"{len(errors)} ʜᴀᴠᴇ ᴏᴄᴄᴜʀᴇᴅ sɪɴᴄᴇ sᴛᴀʀᴛᴜᴘ."
     if len(msg) > 4096:
         with open("errors_msg.txt", "w+") as f:
             f.write(msg)
         context.bot.send_document(
             update.effective_chat.id,
             open("errors_msg.txt", "rb"),
-            caption="Too many errors have occured..",
+            caption="Tᴏᴏ ᴍᴀɴʏ ᴇʀʀᴏʀs ʜᴀᴠᴇ ᴏᴄᴄᴜʀᴇᴅ..",
             parse_mode="html",
         )
         return
