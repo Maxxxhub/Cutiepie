@@ -1,4 +1,3 @@
-# Module to blacklist users and prevent them from using commands by @TheRealPhoenix
 import html
 import EmikoRobot.modules.sql.blacklistusers_sql as sql
 from EmikoRobot import (
@@ -34,34 +33,34 @@ def bl_user(update: Update, context: CallbackContext) -> str:
     user_id, reason = extract_user_and_text(message, args)
 
     if not user_id:
-        message.reply_text("I doubt that's a user.")
+        message.reply_text("I ᴅᴏᴜʙᴛ ᴛʜᴀᴛ's ᴀ ᴜsᴇʀ.")
         return ""
 
     if user_id == bot.id:
-        message.reply_text("How am I supposed to do my work if I am ignoring myself?")
+        message.reply_text("Hᴏᴡ ᴀᴍ ɪ sᴜᴘᴘᴏsᴇᴅ ᴛᴏ ᴅᴏ ᴍʏ ᴡᴏʀᴋ ɪғ ɪ ᴀᴍ ɪɢɴᴏʀɪɴɢ ᴍʏsᴇʟғ..ʏᴏᴜ ᴋɪɴᴅᴀ ɴᴏᴏʙ.!?")
         return ""
 
     if user_id in BLACKLISTWHITELIST:
-        message.reply_text("No!\nNoticing Disasters is my job.")
+        message.reply_text("Nᴏ!\nNᴏᴛɪᴄɪɴɢ ᴅɪsᴀsᴛᴇʀs ɪs ᴍʏ ᴊᴏʙ.")
         return ""
 
     try:
         target_user = bot.get_chat(user_id)
     except BadRequest as excp:
         if excp.message == "User not found":
-            message.reply_text("I can't seem to find this user.")
+            message.reply_text("I ᴄᴀɴ'ᴛ sᴇᴇᴍs ᴛᴏ ғɪɴᴅ ᴛʜɪs ᴜsᴇʀ.")
             return ""
         raise
 
     sql.blacklist_user(user_id, reason)
-    message.reply_text("I shall ignore the existence of this user!")
+    message.reply_text("I sʜᴀʟʟ ɪɢɴᴏʀᴇ ᴛʜᴇ ᴇxɪsᴛᴇɴᴄᴇ ᴏғ ᴛʜɪs ᴜsᴇʀ!")
     log_message = (
-        f"#BLACKLIST\n"
-        f"<b>Admin:</b> {mention_html(user.id, html.escape(user.first_name))}\n"
-        f"<b>User:</b> {mention_html(target_user.id, html.escape(target_user.first_name))}"
+        f"🤡#BLACKLIST🤡\n"
+        f"<b>📍Aᴅᴍɪɴ:</b> {mention_html(user.id, html.escape(user.first_name))}\n"
+        f"<b>🥀Usᴇʀ:</b> {mention_html(target_user.id, html.escape(target_user.first_name))}"
     )
     if reason:
-        log_message += f"\n<b>Reason:</b> {reason}"
+        log_message += f"\n<b>📄Rᴇᴀsᴏɴ:</b> {reason}"
 
     return log_message
 
@@ -75,18 +74,18 @@ def unbl_user(update: Update, context: CallbackContext) -> str:
     user_id = extract_user(message, args)
 
     if not user_id:
-        message.reply_text("I doubt that's a user.")
+        message.reply_text("I ᴅᴏᴜʙᴛ ᴛʜᴀᴛ's ᴀ ᴜsᴇʀ.")
         return ""
 
     if user_id == bot.id:
-        message.reply_text("I always notice myself.")
+        message.reply_text("I ᴀʟᴡᴀʏs ɴᴏᴛɪᴄᴇ ᴍʏsᴇʟғ.")
         return ""
 
     try:
         target_user = bot.get_chat(user_id)
     except BadRequest as excp:
         if excp.message == "User not found":
-            message.reply_text("I can't seem to find this user.")
+            message.reply_text("I ᴄᴀɴ'ᴛ sᴇᴇᴍs ᴛᴏ ғɪɴᴅ ᴛʜɪs ᴜsᴇʀ.")
             return ""
         raise
 
@@ -95,13 +94,13 @@ def unbl_user(update: Update, context: CallbackContext) -> str:
         sql.unblacklist_user(user_id)
         message.reply_text("*notices user*")
         log_message = (
-            f"#UNBLACKLIST\n"
-            f"<b>Admin:</b> {mention_html(user.id, html.escape(user.first_name))}\n"
-            f"<b>User:</b> {mention_html(target_user.id, html.escape(target_user.first_name))}"
+            f"🤡#UNBLACKLIST🤡\n"
+            f"<b>📍Aᴅᴍɪɴ:</b> {mention_html(user.id, html.escape(user.first_name))}\n"
+            f"<b>🥀Usᴇʀ:</b> {mention_html(target_user.id, html.escape(target_user.first_name))}"
         )
 
         return log_message
-    message.reply_text("I am not ignoring them at all though!")
+    message.reply_text("I ᴀᴍ ɴᴏᴛ ɪɢɴᴏʀɪɴɢ ᴛʜᴇᴍ ᴀᴛ ᴀʟʟ ᴛʜᴏᴜɢʜ.!")
     return ""
 
 
@@ -120,7 +119,7 @@ def bl_users(update: Update, context: CallbackContext):
         else:
             users.append(f"• {mention_html(user.id, html.escape(user.first_name))}")
 
-    message = "<b>Blacklisted Users</b>\n"
+    message = "<b>Bʟᴀᴄᴋʟɪsᴛᴇᴅ ᴜsᴇʀs</b>\n"
     if not users:
         message += "Noone is being ignored as of yet."
     else:
@@ -132,7 +131,7 @@ def bl_users(update: Update, context: CallbackContext):
 def __user_info__(user_id):
     is_blacklisted = sql.is_user_blacklisted(user_id)
 
-    text = "Blacklisted: <b>{}</b>"
+    text = "Bʟᴀᴄᴋʟɪsᴛᴇᴅ: <b>{}</b>"
     if user_id in [777000, 1087968824]:
         return ""
     if user_id == dispatcher.bot.id:
@@ -143,7 +142,7 @@ def __user_info__(user_id):
         text = text.format("Yes")
         reason = sql.get_reason(user_id)
         if reason:
-            text += f"\nReason: <code>{reason}</code>"
+            text += f"\nRᴇᴀsᴏɴ: <code>{reason}</code>"
     else:
         text = text.format("No")
 
