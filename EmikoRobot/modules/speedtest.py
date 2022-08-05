@@ -15,8 +15,8 @@ def convert(speed):
 def speedtestxyz(update: Update, context: CallbackContext):
     buttons = [
         [
-            InlineKeyboardButton("ɪᴍᴀɢᴇ", callback_data="speedtest_image"),
-            InlineKeyboardButton("ᴛᴇxᴛ", callback_data="speedtest_text"),
+            InlineKeyboardButton("📷ɪᴍᴀɢᴇ", callback_data="speedtest_image"),
+            InlineKeyboardButton("📄ᴛᴇxᴛ", callback_data="speedtest_text"),
         ]
     ]
     update.effective_message.reply_text(
@@ -45,10 +45,10 @@ def speedtestxyz_callback(update: Update, context: CallbackContext):
 
         elif query.data == "speedtest_text":
             result = speed.results.dict()
-            replymsg += f"\nDownload: `{convert(result['download'])}Mb/s`\nUpload: `{convert(result['upload'])}Mb/s`\nPing: `{result['ping']}`"
+            replymsg += f"\n📥Dᴏᴡɴʟᴏᴀᴅ: `{convert(result['download'])}Mb/s`\n📤Uᴘʟᴏᴀᴅ: `{convert(result['upload'])}Mb/s`\n🏷️Pɪɴɢ ᴘᴏɴɢ: `{result['ping']}`"
             update.effective_message.edit_text(replymsg, parse_mode=ParseMode.MARKDOWN)
     else:
-        query.answer("You are required to join @Teddysupport to use this command.")
+        query.answer("Yᴏᴜ ɴᴇᴇᴅ ᴛᴏ ᴊᴏɪɴ @Teddysupport ᴛᴏ ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ.")
 
 
 SPEED_TEST_HANDLER = DisableAbleCommandHandler("speedtest", speedtestxyz)
