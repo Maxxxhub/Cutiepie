@@ -5,11 +5,11 @@ from EmikoRobot.utils.errors import capture_err
 
 
 __help__ = """
-I will give information about github profile 
+I ᴄᴀɴ ɢɪᴠᴇ ʏᴏᴜ ᴀ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ sᴏᴍᴇᴏɴᴇ's ɢɪᴛʜᴜʙ ᴘʀᴏғɪʟᴇ..Hᴇʀᴇ ᴀʀᴇ ᴍʏ ᴄᴏᴍᴍᴀɴᴅs ғᴏʀ ɪᴛ.. 
 
- × /github <username>: Get information about a GitHub user. """
+ × /github <username>: Tᴏ ɢᴇᴛ ᴀ ᴡʜᴏʟᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴀ ɢɪᴛʜᴜʙ ᴜsᴇʀ. """
 
-__mod_name__ = "Github"
+__mod_name__ = "Gɪᴛʜᴜʙ"
 
 
 @pbot.on_message(filters.command(["github", "git", f"git@{BOT_USERNAME}"]))
@@ -39,7 +39,7 @@ async def github(_, message):
                 followers = result["followers"]
                 following = result["following"]
                 caption = f"""**Iɴғᴏ ᴏғ {name}**
-**𝗨sᴇʀɴᴀᴍᴇ:** `{username}`
+**Usᴇʀɴᴀᴍᴇ:** `{username}`
 **Bɪᴏ:** `{bio}`
 **Pʀᴏғɪʟᴇ ʟɪɴᴋ:** [Here]({url})
 **Cᴏᴍᴘᴀɴʏ:** `{company}`
