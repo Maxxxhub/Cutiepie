@@ -74,15 +74,15 @@ def ping(update: Update, context: CallbackContext):
     msg = update.effective_message
 
     start_time = time.time()
-    message = msg.reply_text("Pinging...")
+    message = msg.reply_text("Pɪɴɢɪɴɢ..Hᴏʟᴅ ᴛɪɢʜᴛ..!")
     end_time = time.time()
     telegram_ping = str(round((end_time - start_time) * 1000, 3)) + " ms"
     uptime = get_readable_time((time.time() - StartTime))
 
     message.edit_text(
-        "PONG!!\n"
-        "<b>Time Taken:</b> <code>{}</code>\n"
-        "<b>Service uptime:</b> <code>{}</code>".format(telegram_ping, uptime),
+        "Pᴏɴɢ 🔖!!\n"
+        "<b>Tɪᴍᴇ ᴛᴀᴋᴇɴ ⏳:</b> <code>{}</code>\n"
+        "<b>Sᴇʀᴠɪᴄᴇ ᴜᴘᴛɪᴍᴇ ⚡:</b> <code>{}</code>".format(telegram_ping, uptime),
         parse_mode=ParseMode.HTML,
     )
 
@@ -95,9 +95,9 @@ def pingall(update: Update, context: CallbackContext):
     pinged_list.insert(2, "")
     uptime = get_readable_time((time.time() - StartTime))
 
-    reply_msg = "⏱Ping results are:\n"
+    reply_msg = "⏱Pɪɴɢ ʀᴇsᴜʟᴛs ᴀʀᴇ 📍:\n"
     reply_msg += "\n".join(pinged_list)
-    reply_msg += "\n<b>Service uptime:</b> <code>{}</code>".format(uptime)
+    reply_msg += "\n<b>Sᴇʀᴠɪᴄᴇ ᴜᴘᴛɪᴍᴇ ⚡:</b> <code>{}</code>".format(uptime)
 
     update.effective_message.reply_text(
         reply_msg, parse_mode=ParseMode.HTML, disable_web_page_preview=True,
