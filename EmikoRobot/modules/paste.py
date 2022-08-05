@@ -41,7 +41,7 @@ async def paste_func(_, message):
         return await message.reply_text(
             "Rᴇᴘʟʏ ᴛᴏ ᴀ ᴍsɢ ᴡɪᴛʜ /paste"
         )
-    m = await message.reply_text("Pᴀsᴛɪɴɢ...")
+    m = await message.reply_text("Pᴀsᴛɪɴɢ...Pʟᴇᴀsᴇ ᴡᴀɪᴛ.!⚡")
     if message.reply_to_message.text:
         content = str(message.reply_to_message.text)
     elif message.reply_to_message.document:
