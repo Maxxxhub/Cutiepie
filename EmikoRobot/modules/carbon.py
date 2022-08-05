@@ -16,7 +16,7 @@ async def carbon_func(_, message):
         return await message.reply_text("`Rᴇᴘʟʏ ᴛᴏ ᴀ ᴛᴇxᴛ ᴍsɢ ᴛᴏ ᴍᴀᴋᴇ ᴄᴀʀʙᴏɴ.`")
     if not message.reply_to_message.text:
         return await message.reply_text("`Rᴇᴘʟʏ ᴛᴏ ᴀ ᴛᴇxᴛ ᴍsɢ ᴛᴏ ᴍᴀᴋᴇ ᴄᴀʀʙᴏɴ.`")
-    m = await message.reply_text("`Pʀᴇᴘᴀʀɪɴɢ ᴄᴀʀʙᴏɴ`")
+    m = await message.reply_text("`Pʀᴇᴘᴀʀɪɴɢ ᴄᴀʀʙᴏɴ ☃️`")
     carbon = await make_carbon(message.reply_to_message.text)
     await m.edit("`Uᴘʟᴏᴀᴅɪɴɢ`")
     await pbot.send_photo(message.chat.id, carbon)
@@ -31,12 +31,11 @@ async def repo(_, message):
     await message.reply_video(
         video=MEMEK,
         caption=f"""✨ **Hᴇy, I'ᴍ Tᴇᴅᴅy Rᴏʙᴏᴛ** \n"
-**Oᴡɴᴇʀ ʀᴇᴩᴏ : [Sᴜʀᴜ](https://t.me/smokerr_xd)** \n"
-**Pyᴛʜᴏɴ ᴠᴇʀꜱɪᴏɴ :** `{y()}` \n"
-**Lɪʙʀᴀʀy ᴠᴇʀꜱɪᴏɴ :** `{o}` \n"
-**Tᴇʟᴇᴛʜᴏɴ ᴠᴇʀꜱɪᴏɴ :** `{s}` \n"
-**Pyʀᴏɢʀᴀᴍ ᴠᴇʀꜱɪᴏɴ :** `{z}` \n"
-**🙂.**
+**🌝Oᴡɴᴇʀ ʀᴇᴩᴏ : [Sᴜʀᴜ](https://t.me/smokerr_xd)** \n"
+**⚡Pyᴛʜᴏɴ ᴠᴇʀꜱɪᴏɴ :** `{y()}` \n"
+**🌀Lɪʙʀᴀʀy ᴠᴇʀꜱɪᴏɴ :** `{o}` \n"
+**☄️Tᴇʟᴇᴛʜᴏɴ ᴠᴇʀꜱɪᴏɴ :** `{s}` \n"
+**🤡Pyʀᴏɢʀᴀᴍ ᴠᴇʀꜱɪᴏɴ :** `{z}` \n"
 """,
         reply_markup=InlineKeyboardMarkup(
             [
