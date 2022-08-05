@@ -109,7 +109,7 @@ async def cancel_spam(event):
         return await event.respond("__Sᴛᴏᴘᴘᴇᴅ ᴍᴇɴᴛᴜᴏɴ ❌.__")
 
 
-__mod_name__ = "Tᴀɢ Aʟʟ"
+__mod_name__ = "Tᴀɢɢᴇʀ"
 __help__ = """
 ──「 Mᴇɴᴛɪᴏɴ ᴀʟʟ ғᴜɴᴄ 」──
 ✘ Tᴇᴅᴅʏ ᴄᴀɴ ᴀʟsᴏ ʙᴇ ᴀɴ ᴍᴇɴᴛɪᴏɴ ʙᴏᴛ ғᴏʀ ʏᴏᴜʀ ɢʀᴏᴜᴘ ✘.
