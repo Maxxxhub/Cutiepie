@@ -38,17 +38,17 @@ async def github(_, message):
                 repositories = result["public_repos"]
                 followers = result["followers"]
                 following = result["following"]
-                caption = f"""**Iɴғᴏ ᴏғ {name}**
-**Usᴇʀɴᴀᴍᴇ:** `{username}`
-**Bɪᴏ:** `{bio}`
-**Pʀᴏғɪʟᴇ ʟɪɴᴋ:** [Here]({url})
-**Cᴏᴍᴘᴀɴʏ:** `{company}`
-**Cʀᴇᴀᴛᴇᴅ ᴏɴ:** `{created_at}`
-**Rᴇᴘᴏsɪᴛᴏʀɪᴇs:** `{repositories}`
-**Bʟᴏɢ:** `{blog}`
-**Lᴏᴄᴀᴛɪᴏɴ:** `{location}`
-**Fᴏʟʟᴏᴡᴇʀs:** `{followers}`
-**Fᴏʟʟᴏᴡɪɴɢ:** `{following}`"""
+                caption = f"""**📍Iɴғᴏ ᴏғ {name}**
+**🔰Usᴇʀɴᴀᴍᴇ:** `{username}`
+**🌍Bɪᴏ:** `{bio}`
+**🏠Pʀᴏғɪʟᴇ ʟɪɴᴋ:** [Yᴜᴘ, Cʟɪᴄᴋ ᴍᴇ]({url})
+**💈Cᴏᴍᴘᴀɴʏ:** `{company}`
+**🧐Cʀᴇᴀᴛᴇᴅ ᴏɴ:** `{created_at}`
+**👨‍💻Rᴇᴘᴏsɪᴛᴏʀɪᴇs:** `{repositories}`
+**♻️Bʟᴏɢ:** `{blog}`
+**🌐Lᴏᴄᴀᴛɪᴏɴ:** `{location}`
+**🚩Fᴏʟʟᴏᴡᴇʀs:** `{followers}`
+**🔖Fᴏʟʟᴏᴡɪɴɢ:** `{following}`"""
             except Exception as e:
                 print(str(e))
                 pass
