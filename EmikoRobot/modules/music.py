@@ -245,9 +245,9 @@ async def lyrics_func(_, message):
 
 
 __help__ = """
-× /song <song name>: Uploads the song in it's best quality available on YouTube.
-× /video <song/video name>! Uploads video in it's best quality available on YouTube.
- 💡Ex: `/song often remix`
- 💡Ex: `/video in the end remix` """
+× /song <song name>: Uᴘʟᴏᴀᴅs ᴛʜᴇ sᴏɴɢ ɪɴ ɪᴛᴢ ʙᴇsᴛ ǫᴜᴀʟɪᴛʏ ᴛʜᴀᴛ ᴀᴠᴀɪʟᴀʙʟᴇ ᴏɴ ʏᴏᴜᴛᴜʙᴇ.
+× /video <song/video name>! Uᴘʟᴏᴀᴅs ᴠɪᴅᴇᴏ ɪɴ ɪᴛᴢ ʙᴇsᴛ ǫᴜᴀʟɪᴛʏ ᴛʜᴀᴛ ᴀᴠᴀɪʟᴀʙʟᴇ ᴏɴ ʏᴏᴜᴛᴜʙᴇ.
+ 💡Ex: `/song ᴏғᴛᴇᴍ ʀᴇᴍɪx`
+ 💡Ex: `/video ɪɴ ᴛʜᴇ ᴇɴᴅ ʀᴇᴍɪx` """
 
-__mod_name__ = "Music"
+__mod_name__ = "Mᴜsɪᴄ"
