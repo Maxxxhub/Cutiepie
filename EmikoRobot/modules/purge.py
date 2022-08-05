@@ -90,7 +90,7 @@ __help__ = """
 
 
 
-__mod_name__ = "Purge"
+__mod_name__ = "Pᴜʀɢᴇ"
 
 
 __command_list__ = ["del", "purge"]
