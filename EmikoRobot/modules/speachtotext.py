@@ -45,7 +45,7 @@ async def _(event):
                 "You need to set the required ENV variables for this module. \nModule stopping"
             )
         else:
-            # await event.reply("Starting analysis")
+            # await event.reply("Sᴛᴀʀᴛɪɴɢ ᴀɴᴀʟʏsɪs 📍")
             headers = {
                 "Content-Type": previous_message.media.document.mime_type,
             }
@@ -75,7 +75,7 @@ async def _(event):
                         transcript_response, ms, transcript_confidence
                     )
                 else:
-                    string_to_show = "TRANSCRIPT: `Nil`\nTime Taken: {} seconds\n\n**No Results Found**".format(
+                    string_to_show = "TRANSCRIPT: `Nil`\n⏳Tɪᴍᴇ ᴛᴀᴋᴇɴ: {} sᴇᴄᴏɴᴅs\n\n**❌Nᴏ ʀᴇsᴜʟᴛs ғᴏᴜɴᴅ**".format(
                         ms
                     )
                 await event.reply(string_to_show)
@@ -84,6 +84,6 @@ async def _(event):
             # now, remove the temporary file
             os.remove(required_file_name)
     else:
-        await event.reply("Reply to a voice message, to get the text out of it.")
+        await event.reply("Rᴇᴘʟʏ ᴛᴏ ᴀ ᴠᴏɪᴄᴇ ᴍᴇssᴀɢᴇ, ᴛᴏ ɢᴇᴛ ᴛᴇxᴛ ᴏᴜᴛ ᴏғ ɪᴛ.")
 
 __mod_name__ = "TTS/STT"
