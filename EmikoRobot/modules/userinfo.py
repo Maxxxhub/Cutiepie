@@ -472,11 +472,11 @@ def about_bio(update: Update, context: CallbackContext):
     elif message.reply_to_message:
         username = user.first_name
         update.effective_message.reply_text(
-            f"{username} hasn't had a message set about themselves yet!\nSet one using /setbio",
+            f"{username} ʜᴀsɴ'ᴛ ʜᴀᴅ ᴀ ᴍᴇssᴀɢᴇ sᴇᴛ ᴀʙᴏᴜᴛ ᴛʜᴇᴍsᴇʟᴠᴇs ʏᴇᴛ!\nSᴇᴛ ᴏɴᴇ ᴜsɪɴɢ /setbio",
         )
     else:
         update.effective_message.reply_text(
-            "You haven't had a bio set about yourself yet!",
+            "Yᴏᴜ ʜᴀᴠᴇɴ'ᴛ ʜᴀᴅ ᴀ ʙɪᴏ sᴇᴛ ᴀʙᴏᴜᴛ ʏᴏᴜʀsᴇʟғ ʏᴇᴛ.!",
         )
 
 
@@ -491,7 +491,7 @@ def set_about_bio(update: Update, context: CallbackContext):
 
         if user_id == message.from_user.id:
             message.reply_text(
-                "Ha, you can't set your own bio! You're at the mercy of others here...",
+                "Yᴏᴜ'ʀᴇ ᴡɪʟʟ ʙᴇ ɴᴏᴛ ᴀʙʟᴇ ᴛᴏ sᴇᴛ ʏᴏᴜʀ ᴏᴡɴ ʙɪᴏ! Yᴏᴜ'ʀᴇ ᴀᴛ ᴛʜᴇ ᴍᴇʀᴄʏ ᴏғ ᴏᴛʜᴇʀs ʜᴇʀᴇ...",
             )
             return
 
@@ -501,7 +501,7 @@ def set_about_bio(update: Update, context: CallbackContext):
 
         if user_id == bot.id and sender_id not in DEV_USERS:
             message.reply_text(
-                "Erm... yeah, I only trust the Ackermans to set my bio.",
+                "Eᴍ... Yᴇʜʜ, I ᴏɴʟʏ ᴛʀᴜsᴛ ᴛʜᴇ `Ackermans` ᴛᴏ sᴇᴛ ᴍʏ ʙɪᴏ.",
             )
             return
 
@@ -514,16 +514,16 @@ def set_about_bio(update: Update, context: CallbackContext):
             if len(bio[1]) < MAX_MESSAGE_LENGTH // 4:
                 sql.set_user_bio(user_id, bio[1])
                 message.reply_text(
-                    "Updated {}'s bio!".format(repl_message.from_user.first_name),
+                    "✅ Sᴜᴄᴄᴇssғᴜʟʟʏ ᴜᴘᴅᴀᴛᴇs {}'s ʙɪᴏ🔖!".format(repl_message.from_user.first_name),
                 )
             else:
                 message.reply_text(
-                    "Bio needs to be under {} characters! You tried to set {}.".format(
+                    "Bɪᴏ ɴᴇᴇᴅs ᴛᴏ ʙᴇ ᴜɴᴅᴇʀ {} ᴄʜᴀʀᴀᴄᴛᴇʀs.! Yᴏᴜ ᴛʀɪᴇᴅ ᴛᴏ sᴇᴛ {}.".format(
                         MAX_MESSAGE_LENGTH // 4, len(bio[1]),
                     ),
                 )
     else:
-        message.reply_text("Reply to someone to set their bio!")
+        message.reply_text("Rᴇᴘʟʏ ᴛᴏ sᴏᴍᴇᴏɴᴇ ᴛᴏ sᴇᴛ ᴛʜᴇɪʀ ʙɪᴏ.!")
 
 
 def __user_info__(user_id):
