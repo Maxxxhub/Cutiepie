@@ -100,17 +100,7 @@ PM_START_TEXT = """
 
 buttons = [
     [
-        InlineKeyboardButton(text=f"🖤Aᴅᴅ ᴛᴇᴅᴅʏ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ🖤", url=f"t.me/Teddyrobot_bot?startgroup=new"),
-    ],
-    [
-        InlineKeyboardButton(text="Sᴜᴘᴘᴏʀᴛ", url="t.me/Teddysupport"),
-        InlineKeyboardButton(
-            text="Uᴘᴅᴀᴛᴇs", url="t.me/Teddy_bot_updates"
-        ),
-    ],
-    [
-        InlineKeyboardButton(
-            text="♠️ Tᴇᴅᴅʏ ᴀʟʟ ᴄᴏᴍᴍᴀɴᴅs ♠️", callback_data="help_back"),
+        InlineKeyboardButton(text=f"🍭 Aᴅᴅ Mᴇ 🍭", url=f"t.me/Cutiepiexrobot?startgroup=new"),
     ],
 ]
 
@@ -120,7 +110,7 @@ Click on the button bellow to get description about specifics command."""
 
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
- You can support the project by contacting @sweetttu_1 \
+ You can support the project by contacting @itzmeanon \
  Supporting isnt always financial! \
  Those who cannot provide monetary support are welcome to help us develop the bot at ."""
 
@@ -253,16 +243,12 @@ Aᴅᴠᴀɴᴄᴇᴅ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ + ᴍᴜsɪᴄ
                 [
                     [
                         InlineKeyboardButton(
-                            text=" ➕ ",
-                            url=f"t.me/Teddyrobot_bot?startgroup=new"
+                            text="Aᴅᴅ ᴍᴇ",
+                            url=f"t.me/Cutiepiexrobot?startgroup=new"
                         ),
                         InlineKeyboardButton(
                         text= " 👨‍💻 ",
-                        url=f"t.me/smokerr_xd"
-                        ),
-                        InlineKeyboardButton(
-                        text= " 🌹 ",
-                            url="t.me/Teddysupport"
+                        url=f"t.me/itzmeanon"
                         ),
                     ]
                 ]
@@ -569,7 +555,7 @@ def get_help(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                text="Click Here",
+                                text="Cʟɪᴄᴋ ʜᴇʀᴇ",
                                 url="t.me/{}?start=ghelp_{}".format(
                                     context.bot.username, module
                                 ),
@@ -762,7 +748,7 @@ def get_settings(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                text="Settings",
+                                text="Sᴇᴛᴛɪɴɢs",
                                 url="t.me/{}?start=stngs_{}".format(
                                     context.bot.username, chat.id
                                 ),
@@ -834,7 +820,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", f"[нℓσ ∂αяℓιиg ❤️, ι'м αℓινє 🔥...!!!)](https://telegra.ph/file/a0ec7152116cac5e50d78.jpg)", parse_mode=ParseMode.MARKDOWN
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", f"[ɪᴍ ᴀʟɪᴠᴇ ʙᴀʙʏ...!!!)](https://telegra.ph/file/9e81cc363c04df80b94e9.jpg)", parse_mode=ParseMode.MARKDOWN
             )
 
         except Unauthorized:
