@@ -49,6 +49,7 @@ from telegram.error import (
     TimedOut,
     Unauthorized,
 )
+from platform import python_version as y
 from telegram.ext import (
     CallbackContext,
     CallbackQueryHandler,
@@ -226,13 +227,13 @@ def start(update: Update, context: CallbackContext):
         update.effective_message.reply_photo(
 random.choice(TEDDY_PM_START_IMG2), caption= f"""
 ╔════════════════════╗
-✿    ♛ Cᴜᴛɪᴇᴘɪᴇ Rᴏʙᴏᴛ ♛
+✿        ♛ Cᴜᴛɪᴇᴘɪᴇ Rᴏʙᴏᴛ ♛
 ╚════════════════════╝
 Aᴅᴠᴀɴᴄᴇᴅ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ + ᴍᴜsɪᴄ
         ʙᴏᴛ ꜰᴏʀ ʏᴏᴜʀ ɢʀᴏᴜᴘ ⫸
-                Cᴜᴛɪᴇᴘɪᴇ
+                   Cᴜᴛɪᴇᴘɪᴇ
 ╔════════════════════╗
- ✿  【 Sᴜᴘᴘᴏʀᴛ❥ @itzmeanon 】
+ ✿**⚡Pyᴛʜᴏɴ ᴠᴇʀꜱɪᴏɴ :** `{y()}`
 ╚════════════════════╝
 """,
             parse_mode=ParseMode.HTML,
