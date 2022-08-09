@@ -8,15 +8,15 @@ from pyrogram import __version__ as pyrover
 from EmikoRobot.events import register
 from EmikoRobot import telethn as tbot
 
-PHOTO = "https://telegra.ph/file/fb69bf46ff817654d95af.jpg"
+PHOTO = "https://telegra.ph/file/7b5477ae0c4771a524d74.jpg"
 @register(pattern=("/alive"))
 async def awake(event):
-  TEXT = f"**ʜɪɪ [{event.sender.first_name}](tg://user?id={event.sender.id}),『 ɪ'ᴍ ᴛᴇᴅᴅy 』** \n\n"
+  TEXT = f"**ʜɪɪ [{event.sender.first_name}](tg://user?id={event.sender.id}),『 ɪ'ᴍ ᴄᴜᴛɪᴇᴘɪᴇ 』** \n\n"
   TEXT += "✰**I'ᴍ ᴡᴏʀᴋɪɴɢ ᴩʀᴏᴩᴇʀʟy** \n\n"
-  TEXT += f"✰ **My ᴍᴀꜱᴛᴇʀ : [ꜱᴜʀᴜ](https://t.me/smokerr_xd)** \n\n"
+  TEXT += f"✰ **My ᴍᴀꜱᴛᴇʀ : [ᴀɴᴏɴ](https://t.me/itzmeanon)** \n\n"
   TEXT += f"✰ **Lɪʙʀᴀʀy ᴠᴇʀꜱɪᴏɴ :** `{telever}` \n\n"
   TEXT += f"✰**Tᴇʟᴇᴛʜᴏɴ ᴠᴇʀꜱɪᴏɴ :** `{tlhver}` \n\n"
   TEXT += f"✰ **Pyʀᴏɢʀᴀᴍ ᴠᴇʀꜱɪᴏɴ :** `{pyrover}` \n\n"
   TEXT += "**🖤Tʜᴀɴᴋꜱ ꜰᴏʀ ᴀᴅᴅɪɴɢ ᴍᴇ ʜᴇʀᴇ, ᴅᴀʀʟɪɴɢ🖤**"
-  BUTTON = [[Button.url("➕ Aᴅᴅ ᴛᴇᴅᴅʏ ➕", "http://t.me/Teddyrobot_bot?startgroup=new"), Button.url("♡ Sᴜᴩᴩᴏʀᴛ ♡", "https://t.me/teddysupport")]]
+  BUTTON = [[Button.url("🥀 Aᴅᴅ ᴍᴇ 🥀", "http://t.me/cutiepiexrobot?startgroup=new"), Button.url("♡ Sᴜᴩᴩᴏʀᴛ ♡", "https://t.me/itzmeanon")]]
   await tbot.send_file(event.chat_id, PHOTO, caption=TEXT,  buttons=BUTTON)
