@@ -96,12 +96,12 @@ async def rm_deletedacc(show):
         )
     await memek.edit(del_status)
 
-__mod_name__ = "Zombies"
+__mod_name__ = "Zᴏᴍʙɪᴇs"
 
 __help__ = """
-✰ Remove's Deleted Accounts from group/chat.
+✰ Rᴇᴍᴏᴠᴇ's ᴅᴇʟᴇᴛᴇᴅ ᴀᴄᴄᴏᴜɴᴛs ғʀᴏᴍ ʏᴏᴜʀ ᴄʜᴀᴛ.
 
- ×  /zombies : Starts searching for deleted accounts in the group.
- ×  /zombies clean : Removes the deleted accounts from the group.
+ ×  /zombies : Sᴛᴀʀᴛs sᴇᴀʀᴄʜɪɴɢ ғᴏʀ ᴅᴇʟᴇᴛᴇᴅ ɪɴ ᴛʜᴇ ɢʀᴏᴜᴘ...
+ ×  /zombies clean : Rᴇᴍᴏᴠᴇs ᴛʜᴇ ᴅᴇʟᴇᴛᴇᴅ ᴀᴄᴄᴏᴜɴᴛs ғʀᴏᴍ ᴛʜᴇ ɢʀᴏᴜᴘ.
  """
 
