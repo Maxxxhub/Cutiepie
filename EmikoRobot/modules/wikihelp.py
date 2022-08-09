@@ -1,5 +1,5 @@
 __help__ = """
-×  /wiki (text) : Searchs about the given text on wikipedia. 
+×  /wiki (text) : Sᴇᴀʀᴄʜᴇs ᴀʙᴏᴜᴛ ᴛʜᴇ ɢɪᴠᴇɴ ᴛᴇxᴛ ᴏɴ ᴡɪᴋɪᴘᴇᴅɪᴀ ᴀɴᴅ ʀᴇᴛᴜʀɴs. 
 """
 
-__mod_name__ = "Wiki"
+__mod_name__ = "Wɪᴋɪ"
