@@ -291,7 +291,7 @@ def info(update: Update, context: CallbackContext):
         if spamwtc:
             text += "\n\n<b>This person is Spamwatched!</b>"
             text += f"\nReason: <pre>{spamwtc.reason}</pre>"
-            text += "\nAppeal at @Teddysupport"
+            text += "\nAppeal at @Itzmeanon"
     except:
         pass  # don't crash if api is down somehow...
 
@@ -353,9 +353,9 @@ def info(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                "Hᴇᴀʟᴛʜ", url="https://t.me/Teddysupport/8379"),
+                                "Hᴇᴀʟᴛʜ", url="https://t.me/itzmeanon/7"),
                             InlineKeyboardButton(
-                                "Sᴜᴘᴘᴏʀᴛ", url="https://t.me/Teddysupport")
+                                "Sᴜᴘᴘᴏʀᴛ", url="https://t.me/itzmeanon")
                         ],
                     ]
                 ),
@@ -371,9 +371,9 @@ def info(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                "Hᴇᴀʟᴛʜ", url="https://t.me/Teddysupport/8379"),
+                                "Hᴇᴀʟᴛʜ", url="https://t.me/itzmeanon/7"),
                             InlineKeyboardButton(
-                                "Sᴜᴘᴘᴏʀᴛ", url="https://t.me/Teddysupport")
+                                "Sᴜᴘᴘᴏʀᴛ", url="https://t.me/itzmeanon")
                         ],
                     ]
                 ),
