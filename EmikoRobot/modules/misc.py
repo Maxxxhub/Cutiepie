@@ -184,6 +184,11 @@ __help__ = """
 ➻ /wiki <query>*:* Wɪᴋɪᴘᴇᴅɪᴀ ᴛʜᴇ ɢɪᴠᴇɴ ǫᴜᴇʀʏ.
 ➻ /wall <query>*:* Gᴇᴛ ᴀ ᴡᴀʟʟᴘᴀᴘᴇʀ ғʀᴏᴍ wall.alphacoders.com
 ➻ /wallpaper *:* Rᴇᴛᴜʀɴs ᴛᴏ ʏᴏᴜ ᴀ ʀᴀɴᴅᴏᴍ ᴡᴀʟʟᴘᴀᴘᴇʀ.
+➻ /weather <city>*:* Gᴇᴛ ᴡᴇᴀᴛʜᴇʀ ɪɴғᴏ ᴏғ ᴛʜᴇ ɢɪᴠᴇɴ ᴄɪᴛʏ.
+➻ /wttr <city>*:* Aᴅᴠᴀɴᴄᴇᴅ ᴡᴇᴀᴛʜᴇʀ ᴍᴏᴅᴜʟᴇ, ᴜsᴀɢᴇ sᴀᴍᴇ ᴀs /weather.
+➻ /wttr moon*:* Gᴇᴛ ᴛʜᴇ ᴄᴜʀʀᴇᴍᴛ sᴛᴀᴛᴜs ᴏғ ᴛʜᴇ ᴍᴏᴏɴ.
+×  /write <text> : Wʀɪᴛᴇs ᴛʜᴇ ɢɪᴠᴇɴ ᴛᴇxᴛ ᴏɴ ᴀ ᴘᴀᴘᴇʀ.
+×  /wiki (text) : Sᴇᴀʀᴄʜᴇs ᴀʙᴏᴜᴛ ᴛʜᴇ ɢɪᴠᴇɴ ᴛᴇxᴛ ᴏɴ ᴡɪᴋɪᴘᴇᴅɪᴀ ᴀɴᴅ ʀᴇᴛᴜʀɴs.
 """
 
 ECHO_HANDLER = DisableAbleCommandHandler(
