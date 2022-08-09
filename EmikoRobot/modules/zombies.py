@@ -53,25 +53,25 @@ async def is_administrator(user_id: int, message):
 async def rm_deletedacc(show):
     con = show.pattern_match.group(1).lower()
     del_u = 0
-    del_status = "**Group clean, not found the deleted account.**"
+    del_status = "**Gʀᴏᴜᴘ ᴄʟᴇᴀɴ, I ᴅɪᴅɴ'ᴛ ғᴏᴜɴᴅ ᴀɴʏ ᴅᴇʟᴇᴛᴇᴅ ᴀᴄᴏᴏᴜɴᴛs ɪɴ ᴛʜɪs ɢʀᴏᴜᴘ..**"
     if con != "clean":
-        kontol = await show.reply("`Searching deleted account...`")
+        kontol = await show.reply("**Sᴇᴀʀᴄʜɪɴɢ ᴅᴇʟᴇᴛᴇᴅ ᴀᴄᴄᴏᴜɴᴛs...**")
         async for user in show.client.iter_participants(show.chat_id):
             if user.deleted:
                 del_u += 1
                 await sleep(1)
         if del_u > 0:
             del_status = (
-                f"**Founding** `{del_u}` **Deleted account/Zombie On this group,"
-                "\nClean it with command** `/zombies clean`"
+                f"**Fᴏᴜɴᴅɪɴɢ** `{del_u}` **Dᴇʟᴇᴛᴇᴅ ᴅᴇʟᴇᴛᴇᴅ ᴢᴏᴍʙɪᴇs ᴏɴ ᴛʜɪs ɢʀᴏᴜᴘ,"
+                "\nCʟᴇᴀɴ ᴛʜᴇᴍ ʙʏ ᴜsɪɴɢ ᴄᴏᴍᴍᴀɴᴅ** `/zombies clean`"
             )
         return await kontol.edit(del_status)
     chat = await show.get_chat()
     admin = chat.admin_rights
     creator = chat.creator
     if not admin and not creator:
-        return await show.reply("**Sorry you're not admin!**")
-    memek = await show.reply("`Deleting deleted account...`")
+        return await show.reply("**Sᴏʀʀʏ ʏᴏᴜ'ʀᴇ ɴᴏᴛ ᴀʟʟᴏᴡᴇᴅ ᴛᴏ ᴅᴏ ᴛʜɪs sᴏ.**")
+    memek = await show.reply("**Dᴇʟᴇᴛɪɴɢ ᴀʟʟ ᴅᴇʟᴇᴛᴇᴅ ᴀᴄᴄᴏᴜɴᴛs...**")
     del_u = 0
     del_a = 0
     async for user in telethn.iter_participants(show.chat_id):
@@ -81,18 +81,18 @@ async def rm_deletedacc(show):
                     EditBannedRequest(show.chat_id, user.id, BANNED_RIGHTS)
                 )
             except ChatAdminRequiredError:
-                return await show.edit("`Not have a banned rights on this group`")
+                return await show.edit("**Iᴀᴍ ɴᴏᴛ ʜᴀᴠɪɴɢ ʙᴀɴ ʀɪɢʜᴛs ɪɴ ᴛʜɪs ɢʀᴏᴜᴘ ᴛᴏ ᴄʟᴇᴀɴ ᴢᴏᴍʙɪᴇs.!**")
             except UserAdminInvalidError:
                 del_u -= 1
                 del_a += 1
             await telethn(EditBannedRequest(show.chat_id, user.id, UNBAN_RIGHTS))
             del_u += 1
     if del_u > 0:
-        del_status = f"**Cleaned** `{del_u}` **Zombies**"
+        del_status = f"**Sᴜᴄᴄᴇssғᴜʟʟʏ ᴄʟᴇᴀɴᴇᴅ** `{del_u}` **Zᴏᴍʙɪᴇs**"
     if del_a > 0:
         del_status = (
-            f"**Cleaned** `{del_u}` **Zombies** "
-            f"\n`{del_a}` **Admin zombies not deleted.**"
+            f"**Sᴜᴄᴄᴇssғᴜʟʟʏ ᴅᴇʟᴇᴛᴇᴅ** `{del_u}` **Zᴏᴍʙɪᴇs** "
+            f"\n`{del_a}` **Aᴅᴍɪɴ ᴢᴏᴍʙɪᴇs ɴᴏᴛ ᴅᴇʟᴇᴛᴇᴅ.!**"
         )
     await memek.edit(del_status)
 
