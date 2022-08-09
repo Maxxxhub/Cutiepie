@@ -17,12 +17,3 @@ async def handwriting(_, message):
     await m.edit("» ᴜᴩʟᴏᴀᴅɪɴɢ...")
     await pbot.send_chat_action(message.chat.id, "upload_photo")
     await message.reply_photo(hand, caption="ᴡʀɪᴛᴛᴇɴ ᴡɪᴛʜ 🖊 ʙʏ [Cᴜᴛɪᴇᴘɪᴇ](t.me/itzmeanon)")
-    
-__help__ = """
-✰ Wʀɪᴛᴇ ᴛʜᴇ ɢɪᴠᴇɴ ᴛᴇxᴛ ᴏɴ ᴀ ᴡʜᴏᴛᴇ ᴘᴀɢᴇ ᴡɪᴛʜ ᴀ ᴘᴇɴ 🖊
-
-×  /write <text> : Wʀɪᴛᴇs ᴛʜᴇ ɢɪᴠᴇɴ ᴛᴇxᴛ ᴏɴ ᴀ ᴘᴀᴘᴇʀ
-"""
-
-__mod_name__ = "Wʀɪᴛᴇ"
-
