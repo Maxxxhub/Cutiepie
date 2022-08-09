@@ -24,26 +24,26 @@ async def carbon_func(_, message):
     carbon.close()
 
 
-MEMEK = "https://telegra.ph/file/76a907d00640f38f6d5fb.mp4"
+MEMEK = "https://telegra.ph/file/9628d3df54624b87d5f47.jpg"
 
 @pbot.on_message(filters.command("repo"))
 async def repo(_, message):
-    await message.reply_video(
-        video=MEMEK,
-        caption=f"""✨ **Hᴇy, I'ᴍ Tᴇᴅᴅy Rᴏʙᴏᴛ** \n"
-**🌝Oᴡɴᴇʀ ʀᴇᴩᴏ : [Sᴜʀᴜ](https://t.me/smokerr_xd)** \n"
-**⚡Pyᴛʜᴏɴ ᴠᴇʀꜱɪᴏɴ :** `{y()}` \n"
-**🌀Lɪʙʀᴀʀy ᴠᴇʀꜱɪᴏɴ :** `{o}` \n"
-**☄️Tᴇʟᴇᴛʜᴏɴ ᴠᴇʀꜱɪᴏɴ :** `{s}` \n"
-**🤡Pyʀᴏɢʀᴀᴍ ᴠᴇʀꜱɪᴏɴ :** `{z}` \n"
+    await message.reply_photo(
+        photo=MEMEK,
+        caption=f"""✨ **Hᴇy, I'ᴍ ᴄᴜᴛɪᴇᴘɪᴇ ʀᴏʙᴏᴛ** \n"
+**🌝Oᴡɴᴇʀ ʀᴇᴩᴏ : [Aɴᴏɴ](https://t.me/itzmeanon)** \n"
+**⚡Pyᴛʜᴏɴ ᴠᴇʀꜱɪᴏɴ :** `{y()}` \n
+**🌀Lɪʙʀᴀʀy ᴠᴇʀꜱɪᴏɴ :** `{o}` \n
+**☄️Tᴇʟᴇᴛʜᴏɴ ᴠᴇʀꜱɪᴏɴ :** `{s}` \n
+**🤡Pyʀᴏɢʀᴀᴍ ᴠᴇʀꜱɪᴏɴ :** `{z}` \n
 """,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "📍 Rᴇᴩᴏ 📍", url="https://t.me/smokerr_xd"), 
+                        "📍 Rᴇᴩᴏ 📍", url="https://t.me/itzmeanon"), 
                     InlineKeyboardButton(
-                        "📍 Sᴜᴩᴩᴏʀᴛ 📍", url="https://t.me/teddysupport")
+                        "📍 Sᴜᴩᴩᴏʀᴛ 📍", url="https://t.me/itzmeanon")
                 ]
             ]
         )
