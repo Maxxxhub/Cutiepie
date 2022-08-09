@@ -1,6 +1,6 @@
 import os
 import re
-from platform import python_version as kontol
+from platform import python_version as ramdi
 from telethon import events, Button
 from telegram import __version__ as telever
 from telethon import __version__ as tlhver
@@ -17,6 +17,7 @@ async def awake(event):
   TEXT += f"✰ **Lɪʙʀᴀʀy ᴠᴇʀꜱɪᴏɴ :** `{telever}` \n\n"
   TEXT += f"✰**Tᴇʟᴇᴛʜᴏɴ ᴠᴇʀꜱɪᴏɴ :** `{tlhver}` \n\n"
   TEXT += f"✰ **Pyʀᴏɢʀᴀᴍ ᴠᴇʀꜱɪᴏɴ :** `{pyrover}` \n\n"
+  TEXT += f"✰ **Pʏᴛʜᴏɴ ᴠᴇʀsɪᴏɴ :** `{ramdi}` \n\n"
   TEXT += "**🖤Tʜᴀɴᴋꜱ ꜰᴏʀ ᴀᴅᴅɪɴɢ ᴍᴇ ʜᴇʀᴇ, ᴅᴀʀʟɪɴɢ🖤**"
   BUTTON = [[Button.url("🥀 Aᴅᴅ ᴍᴇ 🥀", "http://t.me/cutiepiexrobot?startgroup=new"), Button.url("♡ Sᴜᴩᴩᴏʀᴛ ♡", "https://t.me/itzmeanon")]]
   await tbot.send_file(event.chat_id, PHOTO, caption=TEXT,  buttons=BUTTON)
