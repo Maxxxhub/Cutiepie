@@ -88,7 +88,7 @@ def get_readable_time(seconds: int) -> str:
 
 PM_START_TEXT = """
 *♚ Hᴇᴍʟᴏᴏᴏᴏ, {} !* 🍾 
-Mʏ ɴᴀᴍᴇ ɪs ᴄᴜᴛɪᴇᴘɪᴇ ʀᴏʙᴏᴛ...I ᴄᴀɴ ʜᴇʟᴘ ʏᴏᴜ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴀɴᴅ ᴍᴀᴋᴇ ᴛʜᴇᴍ sᴇᴄᴜʀᴇ ғʀᴏᴍ ᴘᴏᴛᴇɴᴛɪᴀʟ sᴘᴀᴍᴍᴇʀs..Cʟɪᴄᴋ ᴏɴ /help ᴛᴏ sᴇᴇ ᴍʏ ᴡʜᴏʟᴇ ᴄᴏᴍᴍᴀɴᴅs. [🍀](https://telegra.ph/file/4c14cbb141189eeea0c9c.mp4)
+Mʏ ɴᴀᴍᴇ ɪs ᴄᴜᴛɪᴇᴘɪᴇ ʀᴏʙᴏᴛ...I ᴄᴀɴ ʜᴇʟᴘ ʏᴏᴜ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴀɴᴅ ᴍᴀᴋᴇ ᴛʜᴇᴍ sᴇᴄᴜʀᴇ\n ғʀᴏᴍ ᴘᴏᴛᴇɴᴛɪᴀʟ sᴘᴀᴍᴍᴇʀs..Cʟɪᴄᴋ ᴏɴ /help ᴛᴏ\n sᴇᴇ ᴍʏ ᴡʜᴏʟᴇ ᴄᴏᴍᴍᴀɴᴅs. [🍀](https://telegra.ph/file/4c14cbb141189eeea0c9c.mp4)
  *╔══════❖•ೋ° °ೋ•❖══════╗*
  ✈*Cᴜᴛɪᴇᴘɪᴇ ᴀʟɪᴠᴇ ꜱɪɴᴄᴇ:* `{}` ★
  ✈ `{}` *Usᴇʀs, ᴀᴄʀᴏss* `{}` *Cʜᴀᴛs.* ★
@@ -225,15 +225,15 @@ def start(update: Update, context: CallbackContext):
     else:
         update.effective_message.reply_photo(
 random.choice(TEDDY_PM_START_IMG2), caption= f"""
-╔═════════════════════╗
-✿    ~ Cᴜᴛɪᴇᴘɪᴇ Rᴏʙᴏᴛ ~
-╚═════════════════════╝
+╔════════════════════╗
+✿    ♛ Cᴜᴛɪᴇᴘɪᴇ Rᴏʙᴏᴛ ♛
+╚════════════════════╝
 Aᴅᴠᴀɴᴄᴇᴅ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ + ᴍᴜsɪᴄ
-    ʙᴏᴛ ꜰᴏʀ ʏᴏᴜʀ ɢʀᴏᴜᴘ ⫸
-          Cᴜᴛɪᴇᴘɪᴇ
-╔═════════════════════╗
+      ʙᴏᴛ ꜰᴏʀ ʏᴏᴜʀ ɢʀᴏᴜᴘ ⫸
+             Cᴜᴛɪᴇᴘɪᴇ
+╔════════════════════╗
  ✿  【 Sᴜᴘᴘᴏʀᴛ❥ @itzmeanon 】
-╚═════════════════════╝
+╚════════════════════╝
 """,
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
