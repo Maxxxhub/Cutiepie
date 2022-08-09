@@ -87,14 +87,3 @@ async def _(event):
         response_api = await response_api_zero.read()
         with io.BytesIO(response_api) as out_file:
             await event.reply(file=out_file)
-            
-__help__ = """
-✰ I can find weather of all cities
-
-➻ /weather <city>*:* Gᴇᴛ ᴡᴇᴀᴛʜᴇʀ ɪɴғᴏ ᴏғ ᴛʜᴇ ɢɪᴠᴇɴ ᴄɪᴛʏ.
-➻ /wttr <city>*:* Aᴅᴠᴀɴᴄᴇᴅ ᴡᴇᴀᴛʜᴇʀ ᴍᴏᴅᴜʟᴇ, ᴜsᴀɢᴇ sᴀᴍᴇ ᴀs /weather.
-➻ /wttr moon*:* Gᴇᴛ ᴛʜᴇ ᴄᴜʀʀᴇᴍᴛ sᴛᴀᴛᴜs ᴏғ ᴛʜᴇ ᴍᴏᴏɴ.
- """
-
-__mod_name__ = "Weather"
-
