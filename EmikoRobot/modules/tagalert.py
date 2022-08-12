@@ -13,7 +13,7 @@ from EmikoRobot import BOT_ID, MONGO_DB_URI
 
 
 client = MongoClient(MONGO_DB_URI)
-dbd = client["missjuliarobot"]
+dbd = client["TeddyRobot"]
 approved_users = dbd.approve
 db = dbd
 
@@ -28,39 +28,39 @@ def get_info(id):
 
 @pbot.on_message(filters.command(["tagalert"]) & filters.private)
 async def locks_dfunc(_, message):
-   lol = await message.reply("Processing..")
+   lol = await message.reply("Pʀᴏᴄᴇssɪɴɢ...!")
    if len(message.command) != 2:
-      return await lol.edit("Expected on or off 👀")
+      return await lol.edit("I Exᴘᴇᴄᴛᴇᴅ ᴏɴ ᴏʀ ᴏғғ 👀")
    parameter = message.text.strip().split(None, 1)[1].lower()
   
    if parameter == "on" or parameter=="ON":
      if not message.from_user:
        return
      if not message.from_user.username:
-       return await lol.edit("Only users with usernames are eligible for tag alert service")
+       return await lol.edit("Oɴʟʏ ᴜsᴇʀs ᴡɪᴛʜ ᴜsᴇʀɴᴀᴍᴇs ᴀʀᴇ ᴇʟɪɢɪʙʟᴇ ғᴏʀ ᴛᴀɢ ᴀʟᴇʀᴛ sᴇʀᴠɪᴄᴇ.")
      uname=str(message.from_user.username)
      uname = uname.lower()
      isittrue = tagdb.find_one({f"teg": uname})
      if not isittrue:
           tagdb.insert_one({f"teg": uname})
-          return await lol.edit(f"Tag alerts enabled.\nWhen someone tags you as @{uname} you will be notified")
+          return await lol.edit(f"Tᴀɢ ᴀʟᴇʀᴛs ᴇɴᴀʙʟᴇᴅ.\nWʜᴇɴ sᴏᴍᴇᴏɴᴇ ᴛᴀɢs ʏᴏᴜ ᴀs @{uname} ʏᴏᴜ ᴡɪʟʟ ʙᴇ ɴᴏᴛɪғɪᴇᴅ")
      else:
-          return await lol.edit("Tag alerts already enabled for you")
+          return await lol.edit("Tᴀɢ ᴀʟᴇʀᴛs ᴀʟʀᴇᴀᴅʏ ᴇɴᴀʙʟᴇᴅ ғᴏʀ ʏᴏᴜ")
    if parameter == "off" or parameter=="OFF":
      if not message.from_user:
        return
      if not message.from_user.username:
-       return await lol.edit("Only users with usernames are eligible for tag alert service")
+       return await lol.edit("Oɴʟʏ ᴜsᴇʀs ᴡɪᴛʜ ᴜsᴇʀɴᴀᴍᴇs ᴀʀᴇ ᴇʟɪɢɪʙʟᴇ ғᴏʀ ᴛᴀɢ ᴀʟᴇʀᴛ sᴇʀᴠɪᴄᴇ")
      uname = message.from_user.username
      uname = uname.lower()
      isittrue = tagdb.find_one({f"teg": uname})
      if isittrue:
           tagdb.delete_one({f"teg": uname})
-          return await lol.edit("Tag alerts removed")
+          return await lol.edit("Tᴀɢ ᴀʟᴇʀᴛs ᴅɪsᴀʙʟᴇᴅ ғᴏʀ ʏᴏᴜ!")
      else:
-          return await lol.edit("Tag alerts already disabled for you") 
+          return await lol.edit("Tᴀɢ ᴀʟᴇʀᴛs ᴀʟʀᴇᴀᴅʏ ᴅɪsᴀʙʟᴇᴅ ғᴏʀ ʏᴏᴜ") 
    else:
-     await lol.edit("Expected on or off 👀")
+     await lol.edit("I Exᴘᴇᴄᴛᴇᴅ ᴏɴ ᴏʀ ᴏғғ 👀")
      
 
 
@@ -250,8 +250,8 @@ async def mentioned_alert(client, message):
             return message.continue_propagation()
         user_ = message.from_user.mention or f"@{message.from_user.username}"
         
-        final_tagged_msg = f"**🔔 You Have Been** [Tagged]({tagged_msg_link}) **in** {chat_name} **By** {user_}"
-        button_s = InlineKeyboardMarkup([[InlineKeyboardButton("🔔 View Message 🔔", url=tagged_msg_link)]])
+        final_tagged_msg = f"**🔔 Yᴏᴜ Hᴀᴠᴇ Bᴇᴇɴ ** [Tᴀɢɢᴇᴅ]({tagged_msg_link}) **in** {chat_name} **By** {user_}"
+        button_s = InlineKeyboardMarkup([[InlineKeyboardButton("🌸Vɪᴇᴡ ᴍᴇssᴀɢᴇ🌸", url=tagged_msg_link)]])
         #print(final_tagged_msg)
         try:
             await client.send_message(chat_id=f"{text}", text=final_tagged_msg,reply_markup=button_s,disable_web_page_preview=True)
