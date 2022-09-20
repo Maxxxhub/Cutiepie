@@ -10,9 +10,9 @@ from pyrogram.errors.exceptions.bad_request_400 import (
 )
 from pyrogram.types import ChatPermissions, InlineKeyboardButton, InlineKeyboardMarkup
 
-from EmikoRobot import DRAGONS as SUDO_USERS
-from EmikoRobot import pbot
-from EmikoRobot.modules.sql import forceSubscribe_sql as sql
+from FallenRobot import DRAGONS as SUDO_USERS
+from FallenRobot import pbot
+from FallenRobot.modules.sql import forceSubscribe_sql as sql
 
 logging.basicConfig(level=logging.INFO)
 
@@ -40,38 +40,42 @@ def _onUnMuteRequest(client, cb):
                 except UserNotParticipant:
                     client.answer_callback_query(
                         cb.id,
-                        text=f"❗ Jᴏɪɴ ᴏᴜʀ @{channel} ᴄʜᴀɴɴᴇʟ ᴀɴᴅ ᴘʀᴇss  '✌️Uɴᴍᴜᴛᴇ ᴍᴇ✌️' ʙᴜᴛᴛᴏɴ.",
+                        text=f"» ᴊᴏɪɴ @{channel} ᴄʜᴀɴɴᴇʟ ᴀɴᴅ ᴛʜᴇɴ ᴩʀᴇss 'ᴜɴᴍᴜᴛᴇ ᴍᴇ' ʙᴜᴛᴛᴏɴ.",
                         show_alert=True,
                     )
             else:
                 client.answer_callback_query(
                     cb.id,
-                    text="❗ Yᴏᴜ ʜᴀᴠᴇ ʙᴇᴇɴ ᴍᴜᴛᴇᴅ ʙʏ ᴀᴅᴍɪɴs ᴅᴜᴇ ᴛᴏ sᴏᴍᴇ ᴏᴛʜᴇʀ ʀᴇᴀsᴏɴ.",
+                    text="» ʏᴏᴜ ᴀʀᴇ ᴍᴜᴛᴇᴅ ʙʏ ᴀᴅᴍɪɴs ғᴏʀ ᴀɴᴏᴛʜᴇʀ ʀᴇᴀsᴏɴ sᴏ ɪ ᴄᴀɴ'ᴛ ᴜɴᴍᴜᴛᴇ ʏᴏᴜ.",
                     show_alert=True,
                 )
         else:
-            if (not client.get_chat_member(chat_id, (client.get_me()).id).status == "administrator"
+            if (
+                not client.get_chat_member(chat_id, (client.get_me()).id).status
+                == "administrator"
             ):
                 client.send_message(
                     chat_id,
-                    f"❗ **{cb.from_user.mention} ɪs ᴛʀʏɪɴɢ ᴛᴏ ᴜɴᴍᴜᴛᴇ ʜɪᴍsᴇʟғ ʙᴜᴛ ɪ ᴄᴀɴ'ᴛ ᴜɴᴍᴜᴛᴇ ʜɪᴍ ʙᴄᴏᴢ ɪ ᴀᴍ ɴᴏᴛ ᴀᴅᴍɪɴ ɪɴ ᴛʜɪs ᴄʜᴀᴛ..Aᴅᴅ ᴍᴇ ᴀs ᴀᴅᴍɪɴ ғɪʀsᴛ.**\n__#Lᴇᴀᴠɪɴɢ ᴛʜɪs ᴄʜᴀᴛ...__",
+                    f"» **{cb.from_user.mention} ɪs ᴛʀʏɪɴɢ ᴛᴏ ᴜɴᴍᴜᴛᴇ ʜɪᴍsᴇʟғ ʙᴜᴛ ɪ ᴄᴀɴ'ᴛ ᴜɴᴍᴜᴛᴇ ʜɪᴍ ʙᴇᴄᴀᴜsᴇ ɪ'ᴍ ɴᴏᴛ ᴀɴ ᴀᴅᴍɪɴ ɪɴ ᴛʜɪs ᴄʜᴀᴛ.**\n__#ʟᴇᴀᴠɪɴɢ ᴄʜᴀᴛ...__",
                 )
 
             else:
                 client.answer_callback_query(
                     cb.id,
-                    text="❗ Wᴀʀɴɪɴɢ! Mᴀᴢᴇ ɴᴀʜ ʟᴇ ʙᴇᴛᴇ 🤨.",
+                    text="» ᴡᴀʀɴɪɴɢ ! ᴅᴏɴ'ᴛ ᴩʀᴇss ᴛʜᴇ ᴜɴᴍᴜᴛᴇ ʙᴜᴛᴛᴏɴ ᴡʜᴇɴ ʏᴏᴜ ᴄᴀɴ ᴛᴀʟᴋ.",
                     show_alert=True,
                 )
 
 
-@pbot.on_message(filters.text & ~filters.private & ~filters.edited, group=1)
+@pbot.on_message(filters.text & ~filters.private, group=1)
 def _check_member(client, message):
     chat_id = message.chat.id
     chat_db = sql.fs_settings(chat_id)
     if chat_db:
         user_id = message.from_user.id
-        if (not client.get_chat_member(chat_id, user_id).status in ("administrator", "creator")
+        if (
+            not client.get_chat_member(chat_id, user_id).status
+            in ("administrator", "creator")
             and not user_id in SUDO_USERS
         ):
             channel = chat_db.channel
@@ -80,7 +84,7 @@ def _check_member(client, message):
             except UserNotParticipant:
                 try:
                     sent_message = message.reply_text(
-                        "Wᴇʟᴄᴏᴍᴇ ʙʀᴏᴛʜᴇʀ/sɪs {} 🙏 \n **Yᴏᴜ ʜᴀᴠᴇɴ'ᴛ ᴊᴏɪɴᴇᴅ ᴏᴜʀ @{} ᴄʜᴀɴɴᴇʟ ʏᴇᴛ**😕 \n \nJᴏɪɴ [Oᴜʀ ᴄʜᴀɴɴᴇʟ](https://t.me/{}) ᴀɴᴅ ʜɪᴛ ᴛʜᴀᴛ **✌️Uɴᴍᴜᴛᴇ ᴍᴇ✌️** Bᴜᴛᴛᴏɴ. \n \n ".format(
+                        "ʜᴇʏ {} 💔 \n **ʏᴏᴜ ʜᴀᴠᴇɴ'ᴛ ᴊᴏɪɴᴇᴅ @{} ᴄʜᴀɴɴᴇʟ ʏᴇᴛ**🧐 \n \nᴩʟᴇᴀsᴇ ᴊᴏɪɴ [ᴛʜɪs ᴄʜᴀɴɴᴇʟ](https://t.me/{}) ᴀɴᴅ ᴛʜᴇɴ ᴩʀᴇss ᴛʜᴇ **ᴜɴᴍᴜᴛᴇ ᴍᴇ** ʙᴜᴛᴛᴏɴ. \n \n ".format(
                             message.from_user.mention, channel, channel
                         ),
                         disable_web_page_preview=True,
@@ -88,13 +92,13 @@ def _check_member(client, message):
                             [
                                 [
                                     InlineKeyboardButton(
-                                        "👉Jᴏɪɴ ᴄʜᴀɴɴᴇʟ👈",
+                                        "• ᴄʜᴀɴɴᴇʟ •",
                                         url="https://t.me/{}".format(channel),
                                     )
                                 ],
                                 [
                                     InlineKeyboardButton(
-                                        "✌️Uɴᴍᴜᴛᴇ ᴍᴇ✌️", callback_data="onUnMuteRequest"
+                                        "• ᴜɴᴍᴜᴛᴇ ᴍᴇ •", callback_data="onUnMuteRequest"
                                     )
                                 ],
                             ]
@@ -105,13 +109,13 @@ def _check_member(client, message):
                     )
                 except ChatAdminRequired:
                     sent_message.edit(
-                        "😕 **Tᴇᴅᴅʏ ɪs ɴᴏᴛ ᴀᴅᴍɪɴ ʜᴇʀᴇ..**\n__Mᴀᴋᴇ ᴛᴇᴅᴅʏ ᴀᴅᴍɪɴ ᴡɪᴛʜ ʙᴀɴ ʀɪɢʜᴛs ᴀɴᴅ ʀᴇᴛʀʏ.. \n#Eɴᴅɪɴɢ FSUB...__"
+                        "😕 **ɪ'ᴍ ɴᴏᴛ ᴀɴ ᴀᴅᴍɪɴ ʜᴇʀᴇ...**\n__ɢɪᴠᴇ ᴍᴇ ᴩᴇʀᴍɪssɪᴏɴs ᴛᴏ ʙᴀɴ ᴜsᴇʀs ᴀɴᴅ ᴛʜᴇɴ ᴛʀʏ ᴀɢᴀɪɴ... \n#ᴇɴᴅɪɴɢ ғsᴜʙ...__"
                     )
 
             except ChatAdminRequired:
                 client.send_message(
                     chat_id,
-                    text=f"😕 **I ᴀᴍ ɴᴏᴛ ᴀɴ ᴀᴅᴍɪɴ ᴏғ @{channel} ᴄʜᴀɴɴᴇʟ.**\n__Mᴀᴋᴇ ᴍᴇ ᴀᴅᴍɪɴ ɪɴ @{channel} ᴀɴᴅ ʀᴇᴛʀʏ.\n#Eɴᴅɪɴɢ FSUB...__",
+                    text=f"😕 **ɪ'ᴍ ɴᴏᴛ ᴀɴ ᴀᴅᴍɪɴ ɪɴ @{channel} ᴄʜᴀɴɴᴇʟ.**\n__ᴩʀᴏᴍᴏᴛᴇ ᴍᴇ ᴀs ᴀɴ ᴀᴅᴍɪɴ ɪɴ ᴛʜᴇ ᴄʜᴀɴɴᴇʟ.\n#ᴇɴᴅɪɴɢ ғsᴜʙ...__",
                 )
 
 
@@ -125,10 +129,10 @@ def config(client, message):
             input_str = input_str.replace("@", "")
             if input_str.lower() in ("off", "no", "disable"):
                 sql.disapprove(chat_id)
-                message.reply_text("❌ **Fᴏʀᴄᴇ sᴜʙsᴄʀɪʙᴇ ɪs ᴅɪsᴀʙʟᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ.**")
+                message.reply_text("**» sᴜᴄᴄᴇssғᴜʟʟʏ ᴅɪsᴀʙʟᴇᴅ ғᴏʀᴄᴇ sᴜʙsᴄʀɪʙᴇ.**")
             elif input_str.lower() in ("clear"):
                 sent_message = message.reply_text(
-                    "**Uɴᴍᴜᴛɪᴍɢ ᴀʟʟ ᴍᴇᴍʙᴇʀs ᴡʜᴏ ᴀʀᴇ ᴍᴜᴛᴇᴅ ʙʏ ᴍᴇ...**"
+                    "**» ᴜɴᴍᴜᴛɪɴɢ ᴀʟʟ ᴍᴇᴍʙᴇʀs ᴍᴜᴛᴇᴅ ʙʏ ɴᴏᴛ ᴊᴏɪɴɪɴɢ ᴛʜᴇ ᴄʜᴀɴɴᴇʟ...**"
                 )
                 try:
                     for chat_member in client.get_chat_members(
@@ -137,40 +141,43 @@ def config(client, message):
                         if chat_member.restricted_by.id == (client.get_me()).id:
                             client.unban_chat_member(chat_id, chat_member.user.id)
                             time.sleep(1)
-                    sent_message.edit("✅ **Uɴᴍᴜᴛᴇᴅ ᴀʟʟ ᴍᴇᴍʙᴇʀs ᴡʜᴏ ᴀʀᴇ ᴍᴜᴛᴇᴅ ʙʏ ᴍᴇ.**")
+                    sent_message.edit(
+                        "**» ᴜɴᴍᴜᴛᴇᴅ ᴀʟʟ ᴍᴇᴍʙᴇʀs ᴡʜᴏ ᴀʀᴇ ᴍᴜᴛᴇᴅ ʙʏ ᴍᴇ ғᴏʀ ɴᴏᴛ ᴊᴏɪɴɪɴɢ ᴛʜᴇ ᴄʜᴀɴɴᴇʟ.**"
+                    )
                 except ChatAdminRequired:
                     sent_message.edit(
-                        "😕 **I ᴀᴍ ɴᴏᴛ ᴀɴ ᴀᴅᴍɪɴ ɪɴ ᴛʜɪs ᴄʜᴀᴛ.**\n__I ᴄᴀɴ'ᴛ ᴜɴᴍᴜᴛᴇ ᴍᴍʙᴇʀs ʙᴄᴏᴢ ɪ ᴀᴍ ɴᴏᴛ ᴀɴ ᴀᴅᴍɪɴ ɪɴ ᴛʜɪs ᴄʜᴀᴛ, ᴍᴀᴋᴇ ᴍᴇ ᴀᴅᴍɪɴ ᴡᴏᴛʜ ʙᴀɴ ᴜsᴇʀ ᴘᴇʀᴍɪssɪᴏɴ.__"
+                        "😕 **ɪ'ᴍ ɴᴏᴛ ᴀɴ ᴀᴅᴍɪɴ ɪɴ ᴛʜɪs ᴄʜᴀᴛ.**\n__ɪ ᴄᴀɴ'ᴛ ᴜɴᴍᴜᴛᴇ ᴍᴇᴍʙᴇʀs ʙᴇᴄᴀᴜsᴇ ɪ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴩᴇʀᴍɪssɪᴏɴs ᴛᴏ ᴍᴜᴛᴇ/ᴜɴᴍᴜᴛᴇ ᴜsᴇʀs ɪɴ ᴛʜɪs ᴄʜᴀᴛ.__"
                     )
             else:
                 try:
                     client.get_chat_member(input_str, "me")
                     sql.add_channel(chat_id, input_str)
                     message.reply_text(
-                        f"✅ **Fᴏʀᴄᴇ Sᴜʙsᴄʀɪʙᴇ ɪs ᴇɴᴀʙʟᴇᴅ**\n__Fᴏʀᴄᴇ Sᴜʙsᴄʀɪʙᴇ ɪs ᴇɴᴀʙʟᴇᴅ, ᴀʟʟ ᴛʜᴇ ɢʀᴏᴜᴘ ᴍᴇᴍʙᴇʀsʜᴀᴠᴇ ᴛᴏ sᴜʙsᴄʀɪʙᴇ ᴛ [ᴄʜᴀɴɴᴇʟ](https://t.me/{input_str}) ɪɴ ᴏʀᴅᴇʀ ᴛᴏ sᴇᴍᴅ ᴍsɢ's ɪɴ ᴛʜɪs ɢʀᴏᴜᴘ.__",
+                        f"**» ғᴏʀᴄᴇ sᴜʙsᴄʀɪʙᴇ ᴇɴᴀʙʟᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ**\n__ғᴏʀᴄᴇ sᴜʙ ᴇɴᴀʙʟᴇᴅ, ᴀʟʟ ᴛʜᴇ ɢʀᴏᴜᴩ ᴍᴇᴍʙᴇʀs ʜᴀᴠᴇ ᴛᴏ sᴜʙsᴄʀɪʙᴇ ᴛʜɪs [ᴄʜᴀɴɴᴇʟ](https://t.me/{input_str}) ғᴏʀ sᴇɴᴅɪɴɢ ᴍᴇssᴀɢᴇs ɪɴ ᴛʜɪs ᴄʜᴀᴛ.__",
                         disable_web_page_preview=True,
                     )
                 except UserNotParticipant:
                     message.reply_text(
-                        f"😕 **Nᴏᴛ ᴀɴ ᴀᴅᴍɪɴ ɪɴ ᴛʜᴇ ᴄʜᴀɴɴᴇʟ**\n__I ᴀᴍ ɴᴏᴛ ᴀɴ ᴀᴅᴍɪɴ ɪɴ ᴛʜᴇ [ᴄʜᴀɴɴᴇʟ](https://t.me/{input_str}). Aᴅᴅ ᴍᴇ ᴀs ᴀ ᴀᴅᴍɪɴ ɪɴ ᴏʀᴅᴇʀ ᴛᴏ ᴇɴᴀʙʟᴇ ғsᴜʙ.__",
+                        f"😕 **ɪ'ᴍ ɴᴏᴛ ᴀɴ ᴀᴅᴍɪɴ ɪɴ ᴛʜᴇ ᴄʜᴀɴɴᴇʟ**\n__ᴩʀᴏᴍᴏᴛᴇ ᴍᴇ ᴀs ᴀɴ ᴀᴅᴍɪɴ ɪɴ ᴛʜᴇ [ᴄʜᴀɴɴᴇʟ](https://t.me/{input_str}) ᴛᴏ ᴇɴᴀʙʟᴇ ғᴏʀᴄᴇ sᴜʙsᴄʀɪʙᴇ.__",
                         disable_web_page_preview=True,
                     )
                 except (UsernameNotOccupied, PeerIdInvalid):
-                    message.reply_text(f"❗ **Iɴᴠᴀʟɪᴅ ᴄʜᴀɴɴᴇʟ ᴜsᴇʀɴᴀᴍᴇ.**")
+                    message.reply_text(f"**» ɪɴᴠᴀʟɪᴅ ᴄʜᴀɴɴᴇʟ ᴜsᴇʀɴᴀᴍᴇ.**")
                 except Exception as err:
-                    message.reply_text(f"❗ **ERROR:** ```{err}```")
+                    message.reply_text(f"**ᴇʀʀᴏʀ:** ```{err}```")
         else:
             if sql.fs_settings(chat_id):
                 message.reply_text(
-                    f"✅ **Fᴏʀᴄᴇ sᴜʙsᴄʀɪʙᴇ ɪs ᴇɴᴀʙʟᴇᴅ ɪɴ ᴛʜɪs ᴄʜᴀᴛ.**\n__Fᴏʀ ᴛʜɪs [ᴄʜᴀɴɴᴇʟ](https://t.me/{sql.fs_settings(chat_id).channel})__",
+                    f"**» ғᴏʀᴄᴇ sᴜʙ ɪs ᴇɴᴀʙʟᴇᴅ.**\n__ғᴏʀ ᴛʜɪs [ᴄʜᴀɴɴᴇʟ](https://t.me/{sql.fs_settings(chat_id).channel})__",
                     disable_web_page_preview=True,
                 )
             else:
-                message.reply_text("❌ **Fᴏʀᴄᴇ sᴜʙsᴄʀɪʙᴇ ɪs ᴅɪsᴀʙʟᴇᴅ ɪɴ ᴛʜɪs ᴄʜᴀᴛ.**")
+                message.reply_text("**» ғᴏʀᴄᴇ sᴜʙ ɪs ᴅɪsᴀʙʟᴇᴅ ɪɴ ᴛʜɪs ᴄʜᴀᴛ.**")
     else:
         message.reply_text(
-            "❗ **Gʀᴏᴜᴘ ᴄʀᴇᴀᴛᴘʀ ʀᴇǫᴜɪʀᴇᴅ**\n__Yᴏᴜ ʜᴀᴠᴇ ᴛᴏ ʙᴇ ᴛʜᴇ ɢʀᴏᴜᴘ ᴄʀᴇᴀᴛᴏʀ ᴛᴏ ᴅᴏ ᴛʜᴀᴛ!__"
+            "**» ᴏɴʟʏ ᴛʜᴇ ᴏᴡɴᴇʀ ᴏғ ᴛʜɪs ᴄʜᴀᴛ ᴄᴀɴ ᴇɴᴀʙʟᴇ ғᴏʀᴄᴇ sᴜʙsᴄʀɪʙᴇ.**"
         )
+
 
 
 __help__ = """
