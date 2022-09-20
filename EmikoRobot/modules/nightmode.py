@@ -143,7 +143,7 @@ async def job_close():
 
 
   ✰  ᴘᴏᴡᴇʀᴇᴅ ʙʏ :  ~ ~
-     ~ ~ @Teddyrobot_bot  ✰
+     ~ ~ @Cutiepiexrobot  ✰
 ┗━━━━━━━━━━━━━━━━━━━┛
 """
             )
@@ -179,7 +179,7 @@ async def job_open():
 
 
   ✰  ᴘᴏᴡᴇʀᴇᴅ ʙʏ :  ~ ~
-     ~ ~ @Teddyrobot_bot  ✰
+     ~ ~ @Cutiepiexrobot  ✰
 ┗━━━━━━━━━━━━━━━━━━━┛
 """
             )
