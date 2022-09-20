@@ -1,4 +1,5 @@
 future
+bs4
 emoji
 lxml
 wget
@@ -6,7 +7,7 @@ gtts
 beautifulsoup4
 requests
 python-telegram-bot==13.11.0
-SQLAlchemy==1.4.39
+SQLAlchemy==1.4.41
 psycopg2-binary
 feedparser
 faker
@@ -83,3 +84,4 @@ fuzzysearch
 img2pdf
 multicolorcaptcha
 git+https://github.com/python-telegram-bot/ptbcontrib.git
+cv2
