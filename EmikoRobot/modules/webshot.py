@@ -32,18 +32,18 @@ async def take_ss(_, message: Message):
     try:
         if len(message.command) != 2:
             return await message.reply_text(
-                "Give A Url To Fetch Screenshot."
+                "Gɪᴍᴍᴇ ᴀ ᴜʀʟ ᴛᴏ ғᴇᴛᴄʜ ᴀ sᴄʀᴇᴇɴsʜᴏᴛ."
             )
         url = message.text.split(None, 1)[1]
-        m = await message.reply_text("**Taking Screenshot**")
-        await m.edit("**Uploading**")
+        m = await message.reply_text("**Tᴀᴋɪɴɢ sᴄʀᴇᴇɴsʜᴏᴛ**")
+        await m.edit("**Uᴘʟᴏᴀᴅɪɴɢ**")
         try:
             await message.reply_photo(
                 photo=f"https://webshot.amanoteam.com/print?q={url}",
                 quote=False,
             )
         except TypeError:
-            return await m.edit("No Such Website.")
+            return await m.edit("Nᴏ sᴜᴄʜ ᴡᴇʙsɪᴛᴇ.")
         await m.delete()
     except Exception as e:
         await message.reply_text(str(e))

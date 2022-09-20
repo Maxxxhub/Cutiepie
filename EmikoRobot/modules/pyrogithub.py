@@ -4,14 +4,19 @@ from EmikoRobot import pbot, BOT_USERNAME
 from EmikoRobot.utils.errors import capture_err
 
 
-__mod_name__ = "Github"
+__help__ = """
+I ᴄᴀɴ ɢɪᴠᴇ ʏᴏᴜ ᴀ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ sᴏᴍᴇᴏɴᴇ's ɢɪᴛʜᴜʙ ᴘʀᴏғɪʟᴇ..Hᴇʀᴇ ᴀʀᴇ ᴍʏ ᴄᴏᴍᴍᴀɴᴅs ғᴏʀ ɪᴛ.. 
+
+ × /github <username>: Tᴏ ɢᴇᴛ ᴀ ᴡʜᴏʟᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴀ ɢɪᴛʜᴜʙ ᴜsᴇʀ. """
+
+__mod_name__ = "Gɪᴛʜᴜʙ"
 
 
 @pbot.on_message(filters.command(["github", "git", f"git@{BOT_USERNAME}"]))
 @capture_err
 async def github(_, message):
     if len(message.command) != 2:
-        await message.reply_text("/git Username")
+        await message.reply_text("/git Usᴇʀɴᴀᴍᴇ")
         return
     username = message.text.split(None, 1)[1]
     URL = f"https://api.github.com/users/{username}"
@@ -33,17 +38,17 @@ async def github(_, message):
                 repositories = result["public_repos"]
                 followers = result["followers"]
                 following = result["following"]
-                caption = f"""**Info Of {name}**
-**Username:** `{username}`
-**Bio:** `{bio}`
-**Profile Link:** [Here]({url})
-**Company:** `{company}`
-**Created On:** `{created_at}`
-**Repositories:** `{repositories}`
-**Blog:** `{blog}`
-**Location:** `{location}`
-**Followers:** `{followers}`
-**Following:** `{following}`"""
+                caption = f"""**📍Iɴғᴏ ᴏғ {name}**
+**🔰Usᴇʀɴᴀᴍᴇ:** `{username}`
+**🌍Bɪᴏ:** `{bio}`
+**🏠Pʀᴏғɪʟᴇ ʟɪɴᴋ:** [Yᴜᴘ, Cʟɪᴄᴋ ᴍᴇ]({url})
+**💈Cᴏᴍᴘᴀɴʏ:** `{company}`
+**🧐Cʀᴇᴀᴛᴇᴅ ᴏɴ:** `{created_at}`
+**👨‍💻Rᴇᴘᴏsɪᴛᴏʀɪᴇs:** `{repositories}`
+**♻️Bʟᴏɢ:** `{blog}`
+**🌐Lᴏᴄᴀᴛɪᴏɴ:** `{location}`
+**🚩Fᴏʟʟᴏᴡᴇʀs:** `{followers}`
+**🔖Fᴏʟʟᴏᴡɪɴɢ:** `{following}`"""
             except Exception as e:
                 print(str(e))
                 pass

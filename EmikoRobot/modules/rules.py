@@ -33,14 +33,14 @@ def send_rules(update, chat_id, from_pm=False):
         if excp.message == "Chat not found" and from_pm:
             bot.send_message(
                 user.id,
-                "The rules shortcut for this chat hasn't been set properly! Ask admins to "
+                "Tʜᴇ ʀᴜʟᴇs sʜᴏʀᴛᴄᴜᴛ ғᴏʀ ᴛʜɪs ᴄʜᴀᴛ ʜᴀsɴ'ᴛ ʙᴇᴇɴ sᴇᴛ ᴘʀᴏᴘᴇʀʟʏ! Ask admins to "
                 "fix this.\nMaybe they forgot the hyphen in ID",
             )
             return
         raise
 
     rules = sql.get_rules(chat_id)
-    text = f"The rules for *{escape_markdown(chat.title)}* are:\n\n{rules}"
+    text = f"📑 Rᴜʟᴇs ғᴏʀ *{escape_markdown(chat.title)}* are:\n\n{rules}"
 
     if from_pm and rules:
         bot.send_message(
@@ -52,17 +52,17 @@ def send_rules(update, chat_id, from_pm=False):
     elif from_pm:
         bot.send_message(
             user.id,
-            "The group admins haven't set any rules for this chat yet. "
-            "This probably doesn't mean it's lawless though...!",
+            "Tʜᴇ ɢʀᴏᴜᴘ ᴀᴅᴍɪɴs ʜᴀᴠᴇɴ'ᴛ sᴇᴛ ᴀɴʏ ʀᴜʟᴇs ғᴏʀ ᴛʜɪs ᴄʜᴀᴛ ʏᴇᴛ ❗ "
+            "Tʜɪs ᴘʀᴏʙᴀʙʟʏ ᴅᴏᴇsɴ'ᴛ ᴍᴇᴀɴ ɪᴛ's ʟᴀᴡʟᴇss ᴛʜᴏᴜɢʜ...!",
         )
     elif rules and reply_msg:
         reply_msg.reply_text(
-            "Please click the button below to see the rules.",
+            "Pʟᴇᴀsᴇ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ᴛᴏ sᴇᴇ ᴛʜᴇ ʀᴜʟᴇs ғᴏʀ ᴛʜɪs ᴄʜᴀɢ 📄",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="Rules",
+                            text="📑 Rᴜʟᴇs",
                             url=f"t.me/{bot.username}?start={chat_id}",
                         ),
                     ],
@@ -71,12 +71,12 @@ def send_rules(update, chat_id, from_pm=False):
         )
     elif rules:
         update.effective_message.reply_text(
-            "Please click the button below to see the rules.",
+            "Pʟᴇᴀsᴇ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ᴛᴏ sᴇᴇ ᴛʜᴇ ʀᴜʟᴇs ғᴏʀ ᴛʜɪs ᴄʜᴀɢ 📄",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="Rules",
+                            text="📑 Rᴜʟᴇs",
                             url=f"t.me/{bot.username}?start={chat_id}",
                         ),
                     ],
@@ -85,8 +85,8 @@ def send_rules(update, chat_id, from_pm=False):
         )
     else:
         update.effective_message.reply_text(
-            "The group admins haven't set any rules for this chat yet. "
-            "This probably doesn't mean it's lawless though...!",
+            "Tʜᴇ ɢʀᴏᴜᴘ ᴀᴅᴍɪɴs ʜᴀᴠᴇɴ'ᴛ sᴇᴛ ᴀɴʏ ʀᴜʟᴇs ғᴏʀ ᴛʜɪs ᴄʜᴀᴛ/ɢʀᴏᴜᴘ ʏᴇᴛ ❗ "
+            "Tʜɪs ᴘʀᴏʙᴀʙʟʏ ᴅᴏᴇsɴ'ᴛ ᴍᴇᴀɴ ɪᴛ'ᴢ ʟᴀᴡʟᴇss ᴛʜᴏᴜɢʜ...!",
         )
 
 
@@ -106,18 +106,18 @@ def set_rules(update: Update, context: CallbackContext):
         )
 
         sql.set_rules(chat_id, markdown_rules)
-        update.effective_message.reply_text("Successfully set rules for this group.")
+        update.effective_message.reply_text("Sᴜᴄᴄᴇssғᴜʟʟʏ ʀᴜʟᴇs ʜᴀᴠᴇ ʙᴇᴇɴ sᴇᴛ ғᴏʀ ᴛʜɪs ᴄʜᴀᴛ ✅")
 
 
 @user_admin
 def clear_rules(update: Update, context: CallbackContext):
     chat_id = update.effective_chat.id
     sql.set_rules(chat_id, "")
-    update.effective_message.reply_text("Successfully cleared rules!")
+    update.effective_message.reply_text("Sᴜᴄᴄᴇssғᴜʟʟʏ ᴄʟᴇᴀʀᴇᴅ ʀᴜʟᴇs ғᴏʀ ᴛʜɪs ᴄʜᴀᴛ ✅!")
 
 
 def __stats__():
-    return f"× {sql.num_chats()} chats have rules set."
+    return f"× {sql.num_chats()} ᴄʜᴀᴛs ʜᴀᴠᴇ ʀᴜʟᴇs sᴇᴛ."
 
 
 def __import_data__(chat_id, data):
@@ -131,10 +131,17 @@ def __migrate__(old_chat_id, new_chat_id):
 
 
 def __chat_settings__(chat_id, user_id):
-    return f"This chat has had it's rules set: `{bool(sql.get_rules(chat_id))}`"
+    return f"Tʜɪs ᴄʜᴀᴛ ʜᴀs ʙᴀᴅ ɪᴛ's ʀᴜʟᴇs sᴇᴛ ᴛᴏ : `{bool(sql.get_rules(chat_id))}`"
 
 
-__mod_name__ = "Rules"
+__mod_name__ = "Rᴜʟᴇs"
+
+__help__ = """
+×  /rules: Gᴇᴛ ᴛʜᴇ ʀᴜʟᴇs ғᴏʀ ᴛʜᴇ ᴄʜᴀᴛ.
+×  /rules here: I ᴛᴏᴏ ᴅᴏɴ'ᴛ ᴋɴᴏᴡ...Asᴋ ɪᴛ ɪɴ @Teddysupport ✨
+Aᴅᴍɪɴs /-:
+×  /setrules <Yᴏᴜʀ ʀᴜʟᴇs ʜᴇʀᴇ>: Sᴇᴛ ᴛʜᴇ ʀᴜʟᴇs ғᴏʀ ᴛʜᴇ ᴄʜᴀᴛ.
+×  /clearrules: Tᴏ ᴄʟᴇᴀʀ ᴛʜᴇ ʀᴜʟᴇs ғᴏʀ ᴛʜᴇ ᴄʜᴀᴛ. """
 
 GET_RULES_HANDLER = CommandHandler(
     "rules", get_rules, filters=Filters.chat_type.groups, run_async=True

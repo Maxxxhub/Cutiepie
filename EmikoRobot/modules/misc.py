@@ -178,24 +178,17 @@ def wall(update: Update, context: CallbackContext):
 
 
 __help__ = """
-*✘ Available commands ✘:*
-➻ /markdownhelp*:* quick summary of how markdown works in telegram - can only be called in private chats
-➻ /paste*:* Saves replied content to `nekobin.com` and replies with a url
-➻ /react*:* Reacts with a random reaction 
-➻ /ud <word>*:* Type the word or expression you want to search use
-➻ /reverse*:* Does a reverse image search of the media which it was replied to.
-➻ /wiki <query>*:* wikipedia your query
-➻ /wall <query>*:* get a wallpaper from wall.alphacoders.com
-➻ /cash*:* currency converter
- Example:
- `/cash 1 USD INR`  
-      _OR_
- `/cash 1 usd inr`
- Output: `1.0 USD = 75.505 INR`
-*✘ Music Modules ✘:*
-➻ /video or /vsong (query): download video from youtube
-➻ /music or /song (query): download song from yt servers. (API BASED)
-➻ /lyrics (song name) : This plugin searches for song lyrics with song name.
+*✘ Cᴏᴍᴍᴀɴᴅs ✘:*
+➻ /markdownhelp*:* Qᴜɪᴄᴋ sᴜᴍᴍᴀʀʏ ᴏғ ʜᴏᴡ ᴍᴀʀᴋᴅᴏᴡɴ ᴡᴏʀᴋs ɪɴ ᴛᴇʟᴇɢʀᴀᴍ - ᴄᴀɴ ᴏɴʟʏ ʙᴇ ᴄᴀʟʟᴇᴅ ɪɴ ᴘʀɪᴠᴀᴛᴇ ᴄʜᴀᴛs.
+➻ /paste*:* Sᴀᴠᴇs ʀᴇᴘʟɪᴇᴅ ᴄᴏɴᴛᴇɴᴛ ᴛᴏ `nekobin.com` ɴᴅ ʀᴇᴘʟɪᴇs ᴡɪᴛʜ ᴀ ᴜʀʟ.
+➻ /wiki <query>*:* Wɪᴋɪᴘᴇᴅɪᴀ ᴛʜᴇ ɢɪᴠᴇɴ ǫᴜᴇʀʏ.
+➻ /wall <query>*:* Gᴇᴛ ᴀ ᴡᴀʟʟᴘᴀᴘᴇʀ ғʀᴏᴍ wall.alphacoders.com
+➻ /wallpaper *:* Rᴇᴛᴜʀɴs ᴛᴏ ʏᴏᴜ ᴀ ʀᴀɴᴅᴏᴍ ᴡᴀʟʟᴘᴀᴘᴇʀ.
+➻ /weather <city>*:* Gᴇᴛ ᴡᴇᴀᴛʜᴇʀ ɪɴғᴏ ᴏғ ᴛʜᴇ ɢɪᴠᴇɴ ᴄɪᴛʏ.
+➻ /wttr <city>*:* Aᴅᴠᴀɴᴄᴇᴅ ᴡᴇᴀᴛʜᴇʀ ᴍᴏᴅᴜʟᴇ, ᴜsᴀɢᴇ sᴀᴍᴇ ᴀs /weather.
+➻ /wttr moon*:* Gᴇᴛ ᴛʜᴇ ᴄᴜʀʀᴇᴍᴛ sᴛᴀᴛᴜs ᴏғ ᴛʜᴇ ᴍᴏᴏɴ.
+×  /write <text> : Wʀɪᴛᴇs ᴛʜᴇ ɢɪᴠᴇɴ ᴛᴇxᴛ ᴏɴ ᴀ ᴘᴀᴘᴇʀ.
+×  /wiki (text) : Sᴇᴀʀᴄʜᴇs ᴀʙᴏᴜᴛ ᴛʜᴇ ɢɪᴠᴇɴ ᴛᴇxᴛ ᴏɴ ᴡɪᴋɪᴘᴇᴅɪᴀ ᴀɴᴅ ʀᴇᴛᴜʀɴs.
 """
 
 ECHO_HANDLER = DisableAbleCommandHandler(
@@ -209,7 +202,7 @@ dispatcher.add_handler(MD_HELP_HANDLER)
 dispatcher.add_handler(WIKI_HANDLER)
 dispatcher.add_handler(WALLPAPER_HANDLER)
 
-__mod_name__ = "✘ᴇxᴛʀᴀꜱ✘"
+__mod_name__ = "Exᴛʀᴀ"
 __command_list__ = ["id", "echo", "wiki", "wall"]
 __handlers__ = [
     ECHO_HANDLER,

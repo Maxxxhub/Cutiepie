@@ -39,7 +39,7 @@ def import_data(update, context):
         chat_name = dispatcher.bot.getChat(conn).title
     else:
         if update.effective_message.chat.type == "private":
-            update.effective_message.reply_text("This is a group only command!")
+            update.effective_message.reply_text("Tʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴡᴏʀᴋ ᴏɴʟʏ ɪɴ ɢʀᴏᴜᴘs.!")
             return ""
 
         chat = update.effective_chat
@@ -50,7 +50,7 @@ def import_data(update, context):
             file_info = context.bot.get_file(msg.reply_to_message.document.file_id)
         except BadRequest:
             msg.reply_text(
-                "Try downloading and uploading the file yourself again, This one seem broken to me!",
+                "Tʀʏ ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ᴀɴᴅ ᴜᴘʟᴏᴀᴅɪɴɢ ᴛʜᴇ ғɪʟᴇ ʏᴏᴜʀsᴇʟғ ᴀɢᴀɪɴ, Tʜɪs ᴏɴᴇ sᴇᴇᴍs ʙʀᴏᴋᴇɴ ᴛᴏ ᴍᴇ!",
             )
             return
 
@@ -62,7 +62,7 @@ def import_data(update, context):
         # only import one group
         if len(data) > 1 and str(chat.id) not in data:
             msg.reply_text(
-                "There are more than one group in this file and the chat.id is not same! How am i supposed to import it?",
+                "Tʜᴇʀᴇ ᴀʀᴇ ᴍᴏʀᴇ ᴛʜᴀɴ ᴏɴᴇ ɢʀᴏᴜᴘ ɪɴ ᴛʜɪs ғɪʟᴇᴀɴᴅ ᴛʜᴇ ᴄʜᴀᴛ ɪᴅ ɪs ɴᴏᴛ! Hᴏᴡ ᴀᴍ ɪ sᴜᴘᴘᴏsᴇᴅ ᴛᴏ ɪᴍᴘᴏʀᴛ ɪᴛ?",
             )
             return
 
@@ -70,19 +70,19 @@ def import_data(update, context):
         try:
             if data.get(str(chat.id)) is None:
                 if conn:
-                    text = "Backup comes from another chat, I can't return another chat to chat *{}*".format(
+                    text = "Bᴀᴄᴋᴜᴘ ᴄᴏᴍᴇs ғʀᴏᴍ ᴀɴᴏᴛʜᴇʀ ᴄʜᴀᴛ, I ᴄᴀɴ'ᴛ ʀᴇᴛᴜʀɴ ᴀɴᴏᴛʜᴇʀ ᴄʜᴀᴛ ᴛᴏ ᴄʜᴀᴛ *{}*".format(
                         chat_name,
                     )
                 else:
-                    text = "Backup comes from another chat, I can't return another chat to this chat"
+                    text = "Bᴀᴄᴋᴜᴘ ᴄᴏᴍᴇs ғʀᴏᴍ ᴀɴᴏᴛʜᴇʀ ᴄʜᴀᴛ, I ᴄᴀɴ'ᴛ ʀᴇᴛᴜᴇɴ ᴀɴᴏᴛʜᴇʀ ᴄʜᴀᴛ ᴛᴏ ᴛʜɪs ᴄʜᴀᴛ"
                 return msg.reply_text(text, parse_mode="markdown")
         except Exception:
-            return msg.reply_text("There was a problem while importing the data!")
+            return msg.reply_text("Tʜᴇʀᴇ ᴡᴀs ᴀ ᴘʀᴏʙʟᴇᴍ ᴡʜɪʟᴇ ɪᴍᴘᴏʀᴛɪɴɢ ᴛʜᴇ ᴅᴀᴛᴀ.!")
         # Check if backup is from self
         try:
             if str(context.bot.id) != str(data[str(chat.id)]["bot"]):
                 return msg.reply_text(
-                    "Backup from another bot that is not suggested might cause the problem, documents, photos, videos, audios, records might not work as it should be.",
+                    "Bᴀᴄᴋᴜᴘ ғʀᴏᴍ ᴀɴᴏᴛʜᴇʀ ʙᴏᴛ ᴛʜᴀᴛ ɪs ɴᴏᴛ sᴜɢɢᴇsᴛᴇᴅ ᴍɪɢʜᴛ ᴄᴀᴜsᴇ ᴘʀᴏʙʟᴇᴍ, ᴅᴏᴄᴜᴍᴇɴᴛs, ᴘʜᴏᴛᴏs, ᴠɪᴅᴇᴏs, ᴀᴜᴅɪᴏs, ʀᴇᴄᴏʀᴅs, ᴍɪɢʜᴛ ɴᴏᴛ ᴡᴏʀᴋ ᴀs ᴛʜᴇʏ sʜᴏᴜʟᴅ.!.",
                 )
         except Exception:
             pass
@@ -97,7 +97,7 @@ def import_data(update, context):
                 mod.__import_data__(str(chat.id), data)
         except Exception:
             msg.reply_text(
-                f"An error occurred while recovering your data. The process failed. If you experience a problem with this, please take it to @{SUPPORT_CHAT}",
+                f"Aɴ ᴇʀʀᴏʀ ᴀᴄᴄᴜʀᴇᴅ ᴡʜɪʟᴇ ʀᴇᴄᴏᴠᴇʀɪɴɢ ʏᴏᴜʀ ᴅᴀᴛᴀ. Pʀᴏᴄᴇss ғᴀɪʟᴇᴅ. Pʟᴇᴀsᴇ ᴛᴀᴋᴇ ᴛʜɪs ᴛᴏ @{SUPPORT_CHAT} 📍",
             )
 
             LOGGER.exception(
@@ -111,9 +111,9 @@ def import_data(update, context):
         # NOTE: consider default permissions stuff?
         if conn:
 
-            text = "Backup fully restored on *{}*.".format(chat_name)
+            text = "Bᴀᴄᴋᴜᴘ ғᴜʟʟʏ ʀᴇsᴛᴏʀᴇᴅ ᴏɴ *{}*.".format(chat_name)
         else:
-            text = "Backup fully restored"
+            text = "Bᴀᴄᴋᴜᴘ ғᴜʟʟʏ ʀᴇsᴛᴏʀᴇᴅ"
         msg.reply_text(text, parse_mode="markdown")
 
 
@@ -132,7 +132,7 @@ def export_data(update, context):
         # chat_name = dispatcher.bot.getChat(conn).title
     else:
         if update.effective_message.chat.type == "private":
-            update.effective_message.reply_text("This is a group only command!")
+            update.effective_message.reply_text("Tʜɪs ᴄᴏᴍᴍᴀɴᴅ ɪs ᴏɴʟʏ ᴍᴀᴅᴇ ғᴏʀ ɢʀᴏᴜᴘs!")
             return ""
         chat = update.effective_chat
         chat_id = update.effective_chat.id
@@ -148,7 +148,7 @@ def export_data(update, context):
                 time.localtime(checkchat.get("value")),
             )
             update.effective_message.reply_text(
-                "You can only backup once a day!\nYou can backup again in about `{}`".format(
+                "Yᴏᴜ ᴄᴀɴ ᴏɴʟʏ ʙᴀᴄᴋᴜᴘ ᴏɴᴄᴇ ᴀ ᴅᴀʏ !\nYᴏᴜ ᴡɪʟʟ ʙᴇ ᴀʙʟᴇ ᴛᴏ ʙᴀᴄᴋᴜᴘ ᴀɢᴀɪɴ ɪɴ `{}`".format(
                     timeformatt,
                 ),
                 parse_mode=ParseMode.MARKDOWN,
@@ -330,14 +330,14 @@ def export_data(update, context):
         },
     }
     baccinfo = json.dumps(backup, indent=4)
-    with open("SaitamaRobot{}.backup".format(chat_id), "w") as f:
+    with open("TeddyRobot{}.backup".format(chat_id), "w") as f:
         f.write(str(baccinfo))
     context.bot.sendChatAction(current_chat_id, "upload_document")
     tgl = time.strftime("%H:%M:%S - %d/%m/%Y", time.localtime(time.time()))
     try:
         context.bot.sendMessage(
             JOIN_LOGGER,
-            "*Successfully imported backup:*\nChat: `{}`\nChat ID: `{}`\nOn: `{}`".format(
+            "*Sᴜᴄᴄᴇssғᴜʟʟᴛ ɪᴍᴘᴏʀᴛᴇᴅ ʙᴀᴄᴋᴜᴘ ✅:*\n🖇️Cʜᴀᴛ: `{}`\n📑Cʜᴀᴛ ɪᴅ: `{}`\nOnɴ `{}`".format(
                 chat.title,
                 chat_id,
                 tgl,
@@ -348,8 +348,8 @@ def export_data(update, context):
         pass
     context.bot.sendDocument(
         current_chat_id,
-        document=open("SaitamaRobot{}.backup".format(chat_id), "rb"),
-        caption="*Successfully Exported backup:*\nChat: `{}`\nChat ID: `{}`\nOn: `{}`\n\nNote: This `SaitamaRobot-Backup` was specially made for notes.".format(
+        document=open("TeddyRobot{}.backup".format(chat_id), "rb"),
+        caption="*Sᴜᴄᴄᴇssғᴜʟʟᴛ ᴇxᴘᴏʀᴛᴇᴅ ʙᴀᴄᴋᴜᴘ ✅ :*\n📄Cʜᴀᴛ: `{}`\n📑Cʜᴀᴛ ɪᴅ: `{}`\nOɴ: `{}`\n\n📜Nᴏᴛᴇ: Tʜɪs `TeddyRobot-Backup` ᴡᴀs sᴘᴇᴄɪᴀʟʟʏ ᴍᴀᴅᴇ ғᴏʀ ɴᴏᴛᴇs.".format(
             chat.title,
             chat_id,
             tgl,
@@ -358,7 +358,7 @@ def export_data(update, context):
         reply_to_message_id=msg.message_id,
         parse_mode=ParseMode.MARKDOWN,
     )
-    os.remove("SaitamaRobot{}.backup".format(chat_id))  # Cleaning file
+    os.remove("TeddyRobot{}.backup".format(chat_id))  # Cleaning file
 
 
 # Temporary data

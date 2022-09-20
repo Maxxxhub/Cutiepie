@@ -12,7 +12,7 @@ async def get_user_info(user, already=False):
     if not already:
         user = await app.get_users(user)
     if not user.first_name:
-        return ["Deleted account", None]
+        return ["Dᴇʟᴇᴛᴇᴅ ᴀᴄᴄᴏᴜɴᴛ", None]
     user_id = user.id
     username = user.username
     first_name = user.first_name
@@ -23,10 +23,10 @@ async def get_user_info(user, already=False):
     body = {
         "ID": user_id,
         "DC": dc_id,
-        "Name": [first_name],
-        "Username": [("@" + username) if username else None],
+        "Nᴀᴍᴇ": [first_name],
+        "Usᴇʀɴᴀᴍᴇ": [("@" + username) if username else None],
         "Mention": [mention],
-        "Sudo": is_sudo,
+        "Sᴜᴅᴏ": is_sudo,
     }
     caption = section("User info", body)
     return [caption, photo_id]
@@ -43,20 +43,20 @@ async def get_chat_info(chat, already=False):
     description = chat.description
     members = chat.members_count
     is_restricted = chat.is_restricted
-    link = f"[Link](t.me/{username})" if username else None
+    link = f"[Lɪɴᴋ](t.me/{username})" if username else None
     dc_id = chat.dc_id
     photo_id = chat.photo.big_file_id if chat.photo else None
     body = {
         "ID": chat_id,
         "DC": dc_id,
-        "Type": type_,
-        "Name": [title],
-        "Username": [("@" + username) if username else None],
-        "Mention": [link],
-        "Members": members,
-        "Scam": is_scam,
-        "Restricted": is_restricted,
-        "Description": [description],
+        "Tʏᴘᴇ": type_,
+        "Nᴀᴍᴇ": [title],
+        "Usᴇʀɴᴀᴍᴇ": [("@" + username) if username else None],
+        "Mᴇɴᴛɪᴏɴ": [link],
+        "Mᴇᴍʙᴇʀs": members,
+        "Sᴄᴀᴍ": is_scam,
+        "Rᴇsᴛʀɪᴄᴛᴇᴅ": is_restricted,
+        "Dᴇsᴄʀɪᴘᴛɪᴏᴍ": [description],
     }
     caption = section("Chat info", body)
     return [caption, photo_id]
@@ -71,7 +71,7 @@ async def info_func(_, message: Message):
     elif not message.reply_to_message and len(message.command) != 1:
         user = message.text.split(None, 1)[1]
 
-    m = await message.reply_text("Processing...")
+    m = await message.reply_text("Pʀᴏᴄᴇssɪɴɢ...")
 
     try:
         info_caption, photo_id = await get_user_info(user)
@@ -96,7 +96,7 @@ async def chat_info_func(_, message: Message):
     try:
         if len(message.command) > 2:
             return await message.reply_text(
-                "**Usage:**cinfo <chat id/username>"
+                "**Usᴀɢᴇ:**cinfo <chat id/username>"
             )
 
         if len(message.command) == 1:
@@ -104,7 +104,7 @@ async def chat_info_func(_, message: Message):
         elif len(message.command) == 2:
             chat = message.text.split(None, 1)[1]
 
-        m = await message.reply_text("Processing...")
+        m = await message.reply_text("Pʀᴏᴄᴇssɪɴɢ...")
 
         info_caption, photo_id = await get_chat_info(chat)
         if not photo_id:

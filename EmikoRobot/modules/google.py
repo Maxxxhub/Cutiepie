@@ -35,7 +35,7 @@ async def _(event):
     if event.fwd_from:
         return
 
-    webevent = await event.reply("searching........")
+    webevent = await event.reply("Gᴏᴏɢʟᴇ ᴛᴏʟᴅ ᴍᴇ ᴛᴏ ғᴜᴍᴄᴋ ᴏғғ...")
     match = event.pattern_match.group(1)
     page = re.findall(r"page=\d+", match)
     try:
@@ -57,7 +57,7 @@ async def _(event):
         except IndexError:
             break
     await webevent.edit(
-        "**Search Query:**\n`" + match + "`\n\n**Results:**\n" + msg, link_preview=False
+        "**Sᴇᴀʀᴄʜ ǫᴜᴇʀʏ:**\n`" + match + "`\n\n**Rᴇsᴜʟᴛs:**\n" + msg, link_preview=False
     )
 
 
@@ -102,15 +102,15 @@ async def okgoogle(img):
         photo = io.BytesIO()
         await tbot.download_media(message, photo)
     else:
-        await img.reply("`Reply to photo or sticker nigger.`")
+        await img.reply("`Rᴇᴘʟʏ ᴛᴏ ᴘʜᴏᴛᴏ ᴏʀ sᴛɪᴄᴋᴇʀ, ɴᴏᴏʙ.`")
         return
 
     if photo:
-        dev = await img.reply("`Processing...`")
+        dev = await img.reply("`Rᴜᴋ ᴊᴀ ᴠᴀᴀɪ...`")
         try:
             image = Image.open(photo)
         except OSError:
-            await dev.edit("`Unsupported sexuality, most likely.`")
+            await dev.edit("`Uɴsᴜᴘᴘᴏʀᴛᴇᴅ sᴇxᴜᴀʟɪᴛʏ, ᴍᴏsᴛ ʟɪʟᴇʟʏ.`")
             return
         name = "okgoogle.png"
         image.save(name, "PNG")
@@ -123,11 +123,11 @@ async def okgoogle(img):
 
         if response != 400:
             await dev.edit(
-                "`Image successfully uploaded to Google. Maybe.`"
-                "\n`Parsing source now. Maybe.`"
+                "`Iᴍᴀɢᴇ sᴜᴄᴄᴇssғᴜʟʟʏ ᴜᴘʟᴏᴀᴅᴇᴅ ᴛᴏ ɢᴏᴏɢʟᴇ. Mᴀʏʙᴇ.`"
+                "\n`Pᴀʀsɪɴɢ sᴏᴜʀᴄᴇ. Mᴀʏʙᴇ.`"
             )
         else:
-            await dev.edit("`Google told me to fuck off.`")
+            await dev.edit("`Gᴏᴏɢʟᴇ ᴛᴏʟᴅ ᴍᴇ ᴛᴏ ᴛᴀᴋᴇ ʏᴏᴜʀ ɢᴀɴᴅ.`")
             return
 
         os.remove(name)
@@ -136,9 +136,9 @@ async def okgoogle(img):
         imgspage = match["similar_images"]
 
         if guess and imgspage:
-            await dev.edit(f"[{guess}]({fetchUrl})\n\n`Looking for this Image...`")
+            await dev.edit(f"[{guess}]({fetchUrl})\n\n`Lᴏᴏᴋɪɴɢ ғᴏʀ ᴛʜɪs ɪᴍᴀɢᴇ...`")
         else:
-            await dev.edit("`Can't find this piece of shit.`")
+            await dev.edit("`Cᴀɴ'ᴛ ғɪɴᴅ ᴛʜᴀᴛ ᴘɪᴇᴄᴇ ᴏғ sʜɪᴛ!`")
             return
 
         if img.pattern_match.group(1):
@@ -159,7 +159,7 @@ async def okgoogle(img):
         except TypeError:
             pass
         await dev.edit(
-            f"[{guess}]({fetchUrl})\n\n[Visually similar images]({imgspage})"
+            f"[{guess}]({fetchUrl})\n\n[Vɪsᴜᴀʟʟʏ sɪᴍɪʟᴀʀ ɪᴍᴀɢᴇs]({imgspage})"
         )
 
 
@@ -250,43 +250,37 @@ async def apk(e):
         app_details = "<a href='" + app_icon + "'>📲&#8203;</a>"
         app_details += " <b>" + app_name + "</b>"
         app_details += (
-            "\n\n<code>Developer :</code> <a href='"
+            "\n\n<code>Dᴇᴠᴇʟᴏᴘᴇʀ :</code> <a href='"
             + app_dev_link
             + "'>"
             + app_dev
             + "</a>"
         )
-        app_details += "\n<code>Rating :</code> " + app_rating.replace(
-            "Rated ", "⭐ "
-        ).replace(" out of ", "/").replace(" stars", "", 1).replace(
+        app_details += "\n<code>Rᴀᴛɪɴɢ :</code> " + app_rating.replace(
+            "Rᴀᴛᴇᴅ ", "⭐ "
+        ).replace(" ᴏᴜᴛ ᴏғ ", "/").replace(" stars", "", 1).replace(
             " stars", "⭐ "
         ).replace(
             "five", "5"
         )
         app_details += (
-            "\n<code>Features :</code> <a href='"
+            "\n<code>Fᴇᴀᴛᴜʀᴇs :</code> <a href='"
             + app_link
-            + "'>View in Play Store</a>"
+            + "'>Vɪᴇᴡ ɪɴ ᴘʟᴀʏsᴛᴏʀᴇ</a>"
         )
-        app_details += "\n\n===> Teddy <==="
+        app_details += "\n\n===> Tᴇᴅᴅʏ <==="
         await e.reply(app_details, link_preview=True, parse_mode="HTML")
     except IndexError:
-        await e.reply("No result found in search. Please enter **Valid app name**")
+        await e.reply("Nᴏ ʀᴇsᴜʟᴛ ғᴏᴜɴᴅ ɪɴ sᴇᴀʀᴄʜ. Pʟᴇᴀsᴇ ᴇɴᴛᴇʀ ᴠᴀʟɪᴅ ᴀᴘᴘ ɴᴀᴍᴇ**")
     except Exception as err:
         await e.reply("Exception Occured:- " + str(err))
 
-
-__mod_name__ = "✘ꜱᴇᴀʀᴄʜ✘"
-
 __help__ = """
-➻ /google <query>*:* Perform a google search
-➻ /image <query>*:* Search Google for images and returns them\nFor greater no. of results specify lim, For eg: `/img hello lim=10`
-➻ /app <appname>*:* Searches for an app in Play Store and returns its details.
-➻ /reverse: Does a reverse image search of the media which it was replied to.
-➻ /gps <location>*:* Get gps location.
-➻ /github <username>*:* Get information about a GitHub user.
-➻ /country <country name>*:* Gathering info about given country
-➻ /imdb <Movie name>*:* Get full info about a movie with imdb.com
-➻ Teddy <query>*:* Teddy answers the query
-  💡Ex: `Teddy where is china?`
-"""
+ × /google <text>: Pᴇʀғᴏʀᴍ ᴀ ɢᴏᴏɢʟᴇ sᴇᴀʀᴄʜ ɴᴅ ʀᴇᴛᴜʀɴs.
+ × /img <text>: Sᴇᴀʀᴄʜ ɢᴏᴏɢʟᴇ ғᴏʀ ɪᴍᴀɢᴇs ᴀɴᴅ ʀᴇᴛᴜʀɴs ᴛʜᴇᴍ.
+Fᴏʀ ɢʀᴇᴀᴛᴇʀ ɴᴏ. ᴏғ ʀᴇsᴜʟᴛs ʟɪᴍ, Fᴏʀ ᴇɢ: /img hello lim=10
+ × /app <appname>: Sᴇᴀʀᴄʜ ғᴏʀ ᴀɴ ᴀᴘᴘ ɪɴ ᴘʟᴀʏsᴛᴏʀᴇ ᴀɴᴅ ʀᴇᴛᴜʀᴍs ɪᴛs ᴅᴇᴛᴀɪʟs.
+ × /reverse: Dᴏᴇs ᴀ ʀᴇᴠᴇʀsᴇ ɪᴍᴀɢᴇ sᴇᴀʀᴄʜ ᴏғ ᴛʜᴇ ᴍᴇᴅɪᴀ ʀᴇᴘʟɪᴇᴅ ᴛᴏ.
+ """
+
+__mod_name__ = "Gᴏᴏɢʟᴇ"

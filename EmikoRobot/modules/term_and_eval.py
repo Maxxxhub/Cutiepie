@@ -19,7 +19,7 @@ async def aexec(code, client, message):
 
 @pbot.on_message(filters.user(OWNER_ID) & filters.command("eval"))
 async def evaluate(client, message):
-    status_message = await message.reply_text("`Running ...`")
+    status_message = await message.reply_text("`📡 Rᴜɴɴɪɴɢ ...`")
     try:
         cmd = message.text.split(" ", maxsplit=1)[1]
     except IndexError:
@@ -43,7 +43,7 @@ async def evaluate(client, message):
     sys.stderr = old_stderr
     evaluation = ""
     if exc:
-        evaluation = f"<b>Exception:</b>\n<code>{html.escape(exc)}</code>\n"
+        evaluation = f"<b>Exᴄᴇᴘᴛɪᴏɴ:</b>\n<code>{html.escape(exc)}</code>\n"
     if stderr:
         evaluation += f"<b>STDERR:</b>\n<code>{html.escape(stderr)}</code>\n"
     if stdout:
@@ -69,7 +69,7 @@ async def evaluate(client, message):
 @pbot.on_message(filters.user(OWNER_ID) & filters.command("term"))
 async def terminal(client, message):
     if len(message.text.split()) == 1:
-        await message.reply("Usage: `/term echo owo`")
+        await message.reply("Usᴀɢᴇ: `/term echo owo`")
         return
     args = message.text.split(None, 1)
     teks = args[1]
@@ -108,14 +108,14 @@ async def terminal(client, message):
             errors = traceback.format_exception(
                 etype=exc_type, value=exc_obj, tb=exc_tb
             )
-            await message.reply("""**Error:**\n```{}```""".format("".join(errors)))
+            await message.reply("""**Eʀʀᴏʀ:**\n```{}```""".format("".join(errors)))
             return
         output = process.stdout.read()[:-1].decode("utf-8")
     if str(output) == "\n":
         output = None
     if output:
         if len(output) > 4096:
-            with open("SaitamaRobot/output.txt", "w+") as file:
+            with open("Teddyrobot/output.txt", "w+") as file:
                 file.write(output)
             await client.send_document(
                 message.chat.id,
@@ -125,6 +125,6 @@ async def terminal(client, message):
             )
             os.remove("tg_bot/output.txt")
             return
-        await message.reply(f"**Output:**\n`{output}`", parse_mode="markdown")
+        await message.reply(f"**Oᴜᴛᴘᴜᴛ:**\n`{output}`", parse_mode="markdown")
     else:
-        await message.reply("**Output:**\n`No Output`")
+        await message.reply("**Oᴜᴛᴘᴜᴛ:**\n`No Output`")

@@ -15,27 +15,21 @@ from EmikoRobot.modules.disable import DisableAbleCommandHandler
 
 
 __help__ = """ 
-Use this module to translate stuff!
-*✘ Commands ✘:*
-➻ /tl (or /tr): as a reply to a message, translates it to English.
-➻ /tl <lang>: translates to <lang>
-eg: /tl ja: translates to Japanese.
-➻ /tl <source>//<dest>: translates from <source> to <lang>.
-eg:  /tl ja//en: translates from Japanese to English.
-➻ /langs: get a list of supported languages for translation.
-I can convert text to voice and voice to text..
-➻ /tts <lang code>*:* Reply to any message to get text to speech output
-➻ /stt*:* Type in reply to a voice message(support english only) to extract text from it.
-*✘ Language Codes ✘*
-`af,am,ar,az,be,bg,bn,bs,ca,ceb,co,cs,cy,da,de,el,en,eo,es,
-et,eu,fa,fi,fr,fy,ga,gd,gl,gu,ha,haw,hi,hmn,hr,ht,hu,hy,
-id,ig,is,it,iw,ja,jw,ka,kk,km,kn,ko,ku,ky,la,lb,lo,lt,lv,mg,mi,mk,
-ml,mn,mr,ms,mt,my,ne,nl,no,ny,pa,pl,ps,pt,ro,ru,sd,si,sk,sl,
-sm,sn,so,sq,sr,st,su,sv,sw,ta,te,tg,th,tl,tr,uk,ur,uz,
-vi,xh,yi,yo,zh,zh_CN,zh_TW,zu`
+Tʜɪs ᴍᴏᴅᴜʟᴇ ᴡɪʟʟ ʜᴇʟᴘ.ʏᴏᴜ ɪɴ ᴛʀᴀɴsʟᴀᴛɪᴏɴ!
+*✘ Cᴏᴍᴍᴀɴᴅs ✘:*
+➻ /tl (or /tr): As ᴀ ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ, ᴛʀᴀɴsʟᴀᴛᴇs ɪᴛ ᴛᴏ ᴇɴɢʟɪsʜ.
+➻ /tl <lang>: Tʀᴀɴsʟᴀᴛᴇs ᴛᴏ <ʟᴀɴɢ ᴄᴏᴅᴇ>
+eg: /tl en: Tʀᴀɴsʟᴀᴛᴇs ᴛᴏ ᴇɴɢʟɪsʜ.
+➻ /tl <source>//<dest>: Tʀᴀɴsʟᴀᴛᴇs ғʀᴏᴍ <source> ᴛᴏ <lang>.
+ᴇɢ:  /tl ja//en: Tʀᴀɴsʟᴀᴛᴇs ғʀᴏᴍ ᴊᴀᴘᴀɴᴇsᴇ ᴛᴏ ᴇɴɢʟɪsʜ.
+➻ /langs: Gᴇᴛ ᴀ ʟɪsᴛ ᴏғ sᴜᴘᴘᴏʀᴛᴇᴅ ʟᴀɴɢᴜᴀɢᴇs ғᴏʀ ᴛʀᴀɴsʟᴀᴛɪᴏɴ.
+I ᴄᴀɴ ᴄᴏɴᴠᴇʀᴛ ᴛᴏ ᴛᴇxᴛ ᴛᴏ ᴠᴏɪᴄᴇ ᴀɴᴅ ᴠᴏɪᴄᴇ ᴛᴏ ᴛᴇxᴛ.
+➻ /tts <lang code>*:* Rᴇᴘʟʏ ᴛᴏ ᴀɴʏ ᴍsɢ ᴛᴏ ɢᴇᴛ ᴛᴇxᴛ ᴛᴏ sᴘᴇᴇᴄʜ ᴏᴜᴛᴘᴜᴛ.
+➻ /stt*:* Tʏᴘᴇ ɪɴ ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴠᴏɪᴄᴇ ᴍsɢ (sᴜᴘᴘᴏʀᴛ ᴇɴɢ ᴏɴʟʏ) ᴛᴏ ᴇxᴛʀᴀᴄᴛ ᴛᴇxᴛ ғʀᴏᴍ ɪᴛ.
+*✘ [Cʟɪᴄᴋ ʜᴇʀᴇ ғᴏʀ ʟᴀɴɢᴜᴀɢᴇ ᴄᴏᴅᴇs](https://t.me/Teddy_bot_updates/73) ✘*
 """
 
-__mod_name__ = "✘ᴛʀᴀɴꜱʟᴀᴛᴏʀ✘"
+__mod_name__ = "Tʀᴀɴꜱʟᴀᴛᴏʀ"
 
 
 trans = Translator()
@@ -45,7 +39,7 @@ trans = Translator()
 async def translate(_, message: Message) -> None:
     reply_msg = message.reply_to_message
     if not reply_msg:
-        await message.reply_text("Reply to a message to translate it!")
+        await message.reply_text("Rᴇᴘʟʏ ᴛᴏ ᴀ ᴍsɢ ᴛᴏ ᴛʀᴀɴsʟᴀᴛᴇ ɪᴛ!")
         return
     if reply_msg.caption:
         to_translate = reply_msg.caption
@@ -64,7 +58,7 @@ async def translate(_, message: Message) -> None:
         dest = "en"
     translation = await trans(to_translate, sourcelang=source, targetlang=dest)
     reply = (
-        f"<b>Translated from {source} to {dest}</b>:\n"
+        f"<b>Tʀᴀɴsʟᴀᴛᴇᴅ ғʀᴏᴍ {source} ᴛᴏ {dest}</b>:\n"
         f"<code>{translation.text}</code>"
     )
 
@@ -73,13 +67,13 @@ async def translate(_, message: Message) -> None:
 
 def languages(update: Update, context: CallbackContext) -> None:
     update.effective_message.reply_text(
-        "Click on the button below to see the list of supported language codes.",
+        "Cʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ᴛᴏ sᴇᴇ ᴛʜᴇ ʟɪsᴛ ᴏғ sᴜᴘᴘᴏʀᴛᴇᴅ ʟᴀɴɢᴜᴀɢᴇ ᴄᴏᴅᴇs.",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        text="Language codes",
-                        url="https://telegra.ph/Lang-Codes-03-19-3",
+                        text=" 🗽Lᴀɴɢᴜᴀɢᴇ ᴄᴏᴅᴇs 🗽",
+                        url="https://t.me/Teddy_bot_updates/73",
                     ),
                 ],
             ],

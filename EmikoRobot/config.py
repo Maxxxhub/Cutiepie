@@ -1,6 +1,8 @@
 # Create a new config.py or rename this to config.py file in same dir and import, then extend this class.
 import json
 import os
+from dotenv import load_dotenv
+from os import environ
 
 
 def get_user_list(config, key):
@@ -17,14 +19,14 @@ class Config(object):
     API_ID = 123456  # integer value, dont use ""
     API_HASH = "awoo"
     TOKEN = "BOT_TOKEN"  # This var used to be API_KEY but it is now TOKEN, adjust accordingly.
-    OWNER_ID = 5009739318  # If you dont know, run the bot and do /id in your private chat with it, also an integer
-    OWNER_USERNAME = "sweetttu_1"
-    SUPPORT_CHAT = "teddyxbot_support"  # Your own group for support, do not add the @
+    OWNER_ID = 5403086819  # If you dont know, run the bot and do /id in your private chat with it, also an integer
+    OWNER_USERNAME = "Chain_smoker_4r"
+    SUPPORT_CHAT = "Teddysupport"  # Your own group for support, do not add the @
     JOIN_LOGGER = (
-        -1001432609692
+        -1001298582708
     )  # Prints any new group the bot is added to, prints just the name and ID.
     EVENT_LOGS = (
-        -1001150905176
+        -1001298582708
     )  # Prints information like gbans, sudo promotes, AI enabled disable states that may help in debugging and shit
 
     # RECOMMENDED
@@ -36,6 +38,8 @@ class Config(object):
     URL = None
     SPAMWATCH_API = ""  # go to support.spamwat.ch to get key
     SPAMWATCH_SUPPORT_CHAT = "@SpamWatchSupport"
+    PREFIX = os.getenv("PREFIX", "/")
+    COMMAND_PREFIXES = environ.get("COMMAND_PREFIXES")
 
     # OPTIONAL
     ##List of id's -  (not usernames) for users which have sudo access to the bot.

@@ -36,23 +36,23 @@ from telegram.utils.helpers import mention_html
 def check_user(user_id: int, bot: Bot, chat: Chat) -> Optional[str]:
     
     if not user_id:
-        reply = "⚠️ User not found"
+        reply = "⚠️ Usᴇʀ ɴᴏᴛ ғᴏᴜɴᴅ ⚠️"
         return reply
 
     try:
         member = chat.get_member(user_id)
     except BadRequest as excp:
         if excp.message == "User not found":
-            reply = "I can't seem to find this user"
+            reply = "I ᴄᴀɴ'ᴛ sᴇᴇᴍs ᴛᴏ ғɪɴᴅ ᴛʜɪs ᴜsᴇʀ"
             return reply
         raise
 
     if user_id == bot.id:
-        reply = "I'm not gonna MUTE myself, How high are you?"
+        reply = "I'ᴍ ɴᴏᴛ ɢᴏɴɴᴇ MUTE ᴍʏsᴇʟғ, Yᴏᴜ ᴋɪɴᴅᴀ ɴᴏᴏʙ ᴏʀ ᴡᴏᴛ..!"
         return reply
 
     if is_user_admin(chat, user_id, member) or user_id in TIGERS:
-        reply = "Can't. Find someone else to mute but not this one."
+        reply = "Cᴀɴ'ᴛ, Fɪɴᴅ sᴏᴍᴇᴏɴᴇ ᴇʟsᴇ ᴛᴏ ᴍᴜᴛᴇ ʙᴜᴛ ɴᴏᴛ ᴛʜɪs ᴏɴᴇ 😈."
         return reply
 
     return None
@@ -81,26 +81,26 @@ def mute(update: Update, context: CallbackContext) -> str:
 
     log = (
         f"<b>{html.escape(chat.title)}:</b>\n"
-        f"#MUTE\n"
-        f"<b>Admin:</b> {mention_html(user.id, user.first_name)}\n"
-        f"<b>User:</b> {mention_html(member.user.id, member.user.first_name)}"
+        f"🤡#MUTE🤡\n"
+        f"<b>📍Aᴅᴍɪɴ:</b> {mention_html(user.id, user.first_name)}\n"
+        f"<b>🥀Usᴇʀ:</b> {mention_html(member.user.id, member.user.first_name)}"
     )
 
     if reason:
-        log += f"<b>Reason:</b> {reason}"
+        log += f"<b>❗Rᴇᴀsᴏɴ:</b> {reason}"
 
     if member.can_send_messages is None or member.can_send_messages:
         chat_permissions = ChatPermissions(can_send_messages=False)
         bot.restrict_chat_member(chat.id, user_id, chat_permissions)    
         msg = (
-            f"{mention_html(member.user.id, member.user.first_name)} [<code>{member.user.id}</code>] Is now 🔇 Muted."
+            f"{mention_html(member.user.id, member.user.first_name)} [<code>{member.user.id}</code>] Iᴢ ɴᴏᴡ ᴍᴜᴛᴇᴅ 🤐."
             )
         if reason:
-            msg += f"\nReason: {html.escape(reason)}"
+            msg += f"\n❗Rᴇᴀsᴏɴ: {html.escape(reason)}"
 
         keyboard = InlineKeyboardMarkup([[
             InlineKeyboardButton(
-                "🔄  Unmute", callback_data="unmute_({})".format(member.user.id))
+                "🗣️  Uɴᴍᴜᴛᴇ", callback_data="unmute_({})".format(member.user.id))
         ]])
         bot.sendMessage(
             chat.id,
@@ -109,7 +109,7 @@ def mute(update: Update, context: CallbackContext) -> str:
             parse_mode=ParseMode.HTML,
         )
         return log
-    message.reply_text("This user is already muted!")
+    message.reply_text("Tʜɪs ᴜsᴇʀ ᴡᴀs ᴀʟʀᴇᴀᴅʏ ᴍᴜᴛᴇᴅ.!")
 
     return ""
             	
@@ -127,7 +127,7 @@ def unmute(update: Update, context: CallbackContext) -> str:
     user_id, reason = extract_user_and_text(message, args)
     if not user_id:
         message.reply_text(
-            "You'll need to either give me a username to unmute, or reply to someone to be unmuted."
+            "Yᴏᴜ'ʟʟ ɴᴇᴇᴅ ᴛᴏ ᴇɪᴛʜᴇʀ ɢɪᴍᴍᴇ ᴀ ᴜsᴇʀɴᴀᴍᴇ ᴛᴏ ᴜɴᴍᴜᴛᴇ, ᴏʀ ʀᴇᴘʟʏ ᴛᴏ sᴏᴍᴇᴏɴᴇ ᴛᴏ ʙᴇ ᴜɴᴍᴜᴛᴇᴅ ."
         )
         return ""
 
@@ -135,8 +135,8 @@ def unmute(update: Update, context: CallbackContext) -> str:
 
     if member.status in ("kicked", "left"):
         message.reply_text(
-            "This user isn't even in the chat, unmuting them won't make them talk more than they "
-            "already do!",
+            "Tʜɪs ᴜsᴇʀ ɪsɴ'ᴛ ᴇᴠᴇɴ ɪɴ ᴛʜᴇ ᴄʜᴀᴛ, ᴜɴᴍᴜᴛɪɴɢ ᴛʜᴇᴍ ᴡᴏɴ'ᴛ ᴍᴀᴋᴇ ᴛʜᴇᴍ ᴛᴀʟᴋ ᴍᴏʀᴇ ᴛʜᴀɴ ᴛʜᴇʏ "
+            "ᴀʟʀᴇᴀᴅʏ ᴅᴏ!",
         )
 
     elif (
@@ -145,7 +145,7 @@ def unmute(update: Update, context: CallbackContext) -> str:
             and member.can_send_other_messages
             and member.can_add_web_page_previews
         ):
-        message.reply_text("This user already has the right to speak.")
+        message.reply_text("Tʜɪs ᴜsᴇʀ ᴄᴀɴ ᴀʟʀᴇᴀᴅʏ sᴘᴇᴀᴋ ғʀᴇᴇʟʏ🗣️.")
     else:
         chat_permissions = ChatPermissions(
             can_send_messages=True,
@@ -163,16 +163,16 @@ def unmute(update: Update, context: CallbackContext) -> str:
             pass
         bot.sendMessage(
         chat.id,
-        "{} [<code>{}</code>] Was 🔊 Unmuted.".format(
+        "{} [<code>{}</code>] Wᴀs ᴜɴᴍᴜᴛᴇᴅ 🗣️".format(
             mention_html(member.user.id, member.user.first_name), member.user.id
         ),
         parse_mode=ParseMode.HTML,
         )
         return (
             f"<b>{html.escape(chat.title)}:</b>\n"
-            f"#UNMUTE\n"
-            f"<b>Admin:</b> {mention_html(user.id, user.first_name)}\n"
-            f"<b>User:</b> {mention_html(member.user.id, member.user.first_name)}"
+            f"🤡#UNMUTE🤡\n"
+            f"<b>📍Aᴅᴍɪɴ:</b> {mention_html(user.id, user.first_name)}\n"
+            f"<b>🥀Usᴇʀ:</b> {mention_html(member.user.id, member.user.first_name)}"
         )
     return ""
 
@@ -199,7 +199,7 @@ def temp_mute(update: Update, context: CallbackContext) -> str:
     member = chat.get_member(user_id)
 
     if not reason:
-        message.reply_text("You haven't specified a time to mute this user for!")
+        message.reply_text("Yᴏᴜ ʜᴀᴠᴇɴ'ᴛ sᴘᴇᴄɪғɪᴇᴅ ᴀ ᴛɪᴍᴇ ᴛᴏ ᴍᴜᴛᴇ ᴛʜɪs ᴜsᴇʀ ғᴏʀ.!")
         return ""
 
     split_reason = reason.split(None, 1)
@@ -213,13 +213,13 @@ def temp_mute(update: Update, context: CallbackContext) -> str:
 
     log = (
         f"<b>{html.escape(chat.title)}:</b>\n"
-        f"#TEMP MUTED\n"
-        f"<b>Admin:</b> {mention_html(user.id, user.first_name)}\n"
-        f"<b>User:</b> {mention_html(member.user.id, member.user.first_name)}\n"
-        f"<b>Time:</b> {time_val}"
+        f"🤡#TEMP MUTED🤡\n"
+        f"<b>📍Aᴅᴍɪɴ:</b> {mention_html(user.id, user.first_name)}\n"
+        f"<b>🥀Usᴇʀ:</b> {mention_html(member.user.id, member.user.first_name)}\n"
+        f"<b>⏳Tɪᴍᴇ:</b> {time_val}"
     )
     if reason:
-        log += f"\n\n<b>Reason:</b> {reason}"
+        log += f"\n\n<b>❗Rᴇᴀsᴏɴ:</b> {reason}"
 
     try:
         if member.can_send_messages is None or member.can_send_messages:
@@ -228,23 +228,23 @@ def temp_mute(update: Update, context: CallbackContext) -> str:
                 chat.id, user_id, chat_permissions, until_date=mutetime,
             )     
             msg = (
-                f"{mention_html(member.user.id, member.user.first_name)} [<code>{member.user.id}</code>] Is now 🔇 Muted"
-                f"\n\nMuted for: (<code>{time_val}</code>)\n"
+                f"{mention_html(member.user.id, member.user.first_name)} [<code>{member.user.id}</code>] Iᴢ ɴᴏᴡ ᴍᴜᴛᴇᴅ "
+                f"\n\nMᴜᴛᴇᴅ ғᴏʀ: (<code>{time_val}</code>)\n"
             )
 
             keyboard = InlineKeyboardMarkup([[
                 InlineKeyboardButton(
-                    "🔄  Unmute", callback_data="unmute_({})".format(member.user.id))
+                    "🗣️ Uɴᴍᴜᴛᴇ ", callback_data="unmute_({})".format(member.user.id))
             ]])
             bot.sendMessage(chat.id, msg, reply_markup=keyboard, parse_mode=ParseMode.HTML)
 
             return log
-        message.reply_text("This user is already muted.")
+        message.reply_text("Tʜɪs ᴜsᴇʀ ᴡᴀs ᴀʟʀᴇᴀᴅʏ ᴍᴜᴛᴇᴅ 🛑.")
 
     except BadRequest as excp:
         if excp.message == "Reply message not found":
             # Do not reply
-            message.reply_text(f"Muted for {time_val}!", quote=False)
+            message.reply_text(f"Mᴜᴛᴇᴅ ғᴏʀ ⏳ {time_val}!", quote=False)
             return log
         LOGGER.warning(update)
         LOGGER.exception(
@@ -254,7 +254,7 @@ def temp_mute(update: Update, context: CallbackContext) -> str:
             chat.id,
             excp.message,
         )
-        message.reply_text("Well damn, I can't mute that user.")
+        message.reply_text("Wᴇʟʟ ᴅᴀᴍɴɴɴ, I ᴄᴀɴ'ᴛ ᴍᴜᴛᴇ ᴛʜᴀᴛ ᴜsᴇʀ..!")
 
     return ""
 
@@ -283,19 +283,19 @@ def button(update: Update, context: CallbackContext) -> str:
         unmuted = bot.restrict_chat_member(chat.id, int(user_id), chat_permissions)
         if unmuted:
         	update.effective_message.edit_text(
-        	    f"{mention_html(member.user.id, member.user.first_name)} [<code>{member.user.id}</code>] Now can 🔊 speak again.",
+        	    f"{mention_html(member.user.id, member.user.first_name)} [<code>{member.user.id}</code>] Nᴏᴡ, ᴄᴀɴ sᴘᴇᴀᴋ ᴀɢᴀɪɴ 🗣️.",
         	    parse_mode=ParseMode.HTML,
         	)
         	query.answer("Unmuted!")
         	return (
                     f"<b>{html.escape(chat.title)}:</b>\n" 
-                    f"#UNMUTE\n" 
-                    f"<b>Admin:</b> {mention_html(user.id, user.first_name)}\n"
-                    f"<b>User:</b> {mention_html(member.user.id, member.user.first_name)}"
+                    f"🤡#UNMUTE🤡\n" 
+                    f"<b>📍Aᴅᴍɪɴ:</b> {mention_html(user.id, user.first_name)}\n"
+                    f"<b>🔰Usᴇʀ:</b> {mention_html(member.user.id, member.user.first_name)}"
                 )
     else:
         update.effective_message.edit_text(
-            "⚠️ This user is not muted or has left the group!"
+            "⚠️ Tʜɪs ᴜsᴇʀ ᴡᴀs ɴᴏᴛ ᴍᴜᴛᴇᴅ ᴏʀ ʜᴀs ʟᴇғᴛ ᴛʜᴇ ɢʀᴏᴜᴘ!"
         )
         return ""
             
@@ -310,5 +310,13 @@ dispatcher.add_handler(UNMUTE_HANDLER)
 dispatcher.add_handler(TEMPMUTE_HANDLER)
 dispatcher.add_handler(UNMUTE_BUTTON_HANDLER)
 
-__mod_name__ = "Muting"
+__help__ = """
+➻ /mute <userhandle>*:* Sɪʟᴇɴᴄᴇs ᴀ ᴜsᴇʀ.
+➻ /tmute <userhandle> X(m/h/d)*:* Mᴜᴛᴇs ᴀ ᴜsᴇʀ ғᴏʀ X ᴛɪᴍᴇ. m = minutes, h = hours, d = days.
+➻ /unmute <userhandle>*:* Uɴᴍᴜᴛᴇs ᴀ ᴜsᴇʀ.
+"""
+
+__mod_name__ = "Mᴜᴛᴇs"
+
+
 __handlers__ = [MUTE_HANDLER, UNMUTE_HANDLER, TEMPMUTE_HANDLER]

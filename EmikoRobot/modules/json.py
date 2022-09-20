@@ -26,7 +26,7 @@ async def _(event):
     if event.is_group:
         if not (await is_register_admin(event.input_chat, event.message.sender_id)):
             await event.reply(
-                "🚨 Need Admin Pewer.. You can't use this command.. But you can use in my pm"
+                "🚨 𝗡𝗲𝗲𝗱 𝗮𝗱𝗺𝗶𝗻 𝗽𝗼𝘄𝗲𝗿.. 𝗬𝗼𝘂 𝗰𝗮𝗻'𝘁 𝘂𝘀𝗲 𝘁𝗵𝗶𝘀 𝗰𝗼𝗺𝗺𝗮𝗻𝗱.. 𝗕𝘂𝘁 𝘆𝗼𝘂 𝗰𝗮𝗻 𝘂𝘀𝗲 𝗶𝗻 𝗺𝘆 𝗽𝗺"
             )
             return
 

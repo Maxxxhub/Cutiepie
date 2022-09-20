@@ -8,7 +8,7 @@ from PIL import Image
 from datetime import datetime
 from telegraph import Telegraph, upload_file, exceptions
 
-wibu = "EmikoRobot"
+wibu = "TeddyRobot"
 telegraph = Telegraph()
 r = telegraph.create_account(short_name=wibu)
 auth_url = r["auth_url"]
@@ -30,7 +30,7 @@ async def _(event):
             )
             end = datetime.now()
             ms = (end - start).seconds
-            h = await event.reply("Downloaded to {} in {} seconds.".format(downloaded_file_name, ms))
+            h = await event.reply("Dᴏᴡɴʟᴏᴀᴅᴇᴅ ᴛᴏ {} ɪɴ {} sᴇᴄᴏɴᴅs.".format(downloaded_file_name, ms))
             if downloaded_file_name.endswith((".webp")):
                 resize_image(downloaded_file_name)
             try:
@@ -43,7 +43,7 @@ async def _(event):
                 end = datetime.now()
                 ms_two = (end - start).seconds
                 os.remove(downloaded_file_name)
-                await h.edit("Uploaded to https://telegra.ph{}".format(media_urls[0], (ms + ms_two)), link_preview=True)
+                await h.edit("⚡Sᴜᴄᴄᴇssғᴜʟʟʏ ᴜᴘʟᴏᴀᴅᴇᴅ ᴛᴏ https://telegra.ph{}".format(media_urls[0], (ms + ms_two)), link_preview=True)
         elif input_str == "gt":
             user_object = await telethn.get_entity(r_message.sender_id)
             title_of_page = user_object.first_name # + " " + user_object.last_name
@@ -71,9 +71,9 @@ async def _(event):
             )
             end = datetime.now()
             ms = (end - start).seconds
-            await event.reply("Pasted to https://telegra.ph/{}".format(response["path"], ms), link_preview=True)
+            await event.reply("⚡ Sᴜᴄᴄᴇssғᴜʟʟʏ ᴘᴀsᴛᴇᴅ ᴛᴏ https://telegra.ph/{}".format(response["path"], ms), link_preview=True)
     else:
-        await event.reply("Reply to a message to get a permanent telegra.ph link.")
+        await event.reply("Rᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ ᴛᴏ ɢᴇᴛ ɪᴛᴢ ᴘᴇʀᴍᴀɴᴇɴᴛ ᴛᴇʟᴇɢʀᴀ.ᴘʜ ʟɪɴᴋ.")
 
 
 def resize_image(image):
@@ -84,4 +84,9 @@ file_help = os.path.basename(__file__)
 file_help = file_help.replace(".py", "")
 file_helpo = file_help.replace("_", " ")
 
-__mod_name__ = "Telegraph"
+__mod_name__ = "T-ɢʀᴀᴘʜ"
+
+__help__ = """
+➻ /tgm : Gᴇᴛ ᴀ ᴘᴇʀᴍᴀɴᴇɴᴛ ᴛᴇʟᴇɢʀᴀᴘʜ ʟɪɴᴋ ᴏғ ʀᴇᴘʟɪᴇᴅ ᴍᴇᴅɪᴀ.
+➻ /tgt: Gᴇᴛ ᴀ ᴘᴇʀᴍᴀɴᴇɴᴛ ᴛᴇʟᴇɢʀᴀᴘʜ ʟɪɴᴋ ᴏғ ʀᴇᴘʟɪᴇᴅ ᴛᴇxᴛ.
+ """

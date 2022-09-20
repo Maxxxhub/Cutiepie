@@ -1,4 +1,5 @@
 future
+bs4
 emoji
 lxml
 wget
@@ -6,7 +7,7 @@ gtts
 beautifulsoup4
 requests
 python-telegram-bot==13.11.0
-SQLAlchemy==1.4.35
+SQLAlchemy==1.4.41
 psycopg2-binary
 feedparser
 faker
@@ -43,7 +44,7 @@ ujson
 pretty_errors
 pygithub
 TgCrypto
-pyrogram==1.4.16
+pyrogram==1.4.0
 PyDictionary
 git+https://github.com/Sorrybabe/downloader
 youtube_search_python==1.4.9
@@ -77,8 +78,6 @@ nekos.py
 motor
 gpytranslate
 fontTools
-opencv-python-headless
-odmantic
 tzlocal
 pendulum
 fuzzysearch
