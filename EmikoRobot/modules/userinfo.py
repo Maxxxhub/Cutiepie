@@ -291,7 +291,7 @@ def info(update: Update, context: CallbackContext):
         if spamwtc:
             text += "\n\n<b>This person is Spamwatched!</b>"
             text += f"\nReason: <pre>{spamwtc.reason}</pre>"
-            text += "\nAppeal at @Itzmeanon"
+            text += "\nAppeal at @Cutiepiesupport"
     except:
         pass  # don't crash if api is down somehow...
 
@@ -353,9 +353,9 @@ def info(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                "Hᴇᴀʟᴛʜ", url="https://t.me/itzmeanon/7"),
+                                "Hᴇᴀʟᴛʜ", url="https://t.me/cutiepiesupport"),
                             InlineKeyboardButton(
-                                "Sᴜᴘᴘᴏʀᴛ", url="https://t.me/itzmeanon")
+                                "Sᴜᴘᴘᴏʀᴛ", url="https://t.me/cutiepiesupport")
                         ],
                     ]
                 ),
@@ -371,9 +371,9 @@ def info(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                "Hᴇᴀʟᴛʜ", url="https://t.me/itzmeanon/7"),
+                                "Hᴇᴀʟᴛʜ", url="https://t.me/cutiepiesupport"),
                             InlineKeyboardButton(
-                                "Sᴜᴘᴘᴏʀᴛ", url="https://t.me/itzmeanon")
+                                "Sᴜᴘᴘᴏʀᴛ", url="https://t.me/cutiepiesupport")
                         ],
                     ]
                 ),
@@ -430,11 +430,11 @@ def set_about_me(update: Update, context: CallbackContext):
         if len(info[1]) < MAX_MESSAGE_LENGTH // 4:
             sql.set_user_me_info(user_id, info[1])
             if user_id in [777000, 1087968824]:
-                message.reply_text("Authorized...Information updated!")
+                message.reply_text("Aᴜᴛʜᴏʀɪᴢᴇᴅ...Iɴғᴏʀᴍᴀᴛɪᴏɴ ᴜᴘᴅᴀᴛᴇᴅ!")
             elif user_id == bot.id:
-                message.reply_text("I have updated my info with the one you provided!")
+                message.reply_text("I ʜᴀᴠᴇ ᴜᴘᴅᴀᴛᴇᴅ ᴍʏ ɪɴғᴏ ᴡɪᴛʜ ᴛʜᴇ ᴏɴᴇ ʏᴏᴜ ᴘʀᴏᴠɪᴅᴇᴅ!")
             else:
-                message.reply_text("Information updated!")
+                message.reply_text("Iɴғᴏʀᴍᴀᴛɪᴏɴ ᴜᴘᴅᴀᴛᴇᴅ!")
         else:
             message.reply_text(
                 "The info needs to be under {} characters! You have {}.".format(
