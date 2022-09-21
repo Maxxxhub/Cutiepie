@@ -246,7 +246,7 @@ Aᴅᴠᴀɴᴄᴇᴅ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ + ᴍᴜsɪᴄ
                         ),
                         InlineKeyboardButton(
                         text= " 👨‍💻 ",
-                        url=f"t.me/itzmeanon"
+                        url=f"t.me/cutiepiesupport"
                         ),
                     ]
                 ]
@@ -818,7 +818,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", f"[ɪᴍ ᴀʟɪᴠᴇ ʙᴀʙʏ...!!!)](https://telegra.ph/file/9e81cc363c04df80b94e9.jpg)", parse_mode=ParseMode.MARKDOWN
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", f"[ɪᴍ ᴀʟɪᴠᴇ ʙᴀʙʏ...!!!)](https://telegra.ph/file/59b4be1eb1bea452c3a51.jpg)", parse_mode=ParseMode.MARKDOWN
             )
 
         except Unauthorized:
